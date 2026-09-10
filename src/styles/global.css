@@ -266,6 +266,18 @@
   color: var(--gold-ink);
   opacity: 0.55;
 }
+/* POSITIONING PHASE 2 — variante grande, solo para las 3 tarjetas de
+   línea de negocio (backbone estratégico del home): mismo lenguaje visual
+   que .editorial-num, a mayor escala para que se sientan más importantes
+   que la numeración de "Servicios de Apoyo". */
+.editorial-num-lg {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 1;
+  color: var(--gold-ink);
+  opacity: 0.35;
+}
 
 /* ---- Buttons ---- */
 .btn-cyber {

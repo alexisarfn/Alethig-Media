@@ -146,23 +146,53 @@ collections:
             fields:
               - { name: icon, label: "Icono", widget: string }
               - { name: label, label: "Texto", widget: string }
-          - { name: servicesTag, label: "Servicios · Etiqueta", widget: string }
-          - { name: servicesHeading, label: "Servicios · Titular", widget: string }
-          - { name: servicesHighlight, label: "Servicios · Palabra resaltada", widget: string, required: false }
-          - { name: servicesSubtitle, label: "Servicios · Subtítulo", widget: text }
+          - { name: businessPathsTag, label: "Líneas de negocio · Etiqueta", widget: string }
+          - { name: businessPathsHeading, label: "Líneas de negocio · Titular", widget: string }
+          - name: businessPaths
+            label: "Líneas de negocio (3 tarjetas)"
+            widget: list
+            fields:
+              - { name: num, label: "Número (01, 02, 03)", widget: string }
+              - { name: icon, label: "Icono", widget: string }
+              - { name: headline, label: "Pregunta / titular de la tarjeta", widget: string }
+              - { name: title, label: "Nombre de la línea de negocio", widget: string }
+              - { name: items, label: "Ítems de apoyo", widget: list, field: { name: item, label: "Ítem", widget: string } }
+              - { name: desc, label: "Descripción corta", widget: text }
+              - { name: ctaLabel, label: "Texto del botón", widget: string }
+              - { name: ctaHref, label: "Enlace (ancla #... o ruta existente)", widget: string }
+          - { name: trafficTag, label: "Traffic & Growth · Etiqueta", widget: string }
+          - { name: trafficHeading, label: "Traffic & Growth · Titular", widget: string }
+          - { name: trafficIntro, label: "Traffic & Growth · Párrafo", widget: text }
+          - name: trafficModules
+            label: "Traffic & Growth · Módulos"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: trafficCtaLabel, label: "Traffic & Growth · Texto botón", widget: string }
+          - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
+          - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
+          - { name: osHighlight, label: "Alethig Media OS · Palabra resaltada", widget: string, required: false }
+          - { name: osBody, label: "Alethig Media OS · Párrafo", widget: text }
+          - { name: osCtaLabel, label: "Alethig Media OS · Texto botón", widget: string }
+          - { name: sublimationTag, label: "Sublimación · Etiqueta", widget: string }
+          - { name: sublimationHeading, label: "Sublimación · Titular", widget: string }
+          - { name: sublimationIntro, label: "Sublimación · Párrafo", widget: text }
+          - { name: sublimationCategories, label: "Sublimación · Categorías", widget: list, field: { name: category, label: "Categoría", widget: string } }
+          - { name: sublimationCtaLabel, label: "Sublimación · Texto botón", widget: string }
+          - { name: servicesTag, label: "Servicios de apoyo · Etiqueta", widget: string }
+          - { name: servicesHeading, label: "Servicios de apoyo · Titular", widget: string }
+          - { name: servicesHighlight, label: "Servicios de apoyo · Palabra resaltada (sin uso actualmente)", widget: string, required: false }
+          - { name: servicesSubtitle, label: "Servicios de apoyo · Subtítulo", widget: text }
           - name: services
-            label: "Servicios (tarjetas del home)"
+            label: "Servicios de apoyo (tarjetas del home)"
             widget: list
             fields:
               - { name: icon, label: "Icono", widget: string }
               - { name: title, label: "Título", widget: string }
               - { name: desc, label: "Descripción", widget: text }
               - { name: href, label: "Enlace", widget: string }
-          - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
-          - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
-          - { name: osHighlight, label: "Alethig Media OS · Palabra resaltada", widget: string, required: false }
-          - { name: osBody, label: "Alethig Media OS · Párrafo", widget: text }
-          - { name: osCtaLabel, label: "Alethig Media OS · Texto botón", widget: string }
           - { name: reasonsTag, label: "Por qué · Etiqueta", widget: string }
           - { name: reasonsHeading, label: "Por qué · Titular", widget: string }
           - { name: reasonsHighlight, label: "Por qué · Palabra resaltada", widget: string, required: false }
@@ -209,23 +239,53 @@ collections:
             fields:
               - { name: icon, label: "Icono", widget: string }
               - { name: label, label: "Texto", widget: string }
-          - { name: servicesTag, label: "Servicios · Etiqueta", widget: string }
-          - { name: servicesHeading, label: "Servicios · Titular", widget: string }
-          - { name: servicesHighlight, label: "Servicios · Palabra resaltada", widget: string, required: false }
-          - { name: servicesSubtitle, label: "Servicios · Subtítulo", widget: text }
+          - { name: businessPathsTag, label: "Líneas de negocio · Etiqueta", widget: string }
+          - { name: businessPathsHeading, label: "Líneas de negocio · Titular", widget: string }
+          - name: businessPaths
+            label: "Líneas de negocio (3 tarjetas)"
+            widget: list
+            fields:
+              - { name: num, label: "Número (01, 02, 03)", widget: string }
+              - { name: icon, label: "Icono", widget: string }
+              - { name: headline, label: "Pregunta / titular de la tarjeta", widget: string }
+              - { name: title, label: "Nombre de la línea de negocio", widget: string }
+              - { name: items, label: "Ítems de apoyo", widget: list, field: { name: item, label: "Ítem", widget: string } }
+              - { name: desc, label: "Descripción corta", widget: text }
+              - { name: ctaLabel, label: "Texto del botón", widget: string }
+              - { name: ctaHref, label: "Enlace (ancla #... o ruta existente)", widget: string }
+          - { name: trafficTag, label: "Traffic & Growth · Etiqueta", widget: string }
+          - { name: trafficHeading, label: "Traffic & Growth · Titular", widget: string }
+          - { name: trafficIntro, label: "Traffic & Growth · Párrafo", widget: text }
+          - name: trafficModules
+            label: "Traffic & Growth · Módulos"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: trafficCtaLabel, label: "Traffic & Growth · Texto botón", widget: string }
+          - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
+          - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
+          - { name: osHighlight, label: "Alethig Media OS · Palabra resaltada", widget: string, required: false }
+          - { name: osBody, label: "Alethig Media OS · Párrafo", widget: text }
+          - { name: osCtaLabel, label: "Alethig Media OS · Texto botón", widget: string }
+          - { name: sublimationTag, label: "Sublimación · Etiqueta", widget: string }
+          - { name: sublimationHeading, label: "Sublimación · Titular", widget: string }
+          - { name: sublimationIntro, label: "Sublimación · Párrafo", widget: text }
+          - { name: sublimationCategories, label: "Sublimación · Categorías", widget: list, field: { name: category, label: "Categoría", widget: string } }
+          - { name: sublimationCtaLabel, label: "Sublimación · Texto botón", widget: string }
+          - { name: servicesTag, label: "Servicios de apoyo · Etiqueta", widget: string }
+          - { name: servicesHeading, label: "Servicios de apoyo · Titular", widget: string }
+          - { name: servicesHighlight, label: "Servicios de apoyo · Palabra resaltada (sin uso actualmente)", widget: string, required: false }
+          - { name: servicesSubtitle, label: "Servicios de apoyo · Subtítulo", widget: text }
           - name: services
-            label: "Servicios (tarjetas del home)"
+            label: "Servicios de apoyo (tarjetas del home)"
             widget: list
             fields:
               - { name: icon, label: "Icono", widget: string }
               - { name: title, label: "Título", widget: string }
               - { name: desc, label: "Descripción", widget: text }
               - { name: href, label: "Enlace", widget: string }
-          - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
-          - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
-          - { name: osHighlight, label: "Alethig Media OS · Palabra resaltada", widget: string, required: false }
-          - { name: osBody, label: "Alethig Media OS · Párrafo", widget: text }
-          - { name: osCtaLabel, label: "Alethig Media OS · Texto botón", widget: string }
           - { name: reasonsTag, label: "Por qué · Etiqueta", widget: string }
           - { name: reasonsHeading, label: "Por qué · Titular", widget: string }
           - { name: reasonsHighlight, label: "Por qué · Palabra resaltada", widget: string, required: false }
