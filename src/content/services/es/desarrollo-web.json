@@ -1,6 +1,6 @@
 {
   "title": "Desarrollo Web",
-  "metaDescription": "Desarrollo web en Long Island, NY. Sitios rápidos y modernos que convierten visitantes en clientes. Bilingüe inglés y español — Alethig Media.",
+  "metaDescription": "Desarrollo web para negocios, con base en Long Island, NY. Sitios rápidos y modernos que convierten visitantes en clientes. Bilingüe inglés y español — Alethig Media.",
   "order": 5,
   "icon": "language",
   "heroHeading": "Un sitio web profesional que funciona en todos los dispositivos",
@@ -8,7 +8,7 @@
   "heroSub": "Obtén un sitio en WordPress con hosting, certificado SSL y correo corporativo incluidos. La opción económica usa plantillas premium adaptadas a tu marca; la opción a la medida se diseña desde cero.",
   "heroCtaLabel": "Agenda tu Consulta Gratis",
   "image": "/uploads/servicio-desarrollo-web.webp",
-  "imageAlt": "Desarrollo web para negocios de Long Island",
+  "imageAlt": "Desarrollo web profesional para negocios",
   "features": [
     { "icon": "devices", "title": "WordPress profesional", "desc": "Sitios que se ven y funcionan perfecto en computadora, tablet y celular." },
     { "icon": "lock", "title": "Hosting + SSL + correo", "desc": "Todos los sitios incluyen hosting, certificado SSL y cuentas de correo corporativo." },

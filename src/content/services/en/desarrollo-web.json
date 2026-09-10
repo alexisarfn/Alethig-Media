@@ -1,7 +1,7 @@
 {
   "title": "Web Development",
   "urlSlug": "web-development",
-  "metaDescription": "Web development in Long Island, NY. Fast, modern websites that convert visitors into customers. Bilingual English and Spanish — Alethig Media.",
+  "metaDescription": "Web development for businesses, based in Long Island, NY. Fast, modern websites that convert visitors into customers. Bilingual English and Spanish — Alethig Media.",
   "order": 5,
   "icon": "language",
   "heroHeading": "A professional website that works on every device",
@@ -9,7 +9,7 @@
   "heroSub": "Get a WordPress site with hosting, an SSL certificate, and business email included. The budget-friendly option uses premium templates tailored to your brand; the custom option is designed from scratch.",
   "heroCtaLabel": "Book Your Free Consultation",
   "image": "/uploads/servicio-desarrollo-web.webp",
-  "imageAlt": "Web development for Long Island businesses",
+  "imageAlt": "Professional web development for businesses",
   "features": [
     { "icon": "devices", "title": "Professional WordPress", "desc": "Sites that look and work great on desktop, tablet, and phone." },
     { "icon": "lock", "title": "Hosting + SSL + Email", "desc": "Every site includes hosting, an SSL certificate, and business email accounts." },

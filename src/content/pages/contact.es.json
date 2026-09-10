@@ -1,6 +1,6 @@
 {
-  "title": "Contacto | Agencia de Marketing en Long Island NY | Alethig Media",
-  "metaDescription": "Contacta a Alethig Media en Long Island, NY. Agenda una consulta gratuita de 15 minutos, en inglés o español. Sin compromiso.",
+  "title": "Contacto | Alethig Media — Con Base en Long Island, NY",
+  "metaDescription": "Contacta a Alethig Media, con base en Long Island, NY. Trabajamos con negocios de Long Island y más allá. Agenda una consulta gratuita de 15 minutos, en inglés o español. Sin compromiso.",
   "heroTag": "Contacto",
   "heroHeading": "Hagamos Crecer Tu Negocio.",
   "heroHighlight": "Crecer Tu Negocio",
@@ -23,7 +23,7 @@
     { "value": "not-sure", "label": "No estoy seguro aún" }
   ],
   "mapHeading": "Amityville, Long Island, Nueva York",
-  "mapText": "Servimos todo Long Island — Condado Nassau y Condado Suffolk",
+  "mapText": "Con base en Long Island — Condado Nassau y Condado Suffolk — y con capacidad para trabajar con negocios fuera del área local",
   "form": {
     "nameLabel": "Tu Nombre",
     "namePlaceholder": "Tu nombre",
@@ -45,7 +45,7 @@
   "faq": [
     {
       "question": "¿Atienden negocios en Nassau y Suffolk County?",
-      "answer": "Sí. Atendemos a negocios locales en todo Long Island, incluyendo Nassau y Suffolk County. Trabajamos de forma presencial y remota según el servicio."
+      "answer": "Sí. Tenemos nuestra base en Long Island y atendemos negocios locales en Nassau y Suffolk County, presencial y remotamente según el servicio. También trabajamos con negocios fuera del área local de forma remota, dependiendo del servicio."
     },
     {
       "question": "¿Ofrecen atención en español?",

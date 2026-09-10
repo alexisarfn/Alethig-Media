@@ -1,14 +1,14 @@
 {
   "title": "Diseño de Marca",
-  "metaDescription": "Diseño de marca en Long Island, NY. Logo, identidad visual y branding que distingue tu negocio. Bilingüe inglés y español — Alethig Media.",
+  "metaDescription": "Diseño de marca para negocios, con base en Long Island, NY. Logo, identidad visual y branding que distingue tu negocio. Bilingüe inglés y español — Alethig Media.",
   "order": 4,
   "icon": "palette",
   "heroHeading": "Tu marca es tu primera impresión",
   "heroHighlight": "primera impresión",
-  "heroSub": "Diseñamos logotipos, tarjetas, flyers, menús y todos los materiales visuales que tu negocio necesita para verse profesional y destacar en Long Island.",
+  "heroSub": "Diseñamos logotipos, tarjetas, flyers, menús y todos los materiales visuales que tu negocio necesita para verse profesional y destacar.",
   "heroCtaLabel": "Agenda tu Consulta Gratis",
   "image": "/uploads/servicio-diseno-marca.webp",
-  "imageAlt": "Diseño de marca para negocios de Long Island",
+  "imageAlt": "Diseño de marca profesional para negocios",
   "features": [
     { "icon": "branding_watermark", "title": "Identidad completa", "desc": "Logotipos y kit de marca que comunican autoridad y generan reconocimiento inmediato." },
     { "icon": "description", "title": "Material impreso", "desc": "Tarjetas, flyers, carteles y menús listos para usar en tu negocio." },

@@ -29,7 +29,7 @@ const relatedServices = (await getCollection('servicesEs'))
 const enMatch = (await getCollection('servicesEn')).find(entry => entry.id === slug);
 const altHref = enMatch ? `/en/services/${enMatch.data.urlSlug}/` : '/en/';
 ---
-<Layout title={`${s.title} Long Island NY | Alethig Media`} description={s.metaDescription} image={s.image} base={BASE} locale="es" altHref={altHref}>
+<Layout title={`${s.title} | Alethig Media — Long Island, NY`} description={s.metaDescription} image={s.image} base={BASE} locale="es" altHref={altHref}>
   <section class="mesh-bg relative pt-32 pb-section-py-sm overflow-hidden">
     <div class="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-accent/5 blur-[120px] pointer-events-none"></div>
     <div class="max-w-container-max mx-auto px-gutter">

@@ -1,7 +1,7 @@
 {
   "title": "Social Media Management",
   "urlSlug": "social-media-management",
-  "metaDescription": "Social media management in Long Island: full Instagram, Facebook, and TikTok management, with content, design, and paid advertising. English and Spanish.",
+  "metaDescription": "Social media management for businesses, based in Long Island: full Instagram, Facebook, and TikTok management, with content, design, and paid advertising. English and Spanish.",
   "order": 1,
   "icon": "thumb_up",
   "heroHeading": "We take care of your social media so your business can grow",
@@ -9,7 +9,7 @@
   "heroSub": "We fully manage your Instagram, Facebook, and TikTok — content, designs, copywriting, replies, and paid advertising. Every month you get a detailed growth report.",
   "heroCtaLabel": "Book Your Free Consultation",
   "image": "/uploads/servicio-redes.webp",
-  "imageAlt": "Social media management for Long Island businesses",
+  "imageAlt": "Social media management for businesses",
   "features": [
     { "icon": "calendar_month", "title": "Content Calendar", "desc": "15 designs per social network each month, with copywriting and posting handled by your dedicated team." },
     { "icon": "forum", "title": "Community Management", "desc": "We respond to comments and messages Monday through Friday, plus a 24/7 AI agent after hours." },

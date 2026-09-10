@@ -44,6 +44,9 @@ const portfolio = (await getCollection('portfolioEs'))
         <div class="hero-reveal">
           <span class="tag-cyber mb-6 inline-flex"><Icon name="bolt" class="text-sm" />{home.heroTag}</span>
           <h1 class="font-display text-display-hero-mobile md:text-display-hero-tablet xl:text-display-hero 2xl:text-[92px] mb-6" set:html={highlightHeading(home.heroHeading, home.heroHighlight)}></h1>
+          <!-- POSITIONING PHASE 1: línea de posicionamiento de marca, como
+               subtítulo de apoyo (no H1, no metadata) — ver AUDIT V2 §5. -->
+          <p class="font-display font-semibold text-lg md:text-xl text-gold-ink mb-4 max-w-2xl">{home.heroTagline}</p>
           <p class="text-body-lg text-ink-dim mb-8 max-w-xl">
             {home.heroParagraph}
           </p>

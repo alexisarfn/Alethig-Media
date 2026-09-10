@@ -1,15 +1,15 @@
 {
   "title": "Brand Design",
   "urlSlug": "brand-design",
-  "metaDescription": "Brand design in Long Island, NY. Logo, visual identity, and branding that sets your business apart. Bilingual English and Spanish — Alethig Media.",
+  "metaDescription": "Brand design for businesses, based in Long Island, NY. Logo, visual identity, and branding that sets your business apart. Bilingual English and Spanish — Alethig Media.",
   "order": 4,
   "icon": "palette",
   "heroHeading": "Your brand is your first impression",
   "heroHighlight": "first impression",
-  "heroSub": "We design logos, business cards, flyers, menus, and all the visual materials your business needs to look professional and stand out in Long Island.",
+  "heroSub": "We design logos, business cards, flyers, menus, and all the visual materials your business needs to look professional and stand out.",
   "heroCtaLabel": "Book Your Free Consultation",
   "image": "/uploads/servicio-diseno-marca.webp",
-  "imageAlt": "Brand design for Long Island businesses",
+  "imageAlt": "Professional brand design for businesses",
   "features": [
     { "icon": "branding_watermark", "title": "Complete Identity", "desc": "Logos and a full brand kit that communicate authority and build instant recognition." },
     { "icon": "description", "title": "Print Materials", "desc": "Business cards, flyers, posters, and menus ready to use at your business." },

@@ -1,16 +1,16 @@
 {
   "title": "Publicidad Pagada",
-  "metaDescription": "Publicidad pagada en Long Island, NY. Campañas en Meta y Google que generan clientes reales. Gestión bilingüe inglés y español — Alethig Media.",
+  "metaDescription": "Publicidad pagada para negocios, con base en Long Island, NY. Campañas en Meta y Google que generan clientes reales. Gestión bilingüe inglés y español — Alethig Media.",
   "order": 3,
   "icon": "ads_click",
   "heroHeading": "Deja de adivinar y empieza a conseguir leads reales",
   "heroHighlight": "leads reales",
-  "heroSub": "Nuestros especialistas configuran, lanzan y manejan tus campañas en Facebook, Instagram, TikTok y Google — apuntando exactamente a los clientes correctos en el área de Long Island.",
+  "heroSub": "Nuestros especialistas configuran, lanzan y manejan tus campañas en Facebook, Instagram, TikTok y Google — apuntando exactamente a los clientes correctos para tu negocio.",
   "heroCtaLabel": "Agenda tu Consulta Gratis",
   "image": "/uploads/servicio-publicidad.webp",
-  "imageAlt": "Publicidad pagada para negocios de Long Island",
+  "imageAlt": "Publicidad pagada para negocios",
   "features": [
-    { "icon": "my_location", "title": "Segmentación precisa", "desc": "Análisis de mercado y segmentación de audiencia para apuntar a los clientes correctos de Long Island." },
+    { "icon": "my_location", "title": "Segmentación precisa", "desc": "Análisis de mercado y segmentación de audiencia para apuntar a los clientes correctos para tu negocio." },
     { "icon": "design_services", "title": "Diseño del anuncio", "desc": "Creamos la pieza —imagen o video— lista para captar la atención y convertir." },
     { "icon": "monitoring", "title": "Monitoreo 30 días", "desc": "Configuración, lanzamiento y monitoreo durante 30 días, con reporte de rendimiento al final." }
   ],

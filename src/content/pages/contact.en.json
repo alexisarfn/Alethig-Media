@@ -1,6 +1,6 @@
 {
-  "title": "Contact | Marketing Agency in Long Island NY | Alethig Media",
-  "metaDescription": "Contact Alethig Media in Long Island, NY. Book a free 15-minute consultation, in English or Spanish. No commitment.",
+  "title": "Contact | Alethig Media — Based in Long Island, NY",
+  "metaDescription": "Contact Alethig Media, based in Long Island, NY. We work with businesses in Long Island and beyond. Book a free 15-minute consultation, in English or Spanish. No commitment.",
   "heroTag": "Contact",
   "heroHeading": "Let's Grow Your Business.",
   "heroHighlight": "Grow Your Business",
@@ -23,7 +23,7 @@
     { "value": "not-sure", "label": "Not sure yet" }
   ],
   "mapHeading": "Amityville, Long Island, New York",
-  "mapText": "We serve all of Long Island — Nassau County and Suffolk County",
+  "mapText": "Based in Long Island — Nassau County and Suffolk County — and able to work with businesses beyond the local area",
   "form": {
     "nameLabel": "Your Name",
     "namePlaceholder": "Your name",
@@ -45,7 +45,7 @@
   "faq": [
     {
       "question": "Do you serve businesses in Nassau and Suffolk County?",
-      "answer": "Yes. We serve local businesses throughout Long Island, including both Nassau and Suffolk County, both in person and remotely depending on the service."
+      "answer": "Yes. We're based in Long Island and serve local businesses in Nassau and Suffolk County, both in person and remotely depending on the service. We also work with businesses beyond the local area remotely, depending on the service."
     },
     {
       "question": "Do you offer support in Spanish?",

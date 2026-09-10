@@ -175,7 +175,14 @@ const businessSchema: Record<string, unknown> = {
     addressRegion: 'NY',
     addressCountry: 'US',
   },
-  areaServed: contact.location,
+  // POSITIONING PHASE 1 — antes: areaServed = contact.location (el mismo
+  // valor que address, "Amityville, Long Island, NY"), lo que implicaba
+  // que el negocio SOLO atiende esa área hiperlocal. Ahora es una lista:
+  // se conserva Long Island (señal local real, no se pierde) más "New
+  // York" (el estado, un área más amplia real y verificable) — sin
+  // inventar un país ni oficinas que no existen. address (la ubicación
+  // física real) no cambia.
+  areaServed: ['Long Island, NY', 'New York'],
 };
 if (whatsapp?.number) {
   businessSchema.telephone = `+${whatsapp.number}`;

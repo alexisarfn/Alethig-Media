@@ -1,17 +1,17 @@
 {
   "title": "Paid Advertising",
   "urlSlug": "paid-advertising",
-  "metaDescription": "Paid advertising in Long Island, NY. Meta and Google campaigns that generate real customers. Bilingual English and Spanish management — Alethig Media.",
+  "metaDescription": "Paid advertising for businesses, based in Long Island, NY. Meta and Google campaigns that generate real customers. Bilingual English and Spanish management — Alethig Media.",
   "order": 3,
   "icon": "ads_click",
   "heroHeading": "Stop guessing and start getting real leads",
   "heroHighlight": "real leads",
-  "heroSub": "Our specialists set up, launch, and manage your campaigns on Facebook, Instagram, TikTok, and Google — targeting exactly the right customers in the Long Island area.",
+  "heroSub": "Our specialists set up, launch, and manage your campaigns on Facebook, Instagram, TikTok, and Google — targeting exactly the right customers for your business.",
   "heroCtaLabel": "Book Your Free Consultation",
   "image": "/uploads/servicio-publicidad.webp",
-  "imageAlt": "Paid advertising for Long Island businesses",
+  "imageAlt": "Paid advertising for businesses",
   "features": [
-    { "icon": "my_location", "title": "Precise Targeting", "desc": "Market analysis and audience targeting to reach the right customers in Long Island." },
+    { "icon": "my_location", "title": "Precise Targeting", "desc": "Market analysis and audience targeting to reach the right customers for your business." },
     { "icon": "design_services", "title": "Ad Creative", "desc": "We create the ad — image or video — ready to grab attention and convert." },
     { "icon": "monitoring", "title": "30-Day Monitoring", "desc": "Setup, launch, and 30 days of monitoring, with a performance report at the end." }
   ],
