@@ -265,6 +265,13 @@ const portfolio = (await getCollection('portfolioEs'))
           </a>
         ))}
       </div>
+      <!-- POSITIONING PHASE 4: enlace al nuevo hub de servicios — único
+           cambio en esta sección; el resto del home queda intacto. -->
+      <div class="text-center mt-10 reveal">
+        <a href={withBase(BASE, '/servicios')} class="inline-flex items-center gap-2 text-gold-ink text-sm font-display font-semibold">
+          Ver todos los servicios <Icon name="arrow_forward" class="text-sm" />
+        </a>
+      </div>
     </div>
   </section>
 

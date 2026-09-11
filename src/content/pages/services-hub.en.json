@@ -1,0 +1,43 @@
+{
+  "title": "Services | Alethig Media — Digital Marketing, Design & More",
+  "metaDescription": "Digital marketing services, web development, branding, social media management and video production that support your business growth. Based in Long Island, working with businesses beyond the local area.",
+
+  "heroTag": "Services",
+  "heroHeading": "Services That Support Your Business Growth.",
+  "heroParagraph": "Beyond Traffic & Growth, we help businesses with websites, content, video, branding, design and other solutions that strengthen their marketing presence and operations.",
+  "heroCtaPrimaryLabel": "Book a Free Consultation",
+  "heroCtaPrimaryHref": "/contact",
+  "heroCtaSecondaryLabel": "Contact",
+  "heroCtaSecondaryHref": "/contact",
+
+  "tgCalloutTag": "Our Primary Focus",
+  "tgCalloutHeading": "Traffic & Growth Services",
+  "tgCalloutDesc": "Advertising, search visibility and lead generation — the foundation of how we help businesses grow. The services on this page support it, but Traffic & Growth is where most of our strategies start.",
+  "tgCalloutItems": ["Meta Ads", "Google Ads", "SEO", "Local SEO", "Lead Generation", "Growth Strategy"],
+  "tgCalloutCtaLabel": "Explore Traffic & Growth",
+  "tgCalloutCtaHref": "/traffic-growth",
+
+  "digitalPresenceTag": "Digital Presence",
+  "digitalPresenceIntro": "The technical foundation of your business online, including landing pages and funnels depending on what your site needs.",
+
+  "contentBrandTag": "Content & Brand",
+  "contentBrandIntro": "Everything visual and everything you publish — social media, video and the brand identity behind it all.",
+
+  "paidAdsTag": "Paid Advertising",
+  "paidAdsNote": "Paid advertising is part of our broader Traffic & Growth approach. See the specific service here, or explore the full strategy.",
+  "paidAdsNoteLinkLabel": "See full Traffic & Growth",
+
+  "automationTag": "Automation & Systems",
+  "automationHeading": "Alethig Media OS",
+  "automationBody": "Our platform for organizing content, approvals, projects and marketing workflows in one place.",
+  "automationCtaLabel": "Learn About Alethig Media OS",
+  "automationCtaHref": "/alethig-media-os",
+
+  "ctaTag": "Let's Get Started",
+  "ctaHeading": "Ready to Strengthen Your Marketing?",
+  "ctaParagraph": "Book a free 15-minute consultation and let's talk about which services make the most sense for your business.",
+  "ctaButtonLabel": "Book a Free Consultation",
+  "ctaButtonIcon": "calendar_month",
+  "ctaSecondaryLabel": "Contact",
+  "ctaSecondaryHref": "/contact"
+}

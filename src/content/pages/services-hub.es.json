@@ -1,0 +1,43 @@
+{
+  "title": "Servicios | Alethig Media — Marketing Digital, Diseño y Más",
+  "metaDescription": "Servicios de marketing digital, desarrollo web, branding, manejo de redes sociales y producción de video que apoyan el crecimiento de tu negocio. Con base en Long Island, trabajando con negocios más allá del área local.",
+
+  "heroTag": "Servicios",
+  "heroHeading": "Servicios Que Apoyan el Crecimiento de Tu Negocio.",
+  "heroParagraph": "Además de Traffic & Growth, ayudamos a negocios con sitios web, contenido, video, branding, diseño y otras soluciones que fortalecen su presencia y operación de marketing.",
+  "heroCtaPrimaryLabel": "Agenda una consulta gratis",
+  "heroCtaPrimaryHref": "/contacto",
+  "heroCtaSecondaryLabel": "Contactar",
+  "heroCtaSecondaryHref": "/contacto",
+
+  "tgCalloutTag": "Nuestro Enfoque Principal",
+  "tgCalloutHeading": "Traffic & Growth Services",
+  "tgCalloutDesc": "Publicidad, posicionamiento y generación de leads — la base de cómo ayudamos a los negocios a crecer. Los servicios de esta página lo complementan, pero Traffic & Growth es donde empieza la mayoría de nuestras estrategias.",
+  "tgCalloutItems": ["Meta Ads", "Google Ads", "SEO", "Local SEO", "Lead Generation", "Growth Strategy"],
+  "tgCalloutCtaLabel": "Ver Traffic & Growth",
+  "tgCalloutCtaHref": "/trafico-y-crecimiento",
+
+  "digitalPresenceTag": "Presencia Digital",
+  "digitalPresenceIntro": "La base técnica de tu negocio en internet, incluyendo páginas de aterrizaje y embudos según lo que tu sitio necesite.",
+
+  "contentBrandTag": "Contenido y Marca",
+  "contentBrandIntro": "Todo lo visual y lo que publicas — redes sociales, video y la identidad de marca detrás de todo.",
+
+  "paidAdsTag": "Publicidad Pagada",
+  "paidAdsNote": "La publicidad pagada es parte de nuestro enfoque más amplio de Traffic & Growth. Aquí puedes ver el servicio específico, o conocer la estrategia completa.",
+  "paidAdsNoteLinkLabel": "Ver Traffic & Growth completo",
+
+  "automationTag": "Automatización y Sistemas",
+  "automationHeading": "Alethig Media OS",
+  "automationBody": "Nuestra plataforma para organizar contenido, aprobaciones, proyectos y flujos de trabajo de marketing en un solo lugar.",
+  "automationCtaLabel": "Conocer Alethig Media OS",
+  "automationCtaHref": "/alethig-media-os",
+
+  "ctaTag": "Empecemos",
+  "ctaHeading": "¿Listo Para Fortalecer Tu Marketing?",
+  "ctaParagraph": "Agenda una consulta gratuita de 15 minutos y hablemos sobre qué servicios tienen más sentido para tu negocio.",
+  "ctaButtonLabel": "Agenda una consulta gratis",
+  "ctaButtonIcon": "calendar_month",
+  "ctaSecondaryLabel": "Contactar",
+  "ctaSecondaryHref": "/contacto"
+}

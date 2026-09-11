@@ -689,6 +689,90 @@ collections:
           - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
           - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
 
+      # POSITIONING PHASE 4 — hub de Servicios de Apoyo. Solo copy propio
+      # del hub (hero, callout de Traffic & Growth, categorías, CTA); las
+      # tarjetas de servicio se siguen editando en "pages > home" (Inicio),
+      # no se duplican aquí.
+      - name: services-hub
+        label: "Servicios (página hub)"
+        file: "src/content/pages/services-hub.es.json"
+        format: json
+        fields:
+          - { name: title, label: "Título de pestaña (SEO)", widget: string }
+          - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
+          - { name: heroTag, label: "Hero · Etiqueta", widget: string }
+          - { name: heroHeading, label: "Hero · Titular", widget: string }
+          - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: heroCtaPrimaryLabel, label: "Hero · Botón principal", widget: string }
+          - { name: heroCtaPrimaryHref, label: "Hero · Enlace botón principal", widget: string }
+          - { name: heroCtaSecondaryLabel, label: "Hero · Botón secundario", widget: string }
+          - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario", widget: string }
+          - { name: tgCalloutTag, label: "Callout Traffic & Growth · Etiqueta", widget: string }
+          - { name: tgCalloutHeading, label: "Callout Traffic & Growth · Titular", widget: string }
+          - { name: tgCalloutDesc, label: "Callout Traffic & Growth · Párrafo", widget: text }
+          - { name: tgCalloutItems, label: "Callout Traffic & Growth · Ítems", widget: list, field: { name: item, label: "Ítem", widget: string } }
+          - { name: tgCalloutCtaLabel, label: "Callout Traffic & Growth · Texto botón", widget: string }
+          - { name: tgCalloutCtaHref, label: "Callout Traffic & Growth · Enlace (ruta real existente)", widget: string }
+          - { name: digitalPresenceTag, label: "Presencia Digital · Etiqueta", widget: string }
+          - { name: digitalPresenceIntro, label: "Presencia Digital · Párrafo", widget: text }
+          - { name: contentBrandTag, label: "Contenido y Marca · Etiqueta", widget: string }
+          - { name: contentBrandIntro, label: "Contenido y Marca · Párrafo", widget: text }
+          - { name: paidAdsTag, label: "Publicidad Pagada · Etiqueta", widget: string }
+          - { name: paidAdsNote, label: "Publicidad Pagada · Nota (superposición con Traffic & Growth)", widget: text }
+          - { name: paidAdsNoteLinkLabel, label: "Publicidad Pagada · Texto del enlace de la nota", widget: string }
+          - { name: automationTag, label: "Automatización y Sistemas · Etiqueta", widget: string }
+          - { name: automationHeading, label: "Automatización y Sistemas · Titular", widget: string }
+          - { name: automationBody, label: "Automatización y Sistemas · Párrafo (solo claims aprobados)", widget: text }
+          - { name: automationCtaLabel, label: "Automatización y Sistemas · Texto botón", widget: string }
+          - { name: automationCtaHref, label: "Automatización y Sistemas · Enlace", widget: string }
+          - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
+          - { name: ctaHeading, label: "CTA final · Titular", widget: string }
+          - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }
+          - { name: ctaButtonLabel, label: "CTA final · Texto botón", widget: string }
+          - { name: ctaButtonIcon, label: "CTA final · Icono botón", widget: string }
+          - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
+          - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
+
+      - name: services-hub-en
+        label: "Servicios (página hub, Inglés)"
+        file: "src/content/pages/services-hub.en.json"
+        format: json
+        fields:
+          - { name: title, label: "Título de pestaña (SEO)", widget: string }
+          - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
+          - { name: heroTag, label: "Hero · Etiqueta", widget: string }
+          - { name: heroHeading, label: "Hero · Titular", widget: string }
+          - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: heroCtaPrimaryLabel, label: "Hero · Botón principal", widget: string }
+          - { name: heroCtaPrimaryHref, label: "Hero · Enlace botón principal", widget: string }
+          - { name: heroCtaSecondaryLabel, label: "Hero · Botón secundario", widget: string }
+          - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario", widget: string }
+          - { name: tgCalloutTag, label: "Callout Traffic & Growth · Etiqueta", widget: string }
+          - { name: tgCalloutHeading, label: "Callout Traffic & Growth · Titular", widget: string }
+          - { name: tgCalloutDesc, label: "Callout Traffic & Growth · Párrafo", widget: text }
+          - { name: tgCalloutItems, label: "Callout Traffic & Growth · Ítems", widget: list, field: { name: item, label: "Ítem", widget: string } }
+          - { name: tgCalloutCtaLabel, label: "Callout Traffic & Growth · Texto botón", widget: string }
+          - { name: tgCalloutCtaHref, label: "Callout Traffic & Growth · Enlace (ruta real existente)", widget: string }
+          - { name: digitalPresenceTag, label: "Presencia Digital · Etiqueta", widget: string }
+          - { name: digitalPresenceIntro, label: "Presencia Digital · Párrafo", widget: text }
+          - { name: contentBrandTag, label: "Contenido y Marca · Etiqueta", widget: string }
+          - { name: contentBrandIntro, label: "Contenido y Marca · Párrafo", widget: text }
+          - { name: paidAdsTag, label: "Publicidad Pagada · Etiqueta", widget: string }
+          - { name: paidAdsNote, label: "Publicidad Pagada · Nota (superposición con Traffic & Growth)", widget: text }
+          - { name: paidAdsNoteLinkLabel, label: "Publicidad Pagada · Texto del enlace de la nota", widget: string }
+          - { name: automationTag, label: "Automatización y Sistemas · Etiqueta", widget: string }
+          - { name: automationHeading, label: "Automatización y Sistemas · Titular", widget: string }
+          - { name: automationBody, label: "Automatización y Sistemas · Párrafo (solo claims aprobados)", widget: text }
+          - { name: automationCtaLabel, label: "Automatización y Sistemas · Texto botón", widget: string }
+          - { name: automationCtaHref, label: "Automatización y Sistemas · Enlace", widget: string }
+          - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
+          - { name: ctaHeading, label: "CTA final · Titular", widget: string }
+          - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }
+          - { name: ctaButtonLabel, label: "CTA final · Texto botón", widget: string }
+          - { name: ctaButtonIcon, label: "CTA final · Icono botón", widget: string }
+          - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
+          - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
+
   # ─────────── SERVICIOS UNIFORMES (features + planes) ───────────
   - name: services
     label: "Servicios (Español)"
