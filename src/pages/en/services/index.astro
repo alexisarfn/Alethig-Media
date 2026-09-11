@@ -210,6 +210,10 @@ const paidAds = home.services.find(s => s.href.includes('paid-advertising'));
           </a>
           <a href={withBase(BASE, hub.ctaSecondaryHref)} class="btn-ghost magnetic press">{hub.ctaSecondaryLabel}</a>
         </div>
+        <!-- POSITIONING PHASE 6: minimal link to the Pricing Hub. -->
+        <p class="mt-6 text-text-dim text-sm">
+          <a href={withBase(BASE, '/pricing')} class="text-gold-ink hover:underline">How does pricing work? See Pricing →</a>
+        </p>
       </div>
     </div>
   </section>

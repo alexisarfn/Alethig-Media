@@ -30,9 +30,12 @@ const portfolio = (await getCollection('portfolioEn'))
 ---
 <Layout title={home.title} description={home.metaDescription} image={home.heroImage} base={BASE} locale="en" altHref="/es/" navTheme="light">
 
-  <!-- HERO (VISUAL REDESIGN V2 + POSITIONING PHASE 1: unchanged in Phase
-       2 — evaluated, already introduces the broader company thanks to
-       Phase 1's heroHeading + heroTagline). -->
+  <!-- HERO (VISUAL REDESIGN V2 + POSITIONING PHASE 1, no structural
+       changes since). POSITIONING PHASE 6: swapped the CONTENT of
+       heroHeading and heroTagline — the H1 is now the "We Drive Traffic /
+       We Build Brands / We Give You the System" statement (previously
+       lived as the subtitle), and the old Long Island-led H1 dropped down
+       to a supporting subtitle. Zero layout/markup changes. -->
   <section class="on-light mesh-bg-light-hero relative min-h-screen flex items-center pt-24 pb-section-py-sm overflow-hidden">
     <div class="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px] pointer-events-none"></div>
     <div class="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-ink/5 blur-[100px] pointer-events-none"></div>
@@ -46,8 +49,10 @@ const portfolio = (await getCollection('portfolioEn'))
         <div class="hero-reveal">
           <span class="tag-cyber mb-6 inline-flex"><Icon name="bolt" class="text-sm" />{home.heroTag}</span>
           <h1 class="font-display text-display-hero-mobile md:text-display-hero-tablet xl:text-display-hero 2xl:text-[92px] mb-6" set:html={highlightHeading(home.heroHeading, home.heroHighlight)}></h1>
-          <!-- POSITIONING PHASE 1: brand positioning line, as a supporting
-               subheadline (not the H1, not metadata) — see AUDIT V2 §5. -->
+          <!-- POSITIONING PHASE 6: now the Long Island / broader-reach
+               credibility line, as a supporting subheadline (not the H1,
+               not metadata) — Long Island no longer dominates the hero's
+               main message but is retained as credibility. -->
           <p class="font-display font-semibold text-lg md:text-xl text-gold-ink mb-4 max-w-2xl">{home.heroTagline}</p>
           <p class="text-body-lg text-ink-dim mb-8 max-w-xl">
             {home.heroParagraph}

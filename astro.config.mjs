@@ -29,6 +29,8 @@ const LOCALE_PAIRS = [
   // POSITIONING PHASE 5 — página bespoke dedicada de Sublimación y
   // Productos con Marca (tercera línea de negocio primaria).
   ['/es/sublimacion/', '/en/sublimation/'],
+  // POSITIONING PHASE 6 — Pricing Hub.
+  ['/es/precios/', '/en/pricing/'],
   ['/es/servicios/desarrollo-web/', '/en/services/web-development/'],
   ['/es/servicios/diseno-de-marca/', '/en/services/brand-design/'],
   ['/es/servicios/manejo-de-redes-sociales/', '/en/services/social-media-management/'],

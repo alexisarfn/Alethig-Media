@@ -893,6 +893,122 @@ collections:
           - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
           - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
 
+      # POSITIONING PHASE 6 — Pricing Hub. Explica cómo funcionan los
+      # precios por línea de negocio, sin inventar cifras. Los servicios
+      # de apoyo con precios reales se siguen editando en "Servicios
+      # (Español/Inglés)" — este hub solo enlaza a esas páginas.
+      - name: pricing
+        label: "Precios (página hub)"
+        file: "src/content/pages/pricing.es.json"
+        format: json
+        fields:
+          - { name: title, label: "Título de pestaña (SEO)", widget: string }
+          - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
+          - { name: heroTag, label: "Hero · Etiqueta", widget: string }
+          - { name: heroHeading, label: "Hero · Titular", widget: string }
+          - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: tgNum, label: "Traffic & Growth · Número", widget: string }
+          - { name: tgIcon, label: "Traffic & Growth · Icono", widget: string }
+          - { name: tgTag, label: "Traffic & Growth · Etiqueta", widget: string }
+          - { name: tgHeading, label: "Traffic & Growth · Titular", widget: string }
+          - { name: tgBody, label: "Traffic & Growth · Párrafo", widget: text }
+          - { name: tgFactors, label: "Traffic & Growth · De qué depende el precio", widget: list, field: { name: item, label: "Factor", widget: string } }
+          - { name: tgCtaLabel, label: "Traffic & Growth · Botón principal (Cal.com)", widget: string }
+          - { name: tgCtaHref, label: "Traffic & Growth · Enlace botón principal", widget: string }
+          - { name: tgSecondaryLabel, label: "Traffic & Growth · Botón secundario", widget: string }
+          - { name: tgSecondaryHref, label: "Traffic & Growth · Enlace botón secundario", widget: string }
+          - { name: supportNum, label: "Servicios de Apoyo · Número", widget: string }
+          - { name: supportIcon, label: "Servicios de Apoyo · Icono", widget: string }
+          - { name: supportTag, label: "Servicios de Apoyo · Etiqueta", widget: string }
+          - { name: supportHeading, label: "Servicios de Apoyo · Titular", widget: string }
+          - { name: supportBody, label: "Servicios de Apoyo · Párrafo", widget: text }
+          - { name: supportCtaLabel, label: "Servicios de Apoyo · Texto botón", widget: string }
+          - { name: supportCtaHref, label: "Servicios de Apoyo · Enlace (hub de servicios)", widget: string }
+          - { name: osNum, label: "Alethig Media OS · Número", widget: string }
+          - { name: osIcon, label: "Alethig Media OS · Icono", widget: string }
+          - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
+          - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
+          - { name: osBody, label: "Alethig Media OS · Párrafo (solo claims aprobados)", widget: text }
+          - { name: osCtaLabel, label: "Alethig Media OS · Botón principal", widget: string }
+          - { name: osCtaHref, label: "Alethig Media OS · Enlace (página informativa)", widget: string }
+          - { name: osSecondaryLabel, label: "Alethig Media OS · Botón secundario", widget: string }
+          - { name: osSecondaryHref, label: "Alethig Media OS · Enlace botón secundario", widget: string }
+          - { name: subNum, label: "Sublimación · Número", widget: string }
+          - { name: subIcon, label: "Sublimación · Icono", widget: string }
+          - { name: subTag, label: "Sublimación · Etiqueta", widget: string }
+          - { name: subHeading, label: "Sublimación · Titular", widget: string }
+          - { name: subBody, label: "Sublimación · Párrafo", widget: text }
+          - { name: subFactors, label: "Sublimación · De qué depende el precio", widget: list, field: { name: item, label: "Factor", widget: string } }
+          - { name: subCtaLabel, label: "Sublimación · Botón principal (Solicitar Cotización)", widget: string }
+          - { name: subCtaHref, label: "Sublimación · Enlace botón principal", widget: string }
+          - { name: subSecondaryLabel, label: "Sublimación · Botón secundario", widget: string }
+          - { name: subSecondaryHref, label: "Sublimación · Enlace botón secundario", widget: string }
+          - { name: regionIcon, label: "Nota de región · Icono", widget: string }
+          - { name: regionNote, label: "Nota de región · Texto", widget: text }
+          - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
+          - { name: ctaHeading, label: "CTA final · Titular", widget: string }
+          - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }
+          - { name: ctaButtonLabel, label: "CTA final · Texto botón", widget: string }
+          - { name: ctaButtonIcon, label: "CTA final · Icono botón", widget: string }
+          - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
+          - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
+
+      - name: pricing-en
+        label: "Precios (página hub, Inglés)"
+        file: "src/content/pages/pricing.en.json"
+        format: json
+        fields:
+          - { name: title, label: "Título de pestaña (SEO)", widget: string }
+          - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
+          - { name: heroTag, label: "Hero · Etiqueta", widget: string }
+          - { name: heroHeading, label: "Hero · Titular", widget: string }
+          - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: tgNum, label: "Traffic & Growth · Número", widget: string }
+          - { name: tgIcon, label: "Traffic & Growth · Icono", widget: string }
+          - { name: tgTag, label: "Traffic & Growth · Etiqueta", widget: string }
+          - { name: tgHeading, label: "Traffic & Growth · Titular", widget: string }
+          - { name: tgBody, label: "Traffic & Growth · Párrafo", widget: text }
+          - { name: tgFactors, label: "Traffic & Growth · De qué depende el precio", widget: list, field: { name: item, label: "Factor", widget: string } }
+          - { name: tgCtaLabel, label: "Traffic & Growth · Botón principal (Cal.com)", widget: string }
+          - { name: tgCtaHref, label: "Traffic & Growth · Enlace botón principal", widget: string }
+          - { name: tgSecondaryLabel, label: "Traffic & Growth · Botón secundario", widget: string }
+          - { name: tgSecondaryHref, label: "Traffic & Growth · Enlace botón secundario", widget: string }
+          - { name: supportNum, label: "Servicios de Apoyo · Número", widget: string }
+          - { name: supportIcon, label: "Servicios de Apoyo · Icono", widget: string }
+          - { name: supportTag, label: "Servicios de Apoyo · Etiqueta", widget: string }
+          - { name: supportHeading, label: "Servicios de Apoyo · Titular", widget: string }
+          - { name: supportBody, label: "Servicios de Apoyo · Párrafo", widget: text }
+          - { name: supportCtaLabel, label: "Servicios de Apoyo · Texto botón", widget: string }
+          - { name: supportCtaHref, label: "Servicios de Apoyo · Enlace (hub de servicios)", widget: string }
+          - { name: osNum, label: "Alethig Media OS · Número", widget: string }
+          - { name: osIcon, label: "Alethig Media OS · Icono", widget: string }
+          - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
+          - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
+          - { name: osBody, label: "Alethig Media OS · Párrafo (solo claims aprobados)", widget: text }
+          - { name: osCtaLabel, label: "Alethig Media OS · Botón principal", widget: string }
+          - { name: osCtaHref, label: "Alethig Media OS · Enlace (página informativa)", widget: string }
+          - { name: osSecondaryLabel, label: "Alethig Media OS · Botón secundario", widget: string }
+          - { name: osSecondaryHref, label: "Alethig Media OS · Enlace botón secundario", widget: string }
+          - { name: subNum, label: "Sublimación · Número", widget: string }
+          - { name: subIcon, label: "Sublimación · Icono", widget: string }
+          - { name: subTag, label: "Sublimación · Etiqueta", widget: string }
+          - { name: subHeading, label: "Sublimación · Titular", widget: string }
+          - { name: subBody, label: "Sublimación · Párrafo", widget: text }
+          - { name: subFactors, label: "Sublimación · De qué depende el precio", widget: list, field: { name: item, label: "Factor", widget: string } }
+          - { name: subCtaLabel, label: "Sublimación · Botón principal (Request a Quote)", widget: string }
+          - { name: subCtaHref, label: "Sublimación · Enlace botón principal", widget: string }
+          - { name: subSecondaryLabel, label: "Sublimación · Botón secundario", widget: string }
+          - { name: subSecondaryHref, label: "Sublimación · Enlace botón secundario", widget: string }
+          - { name: regionIcon, label: "Nota de región · Icono", widget: string }
+          - { name: regionNote, label: "Nota de región · Texto", widget: text }
+          - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
+          - { name: ctaHeading, label: "CTA final · Titular", widget: string }
+          - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }
+          - { name: ctaButtonLabel, label: "CTA final · Texto botón", widget: string }
+          - { name: ctaButtonIcon, label: "CTA final · Icono botón", widget: string }
+          - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
+          - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
+
   # ─────────── SERVICIOS UNIFORMES (features + planes) ───────────
   - name: services
     label: "Servicios (Español)"
