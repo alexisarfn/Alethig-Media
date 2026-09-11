@@ -79,13 +79,16 @@ const contactHrefs: Record<string, string> = {
 const whatsapp = { ...site.whatsapp, message: siteCopy.whatsappMessage };
 const waHref = whatsapp?.number ? `https://wa.me/${whatsapp.number}?text=${encodeURIComponent(whatsapp.message ?? '')}` : null;
 // Textos de UI (chrome del layout, no contenido de página) por idioma.
-// Los nombres de estas claves (osComingSoon...) quedaron de cuando el
-// producto todavía no existía — la app ya está lista (osHref arriba), así
-// que sus VALORES ahora son la etiqueta "Abrir"/"Open", no "Pronto"/"Soon".
-// No se renombraron las claves para mantener el diff mínimo.
+// Los nombres de estas claves (osComingSoon...) vienen de cuando el
+// producto todavía no existía y luego pasaron por "Abrir/Open" mientras
+// osHref apuntaba directo a la app. POSITIONING PHASE 7: osHref ahora
+// apunta a la página informativa (ver comentario junto a su definición),
+// así que el texto "Abrir/Open" dejó de ser honesto (el clic ya no abre
+// la app) — se cambia a "Ver Más/Learn More". No se renombraron las
+// claves para mantener el diff mínimo.
 const uiCopy = locale === 'en'
-  ? { osComingSoon: 'Open', osComingSoonLong: 'Open app', osAriaLabel: 'Alethig Media OS — open app', contactPath: '/contact', menuAriaLabel: 'Menu', langSwitchAriaLabel: 'Language' }
-  : { osComingSoon: 'Abrir', osComingSoonLong: 'Abrir aplicación', osAriaLabel: 'Alethig Media OS — abrir aplicación', contactPath: '/contacto', menuAriaLabel: 'Menú', langSwitchAriaLabel: 'Idioma' };
+  ? { osComingSoon: 'Learn More', osComingSoonLong: 'Learn about the platform', osAriaLabel: 'Alethig Media OS — learn about the platform', contactPath: '/contact', menuAriaLabel: 'Menu', langSwitchAriaLabel: 'Language' }
+  : { osComingSoon: 'Ver Más', osComingSoonLong: 'Conocer la plataforma', osAriaLabel: 'Alethig Media OS — conocer la plataforma', contactPath: '/contacto', menuAriaLabel: 'Menú', langSwitchAriaLabel: 'Idioma' };
 // Chatbot V2 — acciones reales de contacto (WhatsApp ya se resuelve más
 // abajo como waHref; teléfono y email salen de la misma fuente que ya usa
 // el resto del sitio, site.json, sin datos nuevos).
@@ -95,11 +98,16 @@ const chatEmailHref = `mailto:${site.contact.email}`;
 // href de respaldo que ya usa el CTA de "Contacto" del header (uiCopy.contactPath
 // con la base de idioma aplicada). Si Cal.com no carga, el clic navega aquí.
 const chatBookingHref = withBase(base, uiCopy.contactPath);
-// Entrada "Alethig Media OS": el producto ya está listo, así que este único
-// lugar apunta directo a la app real en vez de a la página interna
-// "próximamente" (que sigue existiendo en /alethig-media-os por si se
-// necesita enlazar a ella aparte, pero ya no es el destino de este botón).
-const osHref = 'https://app.alethigmedia.com';
+// Entrada "Alethig Media OS" del chrome del sitio (badge de header +
+// enlace de footer): POSITIONING PHASE 7 — antes apuntaba directo a la
+// app real; ahora apunta a la página informativa, para que el chrome
+// persistente (visible en todas las páginas) sea de descubrimiento, no
+// de conversión directa. La página informativa conserva su propio botón
+// que sí abre la app real — el enlace directo a la app no desaparece,
+// solo deja de vivir en el chrome global. Un único uso de esta constante
+// en 3 lugares (badge desktop, fila mobile, footer) hace que el cambio
+// sea consistente en todo el sitio con una sola edición.
+const osHref = withBase(base, '/alethig-media-os');
 // Selector ES/EN: el link del idioma activo apunta a la página actual;
 // el del otro idioma usa altHref (o el home de ese idioma si no se pasó).
 const currentPath = Astro.url.pathname;
@@ -304,7 +312,12 @@ businessSchema.openingHoursSpecification = {
   <!-- NAV -->
   <header id="site-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" data-nav-theme={navTheme}>
     <div class="max-w-container-max mx-auto px-gutter">
-      <div class="flex items-center justify-between h-20 transition-all duration-300" id="nav-inner">
+      <!-- POSITIONING PHASE 7: gap-3 agregado — con el contenido ahora
+           ajustado al ancho disponible en 1024px, justify-between dejó de
+           tener espacio sobrante para repartir y el logo terminaba tocando
+           "Inicio" sin separación. gap-3 garantiza un mínimo aunque no
+           sobre espacio; el nav de abajo se ajustó para compensar. -->
+      <div class="flex items-center justify-between gap-3 h-20 transition-all duration-300" id="nav-inner">
         <!-- Logo -->
         <a href={withBase(base, '/')} class="flex items-center group" aria-label={brand}>
           {logo.image
@@ -314,9 +327,14 @@ businessSchema.openingHoursSpecification = {
         </a>
 
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-8">
+        <!-- POSITIONING PHASE 7: gap-8→gap-4 y texto ligeramente más chico
+             (text-[11px], antes text-label-sm/13px) — con 7 links en vez de
+             3, gap-8 + 13px desbordaba a 768-1024px ("Traffic & Growth" se
+             partía en 3 líneas y "Contacto" quedaba cortado). Medido y
+             verificado sin overflow en 768/1024/1280/1440. -->
+        <nav class="hidden md:flex items-center gap-2.5 lg:gap-4">
           {nav.map(item => (
-            <a href={withBase(base, item.href)} class={`text-label-sm transition-colors duration-200 uppercase tracking-widest ${navColors.link}`}>{item.label}</a>
+            <a href={withBase(base, item.href)} class={`text-[11px] whitespace-nowrap transition-colors duration-200 uppercase tracking-wide font-display font-semibold ${navColors.link}`}>{item.label}</a>
           ))}
         </nav>
 
@@ -327,17 +345,32 @@ businessSchema.openingHoursSpecification = {
             <a href={esHref} data-set-lang="es" aria-current={locale === 'es' ? 'page' : undefined} class={`px-2.5 py-1 rounded-full font-display font-semibold uppercase tracking-wider transition-colors duration-200 ${locale === 'es' ? 'bg-accent/15 text-accent' : navColors.selectorInactive}`}>ES</a>
             <a href={enHref} data-set-lang="en" aria-current={locale === 'en' ? 'page' : undefined} class={`px-2.5 py-1 rounded-full font-display font-semibold uppercase tracking-wider transition-colors duration-200 ${locale === 'en' ? 'bg-accent/15 text-accent' : navColors.selectorInactive}`}>EN</a>
           </div>
+          <!-- POSITIONING PHASE 7: whitespace-nowrap agregado — a 1024px
+               (el propio breakpoint lg) el pill no tenía ancho de sobra y
+               el texto se partía en 3 líneas dentro del badge (feo, aunque
+               no causaba overflow de página). El sufijo "· Ver Más/· Learn
+               More" se difiere a xl (≥1280px, mismo punto que el botón de
+               CTA) para liberar espacio justo en el rango más ajustado. -->
           <a
             href={osHref}
-            class={`hidden lg:inline-flex items-center gap-1.5 text-[11px] rounded-full px-3 py-1.5 border transition-colors duration-200 ${navColors.osBadge}`}
+            class={`hidden lg:inline-flex items-center gap-1.5 text-[11px] whitespace-nowrap rounded-full px-3 py-1.5 border transition-colors duration-200 ${navColors.osBadge}`}
             aria-label={uiCopy.osAriaLabel}
           >
             <Icon name="bolt" class="text-sm" />
             Alethig Media OS
-            <span class="uppercase tracking-wider opacity-70">· {uiCopy.osComingSoon}</span>
+            <span class="hidden xl:inline uppercase tracking-wider opacity-70">· {uiCopy.osComingSoon}</span>
           </a>
-          <div class="hidden md:block">
-            <a href={withBase(base, uiCopy.contactPath)} class="btn-cyber press">
+          <!-- POSITIONING PHASE 7: md:block→xl:block. Medido con Playwright:
+               con 7 links + selector ES/EN + badge de OS (lg:inline-flex),
+               en 1024px (el propio breakpoint lg) no queda ancho para
+               este botón también — se renderizaba fuera del viewport,
+               invisible. Se difiere a xl (≥1280px), el primer punto donde
+               los 4 (nav + selector + badge OS + botón) miden y caben con
+               margen real (verificado). "Contacto" sigue disponible como
+               link normal del nav en todo ancho ≥768px, así que no se
+               pierde la ruta de conversión entre 768-1279px. -->
+          <div class="hidden xl:block flex-shrink-0">
+            <a href={withBase(base, uiCopy.contactPath)} class="btn-cyber press whitespace-nowrap">
               <span class="icon-wrap">{ctaLabel} <Icon name="arrow_forward" class="text-base" /></span>
             </a>
           </div>
@@ -349,7 +382,16 @@ businessSchema.openingHoursSpecification = {
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden glass mx-4 mb-4 rounded-2xl overflow-hidden">
+    <!-- POSITIONING PHASE 7: overflow-hidden → overflow-x-hidden +
+         overflow-y-auto + max-h-[75vh]. El menú creció de 4 a 7 links +
+         selector + badge de OS + CTA (11 links en total); este panel vive
+         dentro de <header> (position:fixed), así que si su contenido
+         alguna vez supera la altura visible, overflow-hidden lo recortaría
+         sin forma de llegar al resto — con overflow-y-auto se puede hacer
+         scroll dentro del propio menú en vez de perder contenido. Las
+         esquinas redondeadas se conservan (overflow-x-hidden sigue
+         recortando ese eje). -->
+    <div id="mobile-menu" class="hidden md:hidden glass mx-4 mb-4 rounded-2xl overflow-x-hidden overflow-y-auto max-h-[75vh]">
       <nav class="flex flex-col p-4 gap-1">
         {nav.map(item => (
           <a href={withBase(base, item.href)} class={`px-4 py-3 rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest ${navColors.mobileLink}`}>{item.label}</a>
@@ -447,11 +489,14 @@ businessSchema.openingHoursSpecification = {
       <div class="cyber-divider mb-8"></div>
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="text-text-dim text-sm">{copyright}</p>
+        <!-- POSITIONING PHASE 7: se quitó el enlace suelto "Alethig Media
+             OS" que vivía aquí — footerPages ya lo incluye ahora (columna
+             "Páginas" de arriba), con el mismo destino; mantener ambos
+             sería un duplicado literal en el mismo footer. -->
         <div class="flex gap-6">
           {footerBottomLinks.map(item => (
             <a href={withBase(base, item.href)} class="text-text-dim text-sm hover:text-text-secondary transition-colors">{item.label}</a>
           ))}
-          <a href={osHref} class="text-text-dim text-sm hover:text-text-secondary transition-colors">Alethig Media OS</a>
         </div>
       </div>
     </div>

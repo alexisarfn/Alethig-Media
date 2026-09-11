@@ -2,8 +2,11 @@
   "ctaLabel": "Consulta Gratis",
   "nav": [
     { "label": "Inicio", "href": "/" },
+    { "label": "Traffic & Growth", "href": "/trafico-y-crecimiento" },
+    { "label": "Servicios", "href": "/servicios" },
+    { "label": "Sublimación", "href": "/sublimacion" },
+    { "label": "Precios", "href": "/precios" },
     { "label": "Nosotros", "href": "/nosotros" },
-    { "label": "Servicios", "href": "/#servicios" },
     { "label": "Contacto", "href": "/contacto" }
   ],
   "contactHours": "Lun a Vie · 9:00 AM – 6:00 PM EST",
@@ -11,8 +14,12 @@
   "footerTagline": "Marketing, tecnología y soluciones de marca — con base en Long Island. En inglés y español.",
   "footerPages": [
     { "label": "Inicio", "href": "/" },
+    { "label": "Traffic & Growth", "href": "/trafico-y-crecimiento" },
+    { "label": "Servicios", "href": "/servicios" },
+    { "label": "Alethig Media OS", "href": "/alethig-media-os" },
+    { "label": "Sublimación", "href": "/sublimacion" },
+    { "label": "Precios", "href": "/precios" },
     { "label": "Nosotros", "href": "/nosotros" },
-    { "label": "Servicios", "href": "/#servicios" },
     { "label": "Contacto", "href": "/contacto" }
   ],
   "footerLinks": [

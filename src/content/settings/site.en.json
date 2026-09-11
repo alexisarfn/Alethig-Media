@@ -2,8 +2,11 @@
   "ctaLabel": "Free Consultation",
   "nav": [
     { "label": "Home", "href": "/" },
+    { "label": "Traffic & Growth", "href": "/traffic-growth" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Sublimation", "href": "/sublimation" },
+    { "label": "Pricing", "href": "/pricing" },
     { "label": "About", "href": "/about" },
-    { "label": "Services", "href": "/#services" },
     { "label": "Contact", "href": "/contact" }
   ],
   "contactHours": "Mon–Fri · 9:00 AM – 6:00 PM EST",
@@ -11,8 +14,12 @@
   "footerTagline": "Marketing, technology and branded solutions — based in Long Island. In English and Spanish.",
   "footerPages": [
     { "label": "Home", "href": "/" },
+    { "label": "Traffic & Growth", "href": "/traffic-growth" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Alethig Media OS", "href": "/alethig-media-os" },
+    { "label": "Sublimation", "href": "/sublimation" },
+    { "label": "Pricing", "href": "/pricing" },
     { "label": "About", "href": "/about" },
-    { "label": "Services", "href": "/#services" },
     { "label": "Contact", "href": "/contact" }
   ],
   "footerLinks": [
