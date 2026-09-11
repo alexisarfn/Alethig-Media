@@ -21,6 +21,8 @@ const LOCALE_PAIRS = [
   ['/es/contacto/', '/en/contact/'],
   ['/es/nosotros/', '/en/about/'],
   ['/es/alethig-media-os/', '/en/alethig-media-os/'],
+  // POSITIONING PHASE 3 — página bespoke dedicada de Traffic & Growth.
+  ['/es/trafico-y-crecimiento/', '/en/traffic-growth/'],
   ['/es/servicios/desarrollo-web/', '/en/services/web-development/'],
   ['/es/servicios/diseno-de-marca/', '/en/services/brand-design/'],
   ['/es/servicios/manejo-de-redes-sociales/', '/en/services/social-media-management/'],

@@ -1,0 +1,100 @@
+{
+  "title": "Tráfico, Leads y Crecimiento | Traffic & Growth Services — Alethig Media",
+  "metaDescription": "Meta Ads, Google Ads, SEO, SEO Local y generación de leads para negocios que quieren más tráfico, más clientes y crecimiento constante. Con base en Long Island, trabajando con negocios más allá del área local.",
+
+  "heroTag": "Traffic & Growth Services",
+  "heroHeading": "Tráfico, Leads y Crecimiento Para Tu Negocio.",
+  "heroHighlight": "Crecimiento",
+  "heroParagraph": "Combinamos publicidad digital, Google, SEO y generación de leads para ayudarte a crear un sistema de crecimiento más consistente.",
+  "heroCtaPrimaryLabel": "Agenda una consulta gratis",
+  "heroCtaPrimaryHref": "/contacto",
+  "heroCtaSecondaryLabel": "Contactar",
+  "heroCtaSecondaryHref": "/contacto",
+
+  "modulesTag": "Lo Que Hacemos",
+  "modulesHeading": "Seis Áreas. Un Solo Sistema de Crecimiento.",
+  "modulesIntro": "Cada módulo funciona por separado o como parte de una estrategia combinada, según lo que tu negocio necesite.",
+  "modules": [
+    {
+      "num": "01",
+      "icon": "ads_click",
+      "title": "Meta Ads",
+      "desc": "Campañas en Facebook e Instagram para llegar a audiencias específicas por ubicación, intereses y comportamiento.",
+      "benefit": "Ideal para generar reconocimiento de marca y atraer clientes potenciales de forma constante."
+    },
+    {
+      "num": "02",
+      "icon": "language",
+      "title": "Google Ads",
+      "desc": "Anuncios de búsqueda y display que ponen tu negocio frente a personas que ya están buscando lo que ofreces.",
+      "benefit": "Captura demanda de alta intención en el momento exacto en que alguien busca tu servicio."
+    },
+    {
+      "num": "03",
+      "icon": "monitoring",
+      "title": "SEO",
+      "desc": "Optimización de tu sitio web para mejorar tu visibilidad orgánica en búsquedas relevantes.",
+      "benefit": "Construye presencia a largo plazo sin depender solo de publicidad pagada."
+    },
+    {
+      "num": "04",
+      "icon": "my_location",
+      "title": "Local SEO",
+      "desc": "Fortalecemos tu visibilidad en búsquedas y mapas locales, para negocios que dependen de clientes en su área.",
+      "benefit": "Ayuda a que clientes cercanos te encuentren primero cuando buscan tus servicios."
+    },
+    {
+      "num": "05",
+      "icon": "forum",
+      "title": "Lead Generation",
+      "desc": "Creamos campañas y rutas de conversión diseñadas para generar consultas reales.",
+      "benefit": "Convierte visitantes y clics en oportunidades de negocio concretas."
+    },
+    {
+      "num": "06",
+      "icon": "bar_chart",
+      "title": "Growth Strategy",
+      "desc": "Coordinamos canales, ofertas, tráfico y metas de conversión en un solo plan.",
+      "benefit": "Une todos los esfuerzos de marketing en una estrategia clara y medible."
+    }
+  ],
+
+  "processTag": "Cómo Trabajamos",
+  "processHeading": "Un Proceso Claro, de Principio a Fin.",
+  "processSteps": [
+    { "num": "01", "title": "Descubrimiento", "desc": "Entendemos tu negocio, tu audiencia y tus metas." },
+    { "num": "02", "title": "Planeación", "desc": "Elegimos los canales, ofertas y estructura de campaña adecuados." },
+    { "num": "03", "title": "Lanzamiento", "desc": "Construimos y lanzamos las campañas o el contenido aprobados." },
+    { "num": "04", "title": "Optimización", "desc": "Revisamos el desempeño y mejoramos lo que está funcionando." }
+  ],
+
+  "fitTag": "¿Es Esto Para Tu Negocio?",
+  "fitHeading": "Ideal Para Negocios Que Quieren Crecer De Forma Consistente.",
+  "fitIntro": "Con base en Long Island, trabajando con negocios más allá del área local.",
+  "fitItems": [
+    { "icon": "location_on", "title": "Negocios Locales", "desc": "Negocios que dependen de clientes en su área y quieren más visibilidad." },
+    { "icon": "design_services", "title": "Negocios de Servicios", "desc": "Negocios que ofrecen servicios y necesitan un flujo constante de consultas." },
+    { "icon": "groups", "title": "Pequeñas y Medianas Empresas en Crecimiento", "desc": "Negocios listos para invertir en un sistema de crecimiento más estructurado." },
+    { "icon": "task_alt", "title": "Negocios Que Necesitan Más Consultas Calificadas", "desc": "Negocios que reciben tráfico pero no suficientes clientes potenciales reales." },
+    { "icon": "auto_awesome", "title": "Negocios Que Quieren Mejor Visibilidad", "desc": "Negocios que quieren aparecer donde sus clientes ya están buscando." }
+  ],
+
+  "supportTag": "Servicios de Apoyo",
+  "supportHeading": "Traffic & Growth Se Puede Fortalecer Con Esto.",
+  "supportIntro": "Estas capacidades no son el enfoque principal, pero pueden reforzar tu estrategia de tráfico y crecimiento.",
+  "supportItems": [
+    { "icon": "language", "title": "Landing Pages, Sitios Web y Embudos", "href": "/servicios/desarrollo-web" },
+    { "icon": "palette", "title": "Diseño Gráfico", "href": "/servicios/diseno-de-marca" },
+    { "icon": "movie", "title": "Producción de Video", "href": "/servicios/produccion-de-video" },
+    { "icon": "thumb_up", "title": "Contenido y Redes Sociales", "href": "/servicios/manejo-de-redes-sociales" },
+    { "icon": "bolt", "title": "Automatización de Marketing", "href": "/alethig-media-os" }
+  ],
+
+  "ctaTag": "Empecemos",
+  "ctaHeading": "¿Listo Para Atraer Más Tráfico y Clientes?",
+  "ctaParagraph": "Agenda una consulta gratuita de 15 minutos y hablemos sobre tu negocio, tus metas y qué canales tienen más sentido para ti.",
+  "ctaButtonLabel": "Agenda una consulta gratis",
+  "ctaButtonIcon": "calendar_month",
+  "ctaSecondaryLabel": "Contactar",
+  "ctaSecondaryHref": "/contacto"
+}

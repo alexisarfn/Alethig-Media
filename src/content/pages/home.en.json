@@ -27,7 +27,7 @@
       "items": ["Meta Ads", "Google Ads", "SEO", "Local SEO", "Lead Generation"],
       "desc": "Traffic, advertising and search strategies designed to help you attract more customers and create new business opportunities.",
       "ctaLabel": "Explore Traffic & Growth",
-      "ctaHref": "#traffic-growth"
+      "ctaHref": "/traffic-growth"
     },
     {
       "num": "02",

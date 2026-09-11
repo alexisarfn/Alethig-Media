@@ -1,0 +1,100 @@
+{
+  "title": "Traffic, Leads & Growth Services | Alethig Media",
+  "metaDescription": "Meta Ads, Google Ads, SEO, Local SEO and lead generation for businesses that want more traffic, more customers and consistent growth. Based in Long Island, working with businesses beyond the local area.",
+
+  "heroTag": "Traffic & Growth Services",
+  "heroHeading": "Traffic, Leads & Growth for Your Business.",
+  "heroHighlight": "Growth",
+  "heroParagraph": "We combine digital advertising, Google, SEO and lead generation to help you build a more consistent growth system.",
+  "heroCtaPrimaryLabel": "Book a Free Consultation",
+  "heroCtaPrimaryHref": "/contact",
+  "heroCtaSecondaryLabel": "Contact",
+  "heroCtaSecondaryHref": "/contact",
+
+  "modulesTag": "What We Do",
+  "modulesHeading": "Six Areas. One Growth System.",
+  "modulesIntro": "Each module works on its own or as part of a combined strategy, depending on what your business needs.",
+  "modules": [
+    {
+      "num": "01",
+      "icon": "ads_click",
+      "title": "Meta Ads",
+      "desc": "Facebook and Instagram campaigns that reach specific audiences by location, interests and behavior.",
+      "benefit": "Great for building brand awareness and attracting potential customers consistently."
+    },
+    {
+      "num": "02",
+      "icon": "language",
+      "title": "Google Ads",
+      "desc": "Search and display ads that put your business in front of people already looking for what you offer.",
+      "benefit": "Capture high-intent demand at the exact moment someone searches for your service."
+    },
+    {
+      "num": "03",
+      "icon": "monitoring",
+      "title": "SEO",
+      "desc": "Website optimization to improve your organic visibility for relevant searches.",
+      "benefit": "Builds long-term visibility without relying only on paid advertising."
+    },
+    {
+      "num": "04",
+      "icon": "my_location",
+      "title": "Local SEO",
+      "desc": "We strengthen your visibility in local search and maps, for businesses that depend on customers in their area.",
+      "benefit": "Helps nearby customers find you first when they search for your services."
+    },
+    {
+      "num": "05",
+      "icon": "forum",
+      "title": "Lead Generation",
+      "desc": "We build campaigns and conversion paths designed to generate real inquiries.",
+      "benefit": "Turns visitors and clicks into concrete business opportunities."
+    },
+    {
+      "num": "06",
+      "icon": "bar_chart",
+      "title": "Growth Strategy",
+      "desc": "We coordinate channels, offers, traffic and conversion goals into one plan.",
+      "benefit": "Brings every marketing effort together into one clear, measurable strategy."
+    }
+  ],
+
+  "processTag": "How We Work",
+  "processHeading": "A Clear Process, Start to Finish.",
+  "processSteps": [
+    { "num": "01", "title": "Discover", "desc": "We understand your business, audience and goals." },
+    { "num": "02", "title": "Plan", "desc": "We select the right channels, offers and campaign structure." },
+    { "num": "03", "title": "Launch", "desc": "We build and launch the approved campaigns or content." },
+    { "num": "04", "title": "Optimize", "desc": "We review performance and improve what's working." }
+  ],
+
+  "fitTag": "Is This Right For Your Business?",
+  "fitHeading": "Built For Businesses That Want to Grow Consistently.",
+  "fitIntro": "Based in Long Island, working with businesses beyond the local area.",
+  "fitItems": [
+    { "icon": "location_on", "title": "Local Businesses", "desc": "Businesses that depend on customers in their area and want more visibility." },
+    { "icon": "design_services", "title": "Service Businesses", "desc": "Businesses that offer services and need a consistent flow of inquiries." },
+    { "icon": "groups", "title": "Growing Small & Medium Businesses", "desc": "Businesses ready to invest in a more structured growth system." },
+    { "icon": "task_alt", "title": "Businesses That Need More Qualified Inquiries", "desc": "Businesses getting traffic but not enough real potential customers." },
+    { "icon": "auto_awesome", "title": "Businesses That Want Better Visibility", "desc": "Businesses that want to show up where their customers are already looking." }
+  ],
+
+  "supportTag": "Supporting Services",
+  "supportHeading": "Traffic & Growth Can Be Strengthened By This.",
+  "supportIntro": "These capabilities aren't the main focus, but they can reinforce your traffic and growth strategy.",
+  "supportItems": [
+    { "icon": "language", "title": "Landing Pages, Websites & Funnels", "href": "/services/web-development" },
+    { "icon": "palette", "title": "Graphic Design", "href": "/services/brand-design" },
+    { "icon": "movie", "title": "Video Production", "href": "/services/video-production" },
+    { "icon": "thumb_up", "title": "Content & Social Media", "href": "/services/social-media-management" },
+    { "icon": "bolt", "title": "Marketing Automation", "href": "/alethig-media-os" }
+  ],
+
+  "ctaTag": "Let's Get Started",
+  "ctaHeading": "Ready to Attract More Traffic and Customers?",
+  "ctaParagraph": "Book a free 15-minute consultation and let's talk about your business, your goals, and which channels make the most sense for you.",
+  "ctaButtonLabel": "Book a Free Consultation",
+  "ctaButtonIcon": "calendar_month",
+  "ctaSecondaryLabel": "Contact",
+  "ctaSecondaryHref": "/contact"
+}
