@@ -1,0 +1,55 @@
+{
+  "title": "Productos Personalizados y Sublimación | Alethig Media",
+  "metaDescription": "Productos personalizados para negocios, equipos y eventos — camisas, uniformes, tazas, vasos y merchandise. Con base en Long Island, sirviendo más allá del área local donde el cumplimiento está disponible.",
+
+  "heroTag": "Sublimación y Productos con Marca",
+  "heroHeading": "Productos Personalizados Para Llevar Tu Marca Más Lejos.",
+  "heroHighlight": "Más Lejos",
+  "heroParagraph": "Creamos productos personalizados para negocios, equipos y eventos — desde ropa y uniformes hasta tazas, vasos y materiales promocionales.",
+  "heroCtaPrimaryLabel": "Solicitar Cotización",
+  "heroCtaPrimaryHref": "/contacto",
+  "heroCtaSecondaryLabel": "Contactar",
+  "heroCtaSecondaryHref": "/contacto",
+
+  "categoriesTag": "Categorías de Productos",
+  "categoriesHeading": "Lo Que Podemos Personalizar Para Ti.",
+  "categories": [
+    { "num": "01", "icon": "checkroom", "title": "Camisas Personalizadas", "desc": "Camisetas y playeras con tu logo o diseño, para tu negocio, equipo o evento." },
+    { "num": "02", "icon": "groups", "title": "Uniformes", "desc": "Uniformes personalizados para tu equipo de trabajo, con un aspecto profesional y consistente." },
+    { "num": "03", "icon": "local_cafe", "title": "Tazas y Vasos", "desc": "Tazas, termos y vasos personalizados con tu marca — ideales para regalos o uso diario." },
+    { "num": "04", "icon": "auto_awesome", "title": "Productos Promocionales", "desc": "Artículos de marca para ferias, campañas y regalos corporativos." },
+    { "num": "05", "icon": "star", "title": "Merchandise para Eventos", "desc": "Productos personalizados para eventos, activaciones y celebraciones de marca." },
+    { "num": "06", "icon": "branding_watermark", "title": "Productos de Marca para Negocios", "desc": "Artículos personalizados para tu negocio — de oficina, punto de venta o uso interno." }
+  ],
+
+  "fitTag": "¿Para Quién Es Esto?",
+  "fitHeading": "Ideal Para Negocios, Equipos y Eventos.",
+  "fitIntro": "Con base en Long Island, atendiendo a clientes más allá del área local donde el cumplimiento está disponible.",
+  "fitItems": ["Negocios locales", "Restaurantes", "Contratistas", "Equipos", "Escuelas", "Eventos", "Organizaciones", "Pequeñas y medianas empresas"],
+
+  "processTag": "Cómo Funciona",
+  "processHeading": "Un Proceso Simple, de Principio a Fin.",
+  "processSteps": [
+    { "num": "01", "title": "Cuéntanos Qué Necesitas", "desc": "Comparte el tipo de producto, cantidad, diseño/marca y uso previsto." },
+    { "num": "02", "title": "Revisamos Tu Solicitud", "desc": "Revisamos los detalles y preparamos el siguiente paso." },
+    { "num": "03", "title": "Cotización y Aprobación", "desc": "Revisas la cotización y apruebas el proyecto antes de producción." },
+    { "num": "04", "title": "Producción", "desc": "Los productos con tu marca, ya aprobados, pasan a producción." }
+  ],
+
+  "brandingTag": "Marketing y Productos, Juntos",
+  "brandingHeading": "Conectamos Tu Marca Digital Con Productos Reales.",
+  "brandingBody": "Además de productos personalizados, ayudamos a negocios con marketing digital y diseño de marca — para que tu identidad se vea consistente en línea y en el mundo real.",
+  "brandingLinks": [
+    { "label": "Ver Todos los Servicios", "href": "/servicios" },
+    { "label": "Diseño de Marca", "href": "/servicios/diseno-de-marca" },
+    { "label": "Traffic & Growth", "href": "/trafico-y-crecimiento" }
+  ],
+
+  "ctaTag": "Empecemos",
+  "ctaHeading": "¿Listo Para Personalizar Tus Productos?",
+  "ctaParagraph": "Cuéntanos qué necesitas y te enviaremos una cotización. Sin compromiso.",
+  "ctaButtonLabel": "Solicitar Cotización",
+  "ctaButtonIcon": "send",
+  "ctaSecondaryLabel": "Contactar",
+  "ctaSecondaryHref": "/contacto"
+}

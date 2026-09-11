@@ -1,0 +1,165 @@
+---
+// POSITIONING PHASE 5 — bespoke page for Sublimation & Branded Products
+// (third primary business line). Same pattern as traffic-growth.astro /
+// services-hub (src/content.config.ts anticipates this kind of standalone
+// page): its own .astro file + its own JSON, outside the uniform services
+// collection. Focused on generating quote requests — NOT an ecommerce
+// catalog: no inventory, availability, turnaround times, shipping
+// promises, production capacity, minimum order quantities, fixed prices,
+// or SKUs invented.
+//
+// Imagery: public/uploads/ was checked — no real sublimation/branded
+// product photography exists in the repo. So this page uses CSS/icon
+// treatments only (same approach as the homepage's Sublimation section),
+// leaving room for real product photos later instead of filling space
+// with generic stock imagery.
+import Icon from '../../components/Icon.astro';
+import Layout from '../../layouts/Layout.astro';
+import sub from '../../content/pages/sublimation.en.json';
+import { highlightHeading } from '../../lib/highlight';
+import { withBase } from '../../lib/basePath';
+
+export const prerender = true;
+
+const BASE = '/en';
+---
+<Layout title={sub.title} description={sub.metaDescription} base={BASE} locale="en" altHref="/es/sublimacion/" navTheme="light">
+
+  <!-- HERO -->
+  <section class="on-light mesh-bg-light-hero relative min-h-[85vh] flex items-center pt-28 pb-section-py-sm overflow-hidden">
+    <div class="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-ink/5 blur-[100px] pointer-events-none"></div>
+    <div class="max-w-container-max mx-auto px-gutter w-full">
+      <!-- grid-cols-1 explicit (not just implicit "grid"): without this
+           the mobile grid track is sized to the H1's min-content (a long
+           word at hero size doesn't fit in 272px) and pushes the whole
+           column past the viewport — min-w-0 on the children is the
+           standard reinforcement for the same issue. -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="hero-reveal min-w-0">
+          <span class="tag-cyber mb-6 inline-flex"><Icon name="checkroom" class="text-sm" />{sub.heroTag}</span>
+          <h1 class="font-display text-display-hero-mobile md:text-display-hero-tablet xl:text-display-hero mb-6 break-words" set:html={highlightHeading(sub.heroHeading, sub.heroHighlight)}></h1>
+          <p class="text-body-lg text-ink-dim mb-8 max-w-xl">{sub.heroParagraph}</p>
+          <!-- No Cal.com here on purpose: this line depends on custom
+               requirements, so both CTAs go to Contact instead of a
+               15-minute booking. -->
+          <div class="flex flex-wrap gap-4">
+            <a href={withBase(BASE, sub.heroCtaPrimaryHref)} class="btn-cyber-solid magnetic press">
+              <span class="icon-wrap">{sub.heroCtaPrimaryLabel} <Icon name="send" class="text-base" /></span>
+            </a>
+            <a href={withBase(BASE, sub.heroCtaSecondaryHref)} class="btn-ghost magnetic press">{sub.heroCtaSecondaryLabel}</a>
+          </div>
+        </div>
+        <div class="hero-reveal reveal-delay flex justify-center min-w-0">
+          <!-- Inline style needed: .glass sets border-radius:16px outside
+               any @layer, which beats Tailwind's rounded-full utility
+               (same cascade conflict already documented for
+               .editorial-num). Without this the circle renders as a
+               rounded square instead. -->
+          <div class="glass rounded-full w-64 h-64 md:w-72 md:h-72 flex items-center justify-center border border-accent/20" style="border-radius: 9999px;">
+            <Icon name="checkroom" class="text-gold-ink text-[110px]" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CATEGORIES -->
+  <section class="on-light section-surface-alt py-section-py-sm md:py-section-py-lg">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="text-center mb-14 reveal">
+        <span class="tag-cyber mb-4 inline-flex">{sub.categoriesTag}</span>
+        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg">{sub.categoriesHeading}</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-fade">
+        {sub.categories.map(c => (
+          <div class="glass card-cyber rounded-2xl p-7 relative">
+            <span class="editorial-num absolute top-6 right-7" aria-hidden="true">{c.num}</span>
+            <div class="w-12 h-12 rounded-xl bg-accent/12 border border-accent/25 flex items-center justify-center mb-4">
+              <Icon name={c.icon} class="text-gold-ink text-2xl" />
+            </div>
+            <h3 class="font-display font-bold text-lg mb-2">{c.title}</h3>
+            <p class="text-ink-dim text-sm leading-relaxed">{c.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="on-light section-surface-white py-section-py-sm md:py-section-py-lg">
+    <div class="max-w-container-max mx-auto px-gutter text-center">
+      <div class="mb-10 reveal">
+        <span class="tag-cyber mb-4 inline-flex">{sub.fitTag}</span>
+        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4">{sub.fitHeading}</h2>
+        <!-- POSITIONING PHASE 1/5: real Long Island reference, not
+             exclusive, no unsupported shipping/geographic claims. -->
+        <p class="text-gold-ink font-display font-semibold max-w-2xl mx-auto">{sub.fitIntro}</p>
+      </div>
+      <ul class="flex flex-wrap justify-center gap-2.5 stagger-fade">
+        {sub.fitItems.map(item => (
+          <li class="text-sm font-display font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-4 py-2">{item}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="on-light section-surface py-section-py-sm md:py-section-py-lg">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="text-center mb-16 reveal">
+        <span class="tag-cyber mb-4 inline-flex">{sub.processTag}</span>
+        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg">{sub.processHeading}</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 stagger-fade">
+        {sub.processSteps.map(step => (
+          <div>
+            <span class="editorial-num block text-4xl mb-4" style="opacity:0.35">{step.num}</span>
+            <h3 class="font-display text-headline-md mb-3">{step.title}</h3>
+            <p class="text-ink-dim text-sm leading-relaxed">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETING CONNECTION (reinforces the hybrid positioning — only
+       links to real existing routes, no invented "branding package"). -->
+  <section class="on-light section-surface-alt py-section-py-sm">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="glass rounded-2xl p-8 md:p-10 border border-accent/15 grid md:grid-cols-[1.4fr_1fr] gap-8 items-center reveal">
+        <div>
+          <span class="tag-cyber mb-4 inline-flex"><Icon name="bolt" class="text-sm" />{sub.brandingTag}</span>
+          <h2 class="font-display text-headline-md mb-3">{sub.brandingHeading}</h2>
+          <p class="text-ink-dim text-sm leading-relaxed">{sub.brandingBody}</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          {sub.brandingLinks.map(link => (
+            <a href={withBase(BASE, link.href)} class="inline-flex items-center justify-between gap-2 text-ink font-display font-semibold text-sm bg-white rounded-xl px-5 py-3 border border-ink/10 hover:border-accent/40 transition-colors duration-300">
+              {link.label} <Icon name="arrow_forward" class="text-sm text-gold-ink" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="bg-bg-depth py-section-py-sm">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="glass lumen-border rounded-3xl p-12 md:p-16 text-center reveal"
+           style="background: linear-gradient(135deg, rgba(27,42,107,0.25) 0%, rgba(216,166,42,0.08) 100%);">
+        <span class="tag-cyber mb-6 inline-flex">{sub.ctaTag}</span>
+        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5 break-words">{sub.ctaHeading}</h2>
+        <p class="text-text-secondary text-body-md max-w-xl mx-auto mb-8">{sub.ctaParagraph}</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href={withBase(BASE, sub.ctaSecondaryHref)} class="btn-cyber-solid magnetic press inline-flex">
+            <span class="icon-wrap">{sub.ctaButtonLabel} <Icon name={sub.ctaButtonIcon} class="text-base" /></span>
+          </a>
+          <a href={withBase(BASE, sub.ctaSecondaryHref)} class="btn-ghost magnetic press">{sub.ctaSecondaryLabel}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

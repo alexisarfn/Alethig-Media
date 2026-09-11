@@ -178,6 +178,25 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
     </div>
   </section>
 
+  <!-- ENLACE A SUBLIMACIÓN — POSITIONING PHASE 5 §9: Sublimación es una
+       línea de negocio primaria, no una tarjeta más de servicio de apoyo.
+       Callout propio, chico y con borde dorado (distinto de la grilla de
+       servicios de arriba), solo para que quien navega el hub la
+       encuentre — no se mezcla con las tarjetas de servicios de apoyo. -->
+  <section class="on-light section-surface py-section-py-sm">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <a href={withBase(BASE, hub.sublimationCtaHref)} class="glass rounded-2xl p-6 md:p-7 border border-accent/25 flex flex-col sm:flex-row items-center gap-5 sm:gap-6 group reveal">
+        <div class="w-12 h-12 rounded-xl bg-accent/12 border border-accent/25 flex items-center justify-center flex-shrink-0">
+          <Icon name="checkroom" class="text-gold-ink text-2xl" />
+        </div>
+        <p class="text-ink-dim text-sm leading-relaxed flex-1 text-center sm:text-left">{hub.sublimationNote}</p>
+        <span class="inline-flex items-center gap-2 text-gold-ink text-sm font-display font-semibold sm:whitespace-nowrap">
+          {hub.sublimationCtaLabel} <Icon name="arrow_forward" class="text-sm transition-transform duration-200 group-hover:translate-x-1" />
+        </span>
+      </a>
+    </div>
+  </section>
+
   <!-- CTA FINAL -->
   <section class="bg-bg-depth py-section-py-sm">
     <div class="max-w-container-max mx-auto px-gutter">

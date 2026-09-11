@@ -725,6 +725,9 @@ collections:
           - { name: automationBody, label: "Automatización y Sistemas · Párrafo (solo claims aprobados)", widget: text }
           - { name: automationCtaLabel, label: "Automatización y Sistemas · Texto botón", widget: string }
           - { name: automationCtaHref, label: "Automatización y Sistemas · Enlace", widget: string }
+          - { name: sublimationNote, label: "Enlace a Sublimación · Texto", widget: text }
+          - { name: sublimationCtaLabel, label: "Enlace a Sublimación · Texto botón", widget: string }
+          - { name: sublimationCtaHref, label: "Enlace a Sublimación · Enlace (ruta real existente)", widget: string }
           - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
           - { name: ctaHeading, label: "CTA final · Titular", widget: string }
           - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }
@@ -765,6 +768,123 @@ collections:
           - { name: automationBody, label: "Automatización y Sistemas · Párrafo (solo claims aprobados)", widget: text }
           - { name: automationCtaLabel, label: "Automatización y Sistemas · Texto botón", widget: string }
           - { name: automationCtaHref, label: "Automatización y Sistemas · Enlace", widget: string }
+          - { name: sublimationNote, label: "Enlace a Sublimación · Texto", widget: text }
+          - { name: sublimationCtaLabel, label: "Enlace a Sublimación · Texto botón", widget: string }
+          - { name: sublimationCtaHref, label: "Enlace a Sublimación · Enlace (ruta real existente)", widget: string }
+          - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
+          - { name: ctaHeading, label: "CTA final · Titular", widget: string }
+          - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }
+          - { name: ctaButtonLabel, label: "CTA final · Texto botón", widget: string }
+          - { name: ctaButtonIcon, label: "CTA final · Icono botón", widget: string }
+          - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
+          - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
+
+      # POSITIONING PHASE 5 — página bespoke dedicada de Sublimación y
+      # Productos con Marca (tercera línea de negocio primaria). Orientada
+      # a solicitudes de cotización — sin inventario, precios fijos,
+      # tiempos de entrega ni SKUs.
+      - name: sublimation
+        label: "Sublimación y Productos con Marca (página)"
+        file: "src/content/pages/sublimation.es.json"
+        format: json
+        fields:
+          - { name: title, label: "Título de pestaña (SEO)", widget: string }
+          - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
+          - { name: heroTag, label: "Hero · Etiqueta", widget: string }
+          - { name: heroHeading, label: "Hero · Titular", widget: string }
+          - { name: heroHighlight, label: "Hero · Palabra resaltada", widget: string, required: false }
+          - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: heroCtaPrimaryLabel, label: "Hero · Botón principal (Solicitar Cotización)", widget: string }
+          - { name: heroCtaPrimaryHref, label: "Hero · Enlace botón principal", widget: string }
+          - { name: heroCtaSecondaryLabel, label: "Hero · Botón secundario", widget: string }
+          - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario", widget: string }
+          - { name: categoriesTag, label: "Categorías · Etiqueta", widget: string }
+          - { name: categoriesHeading, label: "Categorías · Titular", widget: string }
+          - name: categories
+            label: "Categorías de productos (sin inventario/precios/especificaciones inventadas)"
+            widget: list
+            fields:
+              - { name: num, label: "Número (01…06)", widget: string }
+              - { name: icon, label: "Icono", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: fitTag, label: "Para quién · Etiqueta", widget: string }
+          - { name: fitHeading, label: "Para quién · Titular", widget: string }
+          - { name: fitIntro, label: "Para quién · Línea de posicionamiento local/global", widget: text }
+          - { name: fitItems, label: "Para quién · Perfiles", widget: list, field: { name: item, label: "Perfil", widget: string } }
+          - { name: processTag, label: "Cómo funciona · Etiqueta", widget: string }
+          - { name: processHeading, label: "Cómo funciona · Titular", widget: string }
+          - name: processSteps
+            label: "Cómo funciona · Pasos"
+            widget: list
+            fields:
+              - { name: num, label: "Número (01, 02…)", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: brandingTag, label: "Conexión con marketing · Etiqueta", widget: string }
+          - { name: brandingHeading, label: "Conexión con marketing · Titular", widget: string }
+          - { name: brandingBody, label: "Conexión con marketing · Párrafo", widget: text }
+          - name: brandingLinks
+            label: "Conexión con marketing · Enlaces (solo rutas reales existentes)"
+            widget: list
+            fields:
+              - { name: label, label: "Texto", widget: string }
+              - { name: href, label: "Enlace", widget: string }
+          - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
+          - { name: ctaHeading, label: "CTA final · Titular", widget: string }
+          - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }
+          - { name: ctaButtonLabel, label: "CTA final · Texto botón", widget: string }
+          - { name: ctaButtonIcon, label: "CTA final · Icono botón", widget: string }
+          - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
+          - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
+
+      - name: sublimation-en
+        label: "Sublimación y Productos con Marca (página, Inglés)"
+        file: "src/content/pages/sublimation.en.json"
+        format: json
+        fields:
+          - { name: title, label: "Título de pestaña (SEO)", widget: string }
+          - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
+          - { name: heroTag, label: "Hero · Etiqueta", widget: string }
+          - { name: heroHeading, label: "Hero · Titular", widget: string }
+          - { name: heroHighlight, label: "Hero · Palabra resaltada", widget: string, required: false }
+          - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: heroCtaPrimaryLabel, label: "Hero · Botón principal (Request a Quote)", widget: string }
+          - { name: heroCtaPrimaryHref, label: "Hero · Enlace botón principal", widget: string }
+          - { name: heroCtaSecondaryLabel, label: "Hero · Botón secundario", widget: string }
+          - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario", widget: string }
+          - { name: categoriesTag, label: "Categorías · Etiqueta", widget: string }
+          - { name: categoriesHeading, label: "Categorías · Titular", widget: string }
+          - name: categories
+            label: "Categorías de productos (sin inventario/precios/especificaciones inventadas)"
+            widget: list
+            fields:
+              - { name: num, label: "Número (01…06)", widget: string }
+              - { name: icon, label: "Icono", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: fitTag, label: "Para quién · Etiqueta", widget: string }
+          - { name: fitHeading, label: "Para quién · Titular", widget: string }
+          - { name: fitIntro, label: "Para quién · Línea de posicionamiento local/global", widget: text }
+          - { name: fitItems, label: "Para quién · Perfiles", widget: list, field: { name: item, label: "Perfil", widget: string } }
+          - { name: processTag, label: "Cómo funciona · Etiqueta", widget: string }
+          - { name: processHeading, label: "Cómo funciona · Titular", widget: string }
+          - name: processSteps
+            label: "Cómo funciona · Pasos"
+            widget: list
+            fields:
+              - { name: num, label: "Número (01, 02…)", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: brandingTag, label: "Conexión con marketing · Etiqueta", widget: string }
+          - { name: brandingHeading, label: "Conexión con marketing · Titular", widget: string }
+          - { name: brandingBody, label: "Conexión con marketing · Párrafo", widget: text }
+          - name: brandingLinks
+            label: "Conexión con marketing · Enlaces (solo rutas reales existentes)"
+            widget: list
+            fields:
+              - { name: label, label: "Texto", widget: string }
+              - { name: href, label: "Enlace", widget: string }
           - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
           - { name: ctaHeading, label: "CTA final · Titular", widget: string }
           - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }

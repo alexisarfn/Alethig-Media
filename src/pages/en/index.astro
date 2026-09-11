@@ -231,7 +231,12 @@ const portfolio = (await getCollection('portfolioEn'))
           </a>
         </div>
         <div class="reveal reveal-delay flex justify-center">
-          <div class="glass rounded-full w-56 h-56 md:w-64 md:h-64 flex items-center justify-center border border-accent/20">
+          <!-- Inline style needed: .glass sets border-radius:16px outside
+               any @layer, which beats Tailwind's rounded-full utility
+               (pre-existing bug found and fixed in POSITIONING PHASE 5;
+               same fix applied here). Without this the circle renders as
+               a rounded square instead. -->
+          <div class="glass rounded-full w-56 h-56 md:w-64 md:h-64 flex items-center justify-center border border-accent/20" style="border-radius: 9999px;">
             <Icon name="checkroom" class="text-gold-ink text-[88px]" />
           </div>
         </div>

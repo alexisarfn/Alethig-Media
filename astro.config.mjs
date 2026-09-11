@@ -26,6 +26,9 @@ const LOCALE_PAIRS = [
   // POSITIONING PHASE 4 — hub de Servicios de Apoyo (distinto de cada
   // detalle de servicio, que ya tiene su propio par más abajo).
   ['/es/servicios/', '/en/services/'],
+  // POSITIONING PHASE 5 — página bespoke dedicada de Sublimación y
+  // Productos con Marca (tercera línea de negocio primaria).
+  ['/es/sublimacion/', '/en/sublimation/'],
   ['/es/servicios/desarrollo-web/', '/en/services/web-development/'],
   ['/es/servicios/diseno-de-marca/', '/en/services/brand-design/'],
   ['/es/servicios/manejo-de-redes-sociales/', '/en/services/social-media-management/'],

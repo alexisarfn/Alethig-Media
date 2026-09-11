@@ -1,0 +1,55 @@
+{
+  "title": "Custom Branded Products & Sublimation | Alethig Media",
+  "metaDescription": "Custom branded products for businesses, teams and events — shirts, uniforms, mugs, tumblers and merchandise. Based in Long Island, serving customers beyond the local area where fulfillment is available.",
+
+  "heroTag": "Sublimation & Branded Products",
+  "heroHeading": "Custom Branded Products That Take Your Brand Further.",
+  "heroHighlight": "Further",
+  "heroParagraph": "We create custom branded products for businesses, teams and events — from apparel and uniforms to mugs, tumblers and promotional items.",
+  "heroCtaPrimaryLabel": "Request a Quote",
+  "heroCtaPrimaryHref": "/contact",
+  "heroCtaSecondaryLabel": "Contact",
+  "heroCtaSecondaryHref": "/contact",
+
+  "categoriesTag": "Product Categories",
+  "categoriesHeading": "What We Can Customize For You.",
+  "categories": [
+    { "num": "01", "icon": "checkroom", "title": "Custom Shirts", "desc": "Custom t-shirts and apparel with your logo or design, for your business, team or event." },
+    { "num": "02", "icon": "groups", "title": "Uniforms", "desc": "Custom uniforms for your team, with a consistent, professional look." },
+    { "num": "03", "icon": "local_cafe", "title": "Mugs & Tumblers", "desc": "Custom mugs, tumblers and cups with your brand — great for gifts or everyday use." },
+    { "num": "04", "icon": "auto_awesome", "title": "Promotional Products", "desc": "Branded items for trade shows, campaigns and corporate gifts." },
+    { "num": "05", "icon": "star", "title": "Event Merchandise", "desc": "Custom products for events, activations and brand celebrations." },
+    { "num": "06", "icon": "branding_watermark", "title": "Branded Business Items", "desc": "Custom items for your business — office, point-of-sale or internal use." }
+  ],
+
+  "fitTag": "Who Is This For?",
+  "fitHeading": "Built For Businesses, Teams and Events.",
+  "fitIntro": "Based in Long Island, serving customers beyond the local area where fulfillment is available.",
+  "fitItems": ["Local businesses", "Restaurants", "Contractors", "Teams", "Schools", "Events", "Organizations", "Small & medium businesses"],
+
+  "processTag": "How It Works",
+  "processHeading": "A Simple Process, Start to Finish.",
+  "processSteps": [
+    { "num": "01", "title": "Tell Us What You Need", "desc": "Share the product type, quantity, artwork/branding, and intended use." },
+    { "num": "02", "title": "We Review the Request", "desc": "We review the details and prepare the next step." },
+    { "num": "03", "title": "Quote & Approval", "desc": "You review the quote and approve the project before production." },
+    { "num": "04", "title": "Production", "desc": "Approved branded products move into production." }
+  ],
+
+  "brandingTag": "Marketing & Products, Together",
+  "brandingHeading": "We Connect Your Digital Brand With Real Products.",
+  "brandingBody": "Beyond custom products, we help businesses with digital marketing and brand design — so your identity looks consistent online and in the real world.",
+  "brandingLinks": [
+    { "label": "View All Services", "href": "/services" },
+    { "label": "Brand Design", "href": "/services/brand-design" },
+    { "label": "Traffic & Growth", "href": "/traffic-growth" }
+  ],
+
+  "ctaTag": "Let's Get Started",
+  "ctaHeading": "Ready to Customize Your Products?",
+  "ctaParagraph": "Tell us what you need and we'll send you a quote. No commitment required.",
+  "ctaButtonLabel": "Request a Quote",
+  "ctaButtonIcon": "send",
+  "ctaSecondaryLabel": "Contact",
+  "ctaSecondaryHref": "/contact"
+}
