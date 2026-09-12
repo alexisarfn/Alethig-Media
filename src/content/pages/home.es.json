@@ -76,7 +76,7 @@
   "servicesHeading": "También Podemos Ayudarte Con Esto.",
   "servicesSubtitle": "Sitios web, diseño de marca, contenido y más — todo lo que tu negocio podría necesitar, en un solo lugar.",
   "services": [
-    { "icon": "thumb_up", "title": "Manejo de Redes Sociales", "desc": "Instagram, Facebook y TikTok — contenido, diseños, textos, respuestas y publicidad pagada. Desde $199/mes.", "href": "/servicios/manejo-de-redes-sociales" },
+    { "icon": "thumb_up", "title": "Contenido para Redes Sociales", "desc": "Diseños, textos y Reels creados por Alethig — organizados, aprobados y en calendario desde Alethig Media OS.", "href": "/servicios/manejo-de-redes-sociales" },
     { "icon": "movie", "title": "Producción de Video", "desc": "Filmamos en tu negocio y nuestros editores hacen el resto. Reels, TikToks y anuncios que detienen el scroll. Desde $75 por video.", "href": "/servicios/produccion-de-video" },
     { "icon": "ads_click", "title": "Publicidad Pagada", "desc": "Facebook, Instagram, TikTok y Google Ads manejados por especialistas. Tú defines el presupuesto, nosotros los resultados. Desde $99.", "href": "/servicios/publicidad-pagada" },
     { "icon": "palette", "title": "Diseño de Marca", "desc": "Logotipos, tarjetas, flyers, menús y todo el material visual para que tu negocio se vea profesional y destaque.", "href": "/servicios/diseno-de-marca" },

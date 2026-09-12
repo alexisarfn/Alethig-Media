@@ -1,28 +1,27 @@
 {
-  "title": "Manejo de Redes Sociales",
-  "metaDescription": "Manejo de redes sociales para negocios, con base en Long Island: Instagram, Facebook y TikTok completos, con contenido, diseño y publicidad pagada. Inglés y español.",
+  "title": "Contenido para Redes Sociales",
+  "metaDescription": "Contenido para redes sociales creado por Alethig y gestionado con Alethig Media OS: diseños, Reels y calendario de contenido, con aprobaciones y revisiones desde la plataforma. Manejo de redes sociales moderno, en inglés y español.",
   "order": 1,
   "icon": "thumb_up",
-  "heroHeading": "Nos hacemos cargo de tus redes para que crezcas tu negocio",
-  "heroHighlight": "crezcas tu negocio",
-  "heroSub": "Manejamos tu Instagram, Facebook y TikTok por completo — contenido, diseños, textos, respuestas y publicidad pagada. Cada mes recibes un reporte detallado de crecimiento.",
+  "heroHeading": "Contenido Para Redes Sociales, Organizado en un Solo Sistema.",
+  "heroHighlight": "un Solo Sistema",
+  "heroSub": "Alethig crea tu contenido, diseños y Reels. Tú revisas, apruebas y organizas el calendario desde Alethig Media OS.",
   "heroCtaLabel": "Agenda tu Consulta Gratis",
+  "heroCtaSecondaryLabel": "Conocer Alethig Media OS",
+  "heroCtaSecondaryHref": "/alethig-media-os",
   "image": "/uploads/servicio-redes.webp",
-  "imageAlt": "Manejo de redes sociales para negocios",
+  "imageAlt": "Creación de contenido para redes sociales, gestionado con Alethig Media OS",
   "features": [
-    { "icon": "calendar_month", "title": "Calendario de contenido", "desc": "15 diseños por red social al mes, con textos y publicación gestionada por tu equipo dedicado." },
-    { "icon": "forum", "title": "Community management", "desc": "Respondemos comentarios y mensajes de lunes a viernes, más un agente de IA 24/7 fuera de horario." },
-    { "icon": "bar_chart", "title": "Reporte mensual", "desc": "Cada mes recibes un reporte detallado de crecimiento y rendimiento, sin tecnicismos confusos." }
+    { "icon": "movie_edit", "title": "Creación de Contenido", "desc": "Diseños, textos y Reels producidos por nuestro equipo cada mes para tus redes sociales." },
+    { "icon": "calendar_month", "title": "Calendario y Aprobaciones", "desc": "Revisa, aprueba y solicita cambios desde Alethig Media OS — todo organizado en un calendario de contenido." },
+    { "icon": "bolt", "title": "Colaboración en Alethig Media OS", "desc": "Organiza el flujo de trabajo con nuestro equipo directamente desde la plataforma, sin cadenas de correos." }
   ],
-  "plans": [
-    { "name": "Starter", "sub": "1 red social", "price": "$199/mes", "featured": false, "features": ["1 red social", "Community manager dedicado", "15 diseños/mes", "Respuestas Lun–Vie", "Reporte mensual"] },
-    { "name": "Growth", "sub": "2 redes sociales", "price": "$299/mes", "featured": false, "features": ["2 redes sociales", "15 diseños por red/mes", "Diseñador gráfico dedicado", "Especialista en anuncios", "Reporte mensual"] },
-    { "name": "Dominance", "sub": "3 redes sociales", "price": "$449/mes", "featured": true, "features": ["3 redes sociales", "15 diseños por red/mes", "Agente IA 24/7", "Publicidad pagada incluida", "Reporte mensual"] },
-    { "name": "Pro", "sub": "4 redes sociales", "price": "$549/mes", "featured": false, "features": ["4 redes sociales", "15 diseños por red/mes", "Equipo completo dedicado", "Agente IA 24/7", "Reporte mensual"] },
-    { "name": "Omnipresencia", "sub": "6 redes sociales", "price": "$699/mes", "featured": false, "features": ["6 redes sociales", "Máxima cobertura", "15 diseños por red/mes", "Agente IA 24/7", "Reporte mensual"] }
-  ],
-  "ctaHeading": "¿Listo para que manejemos tus redes?",
-  "ctaText": "Precio anual disponible — ahorra hasta 15%. Agenda una consulta gratuita y armamos el plan ideal para tu negocio.",
+  "plans": [],
+  "plansHeading": "Precios",
+  "plansCustomHeading": "Precio Personalizado",
+  "plansCustomText": "El precio depende del volumen de contenido, las plataformas y las necesidades de tu negocio. Agenda una consulta gratuita y armamos el plan ideal usando Alethig Media OS.",
+  "ctaHeading": "¿Listo Para Organizar Tu Contenido?",
+  "ctaText": "Conoce cómo Alethig Media OS organiza la creación, aprobación y calendario de tu contenido. Agenda una consulta gratuita y te mostramos cómo funciona.",
   "ctaButtonLabel": "Agendar Mi Consulta Gratis",
   "ctaButtonIcon": "calendar_month"
 }

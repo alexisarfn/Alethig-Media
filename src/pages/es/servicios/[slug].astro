@@ -36,11 +36,16 @@ const altHref = enMatch ? `/en/services/${enMatch.data.urlSlug}/` : '/en/';
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="reveal">
           <span class="tag-cyber mb-5 inline-flex"><Icon name={s.icon} class="text-sm" />{s.title}</span>
-          <h1 class="font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(s.heroHeading, s.heroHighlight)}></h1>
+          <h1 class="uppercase font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(s.heroHeading, s.heroHighlight)}></h1>
           <p class="text-body-lg text-text-secondary mb-8">{s.heroSub}</p>
           <div class="flex gap-4 flex-wrap">
             <a href={withBase(BASE, '/contacto')} class="btn-cyber-solid magnetic press">{s.heroCtaLabel}</a>
-            <a href="#planes" class="btn-ghost magnetic press">Ver planes</a>
+            <!-- POSITIONING PHASE 9.5: override opcional (ver
+                 heroCtaSecondaryLabel/Href en content.config.ts) — un
+                 servicio sin planes públicos (Contenido para Redes
+                 Sociales) puede apuntar este botón a otro lugar en vez del
+                 ancla #planes que ya no tendría una grilla de precios. -->
+            <a href={s.heroCtaSecondaryHref ? withBase(BASE, s.heroCtaSecondaryHref) : '#planes'} class="btn-ghost magnetic press">{s.heroCtaSecondaryLabel ?? 'Ver planes'}</a>
           </div>
         </div>
         <div class="reveal">
@@ -67,7 +72,7 @@ const altHref = enMatch ? `/en/services/${enMatch.data.urlSlug}/` : '/en/';
             <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
               <Icon name={f.icon} class="text-accent text-2xl" />
             </div>
-            <h3 class="font-display font-bold text-lg mb-2">{f.title}</h3>
+            <h3 class="uppercase font-display font-bold text-lg mb-2">{f.title}</h3>
             <p class="text-text-secondary text-sm leading-relaxed">{f.desc}</p>
           </div>
         ))}
@@ -77,16 +82,33 @@ const altHref = enMatch ? `/en/services/${enMatch.data.urlSlug}/` : '/en/';
 
   <section id="planes" class="mesh-bg py-section-py-sm md:py-section-py-lg">
     <div class="max-w-container-max mx-auto px-gutter">
-      <div class="text-center mb-14 reveal">
-        <span class="tag-cyber mb-4 inline-flex">Planes</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg">
-          {s.plansHeading ? <>{s.plansHeading}</> : <>Planes y <span class="gradient-text">precios</span></>}
-        </h2>
-      </div>
-      {s.planGroups && s.planGroups.length ? (
+      <!-- POSITIONING PHASE 9.6: cuando no hay planes públicos, el titular
+           genérico "Planes"/"Planes y precios" se omite por completo — el
+           único titular visible es plansCustomHeading, dentro del propio
+           panel de abajo (antes se mostraban ambos, uno encima del otro,
+           de forma redundante). Servicios con planes reales no cambian. -->
+      {s.plans.length > 0 && (
+        <div class="text-center mb-14 reveal">
+          <span class="tag-cyber mb-4 inline-flex">Planes</span>
+          <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg">
+            {s.plansHeading ? <>{s.plansHeading}</> : <>Planes y <span class="gradient-text">precios</span></>}
+          </h2>
+        </div>
+      )}
+      <!-- POSITIONING PHASE 9.5: servicio sin precio público todavía (ver
+           plansCustomHeading/Text en content.config.ts) — en vez de una
+           grilla vacía, un panel breve de precio a medida + el mismo CTA
+           de consulta del hero. No se inventa un precio nuevo. -->
+      {s.plans.length === 0 ? (
+        <div class="max-w-2xl mx-auto text-center glass card-cyber rounded-2xl p-10 md:p-12 reveal">
+          <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-3">{s.plansCustomHeading ?? 'Precios Personalizados'}</h2>
+          <p class="text-text-secondary text-body-md mb-6">{s.plansCustomText ?? 'El precio depende del alcance y las necesidades de tu negocio. Agenda una consulta gratuita y armamos el plan ideal.'}</p>
+          <a href={withBase(BASE, '/contacto')} data-booking-trigger class="btn-cyber-solid magnetic press inline-flex">{s.heroCtaLabel}</a>
+        </div>
+      ) : s.planGroups && s.planGroups.length ? (
         s.planGroups.map(group => (
           <div class="mb-12 last:mb-0">
-            <h3 class="font-display font-bold text-lg md:text-xl mb-6 text-text-primary">{group.label}</h3>
+            <h3 class="uppercase font-display font-bold text-lg md:text-xl mb-6 text-text-primary">{group.label}</h3>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-fade">
               {s.plans.filter(p => p.group === group.key).map(p => (
                 <PlanCard plan={p} base={BASE} contactHref="/contacto" featuredLabel="Más Popular" ctaLabel="Contratar" />
@@ -108,7 +130,7 @@ const altHref = enMatch ? `/en/services/${enMatch.data.urlSlug}/` : '/en/';
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="mb-8 reveal">
         <span class="tag-cyber mb-4 inline-flex">Más Servicios</span>
-        <h2 class="font-display text-headline-md">Explora Nuestros Otros Servicios.</h2>
+        <h2 class="uppercase font-display text-headline-md">Explora Nuestros Otros Servicios.</h2>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 stagger-fade">
         {relatedServices.map(r => (
@@ -116,7 +138,7 @@ const altHref = enMatch ? `/en/services/${enMatch.data.urlSlug}/` : '/en/';
             <span class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
               <Icon name={r.data.icon} class="text-accent text-lg" />
             </span>
-            <span class="font-display font-semibold text-sm group-hover:text-accent transition-colors duration-300">{r.data.title}</span>
+            <span class="font-display uppercase font-semibold text-sm group-hover:text-accent transition-colors duration-300">{r.data.title}</span>
           </a>
         ))}
       </div>
@@ -126,7 +148,7 @@ const altHref = enMatch ? `/en/services/${enMatch.data.urlSlug}/` : '/en/';
   <section class="bg-bg-depth py-section-py-sm">
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="glass lumen-border rounded-3xl p-12 text-center reveal" style="background: linear-gradient(135deg, rgba(27,42,107,0.25) 0%, rgba(216,166,42,0.08) 100%);">
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4">{s.ctaHeading}</h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4">{s.ctaHeading}</h2>
         <p class="text-text-secondary mb-8 max-w-xl mx-auto">{s.ctaText}</p>
         <!-- PREMIUM EXPERIENCE V1: CTA de cierre convertido a reserva con
              Cal.com (href de respaldo intacto). -->

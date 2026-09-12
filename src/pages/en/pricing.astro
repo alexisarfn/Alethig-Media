@@ -27,7 +27,7 @@ const BASE = '/en';
     <div class="max-w-container-max mx-auto px-gutter w-full">
       <div class="glass card-cyber rounded-2xl p-10 md:p-14 text-center reveal max-w-2xl mx-auto">
         <span class="tag-cyber mb-6 inline-flex"><Icon name="payments" class="text-sm" />{pricing.heroTag}</span>
-        <h1 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5 break-words">{pricing.heroHeading}</h1>
+        <h1 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5 break-words">{pricing.heroHeading}</h1>
         <p class="text-body-lg text-ink-dim max-w-xl mx-auto">{pricing.heroParagraph}</p>
       </div>
     </div>
@@ -39,16 +39,16 @@ const BASE = '/en';
       <div class="glass card-cyber rounded-2xl p-8 md:p-10 relative reveal">
         <span class="editorial-num absolute top-6 right-7" aria-hidden="true">{pricing.tgNum}</span>
         <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.tgIcon} class="text-sm" />{pricing.tgTag}</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.tgHeading}</h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.tgHeading}</h2>
         <p class="text-ink-dim text-body-md mb-6 max-w-2xl">{pricing.tgBody}</p>
         <ul class="flex flex-wrap gap-2 mb-8">
           {pricing.tgFactors.map(f => (
-            <li class="text-xs font-display font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-3 py-1.5">{f}</li>
+            <li class="text-xs font-display uppercase font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-3 py-1.5">{f}</li>
           ))}
         </ul>
         <div class="flex flex-wrap gap-4">
           <a href={withBase(BASE, pricing.tgCtaHref)} data-booking-trigger class="btn-cyber-solid magnetic press">
-            <span class="icon-wrap">{pricing.tgCtaLabel} <Icon name="calendar_month" class="text-base" /></span>
+            <span class="icon-wrap uppercase">{pricing.tgCtaLabel} <Icon name="calendar_month" class="text-base" /></span>
           </a>
           <a href={withBase(BASE, pricing.tgSecondaryHref)} class="btn-ghost magnetic press">{pricing.tgSecondaryLabel}</a>
         </div>
@@ -62,10 +62,10 @@ const BASE = '/en';
       <div class="glass card-cyber rounded-2xl p-8 md:p-10 relative reveal">
         <span class="editorial-num absolute top-6 right-7" aria-hidden="true">{pricing.supportNum}</span>
         <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.supportIcon} class="text-sm" />{pricing.supportTag}</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.supportHeading}</h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.supportHeading}</h2>
         <p class="text-ink-dim text-body-md mb-8 max-w-2xl">{pricing.supportBody}</p>
         <a href={withBase(BASE, pricing.supportCtaHref)} class="btn-cyber-solid magnetic press inline-flex">
-          <span class="icon-wrap">{pricing.supportCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
+          <span class="icon-wrap uppercase">{pricing.supportCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
         </a>
       </div>
     </div>
@@ -77,11 +77,11 @@ const BASE = '/en';
       <div class="glass card-cyber rounded-2xl p-8 md:p-10 relative reveal">
         <span class="editorial-num absolute top-6 right-7" aria-hidden="true">{pricing.osNum}</span>
         <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.osIcon} class="text-sm" />{pricing.osTag}</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.osHeading}</h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.osHeading}</h2>
         <p class="text-ink-dim text-body-md mb-8 max-w-2xl">{pricing.osBody}</p>
         <div class="flex flex-wrap gap-4">
           <a href={withBase(BASE, pricing.osCtaHref)} class="btn-cyber-solid magnetic press inline-flex">
-            <span class="icon-wrap">{pricing.osCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
+            <span class="icon-wrap uppercase">{pricing.osCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
           </a>
           <a href={withBase(BASE, pricing.osSecondaryHref)} class="btn-ghost magnetic press">{pricing.osSecondaryLabel}</a>
         </div>
@@ -95,16 +95,16 @@ const BASE = '/en';
       <div class="glass card-cyber rounded-2xl p-8 md:p-10 relative reveal">
         <span class="editorial-num absolute top-6 right-7" aria-hidden="true">{pricing.subNum}</span>
         <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.subIcon} class="text-sm" />{pricing.subTag}</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.subHeading}</h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.subHeading}</h2>
         <p class="text-ink-dim text-body-md mb-6 max-w-2xl">{pricing.subBody}</p>
         <ul class="flex flex-wrap gap-2 mb-8">
           {pricing.subFactors.map(f => (
-            <li class="text-xs font-display font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-3 py-1.5">{f}</li>
+            <li class="text-xs font-display uppercase font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-3 py-1.5">{f}</li>
           ))}
         </ul>
         <div class="flex flex-wrap gap-4">
           <a href={withBase(BASE, pricing.subCtaHref)} class="btn-cyber-solid magnetic press inline-flex">
-            <span class="icon-wrap">{pricing.subCtaLabel} <Icon name="send" class="text-base" /></span>
+            <span class="icon-wrap uppercase">{pricing.subCtaLabel} <Icon name="send" class="text-base" /></span>
           </a>
           <a href={withBase(BASE, pricing.subSecondaryHref)} class="btn-ghost magnetic press">{pricing.subSecondaryLabel}</a>
         </div>
@@ -129,11 +129,11 @@ const BASE = '/en';
       <div class="glass lumen-border rounded-3xl p-12 md:p-16 text-center reveal"
            style="background: linear-gradient(135deg, rgba(27,42,107,0.25) 0%, rgba(216,166,42,0.08) 100%);">
         <span class="tag-cyber mb-6 inline-flex">{pricing.ctaTag}</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5 break-words">{pricing.ctaHeading}</h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5 break-words">{pricing.ctaHeading}</h2>
         <p class="text-text-secondary text-body-md max-w-xl mx-auto mb-8">{pricing.ctaParagraph}</p>
         <div class="flex flex-wrap items-center justify-center gap-4">
           <a href={withBase(BASE, pricing.ctaSecondaryHref)} data-booking-trigger class="btn-cyber-solid magnetic press inline-flex">
-            <span class="icon-wrap">{pricing.ctaButtonLabel} <Icon name={pricing.ctaButtonIcon} class="text-base" /></span>
+            <span class="icon-wrap uppercase">{pricing.ctaButtonLabel} <Icon name={pricing.ctaButtonIcon} class="text-base" /></span>
           </a>
           <a href={withBase(BASE, pricing.ctaSecondaryHref)} class="btn-ghost magnetic press">{pricing.ctaSecondaryLabel}</a>
         </div>

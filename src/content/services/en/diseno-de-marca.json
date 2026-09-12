@@ -13,7 +13,7 @@
   "features": [
     { "icon": "branding_watermark", "title": "Complete Identity", "desc": "Logos and a full brand kit that communicate authority and build instant recognition." },
     { "icon": "description", "title": "Print Materials", "desc": "Business cards, flyers, posters, and menus ready to use at your business." },
-    { "icon": "auto_awesome", "title": "Design That Stands Out", "desc": "Your business looks professional at every touchpoint across Long Island." }
+    { "icon": "auto_awesome", "title": "Design That Stands Out", "desc": "Your business looks professional and consistent at every brand touchpoint." }
   ],
   "plans": [
     { "name": "Logo + Brand Kit", "sub": "Complete identity", "price": "$429 one-time", "featured": true, "features": ["Professional logo", "Complete brand identity kit", "One-time payment"], "group": "package" },

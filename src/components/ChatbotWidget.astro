@@ -420,6 +420,11 @@ const t = STRINGS[locale] ?? STRINGS.es;
      desde su propia regla en Layout.astro (body.chat-open). */
   @media (max-width: 480px) {
     :global(body.chat-open) .chat-launcher { display: none; }
+    /* POSITIONING PHASE 9: mismo criterio con el menú móvil abierto (ver
+       comentario gemelo junto a body.menu-open en Layout.astro) — el
+       lanzador quedaba superpuesto sobre la fila ES/EN del menú en
+       pantallas cortas. */
+    :global(body.menu-open) .chat-launcher { display: none; }
   }
 
   .chat-panel {

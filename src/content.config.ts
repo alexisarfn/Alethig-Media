@@ -25,6 +25,13 @@ const serviceSchema = z.object({
   heroHighlight: z.string(),
   heroSub: z.string(),
   heroCtaLabel: z.string(),
+  // POSITIONING PHASE 9.5 — override opcional del CTA secundario del hero
+  // (por defecto "Ver planes" → #planes, ver [slug].astro). Un servicio sin
+  // planes públicos (p.ej. Contenido para Redes Sociales, movido a un
+  // modelo gestionado por Alethig Media OS) puede apuntar este botón a otro
+  // lugar (p.ej. la página de Alethig Media OS) en vez del ancla de planes.
+  heroCtaSecondaryLabel: z.string().optional(),
+  heroCtaSecondaryHref: z.string().optional(),
   image: z.string(),
   imageAlt: z.string(),
   features: z.array(z.object({ icon: z.string(), title: z.string(), desc: z.string() })),
@@ -36,6 +43,14 @@ const serviceSchema = z.object({
     // Sin esto, todos los planes se renderizan en una sola grilla (como hoy).
     group: z.string().optional(),
   })),
+  // POSITIONING PHASE 9.5 — cuando `plans` está vacío (servicio sin precio
+  // público todavía, p.ej. Contenido para Redes Sociales bajo el nuevo
+  // modelo gestionado por Alethig Media OS), la sección "Planes" deja de
+  // renderizar una grilla vacía y en su lugar muestra este texto breve +
+  // el mismo CTA de consulta del hero. Ambos opcionales: un servicio con
+  // `plans` no vacío nunca los necesita y la plantilla no los usa.
+  plansCustomHeading: z.string().optional(),
+  plansCustomText: z.string().optional(),
   // Grupos visuales opcionales para la sección de precios (P2C-1). Si está
   // presente, la plantilla agrupa `plans` por su campo `group` bajo cada
   // título; si no está, renderiza la grilla plana de siempre. 100%

@@ -24,7 +24,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="reveal">
           <span class="tag-cyber mb-5 inline-flex"><Icon name="mail" class="text-sm" />{contact.heroTag}</span>
-          <h1 class="font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(contact.heroHeading, contact.heroHighlight)}></h1>
+          <h1 class="uppercase font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(contact.heroHeading, contact.heroHighlight)}></h1>
           <p class="text-body-lg text-text-secondary">
             {contact.heroParagraph}
           </p>
@@ -51,7 +51,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
       <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
         <!-- Left: info -->
         <div class="reveal">
-          <h2 class="font-display text-headline-lg-mobile md:text-headline-md mb-4">{contact.formInfoHeading}</h2>
+          <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-md mb-4">{contact.formInfoHeading}</h2>
           <p class="text-text-secondary text-body-md mb-8 leading-relaxed">
             {contact.formInfoText}
           </p>
@@ -175,7 +175,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
               <div class="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-5">
                 <Icon name="check_circle" class="text-accent text-3xl" />
               </div>
-              <h3 class="font-display text-headline-lg-mobile mb-2">{contact.form.successHeading}</h3>
+              <h3 class="uppercase font-display text-headline-lg-mobile mb-2">{contact.form.successHeading}</h3>
               <p class="text-text-secondary text-body-md">{contact.form.successText}</p>
             </div>
             </div>
@@ -202,12 +202,12 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
   <section class="bg-bg-depth py-section-py-sm md:py-section-py-lg">
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="text-center mb-10 reveal">
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg">{contact.faqHeading}</h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg">{contact.faqHeading}</h2>
       </div>
       <div class="max-w-3xl mx-auto space-y-3">
         {contact.faq.map((item, i) => (
           <div class="glass rounded-2xl overflow-hidden">
-            <h3 class="m-0">
+            <h3 class="uppercase m-0">
               <button
                 type="button"
                 class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5"
@@ -215,7 +215,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
                 aria-controls={`faq-panel-${i}`}
                 id={`faq-trigger-${i}`}
               >
-                <span class="font-display font-semibold text-text-primary text-base md:text-lg">{item.question}</span>
+                <span class="font-body font-semibold text-text-primary text-base md:text-lg">{item.question}</span>
                 <Icon name="expand_more" class="text-accent flex-shrink-0 transition-transform duration-200" />
               </button>
             </h3>

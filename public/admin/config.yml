@@ -1025,12 +1025,15 @@ collections:
     sortable_fields: [order, title]
     fields:
       - { name: title, label: "Nombre", widget: string }
+      - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
       - { name: order, label: "Orden", widget: number, value_type: int }
       - { name: icon, label: "Icono", widget: string }
       - { name: heroHeading, label: "Hero · Titular", widget: string }
       - { name: heroHighlight, label: "Hero · Palabra resaltada", widget: string, required: false }
       - { name: heroSub, label: "Hero · Subtítulo", widget: text }
       - { name: heroCtaLabel, label: "Hero · Texto botón", widget: string }
+      - { name: heroCtaSecondaryLabel, label: "Hero · Texto botón secundario (opcional — reemplaza 'Ver planes')", widget: string, required: false }
+      - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario (opcional, p.ej. /alethig-media-os — reemplaza el ancla #planes)", widget: string, required: false }
       - { name: image, label: "Imagen", widget: image }
       - { name: imageAlt, label: "Texto alternativo", widget: string }
       - name: features
@@ -1041,7 +1044,7 @@ collections:
           - { name: title, label: "Título", widget: string }
           - { name: desc, label: "Descripción", widget: text }
       - name: plans
-        label: "Planes"
+        label: "Planes (dejar vacío para mostrar un panel de 'precio personalizado' + CTA de consulta en vez de una grilla de precios — ver los 2 campos de abajo)"
         widget: list
         fields:
           - { name: name, label: "Nombre", widget: string }
@@ -1058,6 +1061,8 @@ collections:
           - { name: key, label: "Clave (debe coincidir con 'Grupo' en cada plan)", widget: string }
           - { name: label, label: "Título visible del grupo", widget: string }
       - { name: plansHeading, label: "Titular de precios (opcional — reemplaza 'Planes y precios')", widget: string, required: false }
+      - { name: plansCustomHeading, label: "Precio a medida · Titular (opcional — solo se usa si 'Planes' está vacío)", widget: string, required: false }
+      - { name: plansCustomText, label: "Precio a medida · Texto (opcional — solo se usa si 'Planes' está vacío)", widget: text, required: false }
       - { name: ctaHeading, label: "CTA · Titular", widget: string }
       - { name: ctaText, label: "CTA · Texto", widget: text }
       - { name: ctaButtonLabel, label: "CTA · Texto botón", widget: string }
@@ -1079,12 +1084,15 @@ collections:
     fields:
       - { name: title, label: "Nombre (Inglés)", widget: string }
       - { name: urlSlug, label: "URL en inglés (p.ej. web-development)", widget: string }
+      - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
       - { name: order, label: "Orden", widget: number, value_type: int }
       - { name: icon, label: "Icono", widget: string }
       - { name: heroHeading, label: "Hero · Titular", widget: string }
       - { name: heroHighlight, label: "Hero · Palabra resaltada", widget: string, required: false }
       - { name: heroSub, label: "Hero · Subtítulo", widget: text }
       - { name: heroCtaLabel, label: "Hero · Texto botón", widget: string }
+      - { name: heroCtaSecondaryLabel, label: "Hero · Texto botón secundario (opcional — reemplaza 'View plans')", widget: string, required: false }
+      - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario (opcional, p.ej. /alethig-media-os — reemplaza el ancla #plans)", widget: string, required: false }
       - { name: image, label: "Imagen", widget: image }
       - { name: imageAlt, label: "Texto alternativo", widget: string }
       - name: features
@@ -1095,7 +1103,7 @@ collections:
           - { name: title, label: "Título", widget: string }
           - { name: desc, label: "Descripción", widget: text }
       - name: plans
-        label: "Planes"
+        label: "Planes (dejar vacío para mostrar un panel de 'precio personalizado' + CTA de consulta en vez de una grilla de precios — ver los 2 campos de abajo)"
         widget: list
         fields:
           - { name: name, label: "Nombre", widget: string }
@@ -1112,6 +1120,8 @@ collections:
           - { name: key, label: "Clave (debe coincidir con 'Grupo' en cada plan)", widget: string }
           - { name: label, label: "Título visible del grupo", widget: string }
       - { name: plansHeading, label: "Titular de precios (opcional — reemplaza 'Planes y precios')", widget: string, required: false }
+      - { name: plansCustomHeading, label: "Precio a medida · Titular (opcional — solo se usa si 'Planes' está vacío)", widget: string, required: false }
+      - { name: plansCustomText, label: "Precio a medida · Texto (opcional — solo se usa si 'Planes' está vacío)", widget: text, required: false }
       - { name: ctaHeading, label: "CTA · Titular", widget: string }
       - { name: ctaText, label: "CTA · Texto", widget: text }
       - { name: ctaButtonLabel, label: "CTA · Texto botón", widget: string }

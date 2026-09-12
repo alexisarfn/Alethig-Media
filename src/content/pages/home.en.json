@@ -76,7 +76,7 @@
   "servicesHeading": "We Can Also Help With This.",
   "servicesSubtitle": "Websites, brand design, content and more — everything else your business might need, in one place.",
   "services": [
-    { "icon": "thumb_up", "title": "Social Media Management", "desc": "Instagram, Facebook, and TikTok — content, designs, copywriting, replies, and paid advertising. Starting at $199/mo.", "href": "/services/social-media-management" },
+    { "icon": "thumb_up", "title": "Social Media Content", "desc": "Designs, copy and Reels created by Alethig — organized, approved and scheduled through Alethig Media OS.", "href": "/services/social-media-management" },
     { "icon": "movie", "title": "Video Production", "desc": "We film at your business and our editors handle the rest. Reels, TikToks, and scroll-stopping ads. Starting at $75 per video.", "href": "/services/video-production" },
     { "icon": "ads_click", "title": "Paid Advertising", "desc": "Facebook, Instagram, TikTok, and Google Ads managed by specialists. You set the budget, we deliver the results. Starting at $99.", "href": "/services/paid-advertising" },
     { "icon": "palette", "title": "Brand Design", "desc": "Logos, business cards, flyers, menus, and all the visual materials your business needs to look professional and stand out.", "href": "/services/brand-design" },

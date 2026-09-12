@@ -286,6 +286,11 @@ businessSchema.openingHoursSpecification = {
          flotante de WhatsApp para que nunca se solapen (el propio lanzador
          del chat se oculta desde su propio estilo en ChatbotWidget.astro). */
       body.chat-open .wa-float { display: none; }
+      /* POSITIONING PHASE 9: mismo criterio con el menú móvil abierto — en
+         pantallas cortas (p.ej. 320-390×568) el panel del menú es más alto
+         que el espacio libre y el flotante quedaba superpuesto sobre la
+         fila ES/EN del menú (auditado con Playwright). */
+      body.menu-open .wa-float { display: none; }
     }
     /* Entrada única y sutil (Visual P1.6): no es un bounce/pulso continuo,
        corre una sola vez al cargar la página. */
@@ -553,11 +558,19 @@ businessSchema.openingHoursSpecification = {
   }, { passive: true });
 
   // ---- Mobile menu ----
+  // POSITIONING PHASE 9: además de mostrar/ocultar el panel, se alterna
+  // body.menu-open — igual al patrón ya existente de body.chat-open (ver
+  // .wa-float / .chat-launcher más abajo/en ChatbotWidget.astro). En
+  // viewports muy angostos (≤480px, pantallas cortas tipo iPhone SE) el
+  // panel del menú es más alto que el hueco libre y el flotante de
+  // WhatsApp/el lanzador del chat quedaban superpuestos sobre la fila del
+  // selector de idioma — auditado y confirmado en POSITIONING PHASE 9.
   const menuBtn = document.getElementById('menu-btn');
   menuBtn?.addEventListener('click', () => {
     const m = document.getElementById('mobile-menu');
     const isHidden = m?.classList.toggle('hidden');
     menuBtn.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+    document.body.classList.toggle('menu-open', !isHidden);
   });
 
   // ---- Selector ES/EN: recuerda la elección manual 1 año, nunca la pisa ----

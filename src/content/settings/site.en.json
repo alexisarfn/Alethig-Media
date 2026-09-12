@@ -23,7 +23,7 @@
     { "label": "Contact", "href": "/contact" }
   ],
   "footerLinks": [
-    { "label": "Social Media", "href": "/services/social-media-management" },
+    { "label": "Social Media Content", "href": "/services/social-media-management" },
     { "label": "Video Production", "href": "/services/video-production" },
     { "label": "Paid Advertising", "href": "/services/paid-advertising" },
     { "label": "Web Development", "href": "/services/web-development" }

@@ -28,9 +28,9 @@ const { plan, base, contactHref, featuredLabel, ctaLabel } = Astro.props;
 ---
 <div class={`glass card-cyber rounded-2xl p-7 flex flex-col ${plan.featured ? 'lumen-border scale-105 relative' : ''}`}>
   {plan.featured && <span class="tag-cyber mb-4 self-start">{featuredLabel}</span>}
-  <p class="font-display font-bold text-xl mb-1">{plan.name}</p>
+  <p class="font-display uppercase font-bold text-xl mb-1">{plan.name}</p>
   <p class="text-text-secondary text-sm mb-3">{plan.sub}</p>
-  <p class="gradient-text font-display font-extrabold text-2xl mb-5">{plan.price}</p>
+  <p class="gradient-text font-display uppercase font-extrabold text-2xl mb-5">{plan.price}</p>
   <ul class="space-y-2 mb-6 flex-1">
     {plan.features.map(f => (
       <li class="flex items-start gap-2 text-sm text-text-secondary">

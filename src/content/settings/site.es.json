@@ -23,7 +23,7 @@
     { "label": "Contacto", "href": "/contacto" }
   ],
   "footerLinks": [
-    { "label": "Redes Sociales", "href": "/servicios/manejo-de-redes-sociales" },
+    { "label": "Contenido para Redes Sociales", "href": "/servicios/manejo-de-redes-sociales" },
     { "label": "Producción de Video", "href": "/servicios/produccion-de-video" },
     { "label": "Publicidad Pagada", "href": "/servicios/publicidad-pagada" },
     { "label": "Desarrollo Web", "href": "/servicios/desarrollo-web" }

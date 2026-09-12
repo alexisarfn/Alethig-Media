@@ -20,7 +20,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="reveal">
           <span class="tag-cyber mb-5 inline-flex"><Icon name="groups" class="text-sm" />{about.heroTag}</span>
-          <h1 class="font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(about.heroHeading, about.heroHighlight)}></h1>
+          <h1 class="uppercase font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(about.heroHeading, about.heroHighlight)}></h1>
           <p class="text-body-lg text-text-secondary mb-8">
             {about.heroParagraph}
           </p>
@@ -64,7 +64,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
               />
             </div>
             <div class="absolute -bottom-4 -right-4 glass rounded-xl px-5 py-3 border border-accent/30">
-              <p class="text-accent font-display font-bold text-sm">{about.aboutBadgeValue}</p>
+              <p class="text-accent font-display uppercase font-bold text-sm">{about.aboutBadgeValue}</p>
               <p class="text-text-secondary text-xs">{about.aboutBadgeLabel}</p>
             </div>
           </div>
@@ -72,7 +72,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
         <!-- Content col -->
         <div class="md:col-span-7 reveal">
           <span class="tag-cyber mb-5 inline-flex">{about.aboutTag}</span>
-          <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5" set:html={highlightHeading(about.aboutHeading, about.aboutHighlight)}></h2>
+          <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5" set:html={highlightHeading(about.aboutHeading, about.aboutHighlight)}></h2>
           {about.aboutParagraphs.map(p => (
             <p class="text-body-md text-text-secondary mb-6 leading-relaxed">{p}</p>
           ))}
@@ -89,7 +89,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="text-center mb-14 reveal">
         <span class="tag-cyber mb-4 inline-flex">{about.statsTag}</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5" set:html={highlightHeading(about.statsHeading, about.statsHighlight)}></h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5" set:html={highlightHeading(about.statsHeading, about.statsHighlight)}></h2>
         <p class="text-body-md text-text-secondary max-w-2xl mx-auto">
           {about.statsParagraph}
         </p>
@@ -97,7 +97,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5 stagger-fade">
         {about.stats.map(s => (
           <div class="glass card-cyber rounded-2xl p-6 md:p-8 text-center">
-            <p class="font-display font-extrabold text-sm sm:text-lg md:text-2xl gradient-text mb-2">{s.value}</p>
+            <p class="font-display uppercase font-extrabold text-sm sm:text-lg md:text-2xl gradient-text mb-2">{s.value}</p>
             <p class="text-text-secondary text-sm">{s.label}</p>
           </div>
         ))}
@@ -110,7 +110,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="text-center mb-14 reveal">
         <span class="tag-cyber mb-4 inline-flex">{about.teamTag}</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4" set:html={highlightHeading(about.teamHeading, about.teamHighlight)}></h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4" set:html={highlightHeading(about.teamHeading, about.teamHighlight)}></h2>
         <p class="text-text-secondary text-body-md mb-6 max-w-2xl mx-auto">{about.teamParagraph}</p>
         <p class="text-text-secondary text-body-md italic mb-6">"{about.teamQuote}"</p>
         <a href={withBase(BASE, '/contact')} class="btn-cyber magnetic press inline-flex">
@@ -121,7 +121,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
         {about.team.map(m => (
           <div class="glass card-cyber rounded-2xl overflow-hidden group">
             <div class="p-6 text-center">
-              <p class="font-display font-bold text-text-primary">{m.name}</p>
+              <p class="font-display uppercase font-bold text-text-primary">{m.name}</p>
               <p class="text-accent text-sm mt-1">{m.role}</p>
             </div>
           </div>

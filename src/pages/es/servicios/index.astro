@@ -35,7 +35,7 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
     <div class="max-w-container-max mx-auto px-gutter w-full">
       <div class="glass card-cyber rounded-2xl p-10 md:p-14 text-center reveal max-w-2xl mx-auto">
         <span class="tag-cyber mb-6 inline-flex"><Icon name="design_services" class="text-sm" />{hub.heroTag}</span>
-        <h1 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5">{hub.heroHeading}</h1>
+        <h1 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5">{hub.heroHeading}</h1>
         <p class="text-body-lg text-ink-dim mb-10 max-w-xl mx-auto">{hub.heroParagraph}</p>
         <div class="flex flex-wrap items-center justify-center gap-4">
           <a href={withBase(BASE, hub.heroCtaPrimaryHref)} data-booking-trigger class="btn-cyber-solid magnetic press">
@@ -58,11 +58,11 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
         <div class="grid md:grid-cols-[1.3fr_1fr] gap-10 items-center">
           <div>
             <span class="tag-cyber mb-5 inline-flex"><Icon name="monitoring" class="text-sm" />{hub.tgCalloutTag}</span>
-            <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4">{hub.tgCalloutHeading}</h2>
+            <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4">{hub.tgCalloutHeading}</h2>
             <p class="text-text-secondary text-body-md mb-6 max-w-xl">{hub.tgCalloutDesc}</p>
             <ul class="flex flex-wrap gap-2 mb-8">
               {hub.tgCalloutItems.map(item => (
-                <li class="text-xs font-display font-semibold text-text-secondary bg-white/5 border border-white/10 rounded-full px-3 py-1.5">{item}</li>
+                <li class="text-xs font-display uppercase font-semibold text-text-secondary bg-white/5 border border-white/10 rounded-full px-3 py-1.5">{item}</li>
               ))}
             </ul>
             <a href={withBase(BASE, hub.tgCalloutCtaHref)} class="btn-cyber-solid magnetic press inline-flex">
@@ -92,9 +92,9 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
             <div class="w-10 h-10 rounded-xl bg-accent/12 border border-accent/25 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors duration-300">
               <Icon name={s.icon} class="text-gold-ink text-xl" />
             </div>
-            <h3 class="font-display font-bold text-base mb-2 group-hover:text-gold-ink transition-colors duration-300">{s.title}</h3>
+            <h3 class="uppercase font-display font-bold text-base mb-2 group-hover:text-gold-ink transition-colors duration-300">{s.title}</h3>
             <p class="text-ink-dim text-sm leading-relaxed mb-4">{s.desc}</p>
-            <span class="inline-flex items-center gap-2 text-gold-ink text-xs font-display font-semibold">
+            <span class="inline-flex items-center gap-2 text-gold-ink text-xs font-display uppercase font-semibold">
               + Más info <Icon name="arrow_forward" class="text-xs transition-transform duration-200 group-hover:translate-x-1" />
             </span>
           </a>
@@ -116,9 +116,9 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
             <div class="w-10 h-10 rounded-xl bg-accent/12 border border-accent/25 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors duration-300">
               <Icon name={s.icon} class="text-gold-ink text-xl" />
             </div>
-            <h3 class="font-display font-bold text-base mb-2 group-hover:text-gold-ink transition-colors duration-300">{s.title}</h3>
+            <h3 class="uppercase font-display font-bold text-base mb-2 group-hover:text-gold-ink transition-colors duration-300">{s.title}</h3>
             <p class="text-ink-dim text-sm leading-relaxed mb-4">{s.desc}</p>
-            <span class="inline-flex items-center gap-2 text-gold-ink text-xs font-display font-semibold">
+            <span class="inline-flex items-center gap-2 text-gold-ink text-xs font-display uppercase font-semibold">
               + Más info <Icon name="arrow_forward" class="text-xs transition-transform duration-200 group-hover:translate-x-1" />
             </span>
           </a>
@@ -141,15 +141,15 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
             <div class="w-10 h-10 rounded-xl bg-accent/12 border border-accent/25 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors duration-300">
               <Icon name={paidAds.icon} class="text-gold-ink text-xl" />
             </div>
-            <h3 class="font-display font-bold text-base mb-2 group-hover:text-gold-ink transition-colors duration-300">{paidAds.title}</h3>
+            <h3 class="uppercase font-display font-bold text-base mb-2 group-hover:text-gold-ink transition-colors duration-300">{paidAds.title}</h3>
             <p class="text-ink-dim text-sm leading-relaxed mb-4">{paidAds.desc}</p>
-            <span class="inline-flex items-center gap-2 text-gold-ink text-xs font-display font-semibold">
+            <span class="inline-flex items-center gap-2 text-gold-ink text-xs font-display uppercase font-semibold">
               + Más info <Icon name="arrow_forward" class="text-xs transition-transform duration-200 group-hover:translate-x-1" />
             </span>
           </a>
           <div class="glass rounded-2xl p-6 flex flex-col justify-center border border-accent/15">
             <p class="text-ink-dim text-sm leading-relaxed mb-4">{hub.paidAdsNote}</p>
-            <a href={withBase(BASE, hub.tgCalloutCtaHref)} class="inline-flex items-center gap-2 text-gold-ink text-sm font-display font-semibold w-fit">
+            <a href={withBase(BASE, hub.tgCalloutCtaHref)} class="inline-flex items-center gap-2 text-gold-ink text-sm font-display uppercase font-semibold w-fit">
               {hub.paidAdsNoteLinkLabel} <Icon name="arrow_forward" class="text-sm" />
             </a>
           </div>
@@ -170,7 +170,7 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
           <Icon name="bolt" class="text-gold-ink text-2xl" />
         </div>
         <div class="min-w-0">
-          <h3 class="font-display font-bold text-lg mb-1.5">{hub.automationHeading}</h3>
+          <h3 class="uppercase font-display font-bold text-lg mb-1.5">{hub.automationHeading}</h3>
           <p class="text-ink-dim text-sm leading-relaxed">{hub.automationBody}</p>
         </div>
         <a href={withBase(BASE, hub.automationCtaHref)} class="btn-ghost magnetic press md:whitespace-nowrap">{hub.automationCtaLabel}</a>
@@ -190,7 +190,7 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
           <Icon name="checkroom" class="text-gold-ink text-2xl" />
         </div>
         <p class="text-ink-dim text-sm leading-relaxed flex-1 text-center sm:text-left">{hub.sublimationNote}</p>
-        <span class="inline-flex items-center gap-2 text-gold-ink text-sm font-display font-semibold sm:whitespace-nowrap">
+        <span class="inline-flex items-center gap-2 text-gold-ink text-sm font-display uppercase font-semibold sm:whitespace-nowrap">
           {hub.sublimationCtaLabel} <Icon name="arrow_forward" class="text-sm transition-transform duration-200 group-hover:translate-x-1" />
         </span>
       </a>
@@ -203,7 +203,7 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
       <div class="glass lumen-border rounded-3xl p-12 md:p-16 text-center reveal"
            style="background: linear-gradient(135deg, rgba(27,42,107,0.25) 0%, rgba(216,166,42,0.08) 100%);">
         <span class="tag-cyber mb-6 inline-flex">{hub.ctaTag}</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5">{hub.ctaHeading}</h2>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5">{hub.ctaHeading}</h2>
         <p class="text-text-secondary text-body-md max-w-xl mx-auto mb-8">{hub.ctaParagraph}</p>
         <div class="flex flex-wrap items-center justify-center gap-4">
           <a href={withBase(BASE, hub.ctaSecondaryHref)} data-booking-trigger class="btn-cyber-solid magnetic press inline-flex">

@@ -12,7 +12,7 @@
   "features": [
     { "icon": "branding_watermark", "title": "Identidad completa", "desc": "Logotipos y kit de marca que comunican autoridad y generan reconocimiento inmediato." },
     { "icon": "description", "title": "Material impreso", "desc": "Tarjetas, flyers, carteles y menús listos para usar en tu negocio." },
-    { "icon": "auto_awesome", "title": "Diseño que destaca", "desc": "Tu negocio se ve profesional en cada punto de contacto en Long Island." }
+    { "icon": "auto_awesome", "title": "Diseño que destaca", "desc": "Tu negocio se ve profesional y consistente en cada punto de contacto con tu marca." }
   ],
   "plans": [
     { "name": "Logotipo + Kit de Marca", "sub": "Identidad completa", "price": "$429 único", "featured": true, "features": ["Logotipo profesional", "Kit completo de identidad de marca", "Pago único"], "group": "package" },

@@ -15,11 +15,13 @@
   "socialHeading": "Social Media",
   "submitLabel": "Send My Message →",
   "serviceOptions": [
-    { "value": "social-media", "label": "Social Media" },
+    { "value": "social-media", "label": "Social Media Content + Alethig Media OS" },
     { "value": "video-production", "label": "Video" },
     { "value": "paid-advertising", "label": "Advertising" },
     { "value": "web-development", "label": "Website" },
     { "value": "brand-design", "label": "Brand Design" },
+    { "value": "alethig-media-os", "label": "Alethig Media OS" },
+    { "value": "sublimation", "label": "Sublimation & Branded Products" },
     { "value": "not-sure", "label": "Not sure yet" }
   ],
   "mapHeading": "Amityville, Long Island, New York",
