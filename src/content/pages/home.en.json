@@ -4,7 +4,7 @@
   "heroTag": "Marketing · Technology · Branded Products",
   "heroHeading": "We Drive Traffic. We Build Brands. We Give You the System to Manage It All.",
   "heroHighlight": "We Give You the System",
-  "heroTagline": "Based in Long Island. Built to serve businesses beyond it.",
+  "heroTagline": "Marketing, technology and branded products built to help your business grow.",
   "heroParagraph": "Social media management, content creation, video production, and paid advertising — we handle it all for you. Bilingual in English and Spanish.",
   "heroCtaPrimary": { "label": "Book Your Free Consultation", "href": "/contact" },
   "heroCtaSecondary": { "label": "View Services", "href": "#services" },
@@ -12,7 +12,7 @@
   "heroImageAlt": "Alethig Media team working on digital marketing strategy",
   "trustBar": [
     { "icon": "translate", "label": "English & Spanish" },
-    { "icon": "location_on", "label": "Long Island — Nassau & Suffolk" },
+    { "icon": "bar_chart", "label": "Focused on Growth" },
     { "icon": "payments", "label": "Clear, Transparent Pricing" },
     { "icon": "schedule", "label": "Free 15-Minute Consultation" }
   ],
@@ -83,11 +83,11 @@
     { "icon": "language", "title": "Web Development", "desc": "Professional websites with hosting, SSL, and business email included. Works on every device.", "href": "/services/web-development" }
   ],
   "reasonsTag": "Why Choose Us",
-  "reasonsHeading": "Why Long Island Businesses Choose Alethig Media.",
+  "reasonsHeading": "Why Businesses Choose Alethig Media.",
   "reasonsHighlight": "Alethig Media",
   "reasons": [
-    { "icon": "location_on", "title": "We're Local", "desc": "We're right here in Long Island, NY. We know this community and what works for businesses like yours." },
-    { "icon": "translate", "title": "Bilingual in English and Spanish", "desc": "We serve the entire Long Island community. Our team talks to you in whichever language you prefer." },
+    { "icon": "chat", "title": "Personal Attention", "desc": "We work closely with you to understand your business, your goals and the opportunities that can drive real growth." },
+    { "icon": "translate", "title": "Bilingual: English & Spanish", "desc": "We communicate with you in the language you prefer so every step stays clear and simple." },
     { "icon": "payments", "title": "Fixed, Transparent Pricing", "desc": "No surprises, no hidden fees. You know exactly what you pay and what you get every month." },
     { "icon": "groups", "title": "Real Team, Real Results", "desc": "Every account gets a dedicated community manager, designer, and ads specialist. Real people working for your business." }
   ],

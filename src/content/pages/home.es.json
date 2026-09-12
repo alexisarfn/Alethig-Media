@@ -4,7 +4,7 @@
   "heroTag": "Marketing · Tecnología · Productos de Marca",
   "heroHeading": "Generamos Tráfico. Construimos Marcas. Te Damos el Sistema para Manejarlo Todo.",
   "heroHighlight": "Te Damos el Sistema",
-  "heroTagline": "Con base en Long Island. Preparados para trabajar con negocios más allá del área local.",
+  "heroTagline": "Marketing, tecnología y productos de marca diseñados para ayudar a tu negocio a crecer.",
   "heroParagraph": "Manejo de redes sociales, creación de contenido, producción de video y publicidad pagada — todo lo hacemos por ti. Bilingües inglés y español.",
   "heroCtaPrimary": { "label": "Agenda tu Consulta Gratis", "href": "/contacto" },
   "heroCtaSecondary": { "label": "Ver Servicios", "href": "#servicios" },
@@ -12,7 +12,7 @@
   "heroImageAlt": "Equipo de Alethig Media trabajando en estrategia de marketing digital",
   "trustBar": [
     { "icon": "translate", "label": "Inglés y Español" },
-    { "icon": "location_on", "label": "Long Island — Nassau & Suffolk" },
+    { "icon": "bar_chart", "label": "Enfocados en Crecimiento" },
     { "icon": "payments", "label": "Precios claros y transparentes" },
     { "icon": "schedule", "label": "Consulta gratis de 15 minutos" }
   ],
@@ -83,11 +83,11 @@
     { "icon": "language", "title": "Desarrollo Web", "desc": "Sitios web profesionales con hosting, SSL y correo corporativo incluidos. Funcionan en todos los dispositivos.", "href": "/servicios/desarrollo-web" }
   ],
   "reasonsTag": "Por qué elegirnos",
-  "reasonsHeading": "Por Qué los Negocios de Long Island Eligen Alethig Media.",
+  "reasonsHeading": "Por Qué los Negocios Eligen Alethig Media.",
   "reasonsHighlight": "Alethig Media",
   "reasons": [
-    { "icon": "location_on", "title": "Somos Locales", "desc": "Estamos aquí mismo en Long Island, NY. Conocemos esta comunidad y sabemos qué funciona para negocios como el tuyo." },
-    { "icon": "translate", "title": "Bilingües Inglés y Español", "desc": "Servimos a toda la comunidad de Long Island. Nuestro equipo se comunica contigo en el idioma que prefieras." },
+    { "icon": "chat", "title": "Trato Cercano", "desc": "Trabajamos de cerca contigo para entender tu negocio, tus objetivos y las oportunidades reales de crecimiento." },
+    { "icon": "translate", "title": "Bilingües: Inglés y Español", "desc": "Nos comunicamos contigo en el idioma que prefieras para que cada paso sea claro y sencillo." },
     { "icon": "payments", "title": "Precios Fijos y Transparentes", "desc": "Sin sorpresas, sin cargos ocultos. Sabes exactamente cuánto pagas y qué recibes cada mes." },
     { "icon": "groups", "title": "Equipo Real, Resultados Reales", "desc": "Cada cuenta tiene community manager, diseñador y especialista en anuncios dedicados. Personas reales trabajando para tu negocio." }
   ],
