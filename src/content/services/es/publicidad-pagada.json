@@ -1,30 +1,27 @@
 {
   "title": "Publicidad Pagada",
-  "metaDescription": "Publicidad pagada para negocios, con base en Long Island, NY. Campañas en Meta y Google que generan clientes reales. Gestión bilingüe inglés y español — Alethig Media.",
+  "metaDescription": "Gestión de publicidad pagada en Meta y Google, parte de nuestros planes de Traffic & Growth, desde $750/mes. Inversión publicitaria aparte. Gestión bilingüe inglés y español — Alethig Media.",
   "order": 3,
   "icon": "ads_click",
   "heroHeading": "Deja de adivinar y empieza a conseguir leads reales",
   "heroHighlight": "leads reales",
-  "heroSub": "Nuestros especialistas configuran, lanzan y manejan tus campañas en Facebook, Instagram, TikTok y Google — apuntando exactamente a los clientes correctos para tu negocio.",
+  "heroSub": "La gestión de publicidad pagada se ofrece a través de nuestros planes de Traffic & Growth. Nuestros especialistas configuran, lanzan y manejan tus campañas en Facebook, Instagram, TikTok y Google — apuntando exactamente a los clientes correctos para tu negocio.",
   "heroCtaLabel": "Agenda tu Consulta Gratis",
+  "heroCtaSecondaryLabel": "Ver Traffic & Growth",
+  "heroCtaSecondaryHref": "/trafico-y-crecimiento",
   "image": "/uploads/servicio-publicidad.webp",
   "imageAlt": "Publicidad pagada para negocios",
   "features": [
     { "icon": "my_location", "title": "Segmentación precisa", "desc": "Análisis de mercado y segmentación de audiencia para apuntar a los clientes correctos para tu negocio." },
     { "icon": "design_services", "title": "Diseño del anuncio", "desc": "Creamos la pieza —imagen o video— lista para captar la atención y convertir." },
-    { "icon": "monitoring", "title": "Monitoreo 30 días", "desc": "Configuración, lanzamiento y monitoreo durante 30 días, con reporte de rendimiento al final." }
+    { "icon": "monitoring", "title": "Optimización Continua", "desc": "Configuración, lanzamiento y optimización continua, con reportes de rendimiento." }
   ],
-  "plans": [
-    { "name": "Facebook Ads", "sub": "Meta · 1 campaña", "price": "$99/campaña", "featured": true, "features": ["Análisis y segmentación", "Diseño del anuncio", "30 días de monitoreo", "Reporte final", "Especialista dedicado"] },
-    { "name": "Instagram Ads", "sub": "Meta · 1 campaña", "price": "$99/campaña", "featured": false, "features": ["Análisis y segmentación", "Diseño del anuncio", "30 días de monitoreo", "Reporte final", "Especialista dedicado"] },
-    { "name": "TikTok Ads", "sub": "1 campaña", "price": "$99/campaña", "featured": false, "features": ["Análisis y segmentación", "Diseño del anuncio", "30 días de monitoreo", "Reporte final", "Especialista dedicado"] },
-    { "name": "Google Search", "sub": "1 campaña", "price": "$125/campaña", "featured": false, "features": ["Análisis y segmentación", "Diseño del anuncio", "30 días de monitoreo", "Reporte final", "Especialista dedicado"] },
-    { "name": "Google Display", "sub": "1 campaña", "price": "$125/campaña", "featured": false, "features": ["Análisis y segmentación", "Diseño del anuncio", "30 días de monitoreo", "Reporte final", "Especialista dedicado"] },
-    { "name": "Google YouTube", "sub": "1 campaña", "price": "$150/campaña", "featured": false, "features": ["Análisis y segmentación", "Diseño del anuncio", "30 días de monitoreo", "Reporte final", "Especialista dedicado"] }
-  ],
-  "plansHeading": "Elige tu canal de publicidad",
+  "plans": [],
+  "plansHeading": "Precios",
+  "plansCustomHeading": "Desde $750/mes",
+  "plansCustomText": "La inversión publicitaria no está incluida. No garantizamos una cantidad específica de leads ni un ROAS determinado. Agenda una consulta gratuita y te ayudamos a definir qué plan de Traffic & Growth tiene sentido para tu negocio.",
   "ctaHeading": "¿Listo para conseguir más clientes?",
-  "ctaText": "El presupuesto de inversión en anuncios no está incluido — tú controlas cuánto inviertes, nosotros manejamos la estrategia.",
+  "ctaText": "La inversión publicitaria no está incluida. Publicidad Pagada es parte de nuestros planes de Traffic & Growth — tú controlas cuánto inviertes, nosotros manejamos la estrategia.",
   "ctaButtonLabel": "Agendar Mi Consulta Gratis",
   "ctaButtonIcon": "phone_in_talk"
 }

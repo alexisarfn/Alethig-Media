@@ -1,53 +1,169 @@
 {
-  "title": "Precios | Servicios de Marketing Digital, Software y Productos Personalizados — Alethig Media",
-  "metaDescription": "Cómo funcionan los precios en Alethig Media — Traffic & Growth, servicios de apoyo, Alethig Media OS y productos personalizados. Con base en Long Island, trabajando con negocios más allá del área local.",
+  "title": "Precios | Marketing Digital, SEO Local, Contenido y Alethig Media OS — Alethig Media",
+  "metaDescription": "Precios de marketing digital, SEO local, contenido para redes gestionado con Alethig Media OS, sitios web y diseño de marca. Con base en Long Island, trabajando con negocios más allá del área local.",
 
   "heroTag": "Precios",
-  "heroHeading": "Precios Claros Para Servicios, Software y Productos Personalizados.",
-  "heroParagraph": "Alethig Media ofrece distintas soluciones — Traffic & Growth, servicios de apoyo, Alethig Media OS y productos personalizados. El precio depende del tipo de solución, el alcance y las necesidades de cada negocio.",
+  "heroHeading": "Precios Claros Para Cada Servicio.",
+  "heroParagraph": "Elige el servicio que tu negocio necesita y ve de una vez qué incluye, qué plan te conviene y qué requiere una cotización personalizada.",
 
-  "tgNum": "01",
-  "tgIcon": "monitoring",
   "tgTag": "Traffic & Growth",
-  "tgHeading": "Publicidad, SEO y Generación de Leads",
-  "tgBody": "El precio de Traffic & Growth depende de la combinación de canales y el alcance de la estrategia. Agenda una consulta gratuita y te ayudamos a definir qué tiene sentido para tu negocio.",
-  "tgFactors": ["Canales de publicidad", "Alcance de la campaña", "Plataformas publicitarias", "Necesidades de gestión", "Complejidad de la estrategia"],
-  "tgCtaLabel": "Agenda una Consulta Gratis",
+  "tgIcon": "monitoring",
+  "tgHeading": "Publicidad, SEO y Generación de Leads.",
+  "tgIntro": "Planes mensuales de gestión para publicidad pagada, posicionamiento y generación de leads.",
+  "tgAdSpendNote": "La inversión publicitaria no está incluida.",
+  "tgDisclaimer": "No garantizamos una cantidad específica de leads ni un ROAS determinado.",
+  "tgCtaLabel": "Agendar Consulta",
   "tgCtaHref": "/contacto",
   "tgSecondaryLabel": "Ver Traffic & Growth",
   "tgSecondaryHref": "/trafico-y-crecimiento",
+  "tgPlans": [
+    {
+      "name": "Starter",
+      "sub": "1 canal principal",
+      "price": "$750/mes",
+      "featured": false,
+      "features": ["Meta Ads o Google Ads (1 canal)", "Configuración de campaña", "Optimización continua", "Seguimiento básico de conversiones", "Reportes"]
+    },
+    {
+      "name": "Growth",
+      "sub": "Estrategia multicanal",
+      "price": "$1,250/mes",
+      "featured": true,
+      "features": ["Meta + Google, o Publicidad + SEO Local", "Optimización continua", "Revisión de landing page", "Seguimiento de conversiones", "Estrategia de crecimiento"]
+    },
+    {
+      "name": "Scale",
+      "sub": "Cobertura completa",
+      "price": "$1,950/mes",
+      "featured": false,
+      "features": ["Meta Ads", "Google Ads", "SEO Local", "Estrategia de generación de leads", "Optimización de embudo y landing", "Soporte prioritario"]
+    }
+  ],
 
-  "supportNum": "02",
-  "supportIcon": "design_services",
-  "supportTag": "Servicios de Apoyo",
-  "supportHeading": "Sitios Web, Diseño de Marca, Contenido y Video",
-  "supportBody": "Varios de nuestros servicios de apoyo ya tienen planes y precios publicados en su propia página. El contenido para redes sociales ahora se gestiona con Alethig Media OS, con precio a la medida — explora cada servicio para ver las opciones disponibles.",
-  "supportCtaLabel": "Ver Todos los Servicios",
-  "supportCtaHref": "/servicios",
+  "seoTag": "SEO Local",
+  "seoIcon": "my_location",
+  "seoHeading": "Visibilidad en Búsquedas y Mapas Locales.",
+  "seoIntro": "Ideal para negocios de servicios locales, contratistas, servicios para el hogar y negocios profesionales que dependen de la visibilidad en búsquedas locales.",
+  "seoCtaLabel": "Agendar Consulta",
+  "seoCtaHref": "/contacto",
+  "seoPlans": [
+    {
+      "name": "Starter",
+      "sub": "Fundamentos locales",
+      "price": "$499/mes",
+      "featured": false,
+      "features": ["Optimización de Google Business Profile", "SEO local en el sitio", "Seguimiento de posicionamiento local", "Reporte mensual"]
+    },
+    {
+      "name": "Growth",
+      "sub": "Crecimiento local",
+      "price": "$799/mes",
+      "featured": true,
+      "features": ["Todo lo de Starter", "Gestión de citaciones locales", "Apoyo en reputación y reseñas", "Optimización continua"]
+    },
+    {
+      "name": "Pro",
+      "sub": "Máxima visibilidad local",
+      "price": "$1,199/mes",
+      "featured": false,
+      "features": ["Todo lo de Growth", "Estrategia local avanzada", "Soporte prioritario", "Reporte detallado de rendimiento"]
+    }
+  ],
 
-  "osNum": "03",
-  "osIcon": "bolt",
+  "contentTag": "Contenido Gestionado + Alethig Media OS",
+  "contentIcon": "thumb_up",
+  "contentBadge": "Alethig Media OS Incluido",
+  "contentHeading": "Contenido Gestionado + Alethig Media OS.",
+  "contentIntro": "Contenido, diseños y Reels creados por nuestro equipo — organizados, revisados y aprobados desde Alethig Media OS. El software está incluido en estos planes, sin cargo aparte.",
+  "contentCtaLabel": "Agendar Consulta",
+  "contentCtaHref": "/contacto",
+  "contentSecondaryLabel": "Conocer Alethig Media OS",
+  "contentSecondaryHref": "/alethig-media-os",
+  "contentPlans": [
+    {
+      "name": "Content Starter",
+      "sub": "Aprox. 8 piezas/mes",
+      "price": "$599/mes",
+      "featured": false,
+      "features": ["Aprox. 8 piezas de contenido al mes", "Diseño y textos", "Organización de contenido", "Revisión y aprobación en Alethig Media OS"]
+    },
+    {
+      "name": "Content Growth",
+      "sub": "Aprox. 12–16 piezas/mes",
+      "price": "$899/mes",
+      "featured": true,
+      "features": ["Aprox. 12–16 piezas al mes", "Publicaciones + Reels", "Planeación de contenido", "Revisión, cambios y aprobación", "Calendario de contenido en Alethig Media OS"]
+    },
+    {
+      "name": "Content Pro",
+      "sub": "Aprox. 16–20 piezas/mes",
+      "price": "$1,299/mes",
+      "featured": false,
+      "features": ["Aprox. 16–20 piezas al mes", "Más Reels y contenido en video", "Estrategia de contenido", "Atención prioritaria", "Flujo de trabajo en Alethig Media OS"]
+    }
+  ],
+
+  "webTag": "Sitios Web",
+  "webIcon": "language",
+  "webHeading": "Sitios Web Profesionales.",
+  "webIntro": "El precio final depende del alcance, el número de páginas, la funcionalidad, las integraciones y los requisitos de tienda en línea.",
+  "webCtaLabel": "Agendar Consulta",
+  "webCtaHref": "/contacto",
+  "webSecondaryLabel": "Ver Desarrollo Web",
+  "webSecondaryHref": "/servicios/desarrollo-web",
+  "webItems": [
+    { "name": "Landing Page", "price": "Desde $799" },
+    { "name": "Sitio Starter", "price": "Desde $1,499" },
+    { "name": "Sitio Growth", "price": "Desde $2,499" },
+    { "name": "Avanzado / E-commerce", "price": "Desde $3,500+" }
+  ],
+
+  "brandTag": "Diseño de Marca",
+  "brandIcon": "palette",
+  "brandHeading": "Identidad de Marca Profesional.",
+  "brandIntro": "Desde tu logo hasta una identidad de marca completa.",
+  "brandNote": "Flyers, menús, banners, gráficos para redes y otro material están disponibles como adicionales o trabajo personalizado.",
+  "brandCtaLabel": "Agendar Consulta",
+  "brandCtaHref": "/contacto",
+  "brandSecondaryLabel": "Ver Diseño de Marca",
+  "brandSecondaryHref": "/servicios/diseno-de-marca",
+  "brandItems": [
+    { "name": "Logo Starter", "price": "$299" },
+    { "name": "Esenciales de Marca", "price": "$599" },
+    { "name": "Identidad de Marca Completa", "price": "$1,199+" }
+  ],
+
+  "videoTag": "Video",
+  "videoIcon": "movie",
+  "videoHeading": "Producción y Edición de Video.",
+  "videoBody": "La edición de Reels y video puede incluirse en los planes de Contenido Gestionado. Filmación en locación, videos promocionales y producciones más grandes se cotizan de forma individual.",
+  "videoCtaLabel": "Solicitar Cotización",
+  "videoCtaHref": "/contacto",
+  "videoSecondaryLabel": "Ver Producción de Video",
+  "videoSecondaryHref": "/servicios/produccion-de-video",
+
   "osTag": "Alethig Media OS",
-  "osHeading": "Nuestra Plataforma de Marketing",
-  "osBody": "El precio y las opciones de Alethig Media OS dependen del nivel de acceso o paquete que tu negocio necesite. Conoce la plataforma o contáctanos para más información.",
-  "osCtaLabel": "Conocer Alethig Media OS",
-  "osCtaHref": "/alethig-media-os",
-  "osSecondaryLabel": "Contactar",
-  "osSecondaryHref": "/contacto",
+  "osIcon": "bolt",
+  "osHeading": "Alethig Media OS.",
+  "osBody": "Planes próximamente. Contáctanos para conocer opciones de acceso.",
+  "osFeatures": ["Contenido", "Aprobaciones", "Proyectos", "Flujos de Trabajo"],
+  "osCtaLabel": "Contactar",
+  "osCtaHref": "/contacto",
+  "osSecondaryLabel": "Conocer Alethig Media OS",
+  "osSecondaryHref": "/alethig-media-os",
 
-  "subNum": "04",
-  "subIcon": "checkroom",
   "subTag": "Sublimación y Productos con Marca",
-  "subHeading": "Productos Personalizados Por Cotización",
-  "subBody": "El precio de los productos personalizados depende del tipo de producto, la cantidad y los requisitos de diseño o marca. Cada proyecto recibe una cotización individual.",
-  "subFactors": ["Tipo de producto", "Cantidad", "Requisitos de diseño y marca"],
+  "subIcon": "checkroom",
+  "subHeading": "Productos Personalizados Por Cotización.",
+  "subBody": "El precio de los productos personalizados depende del tipo de producto, la cantidad, los materiales, la personalización y los requisitos de diseño. Cada proyecto recibe una cotización individual.",
+  "subFactors": ["Tipo de producto", "Cantidad", "Materiales", "Personalización y diseño"],
   "subCtaLabel": "Solicitar Cotización",
   "subCtaHref": "/sublimacion",
   "subSecondaryLabel": "Contactar",
   "subSecondaryHref": "/contacto",
 
   "regionIcon": "location_on",
-  "regionNote": "El precio puede variar según el mercado, el alcance, la moneda o los requisitos de entrega, cuando aplique.",
+  "regionNote": "Los precios pueden variar según el mercado, el alcance, la moneda y los requisitos de entrega.",
 
   "ctaTag": "¿Tienes Preguntas Sobre Precios?",
   "ctaHeading": "Hablemos Sobre Tu Proyecto.",

@@ -1,15 +1,20 @@
 ---
-// POSITIONING PHASE 6 — Pricing Hub. Página bespoke propia (mismo patrón
-// que traffic-growth.astro / services-hub / sublimacion.astro), fuera de
-// la colección uniforme de servicios. Explica CÓMO funcionan los precios
-// en las 4 líneas de negocio, sin inventar cifras que no existen:
-// Traffic & Growth y Alethig Media OS no tienen precio público (por
-// consulta/paquete); Sublimación es por cotización; los Servicios de
-// Apoyo SÍ tienen planes/precios reales ya publicados en sus propias
-// páginas (ver auditoría en src/content/services/es/*.json) — este hub
-// enlaza a esas páginas en vez de duplicar los valores.
+// PRICING IMPLEMENTATION PHASE — Pricing Hub rediseñado como página de
+// precios comercial real (antes: página explicativa de "cómo funcionan
+// los precios", sin cifras propias más que enlaces a otras páginas).
+// Reutiliza PlanCard (mismo componente que ya usan las páginas de
+// servicio) para las 3 secciones de 3 planes — mismo sistema visual,
+// sin inventar un componente de tarjeta nuevo. Traffic & Growth, SEO
+// Local y Contenido Gestionado son ahora precios públicos reales;
+// Sitios Web y Diseño de Marca se muestran como grillas compactas
+// "Desde $X" (con enlace a su propia página, que conserva su propio
+// detalle de planes); Video, Alethig Media OS y Sublimación se quedan
+// como paneles de cotización/consulta — sin inventar cifras que no
+// están aprobadas (ver informe de conflictos de precios entregado
+// aparte, antes de este cambio).
 import Icon from '../../components/Icon.astro';
 import Layout from '../../layouts/Layout.astro';
+import PlanCard from '../../components/PlanCard.astro';
 import pricing from '../../content/pages/pricing.es.json';
 import { withBase } from '../../lib/basePath';
 
@@ -19,10 +24,8 @@ const BASE = '/es';
 ---
 <Layout title={pricing.title} description={pricing.metaDescription} base={BASE} locale="es" altHref="/en/pricing/" navTheme="light">
 
-  <!-- HERO — centrado y sencillo (mismo patrón que el hub de Servicios):
-       esta página es una guía/decisión, no una línea de negocio propia,
-       así que no compite visualmente con Traffic & Growth/Sublimación. -->
-  <section class="on-light mesh-bg-light-hero relative pt-32 pb-section-py-lg overflow-hidden min-h-[55vh] flex items-center">
+  <!-- HERO -->
+  <section class="on-light mesh-bg-light-hero relative pt-32 pb-section-py-lg overflow-hidden min-h-[45vh] flex items-center">
     <div class="absolute top-1/4 right-1/3 w-72 h-72 rounded-full bg-accent/8 blur-[100px] pointer-events-none"></div>
     <div class="max-w-container-max mx-auto px-gutter w-full">
       <div class="glass card-cyber rounded-2xl p-10 md:p-14 text-center reveal max-w-2xl mx-auto">
@@ -33,67 +36,166 @@ const BASE = '/es';
     </div>
   </section>
 
-  <!-- 01 · TRAFFIC & GROWTH -->
+  <!-- TRAFFIC & GROWTH — 3 planes -->
+  <section class="on-light section-surface-alt py-section-py-sm md:py-section-py-lg">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="text-center mb-10 reveal">
+        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.tgIcon} class="text-sm" />{pricing.tgTag}</span>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl mx-auto break-words">{pricing.tgHeading}</h2>
+        <p class="text-ink-dim text-body-md max-w-2xl mx-auto">{pricing.tgIntro}</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger-fade mb-8">
+        {pricing.tgPlans.map(p => (
+          <PlanCard plan={p} base={BASE} contactHref={pricing.tgCtaHref} featuredLabel="Más Popular" ctaLabel={pricing.tgCtaLabel} />
+        ))}
+      </div>
+      <!-- Nota de inversión publicitaria + disclaimer de resultados: no son
+           parte de ningún plan individual, aplican a las 3 tarjetas. -->
+      <div class="text-center max-w-2xl mx-auto space-y-1 mb-8">
+        <p class="text-ink font-display uppercase font-semibold text-sm">{pricing.tgAdSpendNote}</p>
+        <p class="text-ink-dim text-xs">{pricing.tgDisclaimer}</p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href={withBase(BASE, pricing.tgSecondaryHref)} class="btn-ghost magnetic press uppercase">{pricing.tgSecondaryLabel}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO LOCAL — 3 planes -->
+  <section class="on-light section-surface py-section-py-sm md:py-section-py-lg">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="text-center mb-10 reveal">
+        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.seoIcon} class="text-sm" />{pricing.seoTag}</span>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl mx-auto break-words">{pricing.seoHeading}</h2>
+        <p class="text-ink-dim text-body-md max-w-2xl mx-auto">{pricing.seoIntro}</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger-fade">
+        {pricing.seoPlans.map(p => (
+          <PlanCard plan={p} base={BASE} contactHref={pricing.seoCtaHref} featuredLabel="Más Popular" ctaLabel={pricing.seoCtaLabel} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO GESTIONADO + ALETHIG MEDIA OS — 3 planes -->
+  <section class="on-light section-surface-white py-section-py-sm md:py-section-py-lg">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="text-center mb-10 reveal">
+        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.contentIcon} class="text-sm" />{pricing.contentTag}</span>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-3 max-w-2xl mx-auto break-words">{pricing.contentHeading}</h2>
+        <!-- Insignia "Alethig Media OS Incluido" — deja claro que el software
+             no es un cargo aparte, sin necesidad de una tarjeta de precio
+             de OS separada dentro de esta sección. -->
+        <span class="inline-flex items-center gap-1.5 text-xs font-display uppercase font-bold text-gold-ink bg-accent/10 border border-accent/25 rounded-full px-3 py-1.5 mb-4">
+          <Icon name="bolt" class="text-sm" />{pricing.contentBadge}
+        </span>
+        <p class="text-ink-dim text-body-md max-w-2xl mx-auto">{pricing.contentIntro}</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger-fade mb-8">
+        {pricing.contentPlans.map(p => (
+          <PlanCard plan={p} base={BASE} contactHref={pricing.contentCtaHref} featuredLabel="Más Popular" ctaLabel={pricing.contentCtaLabel} />
+        ))}
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href={withBase(BASE, pricing.contentSecondaryHref)} class="btn-ghost magnetic press uppercase">{pricing.contentSecondaryLabel}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SITIOS WEB — grilla compacta "Desde $X" -->
   <section class="on-light section-surface-alt py-section-py-sm">
     <div class="max-w-container-max mx-auto px-gutter">
-      <div class="glass card-cyber rounded-2xl p-8 md:p-10 relative reveal">
-        <span class="editorial-num absolute top-6 right-7" aria-hidden="true">{pricing.tgNum}</span>
-        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.tgIcon} class="text-sm" />{pricing.tgTag}</span>
-        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.tgHeading}</h2>
-        <p class="text-ink-dim text-body-md mb-6 max-w-2xl">{pricing.tgBody}</p>
+      <div class="glass card-cyber rounded-2xl p-8 md:p-10 reveal">
+        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.webIcon} class="text-sm" />{pricing.webTag}</span>
+        <h2 class="uppercase font-display text-[26px] sm:text-headline-lg-mobile md:text-headline-lg mb-3 max-w-2xl break-words">{pricing.webHeading}</h2>
+        <p class="text-ink-dim text-body-md mb-8 max-w-2xl">{pricing.webIntro}</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {pricing.webItems.map(item => (
+            <div class="bg-ink/5 border border-ink/10 rounded-xl p-5 text-center">
+              <p class="font-display uppercase font-bold text-sm mb-2">{item.name}</p>
+              <p class="gradient-text font-display uppercase font-extrabold text-lg">{item.price}</p>
+            </div>
+          ))}
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href={withBase(BASE, pricing.webCtaHref)} data-booking-trigger class="btn-cyber-solid magnetic press">
+            <span class="icon-wrap uppercase">{pricing.webCtaLabel} <Icon name="calendar_month" class="text-base" /></span>
+          </a>
+          <a href={withBase(BASE, pricing.webSecondaryHref)} class="btn-ghost magnetic press uppercase">{pricing.webSecondaryLabel}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISEÑO DE MARCA — grilla compacta -->
+  <section class="on-light section-surface py-section-py-sm">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="glass card-cyber rounded-2xl p-8 md:p-10 reveal">
+        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.brandIcon} class="text-sm" />{pricing.brandTag}</span>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-3 max-w-2xl break-words">{pricing.brandHeading}</h2>
+        <p class="text-ink-dim text-body-md mb-8 max-w-2xl">{pricing.brandIntro}</p>
+        <div class="grid sm:grid-cols-3 gap-4 mb-4">
+          {pricing.brandItems.map(item => (
+            <div class="bg-ink/5 border border-ink/10 rounded-xl p-5 text-center">
+              <p class="font-display uppercase font-bold text-sm mb-2">{item.name}</p>
+              <p class="gradient-text font-display uppercase font-extrabold text-lg">{item.price}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-ink-dim text-sm mb-8 max-w-2xl">{pricing.brandNote}</p>
+        <div class="flex flex-wrap gap-4">
+          <a href={withBase(BASE, pricing.brandCtaHref)} data-booking-trigger class="btn-cyber-solid magnetic press">
+            <span class="icon-wrap uppercase">{pricing.brandCtaLabel} <Icon name="calendar_month" class="text-base" /></span>
+          </a>
+          <a href={withBase(BASE, pricing.brandSecondaryHref)} class="btn-ghost magnetic press uppercase">{pricing.brandSecondaryLabel}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO — panel de cotización, sin tabla de precios pública -->
+  <section class="on-light section-surface-alt py-section-py-sm">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="glass card-cyber rounded-2xl p-8 md:p-10 reveal">
+        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.videoIcon} class="text-sm" />{pricing.videoTag}</span>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.videoHeading}</h2>
+        <p class="text-ink-dim text-body-md mb-8 max-w-2xl">{pricing.videoBody}</p>
+        <div class="flex flex-wrap gap-4">
+          <a href={withBase(BASE, pricing.videoCtaHref)} data-booking-trigger class="btn-cyber-solid magnetic press inline-flex">
+            <span class="icon-wrap uppercase">{pricing.videoCtaLabel} <Icon name="send" class="text-base" /></span>
+          </a>
+          <a href={withBase(BASE, pricing.videoSecondaryHref)} class="btn-ghost magnetic press uppercase">{pricing.videoSecondaryLabel}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALETHIG MEDIA OS — panel "planes próximamente", sin precio público -->
+  <section class="on-light section-surface py-section-py-sm">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="glass card-cyber rounded-2xl p-8 md:p-10 reveal">
+        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.osIcon} class="text-sm" />{pricing.osTag}</span>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.osHeading}</h2>
+        <p class="text-ink-dim text-body-md mb-6 max-w-2xl">{pricing.osBody}</p>
         <ul class="flex flex-wrap gap-2 mb-8">
-          {pricing.tgFactors.map(f => (
+          {pricing.osFeatures.map(f => (
             <li class="text-xs font-display uppercase font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-3 py-1.5">{f}</li>
           ))}
         </ul>
         <div class="flex flex-wrap gap-4">
-          <a href={withBase(BASE, pricing.tgCtaHref)} data-booking-trigger class="btn-cyber-solid magnetic press">
-            <span class="icon-wrap uppercase">{pricing.tgCtaLabel} <Icon name="calendar_month" class="text-base" /></span>
-          </a>
-          <a href={withBase(BASE, pricing.tgSecondaryHref)} class="btn-ghost magnetic press">{pricing.tgSecondaryLabel}</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 02 · SERVICIOS DE APOYO -->
-  <section class="on-light section-surface py-section-py-sm">
-    <div class="max-w-container-max mx-auto px-gutter">
-      <div class="glass card-cyber rounded-2xl p-8 md:p-10 relative reveal">
-        <span class="editorial-num absolute top-6 right-7" aria-hidden="true">{pricing.supportNum}</span>
-        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.supportIcon} class="text-sm" />{pricing.supportTag}</span>
-        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.supportHeading}</h2>
-        <p class="text-ink-dim text-body-md mb-8 max-w-2xl">{pricing.supportBody}</p>
-        <a href={withBase(BASE, pricing.supportCtaHref)} class="btn-cyber-solid magnetic press inline-flex">
-          <span class="icon-wrap uppercase">{pricing.supportCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 03 · ALETHIG MEDIA OS -->
-  <section class="on-light section-surface-white py-section-py-sm">
-    <div class="max-w-container-max mx-auto px-gutter">
-      <div class="glass card-cyber rounded-2xl p-8 md:p-10 relative reveal">
-        <span class="editorial-num absolute top-6 right-7" aria-hidden="true">{pricing.osNum}</span>
-        <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.osIcon} class="text-sm" />{pricing.osTag}</span>
-        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.osHeading}</h2>
-        <p class="text-ink-dim text-body-md mb-8 max-w-2xl">{pricing.osBody}</p>
-        <div class="flex flex-wrap gap-4">
           <a href={withBase(BASE, pricing.osCtaHref)} class="btn-cyber-solid magnetic press inline-flex">
             <span class="icon-wrap uppercase">{pricing.osCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
           </a>
-          <a href={withBase(BASE, pricing.osSecondaryHref)} class="btn-ghost magnetic press">{pricing.osSecondaryLabel}</a>
+          <a href={withBase(BASE, pricing.osSecondaryHref)} class="btn-ghost magnetic press uppercase">{pricing.osSecondaryLabel}</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 04 · SUBLIMACIÓN Y PRODUCTOS CON MARCA -->
+  <!-- SUBLIMACIÓN Y PRODUCTOS CON MARCA — panel de cotización -->
   <section class="on-light section-surface-alt py-section-py-sm">
     <div class="max-w-container-max mx-auto px-gutter">
-      <div class="glass card-cyber rounded-2xl p-8 md:p-10 relative reveal">
-        <span class="editorial-num absolute top-6 right-7" aria-hidden="true">{pricing.subNum}</span>
+      <div class="glass card-cyber rounded-2xl p-8 md:p-10 reveal">
         <span class="tag-cyber mb-4 inline-flex"><Icon name={pricing.subIcon} class="text-sm" />{pricing.subTag}</span>
         <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4 max-w-2xl break-words">{pricing.subHeading}</h2>
         <p class="text-ink-dim text-body-md mb-6 max-w-2xl">{pricing.subBody}</p>
@@ -106,15 +208,13 @@ const BASE = '/es';
           <a href={withBase(BASE, pricing.subCtaHref)} class="btn-cyber-solid magnetic press inline-flex">
             <span class="icon-wrap uppercase">{pricing.subCtaLabel} <Icon name="send" class="text-base" /></span>
           </a>
-          <a href={withBase(BASE, pricing.subSecondaryHref)} class="btn-ghost magnetic press">{pricing.subSecondaryLabel}</a>
+          <a href={withBase(BASE, pricing.subSecondaryHref)} class="btn-ghost magnetic press uppercase">{pricing.subSecondaryLabel}</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- NOTA DE REGIÓN — arquitectura pensada para poder ampliarse a
-       EE.UU./México/otras regiones más adelante, sin pestañas vacías ni
-       cifras inventadas hoy. -->
+  <!-- NOTA DE REGIÓN -->
   <section class="on-light section-surface py-section-py-sm">
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="flex items-center justify-center gap-3 text-center reveal">
@@ -136,7 +236,7 @@ const BASE = '/es';
           <a href={withBase(BASE, pricing.ctaSecondaryHref)} data-booking-trigger class="btn-cyber-solid magnetic press inline-flex">
             <span class="icon-wrap uppercase">{pricing.ctaButtonLabel} <Icon name={pricing.ctaButtonIcon} class="text-base" /></span>
           </a>
-          <a href={withBase(BASE, pricing.ctaSecondaryHref)} class="btn-ghost magnetic press">{pricing.ctaSecondaryLabel}</a>
+          <a href={withBase(BASE, pricing.ctaSecondaryHref)} class="btn-ghost magnetic press uppercase">{pricing.ctaSecondaryLabel}</a>
         </div>
       </div>
     </div>

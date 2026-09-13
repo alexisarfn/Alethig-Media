@@ -16,10 +16,12 @@
     { "icon": "calendar_month", "title": "Calendario y Aprobaciones", "desc": "Revisa, aprueba y solicita cambios desde Alethig Media OS — todo organizado en un calendario de contenido." },
     { "icon": "bolt", "title": "Colaboración en Alethig Media OS", "desc": "Organiza el flujo de trabajo con nuestro equipo directamente desde la plataforma, sin cadenas de correos." }
   ],
-  "plans": [],
+  "plans": [
+    { "name": "Content Starter", "sub": "Aprox. 8 piezas/mes", "price": "$599/mes", "featured": false, "features": ["Aprox. 8 piezas de contenido al mes", "Diseño y textos", "Organización de contenido", "Revisión y aprobación en Alethig Media OS"] },
+    { "name": "Content Growth", "sub": "Aprox. 12–16 piezas/mes", "price": "$899/mes", "featured": true, "features": ["Aprox. 12–16 piezas al mes", "Publicaciones + Reels", "Planeación de contenido", "Revisión, cambios y aprobación", "Calendario de contenido en Alethig Media OS"] },
+    { "name": "Content Pro", "sub": "Aprox. 16–20 piezas/mes", "price": "$1,299/mes", "featured": false, "features": ["Aprox. 16–20 piezas al mes", "Más Reels y contenido en video", "Estrategia de contenido", "Atención prioritaria", "Flujo de trabajo en Alethig Media OS"] }
+  ],
   "plansHeading": "Precios",
-  "plansCustomHeading": "Precio Personalizado",
-  "plansCustomText": "El precio depende del volumen de contenido, las plataformas y las necesidades de tu negocio. Agenda una consulta gratuita y armamos el plan ideal usando Alethig Media OS.",
   "ctaHeading": "¿Listo Para Organizar Tu Contenido?",
   "ctaText": "Conoce cómo Alethig Media OS organiza la creación, aprobación y calendario de tu contenido. Agenda una consulta gratuita y te mostramos cómo funciona.",
   "ctaButtonLabel": "Agendar Mi Consulta Gratis",

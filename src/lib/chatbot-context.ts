@@ -46,6 +46,17 @@ export async function buildChatContext(locale: ChatLocale): Promise<string> {
       const features = plan.features.length ? ` (incluye: ${plan.features.join(', ')})` : '';
       lines.push(`   - Plan "${plan.name}" · ${plan.sub} · ${plan.price}${features}`);
     }
+    // PRICING RECONCILIATION PHASE — un servicio sin planes fijos (p.ej.
+    // Publicidad Pagada, ahora parte de Traffic & Growth) muestra en su
+    // lugar un precio de referencia + texto explicativo (ver
+    // plansCustomHeading/Text en content.config.ts, mismo dato que ya
+    // renderiza [slug].astro). Se lee aquí también para que el chatbot
+    // nunca quede sin información de precio — sin hardcodear un valor
+    // duplicado, es el mismo campo que ya existe en el servicio.
+    if (s.plans.length === 0 && (s.plansCustomHeading || s.plansCustomText)) {
+      const heading = s.plansCustomHeading ? `${s.plansCustomHeading} — ` : '';
+      lines.push(`   - ${heading}${s.plansCustomText ?? ''}`);
+    }
   }
   lines.push('');
   lines.push(labels.faq + ':');

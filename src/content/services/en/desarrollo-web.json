@@ -1,26 +1,27 @@
 {
   "title": "Web Development",
   "urlSlug": "web-development",
-  "metaDescription": "Web development for businesses, based in Long Island, NY. Fast, modern websites that convert visitors into customers. Bilingual English and Spanish — Alethig Media.",
+  "metaDescription": "Web development for businesses, based in Long Island, NY. Fast, modern websites that convert visitors into customers, starting at $799. Bilingual English and Spanish — Alethig Media.",
   "order": 5,
   "icon": "language",
   "heroHeading": "A professional website that works on every device",
   "heroHighlight": "professional",
-  "heroSub": "Get a WordPress site with hosting, an SSL certificate, and business email included. The budget-friendly option uses premium templates tailored to your brand; the custom option is designed from scratch.",
+  "heroSub": "Get a professional website with hosting, an SSL certificate, and business email included. Final pricing depends on scope, number of pages, functionality, integrations and ecommerce requirements.",
   "heroCtaLabel": "Book Your Free Consultation",
   "image": "/uploads/servicio-desarrollo-web.webp",
   "imageAlt": "Professional web development for businesses",
   "features": [
     { "icon": "devices", "title": "Professional WordPress", "desc": "Sites that look and work great on desktop, tablet, and phone." },
     { "icon": "lock", "title": "Hosting + SSL + Email", "desc": "Every site includes hosting, an SSL certificate, and business email accounts." },
-    { "icon": "palette", "title": "Custom or Budget-Friendly", "desc": "Premium templates tailored to your brand, or a fully custom design built from scratch." }
+    { "icon": "palette", "title": "Scales With Your Business", "desc": "From a landing page to a full online store, with the level of functionality your business needs." }
   ],
   "plans": [
-    { "name": "Landing Page", "sub": "1 page", "price": "$499 – $599", "featured": false, "features": ["One conversion-focused page", "Hosting + SSL included", "Business email", "Tailored to your brand"] },
-    { "name": "Business Website", "sub": "5 pages", "price": "$549 – $649", "featured": true, "features": ["Up to 5 pages", "Hosting + SSL included", "Business email", "Professional design"] },
-    { "name": "WhatsApp Store", "sub": "Store via WhatsApp", "price": "$580 – $680", "featured": false, "features": ["Product catalog", "Orders via WhatsApp", "Hosting + SSL included", "Business email"] },
-    { "name": "Online Store", "sub": "With online payments", "price": "$680 – $780", "featured": false, "features": ["Store with payment gateway", "Product catalog", "Hosting + SSL included", "Business email"] }
+    { "name": "Landing Page", "sub": "1 conversion page", "price": "Starting at $799", "featured": false, "features": ["One conversion-focused page", "Hosting + SSL included", "Business email", "Tailored to your brand"] },
+    { "name": "Starter Website", "sub": "Business website", "price": "Starting at $1,499", "featured": false, "features": ["Multi-page website", "Hosting + SSL included", "Business email", "Professional design"] },
+    { "name": "Growth Website", "sub": "More pages & features", "price": "Starting at $2,499", "featured": false, "features": ["More pages and functionality", "Hosting + SSL included", "Business email", "Integrations as needed"] },
+    { "name": "Advanced / Ecommerce", "sub": "Online store", "price": "Starting at $3,500+", "featured": false, "features": ["Online store or advanced functionality", "Payment gateway where applicable", "Hosting + SSL included", "Business email"] }
   ],
+  "plansHeading": "Pricing",
   "ctaHeading": "Ready for your new website?",
   "ctaText": "From a landing page to a full online store — we'll build the site your business needs. Let's talk.",
   "ctaButtonLabel": "Book My Free Consultation",

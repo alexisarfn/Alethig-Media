@@ -1,31 +1,28 @@
 {
   "title": "Paid Advertising",
   "urlSlug": "paid-advertising",
-  "metaDescription": "Paid advertising for businesses, based in Long Island, NY. Meta and Google campaigns that generate real customers. Bilingual English and Spanish management — Alethig Media.",
+  "metaDescription": "Paid advertising management on Meta and Google, delivered through our Traffic & Growth plans, starting at $750/month. Ad spend separate. Bilingual English and Spanish management — Alethig Media.",
   "order": 3,
   "icon": "ads_click",
   "heroHeading": "Stop guessing and start getting real leads",
   "heroHighlight": "real leads",
-  "heroSub": "Our specialists set up, launch, and manage your campaigns on Facebook, Instagram, TikTok, and Google — targeting exactly the right customers for your business.",
+  "heroSub": "Paid advertising management is delivered through our Traffic & Growth plans. Our specialists set up, launch, and manage your campaigns on Facebook, Instagram, TikTok, and Google — targeting exactly the right customers for your business.",
   "heroCtaLabel": "Book Your Free Consultation",
+  "heroCtaSecondaryLabel": "Explore Traffic & Growth",
+  "heroCtaSecondaryHref": "/traffic-growth",
   "image": "/uploads/servicio-publicidad.webp",
   "imageAlt": "Paid advertising for businesses",
   "features": [
     { "icon": "my_location", "title": "Precise Targeting", "desc": "Market analysis and audience targeting to reach the right customers for your business." },
     { "icon": "design_services", "title": "Ad Creative", "desc": "We create the ad — image or video — ready to grab attention and convert." },
-    { "icon": "monitoring", "title": "30-Day Monitoring", "desc": "Setup, launch, and 30 days of monitoring, with a performance report at the end." }
+    { "icon": "monitoring", "title": "Ongoing Optimization", "desc": "Setup, launch, and ongoing optimization, with performance reporting." }
   ],
-  "plans": [
-    { "name": "Facebook Ads", "sub": "Meta · 1 campaign", "price": "$99/campaign", "featured": true, "features": ["Analysis and targeting", "Ad creative", "30 days of monitoring", "Final report", "Dedicated specialist"] },
-    { "name": "Instagram Ads", "sub": "Meta · 1 campaign", "price": "$99/campaign", "featured": false, "features": ["Analysis and targeting", "Ad creative", "30 days of monitoring", "Final report", "Dedicated specialist"] },
-    { "name": "TikTok Ads", "sub": "1 campaign", "price": "$99/campaign", "featured": false, "features": ["Analysis and targeting", "Ad creative", "30 days of monitoring", "Final report", "Dedicated specialist"] },
-    { "name": "Google Search", "sub": "1 campaign", "price": "$125/campaign", "featured": false, "features": ["Analysis and targeting", "Ad creative", "30 days of monitoring", "Final report", "Dedicated specialist"] },
-    { "name": "Google Display", "sub": "1 campaign", "price": "$125/campaign", "featured": false, "features": ["Analysis and targeting", "Ad creative", "30 days of monitoring", "Final report", "Dedicated specialist"] },
-    { "name": "Google YouTube", "sub": "1 campaign", "price": "$150/campaign", "featured": false, "features": ["Analysis and targeting", "Ad creative", "30 days of monitoring", "Final report", "Dedicated specialist"] }
-  ],
-  "plansHeading": "Choose Your Advertising Channel",
+  "plans": [],
+  "plansHeading": "Pricing",
+  "plansCustomHeading": "Starting at $750/month",
+  "plansCustomText": "Ad spend is not included. We do not guarantee a specific number of leads or ROAS. Book a free consultation and we'll help you figure out which Traffic & Growth plan makes sense for your business.",
   "ctaHeading": "Ready to get more customers?",
-  "ctaText": "Ad spend isn't included — you control how much you invest, we handle the strategy.",
+  "ctaText": "Ad spend is not included. Paid Advertising is part of our Traffic & Growth plans — you control how much you invest, we handle the strategy.",
   "ctaButtonLabel": "Book My Free Consultation",
   "ctaButtonIcon": "phone_in_talk"
 }

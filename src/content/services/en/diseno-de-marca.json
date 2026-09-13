@@ -1,33 +1,36 @@
 {
   "title": "Brand Design",
   "urlSlug": "brand-design",
-  "metaDescription": "Brand design for businesses, based in Long Island, NY. Logo, visual identity, and branding that sets your business apart. Bilingual English and Spanish — Alethig Media.",
+  "metaDescription": "Brand design for businesses, based in Long Island, NY. Logo, visual identity, and branding that sets your business apart, starting at $299. Bilingual English and Spanish — Alethig Media.",
   "order": 4,
   "icon": "palette",
   "heroHeading": "Your brand is your first impression",
   "heroHighlight": "first impression",
-  "heroSub": "We design logos, business cards, flyers, menus, and all the visual materials your business needs to look professional and stand out.",
+  "heroSub": "From a single logo to a complete brand identity. We design the visual materials your business needs to look professional and stand out.",
   "heroCtaLabel": "Book Your Free Consultation",
   "image": "/uploads/servicio-diseno-marca.webp",
   "imageAlt": "Professional brand design for businesses",
   "features": [
     { "icon": "branding_watermark", "title": "Complete Identity", "desc": "Logos and a full brand kit that communicate authority and build instant recognition." },
-    { "icon": "description", "title": "Print Materials", "desc": "Business cards, flyers, posters, and menus ready to use at your business." },
+    { "icon": "description", "title": "Print Materials", "desc": "Business cards, flyers, posters, and menus available as add-ons, quoted per project." },
     { "icon": "auto_awesome", "title": "Design That Stands Out", "desc": "Your business looks professional and consistent at every brand touchpoint." }
   ],
   "plans": [
-    { "name": "Logo + Brand Kit", "sub": "Complete identity", "price": "$429 one-time", "featured": true, "features": ["Professional logo", "Complete brand identity kit", "One-time payment"], "group": "package" },
-    { "name": "Business Card", "sub": "Design", "price": "$45", "featured": false, "features": ["Professional design", "Print-ready"], "group": "individual" },
-    { "name": "Flyer", "sub": "Design", "price": "$45", "featured": false, "features": ["Professional design", "Ready for print or social"], "group": "individual" },
-    { "name": "Banner / Cover Photo", "sub": "For social media", "price": "$35", "featured": false, "features": ["Social media cover photo", "Optimized per platform"], "group": "individual" },
-    { "name": "Poster", "sub": "Design", "price": "$25", "featured": false, "features": ["Professional design"], "group": "individual" },
-    { "name": "Infographic", "sub": "Design", "price": "$25", "featured": false, "features": ["Professional design"], "group": "individual" },
-    { "name": "Digital Menu", "sub": "Small business", "price": "$99", "featured": false, "features": ["Digital menu", "Ideal for restaurants"], "group": "individual" }
+    { "name": "Logo Starter", "sub": "Starting identity", "price": "$299", "featured": false, "features": ["Professional logo", "Commercial-use-ready files"], "group": "package" },
+    { "name": "Brand Essentials", "sub": "Essential identity", "price": "$599", "featured": false, "features": ["Professional logo", "Color palette and typography", "Basic brand kit"], "group": "package" },
+    { "name": "Full Brand Identity", "sub": "Complete identity", "price": "$1,199+", "featured": false, "features": ["Professional logo", "Complete brand system", "Brand guide", "Brand applications"], "group": "package" },
+    { "name": "Business Card", "sub": "Add-on", "price": "Custom Quote", "featured": false, "features": ["Professional design", "Print-ready"], "group": "addon" },
+    { "name": "Flyer", "sub": "Add-on", "price": "Custom Quote", "featured": false, "features": ["Professional design", "Ready for print or social"], "group": "addon" },
+    { "name": "Banner / Cover Photo", "sub": "Add-on", "price": "Custom Quote", "featured": false, "features": ["Social media cover photo", "Optimized per platform"], "group": "addon" },
+    { "name": "Poster", "sub": "Add-on", "price": "Custom Quote", "featured": false, "features": ["Professional design"], "group": "addon" },
+    { "name": "Infographic", "sub": "Add-on", "price": "Custom Quote", "featured": false, "features": ["Professional design"], "group": "addon" },
+    { "name": "Digital Menu", "sub": "Add-on", "price": "Custom Quote", "featured": false, "features": ["Digital menu", "Ideal for restaurants"], "group": "addon" }
   ],
   "planGroups": [
-    { "key": "package", "label": "Brand Package" },
-    { "key": "individual", "label": "Individual Services" }
+    { "key": "package", "label": "Brand Packages" },
+    { "key": "addon", "label": "Add-Ons (Custom Quote)" }
   ],
+  "plansHeading": "Pricing",
   "ctaHeading": "Need your business to look professional?",
   "ctaText": "From a single logo to all your visual materials — we design what your brand needs. Let's talk.",
   "ctaButtonLabel": "Book My Free Consultation",

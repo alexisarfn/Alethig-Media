@@ -17,10 +17,12 @@
     { "icon": "calendar_month", "title": "Calendar & Approvals", "desc": "Review, approve and request changes through Alethig Media OS — everything organized in one content calendar." },
     { "icon": "bolt", "title": "Collaboration in Alethig Media OS", "desc": "Organize the workflow with our team directly through the platform — no email chains." }
   ],
-  "plans": [],
+  "plans": [
+    { "name": "Content Starter", "sub": "~8 pieces/month", "price": "$599/mo", "featured": false, "features": ["Approximately 8 content pieces/month", "Design + copy", "Content organization", "Review and approval through Alethig Media OS"] },
+    { "name": "Content Growth", "sub": "~12–16 pieces/month", "price": "$899/mo", "featured": true, "features": ["Approximately 12–16 pieces/month", "Posts + Reels", "Content planning", "Review, revisions and approval", "Content calendar in Alethig Media OS"] },
+    { "name": "Content Pro", "sub": "~16–20 pieces/month", "price": "$1,299/mo", "featured": false, "features": ["Approximately 16–20 pieces/month", "More Reels & video content", "Content strategy", "Priority handling", "Alethig Media OS workflow"] }
+  ],
   "plansHeading": "Pricing",
-  "plansCustomHeading": "Custom Pricing",
-  "plansCustomText": "Pricing depends on your content volume, platforms and business needs. Book a free consultation and we'll build the right plan using Alethig Media OS.",
   "ctaHeading": "Ready to Get Your Content Organized?",
   "ctaText": "See how Alethig Media OS organizes your content creation, approvals and calendar. Book a free consultation and we'll show you how it works.",
   "ctaButtonLabel": "Book My Free Consultation",

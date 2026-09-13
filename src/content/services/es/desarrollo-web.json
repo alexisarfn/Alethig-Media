@@ -1,25 +1,26 @@
 {
   "title": "Desarrollo Web",
-  "metaDescription": "Desarrollo web para negocios, con base en Long Island, NY. Sitios rápidos y modernos que convierten visitantes en clientes. Bilingüe inglés y español — Alethig Media.",
+  "metaDescription": "Desarrollo web para negocios, con base en Long Island, NY. Sitios rápidos y modernos que convierten visitantes en clientes, desde $799. Bilingüe inglés y español — Alethig Media.",
   "order": 5,
   "icon": "language",
   "heroHeading": "Un sitio web profesional que funciona en todos los dispositivos",
   "heroHighlight": "profesional",
-  "heroSub": "Obtén un sitio en WordPress con hosting, certificado SSL y correo corporativo incluidos. La opción económica usa plantillas premium adaptadas a tu marca; la opción a la medida se diseña desde cero.",
+  "heroSub": "Obtén un sitio profesional con hosting, certificado SSL y correo corporativo incluidos. El precio final depende del alcance, el número de páginas, la funcionalidad, las integraciones y los requisitos de tienda en línea.",
   "heroCtaLabel": "Agenda tu Consulta Gratis",
   "image": "/uploads/servicio-desarrollo-web.webp",
   "imageAlt": "Desarrollo web profesional para negocios",
   "features": [
     { "icon": "devices", "title": "WordPress profesional", "desc": "Sitios que se ven y funcionan perfecto en computadora, tablet y celular." },
     { "icon": "lock", "title": "Hosting + SSL + correo", "desc": "Todos los sitios incluyen hosting, certificado SSL y cuentas de correo corporativo." },
-    { "icon": "palette", "title": "A medida o económico", "desc": "Plantillas premium adaptadas a tu marca, o un diseño desde cero a tu medida." }
+    { "icon": "palette", "title": "Escalable a tu negocio", "desc": "Desde una landing page hasta una tienda en línea completa, con el nivel de funcionalidad que tu negocio necesita." }
   ],
   "plans": [
-    { "name": "Landing Page", "sub": "1 página", "price": "$499 – $599", "featured": false, "features": ["Una página de conversión", "Hosting + SSL incluidos", "Correo corporativo", "Adaptada a tu marca"] },
-    { "name": "Sitio Informativo", "sub": "5 páginas", "price": "$549 – $649", "featured": true, "features": ["Hasta 5 páginas", "Hosting + SSL incluidos", "Correo corporativo", "Diseño profesional"] },
-    { "name": "E-commerce WhatsApp", "sub": "Tienda vía WhatsApp", "price": "$580 – $680", "featured": false, "features": ["Catálogo de productos", "Pedidos por WhatsApp", "Hosting + SSL incluidos", "Correo corporativo"] },
-    { "name": "E-commerce Pasarela", "sub": "Con pagos en línea", "price": "$680 – $780", "featured": false, "features": ["Tienda con pasarela de pagos", "Catálogo de productos", "Hosting + SSL incluidos", "Correo corporativo"] }
+    { "name": "Landing Page", "sub": "1 página de conversión", "price": "Desde $799", "featured": false, "features": ["Una página de conversión", "Hosting + SSL incluidos", "Correo corporativo", "Adaptada a tu marca"] },
+    { "name": "Sitio Starter", "sub": "Sitio de negocio", "price": "Desde $1,499", "featured": false, "features": ["Sitio de varias páginas", "Hosting + SSL incluidos", "Correo corporativo", "Diseño profesional"] },
+    { "name": "Sitio Growth", "sub": "Más páginas y funciones", "price": "Desde $2,499", "featured": false, "features": ["Más páginas y funcionalidad", "Hosting + SSL incluidos", "Correo corporativo", "Integraciones según el proyecto"] },
+    { "name": "Avanzado / E-commerce", "sub": "Tienda en línea", "price": "Desde $3,500+", "featured": false, "features": ["Tienda en línea o funcionalidad avanzada", "Pasarela de pagos cuando aplique", "Hosting + SSL incluidos", "Correo corporativo"] }
   ],
+  "plansHeading": "Precios",
   "ctaHeading": "¿Listo para tu nuevo sitio web?",
   "ctaText": "Desde una landing hasta una tienda en línea — construimos el sitio que tu negocio necesita. Hablemos.",
   "ctaButtonLabel": "Agendar Mi Consulta Gratis",

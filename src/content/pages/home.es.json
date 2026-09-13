@@ -78,7 +78,7 @@
   "services": [
     { "icon": "thumb_up", "title": "Contenido para Redes Sociales", "desc": "Diseños, textos y Reels creados por Alethig — organizados, aprobados y en calendario desde Alethig Media OS.", "href": "/servicios/manejo-de-redes-sociales" },
     { "icon": "movie", "title": "Producción de Video", "desc": "Filmamos en tu negocio y nuestros editores hacen el resto. Reels, TikToks y anuncios que detienen el scroll. Desde $75 por video.", "href": "/servicios/produccion-de-video" },
-    { "icon": "ads_click", "title": "Publicidad Pagada", "desc": "Facebook, Instagram, TikTok y Google Ads manejados por especialistas. Tú defines el presupuesto, nosotros los resultados. Desde $99.", "href": "/servicios/publicidad-pagada" },
+    { "icon": "ads_click", "title": "Publicidad Pagada", "desc": "Facebook, Instagram, TikTok y Google Ads manejados por especialistas, dentro de nuestros planes de Traffic & Growth. Desde $750/mes.", "href": "/servicios/publicidad-pagada" },
     { "icon": "palette", "title": "Diseño de Marca", "desc": "Logotipos, tarjetas, flyers, menús y todo el material visual para que tu negocio se vea profesional y destaque.", "href": "/servicios/diseno-de-marca" },
     { "icon": "language", "title": "Desarrollo Web", "desc": "Sitios web profesionales con hosting, SSL y correo corporativo incluidos. Funcionan en todos los dispositivos.", "href": "/servicios/desarrollo-web" }
   ],

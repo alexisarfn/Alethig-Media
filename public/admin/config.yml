@@ -893,10 +893,11 @@ collections:
           - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
           - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
 
-      # POSITIONING PHASE 6 — Pricing Hub. Explica cómo funcionan los
-      # precios por línea de negocio, sin inventar cifras. Los servicios
-      # de apoyo con precios reales se siguen editando en "Servicios
-      # (Español/Inglés)" — este hub solo enlaza a esas páginas.
+      # PRICING IMPLEMENTATION PHASE — Pricing Hub como página de precios
+      # comercial real (antes: página explicativa sin cifras propias).
+      # tgPlans/seoPlans/contentPlans usan la misma forma que "Planes" en
+      # Servicios (name/sub/price/featured/features) — el mismo componente
+      # PlanCard las renderiza, así que el editor ve un patrón ya conocido.
       - name: pricing
         label: "Precios (página hub)"
         file: "src/content/pages/pricing.es.json"
@@ -907,35 +908,114 @@ collections:
           - { name: heroTag, label: "Hero · Etiqueta", widget: string }
           - { name: heroHeading, label: "Hero · Titular", widget: string }
           - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
-          - { name: tgNum, label: "Traffic & Growth · Número", widget: string }
-          - { name: tgIcon, label: "Traffic & Growth · Icono", widget: string }
+
           - { name: tgTag, label: "Traffic & Growth · Etiqueta", widget: string }
+          - { name: tgIcon, label: "Traffic & Growth · Icono", widget: string }
           - { name: tgHeading, label: "Traffic & Growth · Titular", widget: string }
-          - { name: tgBody, label: "Traffic & Growth · Párrafo", widget: text }
-          - { name: tgFactors, label: "Traffic & Growth · De qué depende el precio", widget: list, field: { name: item, label: "Factor", widget: string } }
-          - { name: tgCtaLabel, label: "Traffic & Growth · Botón principal (Cal.com)", widget: string }
-          - { name: tgCtaHref, label: "Traffic & Growth · Enlace botón principal", widget: string }
+          - { name: tgIntro, label: "Traffic & Growth · Párrafo", widget: text }
+          - { name: tgAdSpendNote, label: "Traffic & Growth · Nota de inversión publicitaria", widget: string }
+          - { name: tgDisclaimer, label: "Traffic & Growth · Disclaimer de resultados", widget: string }
+          - { name: tgCtaLabel, label: "Traffic & Growth · Texto CTA (en cada tarjeta)", widget: string }
+          - { name: tgCtaHref, label: "Traffic & Growth · Enlace CTA (Cal.com)", widget: string }
           - { name: tgSecondaryLabel, label: "Traffic & Growth · Botón secundario", widget: string }
           - { name: tgSecondaryHref, label: "Traffic & Growth · Enlace botón secundario", widget: string }
-          - { name: supportNum, label: "Servicios de Apoyo · Número", widget: string }
-          - { name: supportIcon, label: "Servicios de Apoyo · Icono", widget: string }
-          - { name: supportTag, label: "Servicios de Apoyo · Etiqueta", widget: string }
-          - { name: supportHeading, label: "Servicios de Apoyo · Titular", widget: string }
-          - { name: supportBody, label: "Servicios de Apoyo · Párrafo", widget: text }
-          - { name: supportCtaLabel, label: "Servicios de Apoyo · Texto botón", widget: string }
-          - { name: supportCtaHref, label: "Servicios de Apoyo · Enlace (hub de servicios)", widget: string }
-          - { name: osNum, label: "Alethig Media OS · Número", widget: string }
-          - { name: osIcon, label: "Alethig Media OS · Icono", widget: string }
+          - name: tgPlans
+            label: "Traffic & Growth · Planes (3 tarjetas)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: sub, label: "Subtítulo corto", widget: string }
+              - { name: price, label: "Precio (incluye /mes)", widget: string }
+              - { name: featured, label: "¿Más Popular?", widget: boolean, default: false }
+              - { name: features, label: "Incluye", widget: list, field: { name: item, label: "Ítem", widget: string } }
+
+          - { name: seoTag, label: "SEO Local · Etiqueta", widget: string }
+          - { name: seoIcon, label: "SEO Local · Icono", widget: string }
+          - { name: seoHeading, label: "SEO Local · Titular", widget: string }
+          - { name: seoIntro, label: "SEO Local · Párrafo", widget: text }
+          - { name: seoCtaLabel, label: "SEO Local · Texto CTA (en cada tarjeta)", widget: string }
+          - { name: seoCtaHref, label: "SEO Local · Enlace CTA", widget: string }
+          - name: seoPlans
+            label: "SEO Local · Planes (3 tarjetas)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: sub, label: "Subtítulo corto", widget: string }
+              - { name: price, label: "Precio (incluye /mes)", widget: string }
+              - { name: featured, label: "¿Más Popular?", widget: boolean, default: false }
+              - { name: features, label: "Incluye", widget: list, field: { name: item, label: "Ítem", widget: string } }
+
+          - { name: contentTag, label: "Contenido Gestionado + OS · Etiqueta", widget: string }
+          - { name: contentIcon, label: "Contenido Gestionado + OS · Icono", widget: string }
+          - { name: contentBadge, label: "Contenido Gestionado + OS · Insignia (p.ej. 'Alethig Media OS Incluido')", widget: string }
+          - { name: contentHeading, label: "Contenido Gestionado + OS · Titular", widget: string }
+          - { name: contentIntro, label: "Contenido Gestionado + OS · Párrafo", widget: text }
+          - { name: contentCtaLabel, label: "Contenido Gestionado + OS · Texto CTA (en cada tarjeta)", widget: string }
+          - { name: contentCtaHref, label: "Contenido Gestionado + OS · Enlace CTA", widget: string }
+          - { name: contentSecondaryLabel, label: "Contenido Gestionado + OS · Botón secundario (Conocer Alethig Media OS)", widget: string }
+          - { name: contentSecondaryHref, label: "Contenido Gestionado + OS · Enlace botón secundario", widget: string }
+          - name: contentPlans
+            label: "Contenido Gestionado + OS · Planes (3 tarjetas)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: sub, label: "Subtítulo corto", widget: string }
+              - { name: price, label: "Precio (incluye /mes)", widget: string }
+              - { name: featured, label: "¿Más Popular?", widget: boolean, default: false }
+              - { name: features, label: "Incluye", widget: list, field: { name: item, label: "Ítem", widget: string } }
+
+          - { name: webTag, label: "Sitios Web · Etiqueta", widget: string }
+          - { name: webIcon, label: "Sitios Web · Icono", widget: string }
+          - { name: webHeading, label: "Sitios Web · Titular", widget: string }
+          - { name: webIntro, label: "Sitios Web · Párrafo", widget: text }
+          - { name: webCtaLabel, label: "Sitios Web · Texto botón", widget: string }
+          - { name: webCtaHref, label: "Sitios Web · Enlace botón (Cal.com)", widget: string }
+          - { name: webSecondaryLabel, label: "Sitios Web · Botón secundario", widget: string }
+          - { name: webSecondaryHref, label: "Sitios Web · Enlace botón secundario (página del servicio)", widget: string }
+          - name: webItems
+            label: "Sitios Web · Ítems (grilla 'Desde $X')"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: price, label: "Precio (p.ej. 'Desde $799')", widget: string }
+
+          - { name: brandTag, label: "Diseño de Marca · Etiqueta", widget: string }
+          - { name: brandIcon, label: "Diseño de Marca · Icono", widget: string }
+          - { name: brandHeading, label: "Diseño de Marca · Titular", widget: string }
+          - { name: brandIntro, label: "Diseño de Marca · Párrafo", widget: text }
+          - { name: brandNote, label: "Diseño de Marca · Nota de adicionales", widget: text }
+          - { name: brandCtaLabel, label: "Diseño de Marca · Texto botón", widget: string }
+          - { name: brandCtaHref, label: "Diseño de Marca · Enlace botón (Cal.com)", widget: string }
+          - { name: brandSecondaryLabel, label: "Diseño de Marca · Botón secundario", widget: string }
+          - { name: brandSecondaryHref, label: "Diseño de Marca · Enlace botón secundario (página del servicio)", widget: string }
+          - name: brandItems
+            label: "Diseño de Marca · Ítems (grilla de precios)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: price, label: "Precio", widget: string }
+
+          - { name: videoTag, label: "Video · Etiqueta", widget: string }
+          - { name: videoIcon, label: "Video · Icono", widget: string }
+          - { name: videoHeading, label: "Video · Titular", widget: string }
+          - { name: videoBody, label: "Video · Párrafo (sin tabla de precios pública)", widget: text }
+          - { name: videoCtaLabel, label: "Video · Texto botón (Solicitar Cotización)", widget: string }
+          - { name: videoCtaHref, label: "Video · Enlace botón", widget: string }
+          - { name: videoSecondaryLabel, label: "Video · Botón secundario", widget: string }
+          - { name: videoSecondaryHref, label: "Video · Enlace botón secundario (página del servicio)", widget: string }
+
           - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
+          - { name: osIcon, label: "Alethig Media OS · Icono", widget: string }
           - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
-          - { name: osBody, label: "Alethig Media OS · Párrafo (solo claims aprobados)", widget: text }
+          - { name: osBody, label: "Alethig Media OS · Párrafo ('Planes próximamente' — NO publicar precio)", widget: text }
+          - { name: osFeatures, label: "Alethig Media OS · Capacidades (solo las ya aprobadas)", widget: list, field: { name: item, label: "Ítem", widget: string } }
           - { name: osCtaLabel, label: "Alethig Media OS · Botón principal", widget: string }
-          - { name: osCtaHref, label: "Alethig Media OS · Enlace (página informativa)", widget: string }
+          - { name: osCtaHref, label: "Alethig Media OS · Enlace botón principal", widget: string }
           - { name: osSecondaryLabel, label: "Alethig Media OS · Botón secundario", widget: string }
-          - { name: osSecondaryHref, label: "Alethig Media OS · Enlace botón secundario", widget: string }
-          - { name: subNum, label: "Sublimación · Número", widget: string }
-          - { name: subIcon, label: "Sublimación · Icono", widget: string }
+          - { name: osSecondaryHref, label: "Alethig Media OS · Enlace botón secundario (página informativa)", widget: string }
+
           - { name: subTag, label: "Sublimación · Etiqueta", widget: string }
+          - { name: subIcon, label: "Sublimación · Icono", widget: string }
           - { name: subHeading, label: "Sublimación · Titular", widget: string }
           - { name: subBody, label: "Sublimación · Párrafo", widget: text }
           - { name: subFactors, label: "Sublimación · De qué depende el precio", widget: list, field: { name: item, label: "Factor", widget: string } }
@@ -943,8 +1023,10 @@ collections:
           - { name: subCtaHref, label: "Sublimación · Enlace botón principal", widget: string }
           - { name: subSecondaryLabel, label: "Sublimación · Botón secundario", widget: string }
           - { name: subSecondaryHref, label: "Sublimación · Enlace botón secundario", widget: string }
+
           - { name: regionIcon, label: "Nota de región · Icono", widget: string }
           - { name: regionNote, label: "Nota de región · Texto", widget: text }
+
           - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
           - { name: ctaHeading, label: "CTA final · Titular", widget: string }
           - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }
@@ -963,44 +1045,125 @@ collections:
           - { name: heroTag, label: "Hero · Etiqueta", widget: string }
           - { name: heroHeading, label: "Hero · Titular", widget: string }
           - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
-          - { name: tgNum, label: "Traffic & Growth · Número", widget: string }
-          - { name: tgIcon, label: "Traffic & Growth · Icono", widget: string }
+
           - { name: tgTag, label: "Traffic & Growth · Etiqueta", widget: string }
+          - { name: tgIcon, label: "Traffic & Growth · Icono", widget: string }
           - { name: tgHeading, label: "Traffic & Growth · Titular", widget: string }
-          - { name: tgBody, label: "Traffic & Growth · Párrafo", widget: text }
-          - { name: tgFactors, label: "Traffic & Growth · De qué depende el precio", widget: list, field: { name: item, label: "Factor", widget: string } }
-          - { name: tgCtaLabel, label: "Traffic & Growth · Botón principal (Cal.com)", widget: string }
-          - { name: tgCtaHref, label: "Traffic & Growth · Enlace botón principal", widget: string }
+          - { name: tgIntro, label: "Traffic & Growth · Párrafo", widget: text }
+          - { name: tgAdSpendNote, label: "Traffic & Growth · Nota de inversión publicitaria", widget: string }
+          - { name: tgDisclaimer, label: "Traffic & Growth · Disclaimer de resultados", widget: string }
+          - { name: tgCtaLabel, label: "Traffic & Growth · Texto CTA (en cada tarjeta)", widget: string }
+          - { name: tgCtaHref, label: "Traffic & Growth · Enlace CTA (Cal.com)", widget: string }
           - { name: tgSecondaryLabel, label: "Traffic & Growth · Botón secundario", widget: string }
           - { name: tgSecondaryHref, label: "Traffic & Growth · Enlace botón secundario", widget: string }
-          - { name: supportNum, label: "Servicios de Apoyo · Número", widget: string }
-          - { name: supportIcon, label: "Servicios de Apoyo · Icono", widget: string }
-          - { name: supportTag, label: "Servicios de Apoyo · Etiqueta", widget: string }
-          - { name: supportHeading, label: "Servicios de Apoyo · Titular", widget: string }
-          - { name: supportBody, label: "Servicios de Apoyo · Párrafo", widget: text }
-          - { name: supportCtaLabel, label: "Servicios de Apoyo · Texto botón", widget: string }
-          - { name: supportCtaHref, label: "Servicios de Apoyo · Enlace (hub de servicios)", widget: string }
-          - { name: osNum, label: "Alethig Media OS · Número", widget: string }
-          - { name: osIcon, label: "Alethig Media OS · Icono", widget: string }
+          - name: tgPlans
+            label: "Traffic & Growth · Planes (3 tarjetas)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: sub, label: "Subtítulo corto", widget: string }
+              - { name: price, label: "Precio (incluye /mo)", widget: string }
+              - { name: featured, label: "¿Most Popular?", widget: boolean, default: false }
+              - { name: features, label: "Incluye", widget: list, field: { name: item, label: "Ítem", widget: string } }
+
+          - { name: seoTag, label: "Local SEO · Etiqueta", widget: string }
+          - { name: seoIcon, label: "Local SEO · Icono", widget: string }
+          - { name: seoHeading, label: "Local SEO · Titular", widget: string }
+          - { name: seoIntro, label: "Local SEO · Párrafo", widget: text }
+          - { name: seoCtaLabel, label: "Local SEO · Texto CTA (en cada tarjeta)", widget: string }
+          - { name: seoCtaHref, label: "Local SEO · Enlace CTA", widget: string }
+          - name: seoPlans
+            label: "Local SEO · Planes (3 tarjetas)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: sub, label: "Subtítulo corto", widget: string }
+              - { name: price, label: "Precio (incluye /mo)", widget: string }
+              - { name: featured, label: "¿Most Popular?", widget: boolean, default: false }
+              - { name: features, label: "Incluye", widget: list, field: { name: item, label: "Ítem", widget: string } }
+
+          - { name: contentTag, label: "Managed Content + OS · Etiqueta", widget: string }
+          - { name: contentIcon, label: "Managed Content + OS · Icono", widget: string }
+          - { name: contentBadge, label: "Managed Content + OS · Insignia (p.ej. 'Alethig Media OS Included')", widget: string }
+          - { name: contentHeading, label: "Managed Content + OS · Titular", widget: string }
+          - { name: contentIntro, label: "Managed Content + OS · Párrafo", widget: text }
+          - { name: contentCtaLabel, label: "Managed Content + OS · Texto CTA (en cada tarjeta)", widget: string }
+          - { name: contentCtaHref, label: "Managed Content + OS · Enlace CTA", widget: string }
+          - { name: contentSecondaryLabel, label: "Managed Content + OS · Botón secundario (Learn About Alethig Media OS)", widget: string }
+          - { name: contentSecondaryHref, label: "Managed Content + OS · Enlace botón secundario", widget: string }
+          - name: contentPlans
+            label: "Managed Content + OS · Planes (3 tarjetas)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: sub, label: "Subtítulo corto", widget: string }
+              - { name: price, label: "Precio (incluye /mo)", widget: string }
+              - { name: featured, label: "¿Most Popular?", widget: boolean, default: false }
+              - { name: features, label: "Incluye", widget: list, field: { name: item, label: "Ítem", widget: string } }
+
+          - { name: webTag, label: "Websites · Etiqueta", widget: string }
+          - { name: webIcon, label: "Websites · Icono", widget: string }
+          - { name: webHeading, label: "Websites · Titular", widget: string }
+          - { name: webIntro, label: "Websites · Párrafo", widget: text }
+          - { name: webCtaLabel, label: "Websites · Texto botón", widget: string }
+          - { name: webCtaHref, label: "Websites · Enlace botón (Cal.com)", widget: string }
+          - { name: webSecondaryLabel, label: "Websites · Botón secundario", widget: string }
+          - { name: webSecondaryHref, label: "Websites · Enlace botón secundario (página del servicio)", widget: string }
+          - name: webItems
+            label: "Websites · Ítems (grilla 'Starting at $X')"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: price, label: "Precio (p.ej. 'Starting at $799')", widget: string }
+
+          - { name: brandTag, label: "Brand Design · Etiqueta", widget: string }
+          - { name: brandIcon, label: "Brand Design · Icono", widget: string }
+          - { name: brandHeading, label: "Brand Design · Titular", widget: string }
+          - { name: brandIntro, label: "Brand Design · Párrafo", widget: text }
+          - { name: brandNote, label: "Brand Design · Nota de adicionales", widget: text }
+          - { name: brandCtaLabel, label: "Brand Design · Texto botón", widget: string }
+          - { name: brandCtaHref, label: "Brand Design · Enlace botón (Cal.com)", widget: string }
+          - { name: brandSecondaryLabel, label: "Brand Design · Botón secundario", widget: string }
+          - { name: brandSecondaryHref, label: "Brand Design · Enlace botón secundario (página del servicio)", widget: string }
+          - name: brandItems
+            label: "Brand Design · Ítems (grilla de precios)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: price, label: "Precio", widget: string }
+
+          - { name: videoTag, label: "Video · Etiqueta", widget: string }
+          - { name: videoIcon, label: "Video · Icono", widget: string }
+          - { name: videoHeading, label: "Video · Titular", widget: string }
+          - { name: videoBody, label: "Video · Párrafo (sin tabla de precios pública)", widget: text }
+          - { name: videoCtaLabel, label: "Video · Texto botón (Request a Quote)", widget: string }
+          - { name: videoCtaHref, label: "Video · Enlace botón", widget: string }
+          - { name: videoSecondaryLabel, label: "Video · Botón secundario", widget: string }
+          - { name: videoSecondaryHref, label: "Video · Enlace botón secundario (página del servicio)", widget: string }
+
           - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
+          - { name: osIcon, label: "Alethig Media OS · Icono", widget: string }
           - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
-          - { name: osBody, label: "Alethig Media OS · Párrafo (solo claims aprobados)", widget: text }
+          - { name: osBody, label: "Alethig Media OS · Párrafo ('Plans coming soon' — do NOT publish a price)", widget: text }
+          - { name: osFeatures, label: "Alethig Media OS · Capabilities (only already-approved ones)", widget: list, field: { name: item, label: "Ítem", widget: string } }
           - { name: osCtaLabel, label: "Alethig Media OS · Botón principal", widget: string }
-          - { name: osCtaHref, label: "Alethig Media OS · Enlace (página informativa)", widget: string }
+          - { name: osCtaHref, label: "Alethig Media OS · Enlace botón principal", widget: string }
           - { name: osSecondaryLabel, label: "Alethig Media OS · Botón secundario", widget: string }
-          - { name: osSecondaryHref, label: "Alethig Media OS · Enlace botón secundario", widget: string }
-          - { name: subNum, label: "Sublimación · Número", widget: string }
-          - { name: subIcon, label: "Sublimación · Icono", widget: string }
-          - { name: subTag, label: "Sublimación · Etiqueta", widget: string }
-          - { name: subHeading, label: "Sublimación · Titular", widget: string }
-          - { name: subBody, label: "Sublimación · Párrafo", widget: text }
-          - { name: subFactors, label: "Sublimación · De qué depende el precio", widget: list, field: { name: item, label: "Factor", widget: string } }
-          - { name: subCtaLabel, label: "Sublimación · Botón principal (Request a Quote)", widget: string }
-          - { name: subCtaHref, label: "Sublimación · Enlace botón principal", widget: string }
-          - { name: subSecondaryLabel, label: "Sublimación · Botón secundario", widget: string }
-          - { name: subSecondaryHref, label: "Sublimación · Enlace botón secundario", widget: string }
+          - { name: osSecondaryHref, label: "Alethig Media OS · Enlace botón secundario (informational page)", widget: string }
+
+          - { name: subTag, label: "Sublimation · Etiqueta", widget: string }
+          - { name: subIcon, label: "Sublimation · Icono", widget: string }
+          - { name: subHeading, label: "Sublimation · Titular", widget: string }
+          - { name: subBody, label: "Sublimation · Párrafo", widget: text }
+          - { name: subFactors, label: "Sublimation · De qué depende el precio", widget: list, field: { name: item, label: "Factor", widget: string } }
+          - { name: subCtaLabel, label: "Sublimation · Botón principal (Request a Quote)", widget: string }
+          - { name: subCtaHref, label: "Sublimation · Enlace botón principal", widget: string }
+          - { name: subSecondaryLabel, label: "Sublimation · Botón secundario", widget: string }
+          - { name: subSecondaryHref, label: "Sublimation · Enlace botón secundario", widget: string }
+
           - { name: regionIcon, label: "Nota de región · Icono", widget: string }
           - { name: regionNote, label: "Nota de región · Texto", widget: text }
+
           - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
           - { name: ctaHeading, label: "CTA final · Titular", widget: string }
           - { name: ctaParagraph, label: "CTA final · Párrafo", widget: text }

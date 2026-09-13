@@ -1,53 +1,169 @@
 {
-  "title": "Pricing | Digital Marketing Services, Software & Branded Products — Alethig Media",
-  "metaDescription": "How pricing works at Alethig Media — Traffic & Growth, supporting services, Alethig Media OS and branded products. Based in Long Island, working with businesses beyond the local area.",
+  "title": "Pricing | Digital Marketing, Local SEO, Content & Alethig Media OS — Alethig Media",
+  "metaDescription": "Digital marketing pricing, local SEO pricing, social media content pricing managed through Alethig Media OS, web design pricing and branding pricing. Based in Long Island, working with businesses beyond the local area.",
 
   "heroTag": "Pricing",
-  "heroHeading": "Clear Pricing for Services, Software & Branded Products.",
-  "heroParagraph": "Alethig Media offers different solutions — Traffic & Growth, supporting services, Alethig Media OS and branded products. Pricing depends on the type of solution, scope and each business's needs.",
+  "heroHeading": "Clear Pricing for Every Service.",
+  "heroParagraph": "Pick the service your business needs and see right away what's included, which plan fits, and what requires a custom quote.",
 
-  "tgNum": "01",
-  "tgIcon": "monitoring",
   "tgTag": "Traffic & Growth",
-  "tgHeading": "Advertising, SEO & Lead Generation",
-  "tgBody": "Traffic & Growth pricing depends on the combination of channels and the scope of the strategy. Book a free consultation and we'll help you figure out what makes sense for your business.",
-  "tgFactors": ["Advertising channels", "Campaign scope", "Ad platforms", "Management needs", "Strategy complexity"],
-  "tgCtaLabel": "Book a Free Consultation",
+  "tgIcon": "monitoring",
+  "tgHeading": "Advertising, SEO & Lead Generation.",
+  "tgIntro": "Monthly management plans for paid advertising, search visibility and lead generation.",
+  "tgAdSpendNote": "Ad spend is not included.",
+  "tgDisclaimer": "We do not guarantee a specific number of leads or ROAS.",
+  "tgCtaLabel": "Book a Consultation",
   "tgCtaHref": "/contact",
   "tgSecondaryLabel": "Explore Traffic & Growth",
   "tgSecondaryHref": "/traffic-growth",
+  "tgPlans": [
+    {
+      "name": "Starter",
+      "sub": "1 primary channel",
+      "price": "$750/mo",
+      "featured": false,
+      "features": ["Meta Ads or Google Ads (1 channel)", "Campaign setup", "Ongoing optimization", "Basic conversion tracking", "Reporting"]
+    },
+    {
+      "name": "Growth",
+      "sub": "Multi-channel strategy",
+      "price": "$1,250/mo",
+      "featured": true,
+      "features": ["Meta + Google, or Paid Ads + Local SEO", "Ongoing optimization", "Landing-page review", "Conversion tracking", "Growth strategy"]
+    },
+    {
+      "name": "Scale",
+      "sub": "Full coverage",
+      "price": "$1,950/mo",
+      "featured": false,
+      "features": ["Meta Ads", "Google Ads", "Local SEO", "Lead generation strategy", "Funnel & landing optimization", "Priority support"]
+    }
+  ],
 
-  "supportNum": "02",
-  "supportIcon": "design_services",
-  "supportTag": "Supporting Services",
-  "supportHeading": "Websites, Brand Design, Content & Video",
-  "supportBody": "Several of our supporting services already have plans and pricing published on their own page. Social media content is now managed through Alethig Media OS, with custom pricing — explore each service to see the available options.",
-  "supportCtaLabel": "View All Services",
-  "supportCtaHref": "/services",
+  "seoTag": "Local SEO",
+  "seoIcon": "my_location",
+  "seoHeading": "Visibility in Local Search & Maps.",
+  "seoIntro": "Ideal for local service businesses, contractors, home services and professional businesses that depend on local search visibility.",
+  "seoCtaLabel": "Book a Consultation",
+  "seoCtaHref": "/contact",
+  "seoPlans": [
+    {
+      "name": "Starter",
+      "sub": "Local fundamentals",
+      "price": "$499/mo",
+      "featured": false,
+      "features": ["Google Business Profile optimization", "On-site local SEO", "Local ranking tracking", "Monthly report"]
+    },
+    {
+      "name": "Growth",
+      "sub": "Local growth",
+      "price": "$799/mo",
+      "featured": true,
+      "features": ["Everything in Starter", "Local citation management", "Reputation & review support", "Ongoing optimization"]
+    },
+    {
+      "name": "Pro",
+      "sub": "Maximum local visibility",
+      "price": "$1,199/mo",
+      "featured": false,
+      "features": ["Everything in Growth", "Advanced local strategy", "Priority support", "Detailed performance report"]
+    }
+  ],
 
-  "osNum": "03",
-  "osIcon": "bolt",
+  "contentTag": "Managed Content + Alethig Media OS",
+  "contentIcon": "thumb_up",
+  "contentBadge": "Alethig Media OS Included",
+  "contentHeading": "Managed Content + Alethig Media OS.",
+  "contentIntro": "Content, designs and Reels created by our team — organized, reviewed and approved through Alethig Media OS. The software is included in these plans, at no separate charge.",
+  "contentCtaLabel": "Book a Consultation",
+  "contentCtaHref": "/contact",
+  "contentSecondaryLabel": "Learn About Alethig Media OS",
+  "contentSecondaryHref": "/alethig-media-os",
+  "contentPlans": [
+    {
+      "name": "Content Starter",
+      "sub": "~8 pieces/month",
+      "price": "$599/mo",
+      "featured": false,
+      "features": ["Approximately 8 content pieces/month", "Design + copy", "Content organization", "Review and approval through Alethig Media OS"]
+    },
+    {
+      "name": "Content Growth",
+      "sub": "~12–16 pieces/month",
+      "price": "$899/mo",
+      "featured": true,
+      "features": ["Approximately 12–16 pieces/month", "Posts + Reels", "Content planning", "Review, revisions and approval", "Content calendar in Alethig Media OS"]
+    },
+    {
+      "name": "Content Pro",
+      "sub": "~16–20 pieces/month",
+      "price": "$1,299/mo",
+      "featured": false,
+      "features": ["Approximately 16–20 pieces/month", "More Reels & video content", "Content strategy", "Priority handling", "Alethig Media OS workflow"]
+    }
+  ],
+
+  "webTag": "Websites",
+  "webIcon": "language",
+  "webHeading": "Professional Websites.",
+  "webIntro": "Final pricing depends on scope, number of pages, functionality, integrations and ecommerce requirements.",
+  "webCtaLabel": "Book a Consultation",
+  "webCtaHref": "/contact",
+  "webSecondaryLabel": "Explore Web Development",
+  "webSecondaryHref": "/services/web-development",
+  "webItems": [
+    { "name": "Landing Page", "price": "Starting at $799" },
+    { "name": "Starter Website", "price": "Starting at $1,499" },
+    { "name": "Growth Website", "price": "Starting at $2,499" },
+    { "name": "Advanced / Ecommerce", "price": "Starting at $3,500+" }
+  ],
+
+  "brandTag": "Brand Design",
+  "brandIcon": "palette",
+  "brandHeading": "Professional Brand Identity.",
+  "brandIntro": "From a single logo to a complete brand identity.",
+  "brandNote": "Flyers, menus, banners, social graphics and other materials are available as add-ons or custom work.",
+  "brandCtaLabel": "Book a Consultation",
+  "brandCtaHref": "/contact",
+  "brandSecondaryLabel": "Explore Brand Design",
+  "brandSecondaryHref": "/services/brand-design",
+  "brandItems": [
+    { "name": "Logo Starter", "price": "$299" },
+    { "name": "Brand Essentials", "price": "$599" },
+    { "name": "Full Brand Identity", "price": "$1,199+" }
+  ],
+
+  "videoTag": "Video",
+  "videoIcon": "movie",
+  "videoHeading": "Video Production & Editing.",
+  "videoBody": "Reels and video editing can be included in Managed Content plans. On-location filming, promotional videos and larger productions are quoted individually.",
+  "videoCtaLabel": "Request a Quote",
+  "videoCtaHref": "/contact",
+  "videoSecondaryLabel": "Explore Video Production",
+  "videoSecondaryHref": "/services/video-production",
+
   "osTag": "Alethig Media OS",
-  "osHeading": "Our Marketing Platform",
-  "osBody": "Pricing and options for Alethig Media OS depend on the access level or package your business needs. Learn about the platform or contact us for more information.",
-  "osCtaLabel": "Learn About Alethig Media OS",
-  "osCtaHref": "/alethig-media-os",
-  "osSecondaryLabel": "Contact",
-  "osSecondaryHref": "/contact",
+  "osIcon": "bolt",
+  "osHeading": "Alethig Media OS.",
+  "osBody": "Plans coming soon. Contact us for access options.",
+  "osFeatures": ["Content", "Approvals", "Projects", "Workflows"],
+  "osCtaLabel": "Contact",
+  "osCtaHref": "/contact",
+  "osSecondaryLabel": "Learn About Alethig Media OS",
+  "osSecondaryHref": "/alethig-media-os",
 
-  "subNum": "04",
-  "subIcon": "checkroom",
   "subTag": "Sublimation & Branded Products",
-  "subHeading": "Custom Products, Quote-Based",
-  "subBody": "Pricing for custom products depends on the product type, quantity and design or branding requirements. Every project gets an individual quote.",
-  "subFactors": ["Product type", "Quantity", "Design and branding requirements"],
+  "subIcon": "checkroom",
+  "subHeading": "Custom Products, Quote-Based.",
+  "subBody": "Pricing for custom products depends on the product type, quantity, materials, customization and design requirements. Every project gets an individual quote.",
+  "subFactors": ["Product type", "Quantity", "Materials", "Customization and design"],
   "subCtaLabel": "Request a Quote",
   "subCtaHref": "/sublimation",
   "subSecondaryLabel": "Contact",
   "subSecondaryHref": "/contact",
 
   "regionIcon": "location_on",
-  "regionNote": "Pricing may vary by market, scope, currency, or delivery requirements when applicable.",
+  "regionNote": "Pricing may vary by market, scope, currency, and delivery requirements.",
 
   "ctaTag": "Have Questions About Pricing?",
   "ctaHeading": "Let's Talk About Your Project.",

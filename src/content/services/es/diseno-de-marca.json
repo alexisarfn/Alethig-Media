@@ -1,32 +1,35 @@
 {
   "title": "Diseño de Marca",
-  "metaDescription": "Diseño de marca para negocios, con base en Long Island, NY. Logo, identidad visual y branding que distingue tu negocio. Bilingüe inglés y español — Alethig Media.",
+  "metaDescription": "Diseño de marca para negocios, con base en Long Island, NY. Logo, identidad visual y branding que distingue tu negocio, desde $299. Bilingüe inglés y español — Alethig Media.",
   "order": 4,
   "icon": "palette",
   "heroHeading": "Tu marca es tu primera impresión",
   "heroHighlight": "primera impresión",
-  "heroSub": "Diseñamos logotipos, tarjetas, flyers, menús y todos los materiales visuales que tu negocio necesita para verse profesional y destacar.",
+  "heroSub": "Desde tu logo hasta una identidad de marca completa. Diseñamos los materiales visuales que tu negocio necesita para verse profesional y destacar.",
   "heroCtaLabel": "Agenda tu Consulta Gratis",
   "image": "/uploads/servicio-diseno-marca.webp",
   "imageAlt": "Diseño de marca profesional para negocios",
   "features": [
     { "icon": "branding_watermark", "title": "Identidad completa", "desc": "Logotipos y kit de marca que comunican autoridad y generan reconocimiento inmediato." },
-    { "icon": "description", "title": "Material impreso", "desc": "Tarjetas, flyers, carteles y menús listos para usar en tu negocio." },
+    { "icon": "description", "title": "Material impreso", "desc": "Tarjetas, flyers, carteles y menús disponibles como adicionales, cotizados según tu proyecto." },
     { "icon": "auto_awesome", "title": "Diseño que destaca", "desc": "Tu negocio se ve profesional y consistente en cada punto de contacto con tu marca." }
   ],
   "plans": [
-    { "name": "Logotipo + Kit de Marca", "sub": "Identidad completa", "price": "$429 único", "featured": true, "features": ["Logotipo profesional", "Kit completo de identidad de marca", "Pago único"], "group": "package" },
-    { "name": "Tarjeta de Presentación", "sub": "Diseño", "price": "$45", "featured": false, "features": ["Diseño profesional", "Listo para imprimir"], "group": "individual" },
-    { "name": "Flyer", "sub": "Diseño", "price": "$45", "featured": false, "features": ["Diseño profesional", "Listo para imprimir o redes"], "group": "individual" },
-    { "name": "Banner / Portada", "sub": "Para redes sociales", "price": "$35", "featured": false, "features": ["Portada para redes", "Optimizado por plataforma"], "group": "individual" },
-    { "name": "Cartel", "sub": "Diseño", "price": "$25", "featured": false, "features": ["Diseño profesional"], "group": "individual" },
-    { "name": "Infografía", "sub": "Diseño", "price": "$25", "featured": false, "features": ["Diseño profesional"], "group": "individual" },
-    { "name": "Menú Digital", "sub": "Pequeño negocio", "price": "$99", "featured": false, "features": ["Menú digital", "Ideal para restaurantes"], "group": "individual" }
+    { "name": "Logo Starter", "sub": "Identidad inicial", "price": "$299", "featured": false, "features": ["Logotipo profesional", "Archivos listos para uso comercial"], "group": "package" },
+    { "name": "Brand Essentials", "sub": "Identidad esencial", "price": "$599", "featured": false, "features": ["Logotipo profesional", "Paleta de colores y tipografía", "Kit básico de marca"], "group": "package" },
+    { "name": "Full Brand Identity", "sub": "Identidad completa", "price": "$1,199+", "featured": false, "features": ["Logotipo profesional", "Sistema de marca completo", "Guía de marca", "Aplicaciones de marca"], "group": "package" },
+    { "name": "Tarjeta de Presentación", "sub": "Adicional", "price": "Cotización", "featured": false, "features": ["Diseño profesional", "Listo para imprimir"], "group": "addon" },
+    { "name": "Flyer", "sub": "Adicional", "price": "Cotización", "featured": false, "features": ["Diseño profesional", "Listo para imprimir o redes"], "group": "addon" },
+    { "name": "Banner / Portada", "sub": "Adicional", "price": "Cotización", "featured": false, "features": ["Portada para redes", "Optimizado por plataforma"], "group": "addon" },
+    { "name": "Cartel", "sub": "Adicional", "price": "Cotización", "featured": false, "features": ["Diseño profesional"], "group": "addon" },
+    { "name": "Infografía", "sub": "Adicional", "price": "Cotización", "featured": false, "features": ["Diseño profesional"], "group": "addon" },
+    { "name": "Menú Digital", "sub": "Adicional", "price": "Cotización", "featured": false, "features": ["Menú digital", "Ideal para restaurantes"], "group": "addon" }
   ],
   "planGroups": [
-    { "key": "package", "label": "Paquete de Marca" },
-    { "key": "individual", "label": "Servicios Individuales" }
+    { "key": "package", "label": "Paquetes de Marca" },
+    { "key": "addon", "label": "Adicionales (Por Cotización)" }
   ],
+  "plansHeading": "Precios",
   "ctaHeading": "¿Necesitas que tu negocio se vea profesional?",
   "ctaText": "Desde un logotipo hasta todo tu material visual — diseñamos lo que tu marca necesita. Hablemos.",
   "ctaButtonLabel": "Agendar Mi Consulta Gratis",
