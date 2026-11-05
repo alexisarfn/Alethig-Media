@@ -1,0 +1,99 @@
+---
+// HOME MOTION V3 — sección "Páginas Web" del home. Laptop + celular con
+// plantillas de EJEMPLO que rotan sincronizadas (data-rotator-follow).
+// Precios: se leen de pricing.<locale>.json (webItems) — única fuente, no
+// se duplican aquí.
+import Icon from '../Icon.astro';
+import { withBase } from '../../lib/basePath';
+
+interface Props {
+  home: any;
+  pricing: any;
+  base: string;
+}
+const { home, pricing, base } = Astro.props;
+const templates: any[] = home.webTemplates ?? [];
+---
+<section id="paginas-web" class="bg-bg-void relative py-section-py-sm md:py-section-py-lg overflow-hidden">
+  <div class="spin-slow absolute -right-[26rem] -top-72 w-[56rem] h-[56rem] rounded-full border border-dashed border-accent/25 pointer-events-none" aria-hidden="true"></div>
+  <div class="spin-slow-rev absolute -right-64 -top-40 w-[36rem] h-[36rem] rounded-full border border-dashed border-accent/15 pointer-events-none" aria-hidden="true"></div>
+
+  <div class="max-w-container-max mx-auto px-gutter relative">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+      <div class="reveal">
+        <span class="tag-cyber mb-6 inline-flex"><Icon name="devices" class="text-sm" />{home.webTag}</span>
+        <h2 class="font-display uppercase text-headline-lg-mobile md:text-headline-lg text-text-primary mb-5">
+          {home.webHeading} <span class="text-accent">{home.webHighlight}</span>
+        </h2>
+        <p class="text-body-md text-text-secondary mb-8 max-w-lg">{home.webIntro}</p>
+
+        <ul class="grid sm:grid-cols-2 gap-3 mb-8 stagger-fade">
+          {home.webFeatures.map((f: string) => (
+            <li class="glass rounded-xl px-4 py-3 flex items-center gap-3 text-sm text-text-primary">
+              <Icon name="check_circle" class="text-accent text-lg shrink-0" />{f}
+            </li>
+          ))}
+        </ul>
+
+        <p class="text-xs font-display uppercase font-semibold tracking-wide text-text-dim mb-3">{home.webPlansLabel}</p>
+        <ul class="flex flex-wrap gap-2 mb-8">
+          {pricing.webItems.map((p: any) => (
+            <li class="rounded-full border border-accent/30 px-3.5 py-1.5 text-xs text-text-primary">
+              <span class="font-semibold">{p.name}</span> · <span class="text-accent">{p.price}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="flex flex-wrap gap-4">
+          <a href={withBase(base, home.webCtaHref)} data-booking-trigger class="btn-cyber-solid shine magnetic press">
+            <span class="icon-wrap uppercase">{home.webCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
+            <span class="shine-sweep" aria-hidden="true"></span>
+          </a>
+          <a href={withBase(base, home.webSecondaryHref)} class="btn-ghost magnetic press uppercase">{home.webSecondaryLabel}</a>
+        </div>
+      </div>
+
+      <!-- Mockups: laptop (rotador) + celular (espejo del rotador) -->
+      <div class="reveal reveal-delay relative pb-12 sm:pr-10">
+        <div class="float-soft rounded-2xl bg-bg-depth p-3 shadow-2xl">
+          <div class="rounded-lg overflow-hidden bg-surface-white text-ink">
+            <div class="bg-surface-tint px-4 py-2.5 flex items-center gap-2" aria-hidden="true">
+              <span class="w-2.5 h-2.5 rounded-full bg-ink/25"></span><span class="w-2.5 h-2.5 rounded-full bg-ink/25"></span><span class="w-2.5 h-2.5 rounded-full bg-ink/25"></span>
+            </div>
+            <div class="rot-slides" data-rotator="web-templates" data-interval="3200">
+              {templates.map((t, i) => (
+                <div data-rotator-item class={i === 0 ? 'is-active' : ''}>
+                  <p class="px-4 pt-2 text-[11px] text-ink-dim" aria-hidden="true">{t.url}</p>
+                  <div class="px-7 py-9 text-white" style={`background:${t.color}`}>
+                    <p class="text-[11px] font-bold tracking-[0.2em] opacity-80 mb-2">{home.webTemplateLabel} · {t.kind}</p>
+                    <p class="font-display uppercase text-2xl md:text-3xl leading-tight mb-2">{t.name}</p>
+                    <p class="text-sm opacity-90 mb-5">{t.tagline}</p>
+                    <span class="inline-block bg-white text-sm font-bold px-4 py-2 rounded-lg" style={`color:${t.color}`}>{t.cta}</span>
+                  </div>
+                  <div class="p-5 grid grid-cols-3 gap-2" aria-hidden="true">
+                    <div class="h-16 rounded-lg bg-surface-tint"></div><div class="h-16 rounded-lg bg-surface-tint"></div><div class="h-16 rounded-lg bg-surface-tint"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="bob absolute right-0 bottom-0 w-36 sm:w-40 rounded-[28px] bg-bg-depth p-2 shadow-2xl" aria-hidden="true">
+          <div class="rot-slides rounded-[22px] overflow-hidden" data-rotator-follow="web-templates">
+            {templates.map((t, i) => (
+              <div data-rotator-item data-rotator-decor class={`h-64 p-4 flex flex-col gap-2 text-white ${i === 0 ? 'is-active' : ''}`} style={`background:${t.color}`}>
+                <span class="w-10 h-1 rounded bg-white/50 self-center mb-2"></span>
+                <span class="font-display uppercase text-base leading-tight">{t.name}</span>
+                <span class="text-[11px] opacity-90">{t.tagline}</span>
+                <span class="mt-auto bg-white text-center text-xs font-bold py-2 rounded-lg" style={`color:${t.color}`}>{t.cta}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

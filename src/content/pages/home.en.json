@@ -1,21 +1,81 @@
 {
   "title": "Alethig Media | Digital Marketing Agency Based in Long Island, NY",
   "metaDescription": "Digital marketing agency based in Long Island, NY, working with businesses in Long Island and beyond. Social media management, paid advertising, and video production, in English and Spanish.",
-  "heroTag": "Marketing · Technology · Branded Products",
-  "heroHeading": "We Drive Traffic. We Build Brands. We Give You the System to Manage It All.",
+  "heroTag": "Marketing · Websites · Sublimation",
+  "heroHeading": "We help your business get customers, launch its website, and wear its brand.",
+  "heroHeadingLead": "We help your business",
+  "heroRotatingWords": [
+    "get more customers.",
+    "launch its website.",
+    "wear its brand.",
+    "look professional."
+  ],
   "heroHighlight": "We Give You the System",
-  "heroTagline": "Marketing, technology and branded products built to help your business grow.",
-  "heroParagraph": "Social media management, content creation, video production, and paid advertising — we handle it all for you. Bilingual in English and Spanish.",
-  "heroCtaPrimary": { "label": "Book Your Free Consultation", "href": "/contact" },
-  "heroCtaSecondary": { "label": "View Services", "href": "#services" },
+  "heroTagline": "Marketing, websites, and branded products — in English and Spanish.",
+  "heroParagraph": "Ads that bring customers, websites that sell, and sublimated products with your logo. All in one place, with a team that speaks your language.",
+  "heroCtaPrimary": {
+    "label": "Book Your Free Consultation",
+    "href": "/contact"
+  },
+  "heroCtaSecondary": {
+    "label": "View Services",
+    "href": "#services"
+  },
   "heroImage": "/uploads/home-hero.webp",
   "heroImageAlt": "Alethig Media team working on digital marketing strategy",
   "trustBar": [
-    { "icon": "translate", "label": "English & Spanish" },
-    { "icon": "bar_chart", "label": "Focused on Growth" },
-    { "icon": "payments", "label": "Clear, Transparent Pricing" },
-    { "icon": "schedule", "label": "Free 15-Minute Consultation" }
+    {
+      "icon": "translate",
+      "label": "English & Spanish"
+    },
+    {
+      "icon": "bar_chart",
+      "label": "Focused on Growth"
+    },
+    {
+      "icon": "payments",
+      "label": "Clear, Transparent Pricing"
+    },
+    {
+      "icon": "schedule",
+      "label": "Free 15-Minute Consultation"
+    }
   ],
+  "tickerItems": [
+    "Free 15-minute consultation",
+    "Websites starting at $799",
+    "Sublimation: small orders in 3–5 days",
+    "We speak English and Spanish",
+    "Meta and Google Ads",
+    "Clear pricing, no surprises"
+  ],
+  "showcase": {
+    "slides": [
+      {
+        "tab": "Marketing",
+        "tag": "Ads & Local SEO",
+        "title": "Put your business in front of people already searching",
+        "desc": ""
+      },
+      {
+        "tab": "Websites",
+        "tag": "Websites",
+        "title": "Fast, bilingual sites built for Google",
+        "desc": ""
+      },
+      {
+        "tab": "Sublimation",
+        "tag": "Branded products",
+        "title": "T-shirts, hoodies, caps, mugs and more",
+        "desc": "Small orders in 3–5 days · large orders in about 2 weeks."
+      }
+    ],
+    "adLabel": "Sponsored · Google",
+    "adTitle": "Your Business — Long Island",
+    "adDesc": "English & Spanish service · Call today",
+    "mapTitle": "Show up on Google Maps",
+    "mapDesc": "Optimized Google Business Profile"
+  },
   "businessPathsTag": "Our Business Lines",
   "businessPathsHeading": "Three Ways to Work With Us.",
   "businessPaths": [
@@ -24,27 +84,44 @@
       "icon": "monitoring",
       "headline": "Need More Traffic & Customers?",
       "title": "Traffic & Growth Services",
-      "items": ["Meta Ads", "Google Ads", "SEO", "Local SEO", "Lead Generation"],
+      "items": [
+        "Meta Ads",
+        "Google Ads",
+        "SEO",
+        "Local SEO",
+        "Lead Generation"
+      ],
       "desc": "Traffic, advertising and search strategies designed to help you attract more customers and create new business opportunities.",
       "ctaLabel": "Explore Traffic & Growth",
       "ctaHref": "/traffic-growth"
     },
     {
       "num": "02",
-      "icon": "bolt",
-      "headline": "Want Your Own Marketing System?",
-      "title": "Alethig Media OS",
-      "items": ["Content", "Approvals", "Projects", "Workflows"],
-      "desc": "A platform for organizing content, approvals, projects and marketing workflows from one place.",
-      "ctaLabel": "Learn About Alethig Media OS",
-      "ctaHref": "/alethig-media-os"
+      "icon": "devices",
+      "headline": "Need a Website?",
+      "title": "Websites",
+      "items": [
+        "Landing pages",
+        "Full websites",
+        "E-commerce",
+        "Hosting & email"
+      ],
+      "desc": "Fast, bilingual sites built for mobile and for Google, designed to get you calls and messages.",
+      "ctaLabel": "See Websites",
+      "ctaHref": "/#paginas-web"
     },
     {
       "num": "03",
       "icon": "checkroom",
       "headline": "Need Branded Products?",
       "title": "Sublimation & Branded Products",
-      "items": ["Shirts", "Uniforms", "Mugs / Tumblers", "Promotional Products", "Event Merchandise"],
+      "items": [
+        "T-shirts",
+        "Hoodies",
+        "Caps",
+        "Mugs / Tumblers",
+        "Mouse pads & notebooks"
+      ],
       "desc": "Custom products for businesses, teams and events that help take your brand beyond digital.",
       "ctaLabel": "Explore Branded Products",
       "ctaHref": "/sublimation"
@@ -54,14 +131,80 @@
   "trafficHeading": "More Traffic. More Customers. More Growth.",
   "trafficIntro": "We combine paid advertising, search visibility and lead generation to help your business get more customers, consistently.",
   "trafficModules": [
-    { "icon": "ads_click", "title": "Meta Ads", "desc": "Facebook and Instagram campaigns designed to reach the right people at the right moment." },
-    { "icon": "language", "title": "Google Ads", "desc": "Search and display ads that put your business in front of people already looking for what you offer." },
-    { "icon": "monitoring", "title": "SEO", "desc": "Optimization so your business shows up when people search for your services on Google." },
-    { "icon": "my_location", "title": "Local SEO", "desc": "Optimized presence in local search and maps, for businesses that depend on customers in their area." },
-    { "icon": "forum", "title": "Lead Generation", "desc": "Strategies designed to turn visitors and clicks into real potential customers." },
-    { "icon": "bar_chart", "title": "Growth Strategy", "desc": "A growth plan built around your business, your goals and your budget." }
+    {
+      "icon": "ads_click",
+      "title": "Meta Ads",
+      "desc": "Facebook and Instagram campaigns designed to reach the right people at the right moment."
+    },
+    {
+      "icon": "language",
+      "title": "Google Ads",
+      "desc": "Search and display ads that put your business in front of people already looking for what you offer."
+    },
+    {
+      "icon": "monitoring",
+      "title": "SEO",
+      "desc": "Optimization so your business shows up when people search for your services on Google."
+    },
+    {
+      "icon": "my_location",
+      "title": "Local SEO",
+      "desc": "Optimized presence in local search and maps, for businesses that depend on customers in their area."
+    },
+    {
+      "icon": "forum",
+      "title": "Lead Generation",
+      "desc": "Strategies designed to turn visitors and clicks into real potential customers."
+    },
+    {
+      "icon": "bar_chart",
+      "title": "Growth Strategy",
+      "desc": "A growth plan built around your business, your goals and your budget."
+    }
   ],
   "trafficCtaLabel": "Book a Free Consultation",
+  "webTag": "Websites",
+  "webHeading": "A website that",
+  "webHighlight": "works for you 24/7.",
+  "webIntro": "We design your site so people find you on Google, understand what you do in seconds, and call you or message you on WhatsApp.",
+  "webFeatures": [
+    "Bilingual English / Spanish",
+    "Looks great on mobile",
+    "Hosting, SSL and email included",
+    "Ready for Google and Google Maps"
+  ],
+  "webPlansLabel": "Website plans",
+  "webCtaLabel": "I want my website",
+  "webCtaHref": "/contact",
+  "webSecondaryLabel": "See web development",
+  "webSecondaryHref": "/services/web-development",
+  "webTemplateLabel": "SAMPLE TEMPLATE",
+  "webTemplates": [
+    {
+      "kind": "BARBERSHOP",
+      "name": "Elite Barbershop",
+      "tagline": "Classic & modern cuts · Book online",
+      "cta": "Book now",
+      "color": "#111827",
+      "url": "elitebarbershop.com"
+    },
+    {
+      "kind": "RESTAURANT",
+      "name": "Sabor Latino",
+      "tagline": "Home-style cooking · Order for pickup",
+      "cta": "See the menu",
+      "color": "#9A3412",
+      "url": "saborlatino.com"
+    },
+    {
+      "kind": "CONTRACTOR",
+      "name": "Pro Builders LI",
+      "tagline": "Remodeling & roofing · Licensed",
+      "cta": "Get an estimate",
+      "color": "#1E3A8A",
+      "url": "probuildersli.com"
+    }
+  ],
   "osTag": "Alethig Media OS",
   "osHeading": "Our System for Smarter Marketing Operations.",
   "osHighlight": "Smarter Marketing Operations",
@@ -70,34 +213,110 @@
   "sublimationTag": "Sublimation & Branded Products",
   "sublimationHeading": "Take Your Brand Beyond Digital.",
   "sublimationIntro": "Custom products that help your business, team or event look professional in the real world.",
-  "sublimationCategories": ["Custom Shirts", "Uniforms", "Mugs & Tumblers", "Promotional Products", "Event Merchandise"],
+  "sublimationCategories": [
+    "T-shirts",
+    "Hoodies",
+    "Caps",
+    "Mugs",
+    "Tumblers",
+    "Mouse pads",
+    "Notebooks"
+  ],
+  "sublimationTurnaround": [
+    {
+      "value": "3–5 days",
+      "label": "small orders"
+    },
+    {
+      "value": "~2 weeks",
+      "label": "large orders"
+    }
+  ],
+  "sublimationBrandWord": "YOUR BRAND",
   "sublimationCtaLabel": "Request a Quote",
   "servicesTag": "Supporting Services",
   "servicesHeading": "We Can Also Help With This.",
   "servicesSubtitle": "Websites, brand design, content and more — everything else your business might need, in one place.",
   "services": [
-    { "icon": "thumb_up", "title": "Social Media Content", "desc": "Designs, copy and Reels created by Alethig — organized, approved and scheduled through Alethig Media OS.", "href": "/services/social-media-management" },
-    { "icon": "movie", "title": "Video Production", "desc": "We film at your business and our editors handle the rest. Reels, TikToks, and scroll-stopping ads. Starting at $75 per video.", "href": "/services/video-production" },
-    { "icon": "ads_click", "title": "Paid Advertising", "desc": "Facebook, Instagram, TikTok, and Google Ads managed by specialists, as part of our Traffic & Growth plans. Starting at $750/month.", "href": "/services/paid-advertising" },
-    { "icon": "palette", "title": "Brand Design", "desc": "Logos, business cards, flyers, menus, and all the visual materials your business needs to look professional and stand out.", "href": "/services/brand-design" },
-    { "icon": "language", "title": "Web Development", "desc": "Professional websites with hosting, SSL, and business email included. Works on every device.", "href": "/services/web-development" }
+    {
+      "icon": "thumb_up",
+      "title": "Social Media Content",
+      "desc": "Designs, copy and Reels created by Alethig — organized, approved and scheduled through Alethig Media OS.",
+      "href": "/services/social-media-management"
+    },
+    {
+      "icon": "movie",
+      "title": "Video Production",
+      "desc": "We film at your business and our editors handle the rest. Reels, TikToks, and scroll-stopping ads. Starting at $75 per video.",
+      "href": "/services/video-production"
+    },
+    {
+      "icon": "ads_click",
+      "title": "Paid Advertising",
+      "desc": "Facebook, Instagram, TikTok, and Google Ads managed by specialists, as part of our Traffic & Growth plans. Starting at $750/month.",
+      "href": "/services/paid-advertising"
+    },
+    {
+      "icon": "palette",
+      "title": "Brand Design",
+      "desc": "Logos, business cards, flyers, menus, and all the visual materials your business needs to look professional and stand out.",
+      "href": "/services/brand-design"
+    },
+    {
+      "icon": "language",
+      "title": "Web Development",
+      "desc": "Professional websites with hosting, SSL, and business email included. Works on every device.",
+      "href": "/services/web-development"
+    }
   ],
   "reasonsTag": "Why Choose Us",
   "reasonsHeading": "Why Businesses Choose Alethig Media.",
   "reasonsHighlight": "Alethig Media",
   "reasons": [
-    { "icon": "chat", "title": "Personal Attention", "desc": "We work closely with you to understand your business, your goals and the opportunities that can drive real growth." },
-    { "icon": "translate", "title": "Bilingual: English & Spanish", "desc": "We communicate with you in the language you prefer so every step stays clear and simple." },
-    { "icon": "payments", "title": "Fixed, Transparent Pricing", "desc": "No surprises, no hidden fees. You know exactly what you pay and what you get every month." },
-    { "icon": "groups", "title": "Real Team, Real Results", "desc": "Every account gets a dedicated community manager, designer, and ads specialist. Real people working for your business." }
+    {
+      "icon": "chat",
+      "title": "Personal Attention",
+      "desc": "We work closely with you to understand your business, your goals and the opportunities that can drive real growth."
+    },
+    {
+      "icon": "translate",
+      "title": "Bilingual: English & Spanish",
+      "desc": "We communicate with you in the language you prefer so every step stays clear and simple."
+    },
+    {
+      "icon": "payments",
+      "title": "Fixed, Transparent Pricing",
+      "desc": "No surprises, no hidden fees. You know exactly what you pay and what you get every month."
+    },
+    {
+      "icon": "groups",
+      "title": "Real Team, Real Results",
+      "desc": "Every account gets a dedicated community manager, designer, and ads specialist. Real people working for your business."
+    }
   ],
   "processTag": "Our Process",
   "processHeading": "How We Work.",
   "processSteps": [
-    { "num": "01", "title": "Discover", "desc": "We understand your business, customers and goals." },
-    { "num": "02", "title": "Build the Strategy", "desc": "We define the right channels, content and campaigns for your business." },
-    { "num": "03", "title": "Create & Launch", "desc": "We design, produce and launch the approved work." },
-    { "num": "04", "title": "Optimize", "desc": "We review performance and make adjustments to keep improving." }
+    {
+      "num": "01",
+      "title": "Discover",
+      "desc": "We understand your business, customers and goals."
+    },
+    {
+      "num": "02",
+      "title": "Build the Strategy",
+      "desc": "We define the right channels, content and campaigns for your business."
+    },
+    {
+      "num": "03",
+      "title": "Create & Launch",
+      "desc": "We design, produce and launch the approved work."
+    },
+    {
+      "num": "04",
+      "title": "Optimize",
+      "desc": "We review performance and make adjustments to keep improving."
+    }
   ],
   "ctaTag": "Ready to grow?",
   "ctaHeading": "Ready to Grow Your Business?",

@@ -133,8 +133,10 @@ collections:
         fields:
           - { name: title, label: "Título de pestaña (SEO)", widget: string }
           - { name: heroTag, label: "Hero · Etiqueta", widget: string }
-          - { name: heroHeading, label: "Hero · Titular", widget: string }
-          - { name: heroHighlight, label: "Hero · Palabra resaltada", widget: string, required: false }
+          - { name: heroHeading, label: "Hero · Titular completo (SEO / lectores de pantalla)", widget: string }
+          - { name: heroHeadingLead, label: "Hero · Inicio del titular animado", widget: string }
+          - { name: heroRotatingWords, label: "Hero · Palabras que rotan (final del titular)", widget: list, field: { name: word, label: "Frase", widget: string } }
+          - { name: heroHighlight, label: "Hero · Palabra resaltada (sin uso en el hero animado)", widget: string, required: false }
           - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
           - { name: heroCtaPrimary, label: "Hero · Botón principal", widget: object, fields: [ { name: label, widget: string }, { name: href, widget: string } ] }
           - { name: heroCtaSecondary, label: "Hero · Botón secundario", widget: object, fields: [ { name: label, widget: string }, { name: href, widget: string } ] }
@@ -146,6 +148,24 @@ collections:
             fields:
               - { name: icon, label: "Icono", widget: string }
               - { name: label, label: "Texto", widget: string }
+          - { name: tickerItems, label: "Franja dorada en movimiento · Frases", widget: list, field: { name: item, label: "Frase", widget: string } }
+          - name: showcase
+            label: "Hero · Vitrina animada (3 tarjetas)"
+            widget: object
+            fields:
+              - name: slides
+                label: "Tarjetas (Marketing, Páginas web, Sublimación — en ese orden)"
+                widget: list
+                fields:
+                  - { name: tab, label: "Texto de la pestaña", widget: string }
+                  - { name: tag, label: "Etiqueta", widget: string }
+                  - { name: title, label: "Título", widget: string }
+                  - { name: desc, label: "Descripción (opcional)", widget: string, required: false }
+              - { name: adLabel, label: "Anuncio de ejemplo · Etiqueta", widget: string }
+              - { name: adTitle, label: "Anuncio de ejemplo · Título", widget: string }
+              - { name: adDesc, label: "Anuncio de ejemplo · Texto", widget: string }
+              - { name: mapTitle, label: "Google Maps · Título", widget: string }
+              - { name: mapDesc, label: "Google Maps · Texto", widget: string }
           - { name: businessPathsTag, label: "Líneas de negocio · Etiqueta", widget: string }
           - { name: businessPathsHeading, label: "Líneas de negocio · Titular", widget: string }
           - name: businessPaths
@@ -171,6 +191,27 @@ collections:
               - { name: title, label: "Título", widget: string }
               - { name: desc, label: "Descripción", widget: text }
           - { name: trafficCtaLabel, label: "Traffic & Growth · Texto botón", widget: string }
+          - { name: webTag, label: "Páginas Web · Etiqueta", widget: string }
+          - { name: webHeading, label: "Páginas Web · Titular", widget: string }
+          - { name: webHighlight, label: "Páginas Web · Parte resaltada del titular", widget: string }
+          - { name: webIntro, label: "Páginas Web · Párrafo", widget: text }
+          - { name: webFeatures, label: "Páginas Web · Beneficios", widget: list, field: { name: feature, label: "Beneficio", widget: string } }
+          - { name: webPlansLabel, label: "Páginas Web · Título de planes (precios vienen de la página Precios)", widget: string }
+          - { name: webCtaLabel, label: "Páginas Web · Botón principal", widget: string }
+          - { name: webCtaHref, label: "Páginas Web · Enlace botón principal", widget: string }
+          - { name: webSecondaryLabel, label: "Páginas Web · Botón secundario", widget: string }
+          - { name: webSecondaryHref, label: "Páginas Web · Enlace botón secundario", widget: string }
+          - { name: webTemplateLabel, label: "Páginas Web · Rótulo de plantillas de ejemplo", widget: string }
+          - name: webTemplates
+            label: "Páginas Web · Plantillas de ejemplo (rotan en la laptop y el celular)"
+            widget: list
+            fields:
+              - { name: kind, label: "Tipo de negocio", widget: string }
+              - { name: name, label: "Nombre", widget: string }
+              - { name: tagline, label: "Frase", widget: string }
+              - { name: cta, label: "Botón", widget: string }
+              - { name: color, label: "Color (hex)", widget: string }
+              - { name: url, label: "Dominio de ejemplo", widget: string }
           - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
           - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
           - { name: osHighlight, label: "Alethig Media OS · Palabra resaltada", widget: string, required: false }
@@ -180,6 +221,13 @@ collections:
           - { name: sublimationHeading, label: "Sublimación · Titular", widget: string }
           - { name: sublimationIntro, label: "Sublimación · Párrafo", widget: text }
           - { name: sublimationCategories, label: "Sublimación · Categorías", widget: list, field: { name: category, label: "Categoría", widget: string } }
+          - name: sublimationTurnaround
+            label: "Sublimación · Tiempos de entrega"
+            widget: list
+            fields:
+              - { name: value, label: "Tiempo", widget: string }
+              - { name: label, label: "Para qué pedidos", widget: string }
+          - { name: sublimationBrandWord, label: "Sublimación · Texto en la camiseta de ejemplo", widget: string }
           - { name: sublimationCtaLabel, label: "Sublimación · Texto botón", widget: string }
           - { name: servicesTag, label: "Servicios de apoyo · Etiqueta", widget: string }
           - { name: servicesHeading, label: "Servicios de apoyo · Titular", widget: string }
@@ -226,8 +274,10 @@ collections:
         fields:
           - { name: title, label: "Título de pestaña (SEO)", widget: string }
           - { name: heroTag, label: "Hero · Etiqueta", widget: string }
-          - { name: heroHeading, label: "Hero · Titular", widget: string }
-          - { name: heroHighlight, label: "Hero · Palabra resaltada", widget: string, required: false }
+          - { name: heroHeading, label: "Hero · Titular completo (SEO / lectores de pantalla)", widget: string }
+          - { name: heroHeadingLead, label: "Hero · Inicio del titular animado", widget: string }
+          - { name: heroRotatingWords, label: "Hero · Palabras que rotan (final del titular)", widget: list, field: { name: word, label: "Frase", widget: string } }
+          - { name: heroHighlight, label: "Hero · Palabra resaltada (sin uso en el hero animado)", widget: string, required: false }
           - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
           - { name: heroCtaPrimary, label: "Hero · Botón principal", widget: object, fields: [ { name: label, widget: string }, { name: href, widget: string } ] }
           - { name: heroCtaSecondary, label: "Hero · Botón secundario", widget: object, fields: [ { name: label, widget: string }, { name: href, widget: string } ] }
@@ -239,6 +289,24 @@ collections:
             fields:
               - { name: icon, label: "Icono", widget: string }
               - { name: label, label: "Texto", widget: string }
+          - { name: tickerItems, label: "Franja dorada en movimiento · Frases", widget: list, field: { name: item, label: "Frase", widget: string } }
+          - name: showcase
+            label: "Hero · Vitrina animada (3 tarjetas)"
+            widget: object
+            fields:
+              - name: slides
+                label: "Tarjetas (Marketing, Páginas web, Sublimación — en ese orden)"
+                widget: list
+                fields:
+                  - { name: tab, label: "Texto de la pestaña", widget: string }
+                  - { name: tag, label: "Etiqueta", widget: string }
+                  - { name: title, label: "Título", widget: string }
+                  - { name: desc, label: "Descripción (opcional)", widget: string, required: false }
+              - { name: adLabel, label: "Anuncio de ejemplo · Etiqueta", widget: string }
+              - { name: adTitle, label: "Anuncio de ejemplo · Título", widget: string }
+              - { name: adDesc, label: "Anuncio de ejemplo · Texto", widget: string }
+              - { name: mapTitle, label: "Google Maps · Título", widget: string }
+              - { name: mapDesc, label: "Google Maps · Texto", widget: string }
           - { name: businessPathsTag, label: "Líneas de negocio · Etiqueta", widget: string }
           - { name: businessPathsHeading, label: "Líneas de negocio · Titular", widget: string }
           - name: businessPaths
@@ -264,6 +332,27 @@ collections:
               - { name: title, label: "Título", widget: string }
               - { name: desc, label: "Descripción", widget: text }
           - { name: trafficCtaLabel, label: "Traffic & Growth · Texto botón", widget: string }
+          - { name: webTag, label: "Páginas Web · Etiqueta", widget: string }
+          - { name: webHeading, label: "Páginas Web · Titular", widget: string }
+          - { name: webHighlight, label: "Páginas Web · Parte resaltada del titular", widget: string }
+          - { name: webIntro, label: "Páginas Web · Párrafo", widget: text }
+          - { name: webFeatures, label: "Páginas Web · Beneficios", widget: list, field: { name: feature, label: "Beneficio", widget: string } }
+          - { name: webPlansLabel, label: "Páginas Web · Título de planes (precios vienen de la página Precios)", widget: string }
+          - { name: webCtaLabel, label: "Páginas Web · Botón principal", widget: string }
+          - { name: webCtaHref, label: "Páginas Web · Enlace botón principal", widget: string }
+          - { name: webSecondaryLabel, label: "Páginas Web · Botón secundario", widget: string }
+          - { name: webSecondaryHref, label: "Páginas Web · Enlace botón secundario", widget: string }
+          - { name: webTemplateLabel, label: "Páginas Web · Rótulo de plantillas de ejemplo", widget: string }
+          - name: webTemplates
+            label: "Páginas Web · Plantillas de ejemplo (rotan en la laptop y el celular)"
+            widget: list
+            fields:
+              - { name: kind, label: "Tipo de negocio", widget: string }
+              - { name: name, label: "Nombre", widget: string }
+              - { name: tagline, label: "Frase", widget: string }
+              - { name: cta, label: "Botón", widget: string }
+              - { name: color, label: "Color (hex)", widget: string }
+              - { name: url, label: "Dominio de ejemplo", widget: string }
           - { name: osTag, label: "Alethig Media OS · Etiqueta", widget: string }
           - { name: osHeading, label: "Alethig Media OS · Titular", widget: string }
           - { name: osHighlight, label: "Alethig Media OS · Palabra resaltada", widget: string, required: false }
@@ -273,6 +362,13 @@ collections:
           - { name: sublimationHeading, label: "Sublimación · Titular", widget: string }
           - { name: sublimationIntro, label: "Sublimación · Párrafo", widget: text }
           - { name: sublimationCategories, label: "Sublimación · Categorías", widget: list, field: { name: category, label: "Categoría", widget: string } }
+          - name: sublimationTurnaround
+            label: "Sublimación · Tiempos de entrega"
+            widget: list
+            fields:
+              - { name: value, label: "Tiempo", widget: string }
+              - { name: label, label: "Para qué pedidos", widget: string }
+          - { name: sublimationBrandWord, label: "Sublimación · Texto en la camiseta de ejemplo", widget: string }
           - { name: sublimationCtaLabel, label: "Sublimación · Texto botón", widget: string }
           - { name: servicesTag, label: "Servicios de apoyo · Etiqueta", widget: string }
           - { name: servicesHeading, label: "Servicios de apoyo · Titular", widget: string }

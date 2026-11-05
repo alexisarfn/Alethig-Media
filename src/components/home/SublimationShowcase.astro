@@ -1,0 +1,64 @@
+---
+// HOME MOTION V3 — sección Sublimación del home: sudadera que flota y
+// cambia de color, anillo girando, chips de productos que se iluminan de a
+// uno y tiempos de entrega. Reemplaza la versión estática (círculo con
+// ícono). Todo el texto llega desde home.<locale>.json.
+import Icon from '../Icon.astro';
+import { withBase } from '../../lib/basePath';
+
+interface Props {
+  home: any;
+  base: string;
+  ctaHref: string;
+}
+const { home, base, ctaHref } = Astro.props;
+---
+<section id="sublimation" class="on-light section-surface-white py-section-py-sm md:py-section-py-lg overflow-hidden">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+      <div class="reveal">
+        <span class="tag-cyber mb-6 inline-flex"><Icon name="checkroom" class="text-sm" />{home.sublimationTag}</span>
+        <h2 class="font-display uppercase text-headline-lg-mobile md:text-headline-lg mb-5">{home.sublimationHeading}</h2>
+        <p class="text-body-md text-ink-dim mb-7 max-w-lg">{home.sublimationIntro}</p>
+
+        <ul class="rot-lit flex flex-wrap gap-2 mb-8" data-rotator="sublimation-products" data-interval="1400" data-pause-on-hover="false">
+          {home.sublimationCategories.map((cat: string, i: number) => (
+            <li data-rotator-item data-rotator-decor class={`text-xs font-display uppercase font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-3.5 py-2 ${i === 0 ? 'is-active' : ''}`}>{cat}</li>
+          ))}
+        </ul>
+
+        {home.sublimationTurnaround?.length > 0 && (
+          <div class="flex flex-wrap gap-4 mb-8">
+            {home.sublimationTurnaround.map((t: any) => (
+              <div class="glass rounded-2xl px-5 py-4">
+                <p class="font-display uppercase text-2xl text-ink">{t.value}</p>
+                <p class="text-sm text-ink-dim">{t.label}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <a href={withBase(base, ctaHref)} class="btn-cyber-solid shine magnetic press inline-flex">
+          <span class="icon-wrap uppercase">{home.sublimationCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
+          <span class="shine-sweep" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="reveal reveal-delay relative flex justify-center items-center min-h-[340px] md:min-h-[420px]" aria-hidden="true">
+        <div class="spin-slow absolute w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full border-2 border-dashed border-accent/60"></div>
+        <div class="absolute w-[230px] h-[230px] md:w-[290px] md:h-[290px] rounded-full bg-bg-void"></div>
+        <svg class="bob relative w-[240px] h-[240px] md:w-[300px] md:h-[300px]" viewBox="0 0 120 120">
+          <path class="dye" d="M40 14 L18 24 L6 70 L20 74 L28 46 L28 108 L92 108 L92 46 L100 74 L114 70 L102 24 L80 14 C76 24 68 28 60 28 C52 28 44 24 40 14 Z" stroke-width="1.5" style="stroke:var(--surface-white)"></path>
+          <text x="60" y="64" text-anchor="middle" font-weight="800" font-size="8" style="font-family:var(--font-display);fill:var(--bg-void)">{home.sublimationBrandWord}</text>
+        </svg>
+        <svg class="bob absolute right-[6%] bottom-[4%] w-24 h-24 md:w-28 md:h-28" viewBox="0 0 100 100" style="animation-delay:1.2s">
+          <rect x="14" y="22" width="58" height="66" rx="8" style="fill:var(--surface-white);stroke:var(--ink);stroke-width:2"></rect>
+          <path d="M72 36 h8 a12 12 0 0 1 0 24 h-8" fill="none" stroke-width="7" style="stroke:var(--ink)"></path>
+          <rect class="dye" x="14" y="44" width="58" height="22" style="animation-delay:-3s"></rect>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
