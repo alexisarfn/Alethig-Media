@@ -6,6 +6,11 @@ import { highlightHeading } from '../../lib/highlight';
 import { getSrcSet } from '../../lib/responsiveImage';
 import { withBase } from '../../lib/basePath';
 import { getCollection } from 'astro:content';
+import pricing from '../../content/pages/pricing.es.json';
+import HomeHero from '../../components/home/HomeHero.astro';
+import HomeTicker from '../../components/home/HomeTicker.astro';
+import WebShowcase from '../../components/home/WebShowcase.astro';
+import SublimationShowcase from '../../components/home/SublimationShowcase.astro';
 
 export const prerender = true;
 
@@ -28,89 +33,11 @@ const portfolio = (await getCollection('portfolioEs'))
   .filter(p => p.data.published && p.data.clientConsent)
   .sort((a, b) => Number(b.data.featured) - Number(a.data.featured));
 ---
-<Layout title={home.title} description={home.metaDescription} image={home.heroImage} base={BASE} locale="es" altHref="/en/" navTheme="light">
+<Layout title={home.title} description={home.metaDescription} image={home.heroImage} base={BASE} locale="es" altHref="/en/" navTheme="dark">
 
-  <!-- HERO (VISUAL REDESIGN V2 + POSITIONING PHASE 1, sin cambios de
-       estructura desde entonces). POSITIONING PHASE 6: se intercambió el
-       CONTENIDO de heroHeading y heroTagline — el H1 ahora es la frase de
-       "Generamos Tráfico / Construimos Marcas / Te Damos el Sistema"
-       (antes vivía como subtítulo) y el antiguo H1 centrado en Long
-       Island bajó a subtítulo de apoyo. Cero cambios de layout/markup. -->
-  <section class="on-light mesh-bg-light-hero relative min-h-screen flex items-center pt-24 pb-section-py-sm overflow-hidden">
-    <div class="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-ink/5 blur-[100px] pointer-events-none"></div>
-    <!-- Halo detrás de la imagen del hero: dorado suave en vez del halo
-         índigo (pensado para fondo oscuro) — se integra al nuevo fondo
-         claro en vez de leerse como una mancha oscura. -->
-    <div class="absolute top-1/3 right-[6%] w-[30rem] h-[30rem] rounded-full bg-accent/12 blur-[120px] pointer-events-none"></div>
-
-    <div class="max-w-container-max mx-auto px-gutter w-full">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="hero-reveal">
-          <span class="tag-cyber mb-6 inline-flex"><Icon name="bolt" class="text-sm" />{home.heroTag}</span>
-          <!-- POSITIONING PHASE 8.5: escala reducida (antes 34/46/72/92px vía
-               tokens compartidos con Traffic & Growth/Sublimación — no se
-               tocan esos tokens, solo la clase de este H1) + "uppercase"
-               agregado. La fuente Nord no tiene bien el glifo minúsculo
-               con tilde (ver "Tráfico": la "á" caía a una fuente de
-               respaldo rota) pero SÍ tiene el glifo mayúsculo correcto —
-               confirmado comparando con .tag-cyber, que ya usa
-               text-transform:uppercase y renderiza "QUÉ" perfecto. -->
-          <h1 class="font-display font-extrabold uppercase tracking-[-0.02em] leading-[1.12] text-[38px] md:text-[46px] lg:text-[52px] xl:text-[62px] mb-6" set:html={highlightHeading(home.heroHeading, home.heroHighlight)}></h1>
-          <!-- POSITIONING PHASE 6: ahora es la línea de crédito Long
-               Island/alcance más amplio, como subtítulo de apoyo (no H1,
-               no metadata) — Long Island deja de dominar el mensaje
-               principal del hero pero se conserva como credibilidad. -->
-          <!-- POSITIONING PHASE 8.5: "uppercase" agregado — es un
-               sub-titular de marca en negrita/dorado (mismo nivel visual
-               que path.title en las tarjetas de línea de negocio, que ya
-               usa uppercase), no el párrafo gris normal de abajo (ese sí
-               se deja intacto). Sin esto, "Tecnología"/"Diseñados" mostraban
-               el mismo glifo roto de acento minúsculo que el H1/H2. -->
-          <p class="font-display uppercase font-semibold text-lg md:text-xl text-gold-ink mb-4 max-w-2xl">{home.heroTagline}</p>
-          <p class="text-body-lg text-ink-dim mb-8 max-w-xl">
-            {home.heroParagraph}
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <!-- PREMIUM EXPERIENCE V1: CTA de reserva con Cal.com. href de
-                 respaldo intacto (misma página de Contacto); data-booking-trigger
-                 lo intercepta con JS para abrir el modal en vez de navegar. -->
-            <a href={withBase(BASE, home.heroCtaPrimary.href)} data-booking-trigger class="btn-cyber-solid magnetic press">
-              <span class="icon-wrap uppercase">Agenda una consulta gratis <Icon name="calendar_month" class="text-base" /></span>
-            </a>
-            <a href={withBase(BASE, home.heroCtaSecondary.href)} class="btn-ghost magnetic press uppercase">{home.heroCtaSecondary.label}</a>
-          </div>
-        </div>
-        <div class="hero-reveal reveal-delay">
-          <div class="glass card-cyber rounded-2xl overflow-hidden animate-float">
-            <img
-              src={home.heroImage}
-              srcset={getSrcSet(home.heroImage)}
-              sizes={RESPONSIVE_SIZES}
-              alt={home.heroImageAlt}
-              class="w-full aspect-[4/3] object-cover media-bright"
-              loading="eager"
-              fetchpriority="high"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUST BAR (claro, sin cambios) -->
-  <section class="on-light section-surface-alt border-y border-ink/10 py-4 md:py-5">
-    <div class="max-w-container-max mx-auto px-gutter">
-      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 md:gap-x-12 stagger-fade">
-        {home.trustBar.map(item => (
-          <div class="flex items-center gap-2 text-ink-dim text-sm md:text-base">
-            <Icon name={item.icon} class="text-gold-ink text-lg md:text-xl" />
-            <span class="font-display uppercase font-semibold tracking-wide">{item.label}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <!-- HOME MOTION V3: hero oscuro animado + franja dorada (ver src/components/home/). -->
+  <HomeHero home={home} base={BASE} />
+  <HomeTicker items={home.tickerItems} />
 
   <!-- TRES LÍNEAS DE NEGOCIO (POSITIONING PHASE 2: columna vertebral
        estratégica del home — 3 tarjetas, no genéricas, cada una es una
@@ -176,6 +103,12 @@ const portfolio = (await getCollection('portfolioEs'))
     </div>
   </section>
 
+  <!-- HOME MOTION V3: Páginas Web (nueva) → Sublimación (animada) → Alethig Media OS.
+       Orden pensado para alternar oscuro/claro/oscuro. -->
+  <WebShowcase home={home} pricing={pricing} base={BASE} />
+
+  <SublimationShowcase home={home} base={BASE} ctaHref="/contacto" />
+
   <!-- ALETHIG MEDIA OS (VISUAL REDESIGN V2: sin cambios de diseño ni de
        copy — solo se reposiciona como línea de negocio #2 en la
        narrativa del home, ver POSITIONING PHASE 2). -->
@@ -188,15 +121,16 @@ const portfolio = (await getCollection('portfolioEs'))
           <span class="tag-cyber mb-6 inline-flex"><Icon name="bolt" class="text-sm" />{home.osTag}</span>
           <h2 class="font-display uppercase text-headline-lg-mobile md:text-headline-lg mb-5" set:html={highlightHeading(home.osHeading, home.osHighlight)}></h2>
           <p class="text-body-md text-text-secondary mb-8 max-w-lg">{home.osBody}</p>
-          <a href="https://app.alethigmedia.com" class="btn-cyber-solid magnetic press inline-flex">
+          <a href="https://app.alethigmedia.com" class="btn-cyber-solid shine pulse-ring magnetic press inline-flex">
             <span class="icon-wrap uppercase">{home.osCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
+            <span class="shine-sweep" aria-hidden="true"></span>
           </a>
         </div>
         <!-- Panel abstracto tipo "dashboard": solo formas/barras
              decorativas, no una captura real del producto — evita insinuar
              funciones no confirmadas. -->
         <div class="reveal reveal-delay">
-          <div class="glass rounded-2xl p-6 md:p-8 border border-accent/15">
+          <div class="float-soft glass rounded-2xl p-6 md:p-8 border border-accent/15">
             <div class="flex items-center gap-2 mb-6">
               <span class="w-2.5 h-2.5 rounded-full bg-accent/70"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
@@ -204,58 +138,22 @@ const portfolio = (await getCollection('portfolioEs'))
             </div>
             <div class="space-y-4">
               <div class="flex items-center gap-3">
-                <div class="h-2.5 rounded-full bg-accent/60 w-2/3"></div>
+                <div class="bar-grow h-2.5 rounded-full bg-accent/60 w-2/3"></div>
                 <span class="text-text-dim text-xs font-display uppercase">Contenido</span>
               </div>
               <div class="flex items-center gap-3">
-                <div class="h-2.5 rounded-full bg-accent/35 w-1/3"></div>
+                <div class="bar-grow h-2.5 rounded-full bg-accent/35 w-1/3" style="animation-delay:.6s"></div>
                 <span class="text-text-dim text-xs font-display uppercase">Aprobaciones</span>
               </div>
               <div class="flex items-center gap-3">
-                <div class="h-2.5 rounded-full bg-accent/50 w-1/2"></div>
+                <div class="bar-grow h-2.5 rounded-full bg-accent/50 w-1/2" style="animation-delay:1.2s"></div>
                 <span class="text-text-dim text-xs font-display uppercase">Proyectos</span>
               </div>
               <div class="flex items-center gap-3">
-                <div class="h-2.5 rounded-full bg-accent/25 w-1/4"></div>
+                <div class="bar-grow h-2.5 rounded-full bg-accent/25 w-1/4" style="animation-delay:1.8s"></div>
                 <span class="text-text-dim text-xs font-display uppercase">Flujos de trabajo</span>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUBLIMACIÓN Y PRODUCTOS CON MARCA (POSITIONING PHASE 2: línea de
-       negocio #3 — sección nueva, clara a propósito para mantener el
-       ritmo claro/oscuro de V2. Solo posicionamiento de categorías, sin
-       catálogo, precios, inventario ni tiempos de entrega inventados). -->
-  <section id="sublimation" class="on-light section-surface-white py-section-py-sm md:py-section-py-lg">
-    <div class="max-w-container-max mx-auto px-gutter">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="reveal">
-          <span class="tag-cyber mb-6 inline-flex"><Icon name="checkroom" class="text-sm" />{home.sublimationTag}</span>
-          <h2 class="font-display uppercase text-headline-lg-mobile md:text-headline-lg mb-5">{home.sublimationHeading}</h2>
-          <p class="text-body-md text-ink-dim mb-8 max-w-lg">{home.sublimationIntro}</p>
-          <ul class="flex flex-wrap gap-2 mb-8">
-            {home.sublimationCategories.map(cat => (
-              <li class="text-xs font-display uppercase font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-3 py-1.5">{cat}</li>
-            ))}
-          </ul>
-          <!-- CTA orientado a cotización/contacto — reutiliza la página de
-               contacto existente, sin formulario nuevo. -->
-          <a href={withBase(BASE, '/contacto')} class="btn-cyber-solid magnetic press inline-flex">
-            <span class="icon-wrap uppercase">{home.sublimationCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
-          </a>
-        </div>
-        <div class="reveal reveal-delay flex justify-center">
-          <!-- style inline necesario: .glass define border-radius:16px sin
-               @layer, lo que le gana a la utilidad rounded-full de
-               Tailwind (bug preexistente detectado y corregido en
-               POSITIONING PHASE 5; mismo fix aplicado aquí). Sin esto el
-               círculo se ve como un cuadrado con esquinas redondeadas. -->
-          <div class="glass rounded-full w-56 h-56 md:w-64 md:h-64 flex items-center justify-center border border-accent/20" style="border-radius: 9999px;">
-            <Icon name="checkroom" class="text-gold-ink text-[88px]" />
           </div>
         </div>
       </div>
@@ -444,3 +342,8 @@ const portfolio = (await getCollection('portfolioEs'))
   </section>
 
 </Layout>
+
+<script>
+  import { initHomeMotion } from '../../scripts/home-motion';
+  initHomeMotion();
+</script>

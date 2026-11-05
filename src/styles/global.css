@@ -519,3 +519,117 @@ a:hover .icon-wrap, button:hover .icon-wrap { gap: 8px; }
   z-index: 9999;
   opacity: 0.4;
 }
+
+/* ============================================================
+   HOME MOTION V3 — movimiento continuo del home (hero con palabras
+   que rotan, vitrina de servicios, ticker dorado, sección Páginas Web
+   y Sublimación animadas). Todo con variables del tema (Layout.astro),
+   nada de colores de marca hardcodeados.
+   - Los rotadores ([data-rotator], ver src/scripts/home-motion.ts) se
+     pintan SIEMPRE con su primer elemento visible (.is-active en el
+     markup), así que sin JS el contenido se lee igual.
+   - Bajo prefers-reduced-motion: se apagan los loops decorativos
+     (ticker, cuadrícula, brillos, giros, flotación) y los rotadores
+     cambian sin transición (ver bloque al final).
+   ============================================================ */
+@keyframes am-ticker { to { transform: translateX(-50%); } }
+@keyframes am-grid-drift { to { background-position: 0 64px, 0 64px; } }
+@keyframes am-breathe { 0%, 100% { opacity: .5; transform: scale(1); } 50% { opacity: .95; transform: scale(1.15); } }
+@keyframes am-sweep { 0% { left: -60%; } 55%, 100% { left: 130%; } }
+@keyframes am-pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb), .6); }
+  70% { box-shadow: 0 0 0 14px rgba(var(--accent-rgb), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0); }
+}
+@keyframes am-spin { to { transform: rotate(360deg); } }
+@keyframes am-bob { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-12px) rotate(3deg); } }
+@keyframes am-float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes am-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes am-bar { from { transform: scaleX(.35); } to { transform: scaleX(1); } }
+@keyframes am-dye {
+  0%, 20%   { fill: var(--accent); }
+  25%, 45%  { fill: var(--surface-white); }
+  50%, 70%  { fill: var(--accent-2); }
+  75%, 95%  { fill: var(--text-secondary); }
+  100%      { fill: var(--accent); }
+}
+
+.ticker { overflow: hidden; }
+.ticker-track { display: flex; width: max-content; animation: am-ticker 32s linear infinite; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+
+.grid-drift {
+  background-image:
+    linear-gradient(rgba(var(--accent-rgb), .09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--accent-rgb), .09) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px;
+  animation: am-grid-drift 4s linear infinite;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 35%, transparent 80%);
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 35%, transparent 80%);
+}
+.glow-breathe { animation: am-breathe 7s ease-in-out infinite; }
+.float-soft { animation: am-float-soft 6s ease-in-out infinite; }
+.spin-slow { animation: am-spin 24s linear infinite; }
+.spin-slow-rev { animation: am-spin 30s linear infinite reverse; }
+.bob { animation: am-bob 4.5s ease-in-out infinite; }
+.pulse-ring { animation: am-pulse-ring 2s infinite; }
+.dye { animation: am-dye 8s ease-in-out infinite; }
+.bar-grow { transform-origin: left; animation: am-bar 2.6s ease-in-out infinite alternate; }
+
+/* Brillo que recorre un botón: <a class="btn-cyber-solid shine">…<span class="shine-sweep"></span></a> */
+.shine { position: relative; overflow: hidden; isolation: isolate; }
+.shine-sweep {
+  position: absolute; top: 0; bottom: 0; left: -60%; width: 40%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .55), transparent);
+  transform: skewX(-20deg);
+  animation: am-sweep 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ---- Rotadores (home-motion.ts) ----
+   .rot-words  → palabras del H1, entran con giro 3D
+   .rot-slides → tarjetas de la vitrina / pantallas de ejemplo
+   .rot-lit    → chips que se iluminan de a uno (no se apilan) */
+.rot-words, .rot-slides { display: grid; }
+.rot-words > [data-rotator-item],
+.rot-slides > [data-rotator-item] { grid-area: 1 / 1; }
+.rot-words { perspective: 600px; }
+.rot-words > [data-rotator-item] {
+  opacity: 0; visibility: hidden;
+  transform: translateY(45%) rotateX(-70deg);
+  transform-origin: 50% 100%;
+  transition: opacity .45s ease, transform .6s var(--ease-spring, cubic-bezier(.34, 1.56, .64, 1)), visibility 0s .6s;
+}
+.rot-slides > [data-rotator-item] {
+  opacity: 0; visibility: hidden;
+  transform: translateX(40px) scale(.97);
+  transition: opacity .5s ease, transform .7s var(--ease-out-expo, cubic-bezier(.16, 1, .3, 1)), visibility 0s .7s;
+}
+.rot-words > .is-active,
+.rot-slides > .is-active {
+  opacity: 1; visibility: visible; transform: none;
+  transition-delay: 0s;
+}
+.rot-lit > [data-rotator-item] { transition: background-color .4s ease, color .4s ease, border-color .4s ease, transform .4s ease; }
+.rot-lit > .is-active {
+  background-color: var(--ink);
+  border-color: var(--ink);
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.rot-tab { position: relative; overflow: hidden; }
+.rot-tab.is-active { background: var(--accent); color: var(--bg-void); border-color: var(--accent); }
+.rot-tab-bar {
+  position: absolute; left: 0; bottom: 0; height: 3px; width: 100%;
+  background: var(--bg-void); transform: scaleX(0); transform-origin: left;
+}
+.rot-tab.is-active .rot-tab-bar { animation: am-progress var(--rot-interval, 4500ms) linear both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track, .grid-drift, .glow-breathe, .float-soft, .spin-slow, .spin-slow-rev,
+  .bob, .pulse-ring, .dye, .bar-grow, .shine-sweep, .rot-tab-bar { animation: none !important; }
+  .rot-words > [data-rotator-item],
+  .rot-slides > [data-rotator-item],
+  .rot-lit > [data-rotator-item] { transition: none !important; transform: none !important; }
+}

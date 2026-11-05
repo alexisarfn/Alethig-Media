@@ -1,0 +1,136 @@
+---
+// HOME MOTION V3 — hero oscuro con palabras que rotan en el H1 y una
+// vitrina que alterna los 3 servicios principales (Marketing, Páginas web,
+// Sublimación). Compartido por /es/ y /en/: todo el texto llega desde
+// home.<locale>.json, nada de copy hardcodeado aquí.
+//
+// Accesibilidad: el H1 real (heroHeading) va en .sr-only con la frase
+// completa; la versión animada es aria-hidden. Los rotadores arrancan con
+// su primer elemento visible (sin JS se lee igual).
+import Icon from '../Icon.astro';
+import { withBase } from '../../lib/basePath';
+
+interface Props {
+  home: any;
+  base: string;
+}
+const { home, base } = Astro.props;
+const sc = home.showcase;
+const tpl = home.webTemplates?.[0];
+---
+<section class="bg-bg-void relative min-h-screen flex items-center pt-28 md:pt-32 pb-section-py-sm overflow-hidden">
+  <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -top-40 -right-32 w-[38rem] h-[38rem] rounded-full bg-accent/25 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -bottom-56 -left-48 w-[32rem] h-[32rem] rounded-full bg-grad-indigo/60 blur-[120px] pointer-events-none" style="animation-delay:2.5s" aria-hidden="true"></div>
+
+  <div class="max-w-container-max mx-auto px-gutter w-full relative">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <div class="hero-reveal">
+        <span class="tag-cyber mb-6 inline-flex items-center gap-2">
+          <span class="pulse-ring w-2 h-2 rounded-full bg-accent" aria-hidden="true"></span>{home.heroTag}
+        </span>
+
+        <h1 class="sr-only">{home.heroHeading}</h1>
+        <p aria-hidden="true" class="font-display font-extrabold uppercase tracking-[-0.02em] leading-[1.08] text-[34px] sm:text-[42px] lg:text-[50px] xl:text-[60px] text-text-primary mb-6">
+          <span class="block">{home.heroHeadingLead}</span>
+          <span class="rot-words text-accent" data-rotator="hero-words" data-interval="2600" data-pause-on-hover="false">
+            {home.heroRotatingWords.map((w: string, i: number) => (
+              <span data-rotator-item class={i === 0 ? 'is-active' : ''}>{w}</span>
+            ))}
+          </span>
+        </p>
+
+        <p class="font-display uppercase font-semibold text-base md:text-lg text-accent-2 mb-4 max-w-2xl">{home.heroTagline}</p>
+        <p class="text-body-lg text-text-secondary mb-8 max-w-xl">{home.heroParagraph}</p>
+
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href={withBase(base, home.heroCtaPrimary.href)} data-booking-trigger class="btn-cyber-solid shine magnetic press">
+            <span class="icon-wrap uppercase">{home.heroCtaPrimary.label} <Icon name="calendar_month" class="text-base" /></span>
+            <span class="shine-sweep" aria-hidden="true"></span>
+          </a>
+          <a href={withBase(base, home.heroCtaSecondary.href)} class="btn-ghost magnetic press uppercase">{home.heroCtaSecondary.label}</a>
+        </div>
+
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-secondary">
+          {home.trustBar.map((t: any) => (
+            <li class="flex items-center gap-2"><Icon name={t.icon} class="text-accent text-base" />{t.label}</li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Vitrina: 3 tarjetas que rotan + pestañas con barra de progreso -->
+      <div class="hero-reveal reveal-delay">
+        <div class="float-soft">
+          <div class="rot-slides" data-rotator="showcase" data-interval="4500">
+
+            <!-- 1 · Marketing -->
+            <div data-rotator-item class="is-active glass rounded-2xl p-6 md:p-7 border border-accent/20 shadow-2xl">
+              <p class="tag-cyber mb-4 inline-flex"><Icon name="ads_click" class="text-sm" />{sc.slides[0].tag}</p>
+              <p class="font-display uppercase text-xl md:text-2xl text-text-primary mb-5">{sc.slides[0].title}</p>
+              <div class="rounded-xl bg-surface-white text-ink p-4 mb-3">
+                <p class="text-xs text-ink-dim mb-1">{sc.adLabel}</p>
+                <p class="font-bold text-lg text-grad-indigo">{sc.adTitle}</p>
+                <p class="text-sm text-ink-dim">{sc.adDesc}</p>
+              </div>
+              <div class="rounded-xl bg-surface-white text-ink p-4 flex items-center gap-3">
+                <span class="w-11 h-11 rounded-full bg-surface-tint flex items-center justify-center shrink-0"><Icon name="location_on" class="text-xl text-ink" /></span>
+                <span>
+                  <span class="block font-bold text-sm">{sc.mapTitle}</span>
+                  <span class="block text-xs text-ink-dim">{sc.mapDesc}</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- 2 · Páginas web -->
+            <div data-rotator-item class="rounded-2xl overflow-hidden bg-surface-white text-ink shadow-2xl">
+              <div class="bg-surface-tint px-4 py-3 flex items-center gap-2" aria-hidden="true">
+                <span class="w-2.5 h-2.5 rounded-full bg-ink/25"></span><span class="w-2.5 h-2.5 rounded-full bg-ink/25"></span><span class="w-2.5 h-2.5 rounded-full bg-ink/25"></span>
+                <span class="ml-3 text-xs text-ink-dim">{tpl?.url}</span>
+              </div>
+              <div class="px-6 py-7 text-white" style={`background:${tpl?.color}`}>
+                <p class="text-[11px] font-bold tracking-[0.2em] opacity-80 mb-2">{home.webTemplateLabel} · {tpl?.kind}</p>
+                <p class="font-display uppercase text-2xl mb-2">{tpl?.name}</p>
+                <p class="text-sm opacity-90 mb-4">{tpl?.tagline}</p>
+                <span class="inline-block bg-white text-sm font-bold px-4 py-2 rounded-lg" style={`color:${tpl?.color}`}>{tpl?.cta}</span>
+              </div>
+              <div class="p-5 grid grid-cols-3 gap-2" aria-hidden="true">
+                <div class="h-14 rounded-lg bg-surface-tint"></div><div class="h-14 rounded-lg bg-surface-tint"></div><div class="h-14 rounded-lg bg-surface-tint"></div>
+              </div>
+              <p class="px-6 pb-5 text-xs font-display uppercase font-semibold text-gold-ink">{sc.slides[1].title}</p>
+            </div>
+
+            <!-- 3 · Sublimación -->
+            <div data-rotator-item class="glass rounded-2xl p-6 md:p-7 border border-accent/20 shadow-2xl">
+              <p class="tag-cyber mb-4 inline-flex"><Icon name="checkroom" class="text-sm" />{sc.slides[2].tag}</p>
+              <div class="flex justify-center items-end gap-8 py-3" aria-hidden="true">
+                <svg class="bob w-32 h-32 md:w-36 md:h-36" viewBox="0 0 120 120">
+                  <path class="dye" d="M40 12 L20 22 L8 44 L24 52 L28 44 L28 108 L92 108 L92 44 L96 52 L112 44 L100 22 L80 12 C76 22 68 26 60 26 C52 26 44 22 40 12 Z" stroke="currentColor" stroke-width="2" style="color:var(--surface-white)"></path>
+                  <text x="60" y="66" text-anchor="middle" font-weight="800" font-size="8" style="font-family:var(--font-display);fill:var(--bg-void)">{home.sublimationBrandWord}</text>
+                </svg>
+                <svg class="bob w-24 h-24" viewBox="0 0 100 100" style="animation-delay:1s">
+                  <rect x="14" y="22" width="58" height="66" rx="8" style="fill:var(--surface-white)"></rect>
+                  <path d="M72 36 h8 a12 12 0 0 1 0 24 h-8" fill="none" stroke-width="7" style="stroke:var(--surface-white)"></path>
+                  <rect class="dye" x="14" y="44" width="58" height="22" style="animation-delay:-2s"></rect>
+                </svg>
+              </div>
+              <p class="font-display uppercase text-xl md:text-2xl text-text-primary mb-2">{sc.slides[2].title}</p>
+              <p class="text-sm text-text-secondary">{sc.slides[2].desc}</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mt-5">
+          {sc.slides.map((s: any, i: number) => (
+            <button type="button" data-rotator-tab="showcase" aria-pressed={i === 0 ? 'true' : 'false'}
+              class={`rot-tab ${i === 0 ? 'is-active' : ''} flex-1 min-w-[110px] min-h-[44px] rounded-xl border border-white/15 bg-white/5 text-text-primary font-display uppercase text-xs font-bold px-3 py-2.5 transition-colors`}>
+              {s.tab}<span class="rot-tab-bar" aria-hidden="true"></span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
