@@ -30,38 +30,39 @@ const channelBars = [
   { label: 'Lead Generation', width: 'w-3/4', opacity: 'bg-accent/30' },
 ];
 ---
-<Layout title={tg.title} description={tg.metaDescription} base={BASE} locale="es" altHref="/en/traffic-growth/" navTheme="light">
+<Layout title={tg.title} description={tg.metaDescription} base={BASE} locale="es" altHref="/en/traffic-growth/" navTheme="dark">
 
   <!-- HERO -->
-  <section class="on-light mesh-bg-light-hero relative min-h-[85vh] flex items-center pt-28 pb-section-py-sm overflow-hidden">
-    <div class="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-ink/5 blur-[100px] pointer-events-none"></div>
-    <div class="max-w-container-max mx-auto px-gutter w-full">
+  <section class="bg-bg-void relative min-h-[85vh] flex items-center pt-28 pb-section-py-sm overflow-hidden">
+    <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+    <div class="glow-breathe absolute -top-40 -right-32 w-[34rem] h-[34rem] rounded-full bg-accent/20 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+    <div class="glow-breathe absolute -bottom-56 -left-48 w-[30rem] h-[30rem] rounded-full bg-grad-indigo/60 blur-[120px] pointer-events-none" style="animation-delay:2.5s" aria-hidden="true"></div>
+    <div class="relative max-w-container-max mx-auto px-gutter w-full">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="hero-reveal">
           <span class="tag-cyber mb-6 inline-flex"><Icon name="monitoring" class="text-sm" />{tg.heroTag}</span>
           <h1 class="uppercase font-display text-display-hero-mobile md:text-display-hero-tablet xl:text-display-hero mb-6" set:html={highlightHeading(tg.heroHeading, tg.heroHighlight)}></h1>
-          <p class="text-body-lg text-ink-dim mb-8 max-w-xl">{tg.heroParagraph}</p>
+          <p class="text-body-lg text-text-secondary mb-8 max-w-xl">{tg.heroParagraph}</p>
           <div class="flex flex-wrap gap-4">
             <!-- CTA de reserva con Cal.com; href de respaldo a Contacto. -->
-            <a href={withBase(BASE, tg.heroCtaPrimaryHref)} data-booking-trigger class="btn-cyber-solid magnetic press">
+            <a href={withBase(BASE, tg.heroCtaPrimaryHref)} data-booking-trigger class="btn-cyber-solid shine magnetic press">
               <span class="icon-wrap">{tg.heroCtaPrimaryLabel} <Icon name="calendar_month" class="text-base" /></span>
-            </a>
+            <span class="shine-sweep" aria-hidden="true"></span></a>
             <a href={withBase(BASE, tg.heroCtaSecondaryHref)} class="btn-ghost magnetic press">{tg.heroCtaSecondaryLabel}</a>
           </div>
         </div>
         <div class="hero-reveal reveal-delay">
-          <div class="glass rounded-2xl p-6 md:p-8 border border-accent/15">
+          <div class="float-soft glass rounded-2xl p-6 md:p-8 border border-accent/15">
             <div class="flex items-center gap-2 mb-6">
-              <span class="w-2.5 h-2.5 rounded-full bg-accent/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-ink/15"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-ink/15"></span>
+              <span class="pulse-ring w-2.5 h-2.5 rounded-full bg-accent/70"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-white/15"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-white/15"></span>
             </div>
             <div class="space-y-4">
-              {channelBars.map((bar) => (
+              {channelBars.map((bar, i) => (
                 <div class="flex items-center gap-3">
-                  <div class={`h-2.5 rounded-full ${bar.opacity} ${bar.width}`}></div>
-                  <span class="text-ink-dim text-xs font-display whitespace-nowrap">{bar.label}</span>
+                  <div class={`bar-grow h-2.5 rounded-full ${bar.opacity} ${bar.width}`} style={`animation-delay:${i * 0.45}s`}></div>
+                  <span class="text-text-secondary text-xs font-display whitespace-nowrap">{bar.label}</span>
                 </div>
               ))}
             </div>
@@ -168,9 +169,9 @@ const channelBars = [
         <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5">{tg.ctaHeading}</h2>
         <p class="text-text-secondary text-body-md max-w-xl mx-auto mb-8">{tg.ctaParagraph}</p>
         <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href={withBase(BASE, tg.ctaSecondaryHref)} data-booking-trigger class="btn-cyber-solid magnetic press inline-flex">
+          <a href={withBase(BASE, tg.ctaSecondaryHref)} data-booking-trigger class="btn-cyber-solid shine magnetic press inline-flex">
             <span class="icon-wrap">{tg.ctaButtonLabel} <Icon name={tg.ctaButtonIcon} class="text-base" /></span>
-          </a>
+          <span class="shine-sweep" aria-hidden="true"></span></a>
           <a href={withBase(BASE, tg.ctaSecondaryHref)} class="btn-ghost magnetic press">{tg.ctaSecondaryLabel}</a>
         </div>
         <!-- POSITIONING PHASE 6: enlace mínimo al Pricing Hub — texto

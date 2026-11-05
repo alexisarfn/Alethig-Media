@@ -25,22 +25,24 @@ const contentBrand = home.services.filter(s =>
 );
 const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
 ---
-<Layout title={hub.title} description={hub.metaDescription} base={BASE} locale="es" altHref="/en/services/" navTheme="light">
+<Layout title={hub.title} description={hub.metaDescription} base={BASE} locale="es" altHref="/en/services/" navTheme="dark">
 
   <!-- HERO — más sencillo/centrado que el de Traffic & Growth a propósito:
        este hub es de apoyo, no debe competir visualmente con la línea de
        negocio principal (ver callout más abajo). -->
-  <section class="on-light mesh-bg-light-hero relative pt-32 pb-section-py-lg overflow-hidden min-h-[60vh] flex items-center">
-    <div class="absolute top-1/4 right-1/3 w-72 h-72 rounded-full bg-accent/8 blur-[100px] pointer-events-none"></div>
-    <div class="max-w-container-max mx-auto px-gutter w-full">
+  <section class="bg-bg-void relative pt-32 pb-section-py-lg overflow-hidden min-h-[60vh] flex items-center">
+    <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+    <div class="glow-breathe absolute -top-40 -right-32 w-[34rem] h-[34rem] rounded-full bg-accent/20 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+    <div class="glow-breathe absolute -bottom-56 -left-48 w-[30rem] h-[30rem] rounded-full bg-grad-indigo/60 blur-[120px] pointer-events-none" style="animation-delay:2.5s" aria-hidden="true"></div>
+    <div class="relative max-w-container-max mx-auto px-gutter w-full">
       <div class="glass card-cyber rounded-2xl p-10 md:p-14 text-center reveal max-w-2xl mx-auto">
         <span class="tag-cyber mb-6 inline-flex"><Icon name="design_services" class="text-sm" />{hub.heroTag}</span>
         <h1 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5">{hub.heroHeading}</h1>
-        <p class="text-body-lg text-ink-dim mb-10 max-w-xl mx-auto">{hub.heroParagraph}</p>
+        <p class="text-body-lg text-text-secondary mb-10 max-w-xl mx-auto">{hub.heroParagraph}</p>
         <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href={withBase(BASE, hub.heroCtaPrimaryHref)} data-booking-trigger class="btn-cyber-solid magnetic press">
+          <a href={withBase(BASE, hub.heroCtaPrimaryHref)} data-booking-trigger class="btn-cyber-solid shine magnetic press">
             <span class="icon-wrap">{hub.heroCtaPrimaryLabel} <Icon name="calendar_month" class="text-base" /></span>
-          </a>
+          <span class="shine-sweep" aria-hidden="true"></span></a>
           <a href={withBase(BASE, hub.heroCtaSecondaryHref)} class="btn-ghost magnetic press">{hub.heroCtaSecondaryLabel}</a>
         </div>
       </div>
@@ -65,9 +67,9 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
                 <li class="text-xs font-display uppercase font-semibold text-text-secondary bg-white/5 border border-white/10 rounded-full px-3 py-1.5">{item}</li>
               ))}
             </ul>
-            <a href={withBase(BASE, hub.tgCalloutCtaHref)} class="btn-cyber-solid magnetic press inline-flex">
+            <a href={withBase(BASE, hub.tgCalloutCtaHref)} class="btn-cyber-solid shine magnetic press inline-flex">
               <span class="icon-wrap">{hub.tgCalloutCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
-            </a>
+            <span class="shine-sweep" aria-hidden="true"></span></a>
           </div>
           <div class="hidden md:flex justify-center">
             <div class="w-32 h-32 rounded-full bg-accent/12 border border-accent/25 flex items-center justify-center">
@@ -206,9 +208,9 @@ const paidAds = home.services.find(s => s.href.includes('publicidad-pagada'));
         <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5">{hub.ctaHeading}</h2>
         <p class="text-text-secondary text-body-md max-w-xl mx-auto mb-8">{hub.ctaParagraph}</p>
         <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href={withBase(BASE, hub.ctaSecondaryHref)} data-booking-trigger class="btn-cyber-solid magnetic press inline-flex">
+          <a href={withBase(BASE, hub.ctaSecondaryHref)} data-booking-trigger class="btn-cyber-solid shine magnetic press inline-flex">
             <span class="icon-wrap">{hub.ctaButtonLabel} <Icon name={hub.ctaButtonIcon} class="text-base" /></span>
-          </a>
+          <span class="shine-sweep" aria-hidden="true"></span></a>
           <a href={withBase(BASE, hub.ctaSecondaryHref)} class="btn-ghost magnetic press">{hub.ctaSecondaryLabel}</a>
         </div>
         <!-- POSITIONING PHASE 6: enlace mínimo al Pricing Hub. -->
