@@ -5,10 +5,25 @@
   "heroHeading": "We're From Here. We Grow Businesses Here.",
   "heroHighlight": "Here",
   "heroParagraph": "Alethig Media is a digital marketing agency based in Long Island, founded by an immigrant, for the community.",
-  "heroCtaPrimary": { "label": "Our Story", "href": "#story" },
-  "heroCtaSecondary": { "label": "View Services", "href": "/#services" },
+  "heroCtaPrimary": {
+    "label": "Our Story",
+    "href": "#historia"
+  },
+  "heroCtaSecondary": {
+    "label": "View Services",
+    "href": "/#services"
+  },
   "heroImage": "/uploads/nosotros-hero.webp",
   "heroImageAlt": "Alethig Media team in Long Island",
+  "tickerItems": [
+    "Founded in Long Island",
+    "English & Spanish",
+    "Digital marketing",
+    "Websites",
+    "Sublimation",
+    "Transparent pricing",
+    "For businesses ready to grow"
+  ],
   "aboutTag": "Our Story",
   "aboutHeading": "The Story Behind Alethig Media.",
   "aboutHighlight": "Alethig Media",
@@ -23,15 +38,78 @@
     "The name Alethig is personal: it combines the names of the three most important people in his life — Alexis, Thiago (his son), and Gisella (his wife). Every client we serve is part of that same story: building something real, for the people we love."
   ],
   "aboutCtaLabel": "Book My Free Consultation",
+  "nameTag": "The Name",
+  "nameHeading": "Alethig Is a Family.",
+  "nameParts": [
+    {
+      "letters": "ALE",
+      "name": "Alexis",
+      "role": "Founder"
+    },
+    {
+      "letters": "THI",
+      "name": "Thiago",
+      "role": "His son"
+    },
+    {
+      "letters": "G",
+      "name": "Gisella",
+      "role": "His wife"
+    }
+  ],
+  "journeyTag": "The Journey",
+  "journeyHeading": "From Ecuador to Long Island.",
+  "journey": [
+    {
+      "icon": "location_on",
+      "label": "Ecuador",
+      "title": "Engineering & Entrepreneurship",
+      "desc": "Trained as a petroleum engineer. Founded Delifruits, a dried-fruit brand, handling marketing, sales, social media and deliveries."
+    },
+    {
+      "icon": "design_services",
+      "label": "Education",
+      "title": "MBA & Digital Marketing",
+      "desc": "MBA from UNIR (Spain) and a Digital Marketing certification from Universidad de los Hemisferios."
+    },
+    {
+      "icon": "devices",
+      "label": "Long Island, NY",
+      "title": "Sales, Marketing & Web",
+      "desc": "A career in sales and marketing on Long Island, plus a web development certificate from Farmingdale."
+    },
+    {
+      "icon": "rocket_launch",
+      "label": "Today",
+      "title": "Alethig Media",
+      "desc": "Digital marketing, websites and sublimation for businesses ready to grow — in English and Spanish."
+    }
+  ],
   "statsTag": "Our Values",
   "statsHeading": "What We Believe In.",
   "statsHighlight": "Believe In",
   "statsParagraph": "Our mission: help businesses grow online with honest, transparent, results-focused digital marketing — starting right here in Long Island — in English and in Spanish.",
   "stats": [
-    { "value": "Transparency", "label": "No hidden fees, no confusing reports. You always know what we're doing and why." },
-    { "value": "Community", "label": "We live in Long Island, and we work with businesses beyond it too. Your success is our success." },
-    { "value": "Results", "label": "We don't measure in likes. We measure in leads, calls, and new customers." },
-    { "value": "Bilingual", "label": "English and Spanish. Because Long Island is both, and so are we." }
+    {
+      "value": "Transparency",
+      "label": "No hidden fees, no confusing reports. You always know what we're doing and why.",
+      "icon": "task_alt"
+    },
+    {
+      "value": "Community",
+      "label": "We live in Long Island, and we work with businesses beyond it too. Your success is our success.",
+      "icon": "groups"
+    },
+    {
+      "value": "Results",
+      "label": "We don't measure in likes. We measure in leads, calls, and new customers.",
+      "icon": "bar_chart"
+    },
+    {
+      "value": "Bilingual",
+      "label": "English and Spanish. Because Long Island is both, and so are we.",
+      "icon": "translate"
+    }
   ],
   "teamTag": "Our Team",
   "teamHeading": "Meet the Team.",
@@ -40,10 +118,34 @@
   "teamQuote": "Building something real, for the people we love.",
   "teamCtaLabel": "Book a Consultation",
   "team": [
-    { "name": "Alexis Fuel", "role": "Founder · Sales & Marketing · Amityville, NY", "img": "/uploads/fundador.jpg" },
-    { "name": "Project Manager", "role": "Project Management", "img": "/uploads/project-manager.jpg" },
-    { "name": "Designer", "role": "Graphic & Visual Design", "img": "/uploads/disenador.jpg" },
-    { "name": "Community Manager", "role": "Social Media Management", "img": "/uploads/community-manager.jpg" },
-    { "name": "Developer", "role": "Web Development", "img": "/uploads/programador.jpg" }
+    {
+      "name": "Alexis Fuel",
+      "role": "Founder · Sales & Marketing · Amityville, NY",
+      "img": "/uploads/fundador.jpg"
+    },
+    {
+      "name": "Project Manager",
+      "role": "Project Management",
+      "img": "/uploads/project-manager.jpg",
+      "icon": "task_alt"
+    },
+    {
+      "name": "Designer",
+      "role": "Graphic & Visual Design",
+      "img": "/uploads/disenador.jpg",
+      "icon": "palette"
+    },
+    {
+      "name": "Community Manager",
+      "role": "Social Media Management",
+      "img": "/uploads/community-manager.jpg",
+      "icon": "forum"
+    },
+    {
+      "name": "Developer",
+      "role": "Web Development",
+      "img": "/uploads/programador.jpg",
+      "icon": "devices"
+    }
   ]
 }

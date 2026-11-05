@@ -1,0 +1,178 @@
+---
+// NOSOTROS V3 — página "Nosotros/About" con el estilo animado del home.
+// Compartida por /es/nosotros/ y /en/about/; texto en about.<locale>.json.
+// Secciones: hero oscuro con foto flotante → historia → el nombre ALETHIG
+// animado (ALE + THI + G) → trayectoria del fundador (línea de tiempo) →
+// valores que se iluminan → equipo → CTA.
+import Icon from '../Icon.astro';
+import HomeTicker from '../home/HomeTicker.astro';
+import { highlightHeading } from '../../lib/highlight';
+import { getSrcSet } from '../../lib/responsiveImage';
+import { withBase } from '../../lib/basePath';
+
+interface Props {
+  about: any;
+  base: string;
+  contactPath: string;
+}
+const { about, base, contactPath } = Astro.props;
+const SIZES = '(min-width: 1024px) 50vw, 100vw';
+---
+<!-- HERO -->
+<section class="bg-bg-void relative min-h-[88vh] flex items-center pt-28 md:pt-32 pb-section-py-sm overflow-hidden">
+  <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -top-40 -left-32 w-[36rem] h-[36rem] rounded-full bg-accent/20 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -bottom-56 -right-40 w-[32rem] h-[32rem] rounded-full bg-grad-indigo/60 blur-[120px] pointer-events-none" style="animation-delay:2.5s" aria-hidden="true"></div>
+  <div class="max-w-container-max mx-auto px-gutter w-full relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="hero-reveal min-w-0">
+        <span class="tag-cyber mb-6 inline-flex items-center gap-2"><span class="pulse-ring w-2 h-2 rounded-full bg-accent" aria-hidden="true"></span>{about.heroTag}</span>
+        <h1 class="uppercase font-display font-extrabold text-text-primary tracking-[-0.02em] leading-[1.08] text-[34px] sm:text-[42px] lg:text-[50px] xl:text-[58px] mb-6 break-words" set:html={highlightHeading(about.heroHeading, about.heroHighlight)}></h1>
+        <p class="text-body-lg text-text-secondary mb-8 max-w-xl">{about.heroParagraph}</p>
+        <div class="flex gap-4 flex-wrap">
+          <a href={withBase(base, about.heroCtaPrimary.href)} class="btn-cyber-solid shine magnetic press">
+            <span class="icon-wrap uppercase">{about.heroCtaPrimary.label} <Icon name="arrow_forward" class="text-base" /></span>
+            <span class="shine-sweep" aria-hidden="true"></span>
+          </a>
+          <a href={withBase(base, about.heroCtaSecondary.href)} class="btn-ghost magnetic press uppercase">{about.heroCtaSecondary.label}</a>
+        </div>
+      </div>
+      <div class="hero-reveal reveal-delay min-w-0 relative">
+        <div class="absolute -top-4 -right-4 w-full h-full rounded-2xl border-2 border-accent/40 pointer-events-none hidden md:block" aria-hidden="true"></div>
+        <div class="float-soft glass card-cyber rounded-2xl overflow-hidden relative">
+          <img src={about.heroImage} srcset={getSrcSet(about.heroImage)} sizes={SIZES} alt={about.heroImageAlt}
+               class="w-full aspect-[4/3] object-cover media-bright" loading="eager" fetchpriority="high" />
+        </div>
+        <div class="bob absolute -bottom-5 -left-3 md:-left-8 glass rounded-xl px-5 py-3 border border-accent/30 bg-bg-void/80">
+          <p class="text-accent font-display uppercase font-bold text-sm">{about.aboutBadgeValue}</p>
+          <p class="text-text-secondary text-xs">{about.aboutBadgeLabel}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<HomeTicker items={about.tickerItems} />
+
+<!-- HISTORIA -->
+<section id="historia" class="on-light section-surface py-section-py-sm md:py-section-py-lg scroll-mt-24">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 reveal">
+        <div class="relative">
+          <div class="absolute -top-4 -left-4 w-full h-full rounded-2xl border-2 border-accent/50" aria-hidden="true"></div>
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src={about.aboutImage} srcset={getSrcSet(about.aboutImage)} sizes={SIZES} alt={about.aboutImageAlt}
+                 class="w-full aspect-square object-cover media-bright" loading="lazy" />
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-7 reveal">
+        <span class="tag-cyber mb-5 inline-flex">{about.aboutTag}</span>
+        <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-6" set:html={highlightHeading(about.aboutHeading, about.aboutHighlight)}></h2>
+        <div class="stagger-fade">
+          {about.aboutParagraphs.map((p: string) => (
+            <p class="text-body-md text-ink-dim mb-5 leading-relaxed">{p}</p>
+          ))}
+        </div>
+        <a href={withBase(base, contactPath)} data-booking-trigger class="btn-cyber-solid shine magnetic press inline-flex mt-2">
+          <span class="icon-wrap uppercase">{about.aboutCtaLabel} <Icon name="calendar_month" class="text-base" /></span>
+          <span class="shine-sweep" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EL NOMBRE: ALE + THI + G -->
+<section class="bg-bg-void relative py-section-py-sm md:py-section-py-lg overflow-hidden">
+  <div class="glow-breathe absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[46rem] h-[26rem] rounded-full bg-accent/15 blur-[130px] pointer-events-none" aria-hidden="true"></div>
+  <div class="max-w-container-max mx-auto px-gutter relative text-center">
+    <div class="reveal mb-12">
+      <span class="tag-cyber mb-4 inline-flex"><Icon name="star" class="text-sm" />{about.nameTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg text-text-primary">{about.nameHeading}</h2>
+    </div>
+    <div class="rot-name flex flex-wrap justify-center gap-3 md:gap-5 reveal" data-rotator="alethig-name" data-interval="1800" data-pause-on-hover="false">
+      {about.nameParts.map((part: any, i: number) => (
+        <div data-rotator-item data-rotator-decor class={`name-part glass rounded-2xl px-6 md:px-10 py-6 md:py-8 border border-white/10 ${i === 0 ? 'is-active' : ''}`}>
+          <p class="font-display font-extrabold text-5xl md:text-7xl leading-none mb-3">{part.letters}</p>
+          <p class="font-display uppercase text-sm md:text-base text-text-primary">{part.name}</p>
+          <p class="text-xs text-text-secondary mt-1">{part.role}</p>
+        </div>
+      ))}
+    </div>
+    <p class="text-text-secondary text-body-md max-w-2xl mx-auto mt-10 reveal">"{about.teamQuote}"</p>
+  </div>
+</section>
+
+<!-- TRAYECTORIA -->
+<section class="on-light section-surface-white py-section-py-sm md:py-section-py-lg">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="text-center mb-14 reveal">
+      <span class="tag-cyber mb-4 inline-flex"><Icon name="rocket_launch" class="text-sm" />{about.journeyTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg">{about.journeyHeading}</h2>
+    </div>
+    <ol class="relative grid md:grid-cols-4 gap-6 stagger-fade">
+      <span class="hidden md:block absolute left-0 right-0 top-7 h-0.5 bg-ink/10" aria-hidden="true"></span>
+      <span class="bar-grow hidden md:block absolute left-0 right-0 top-7 h-0.5 bg-accent" aria-hidden="true"></span>
+      {about.journey.map((step: any) => (
+        <li class="relative">
+          <span class="relative z-10 w-14 h-14 rounded-full bg-bg-void text-accent flex items-center justify-center mb-5 shadow-lg pulse-ring">
+            <Icon name={step.icon} class="text-2xl" />
+          </span>
+          <p class="text-xs font-display uppercase font-bold text-gold-ink tracking-wide mb-1">{step.label}</p>
+          <h3 class="uppercase font-display font-bold text-lg mb-2">{step.title}</h3>
+          <p class="text-ink-dim text-sm leading-relaxed">{step.desc}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="on-light section-surface-alt py-section-py-sm md:py-section-py-lg">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="text-center mb-14 reveal">
+      <span class="tag-cyber mb-4 inline-flex">{about.statsTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5" set:html={highlightHeading(about.statsHeading, about.statsHighlight)}></h2>
+      <p class="text-body-md text-ink-dim max-w-2xl mx-auto">{about.statsParagraph}</p>
+    </div>
+    <div class="rot-values grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal" data-rotator="values" data-interval="2200" data-pause-on-hover="false">
+      {about.stats.map((s: any, i: number) => (
+        <div data-rotator-item data-rotator-decor class={`value-card rounded-2xl p-7 border border-ink/10 bg-surface-white ${i === 0 ? 'is-active' : ''}`}>
+          <Icon name={s.icon ?? 'check_circle'} class="value-icon text-3xl mb-4 block" />
+          <p class="font-display uppercase font-extrabold text-lg mb-2">{s.value}</p>
+          <p class="value-text text-sm leading-relaxed">{s.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="bg-bg-depth py-section-py-sm md:py-section-py-lg">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="text-center mb-14 reveal">
+      <span class="tag-cyber mb-4 inline-flex">{about.teamTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg text-text-primary mb-4" set:html={highlightHeading(about.teamHeading, about.teamHighlight)}></h2>
+      <p class="text-text-secondary text-body-md max-w-2xl mx-auto">{about.teamParagraph}</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 stagger-fade">
+      {about.team.map((m: any, i: number) => (
+        <div class="glass card-cyber rounded-2xl p-6 text-center hover:-translate-y-2 transition-transform duration-300">
+          <span class={`mx-auto mb-4 w-14 h-14 rounded-full flex items-center justify-center font-display text-xl ${i === 0 ? 'bg-accent text-bg-void' : 'bg-white/5 text-accent border border-accent/30'}`} aria-hidden="true">
+            {i === 0 ? 'AF' : <Icon name={m.icon ?? 'groups'} class="text-2xl" />}
+          </span>
+          <p class="font-display uppercase font-bold text-text-primary">{m.name}</p>
+          <p class="text-accent text-sm mt-1">{m.role}</p>
+        </div>
+      ))}
+    </div>
+    <div class="text-center mt-12 reveal">
+      <a href={withBase(base, contactPath)} data-booking-trigger class="btn-cyber-solid shine pulse-ring magnetic press inline-flex">
+        <span class="icon-wrap uppercase">{about.teamCtaLabel} <Icon name="calendar_month" class="text-base" /></span>
+        <span class="shine-sweep" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -422,6 +422,7 @@ collections:
           - { name: heroCtaSecondary, label: "Hero · Botón secundario", widget: object, fields: [ { name: label, widget: string }, { name: href, widget: string } ] }
           - { name: heroImage, label: "Hero · Imagen", widget: image }
           - { name: heroImageAlt, label: "Hero · Texto alternativo", widget: string }
+          - { name: tickerItems, label: "Franja dorada · Frases", widget: list, field: { name: item, label: "Frase", widget: string } }
           - { name: aboutTag, label: "Esencia · Etiqueta", widget: string }
           - { name: aboutHeading, label: "Esencia · Titular", widget: string }
           - { name: aboutHighlight, label: "Esencia · Palabra resaltada", widget: string, required: false }
@@ -431,6 +432,25 @@ collections:
           - { name: aboutBadgeLabel, label: "Insignia · Etiqueta", widget: string }
           - { name: aboutParagraphs, label: "Esencia · Párrafos", widget: list, field: { name: text, label: "Párrafo", widget: text } }
           - { name: aboutCtaLabel, label: "Esencia · Texto botón", widget: string }
+          - { name: nameTag, label: "El nombre · Etiqueta", widget: string }
+          - { name: nameHeading, label: "El nombre · Titular", widget: string }
+          - name: nameParts
+            label: "El nombre · Partes (ALE + THI + G)"
+            widget: list
+            fields:
+              - { name: letters, label: "Letras", widget: string }
+              - { name: name, label: "Nombre", widget: string }
+              - { name: role, label: "Quién es", widget: string }
+          - { name: journeyTag, label: "Trayectoria · Etiqueta", widget: string }
+          - { name: journeyHeading, label: "Trayectoria · Titular", widget: string }
+          - name: journey
+            label: "Trayectoria · Pasos"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: label, label: "Lugar / momento", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
           - { name: statsTag, label: "Métricas · Etiqueta", widget: string }
           - { name: statsHeading, label: "Métricas · Titular", widget: string }
           - { name: statsHighlight, label: "Métricas · Palabra resaltada", widget: string, required: false }
@@ -441,6 +461,7 @@ collections:
             fields:
               - { name: value, label: "Valor", widget: string }
               - { name: label, label: "Etiqueta", widget: string }
+              - { name: icon, label: "Icono", widget: string, required: false }
           - { name: teamTag, label: "Equipo · Etiqueta", widget: string }
           - { name: teamHeading, label: "Equipo · Titular", widget: string }
           - { name: teamHighlight, label: "Equipo · Palabra resaltada", widget: string, required: false }
@@ -452,6 +473,7 @@ collections:
             fields:
               - { name: name, label: "Nombre", widget: string }
               - { name: role, label: "Cargo", widget: string }
+              - { name: icon, label: "Icono (si no hay foto)", widget: string, required: false }
               - { name: img, label: "Foto", widget: image }
 
       - name: about-en
@@ -468,6 +490,7 @@ collections:
           - { name: heroCtaSecondary, label: "Hero · Botón secundario", widget: object, fields: [ { name: label, widget: string }, { name: href, widget: string } ] }
           - { name: heroImage, label: "Hero · Imagen", widget: image }
           - { name: heroImageAlt, label: "Hero · Texto alternativo", widget: string }
+          - { name: tickerItems, label: "Franja dorada · Frases", widget: list, field: { name: item, label: "Frase", widget: string } }
           - { name: aboutTag, label: "Esencia · Etiqueta", widget: string }
           - { name: aboutHeading, label: "Esencia · Titular", widget: string }
           - { name: aboutHighlight, label: "Esencia · Palabra resaltada", widget: string, required: false }
@@ -477,6 +500,25 @@ collections:
           - { name: aboutBadgeLabel, label: "Insignia · Etiqueta", widget: string }
           - { name: aboutParagraphs, label: "Esencia · Párrafos", widget: list, field: { name: text, label: "Párrafo", widget: text } }
           - { name: aboutCtaLabel, label: "Esencia · Texto botón", widget: string }
+          - { name: nameTag, label: "El nombre · Etiqueta", widget: string }
+          - { name: nameHeading, label: "El nombre · Titular", widget: string }
+          - name: nameParts
+            label: "El nombre · Partes (ALE + THI + G)"
+            widget: list
+            fields:
+              - { name: letters, label: "Letras", widget: string }
+              - { name: name, label: "Nombre", widget: string }
+              - { name: role, label: "Quién es", widget: string }
+          - { name: journeyTag, label: "Trayectoria · Etiqueta", widget: string }
+          - { name: journeyHeading, label: "Trayectoria · Titular", widget: string }
+          - name: journey
+            label: "Trayectoria · Pasos"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: label, label: "Lugar / momento", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
           - { name: statsTag, label: "Métricas · Etiqueta", widget: string }
           - { name: statsHeading, label: "Métricas · Titular", widget: string }
           - { name: statsHighlight, label: "Métricas · Palabra resaltada", widget: string, required: false }
@@ -487,6 +529,7 @@ collections:
             fields:
               - { name: value, label: "Valor", widget: string }
               - { name: label, label: "Etiqueta", widget: string }
+              - { name: icon, label: "Icono", widget: string, required: false }
           - { name: teamTag, label: "Equipo · Etiqueta", widget: string }
           - { name: teamHeading, label: "Equipo · Titular", widget: string }
           - { name: teamHighlight, label: "Equipo · Palabra resaltada", widget: string, required: false }
@@ -498,6 +541,7 @@ collections:
             fields:
               - { name: name, label: "Nombre", widget: string }
               - { name: role, label: "Cargo", widget: string }
+              - { name: icon, label: "Icono (si no hay foto)", widget: string, required: false }
               - { name: img, label: "Foto", widget: image }
 
       - name: contact
