@@ -112,38 +112,38 @@
     }
   ],
   "teamTag": "Our Team",
-  "teamHeading": "Meet the Team.",
-  "teamHighlight": "Team",
-  "teamParagraph": "The name Alethig brings together three people: Alexis, Thiago, and Gisella — the origin of the agency. Today, alongside a team of content creators, editors, and advertising specialists, we grow businesses with roots in Long Island.",
+  "teamHeading": "Who Works on Your Account.",
+  "teamHighlight": "Your Account",
+  "teamParagraph": "Alexis leads every account personally: strategy, communication and quality control. For production we work with a network of specialists in design, video, ads and web development who join based on what your project needs.",
   "teamQuote": "Building something real, for the people we love.",
   "teamCtaLabel": "Book a Consultation",
   "team": [
     {
       "name": "Alexis Fuel",
-      "role": "Founder · Sales & Marketing · Amityville, NY",
+      "role": "Founder · Strategy & accounts",
       "img": "/uploads/fundador.jpg"
     },
     {
-      "name": "Project Manager",
-      "role": "Project Management",
+      "name": "Graphic design",
+      "role": "Specialist network",
       "img": "/uploads/project-manager.jpg",
-      "icon": "task_alt"
-    },
-    {
-      "name": "Designer",
-      "role": "Graphic & Visual Design",
-      "img": "/uploads/disenador.jpg",
       "icon": "palette"
     },
     {
-      "name": "Community Manager",
-      "role": "Social Media Management",
-      "img": "/uploads/community-manager.jpg",
-      "icon": "forum"
+      "name": "Video editing",
+      "role": "Specialist network",
+      "img": "/uploads/disenador.jpg",
+      "icon": "movie"
     },
     {
-      "name": "Developer",
-      "role": "Web Development",
+      "name": "Meta & Google Ads",
+      "role": "Specialist network",
+      "img": "/uploads/community-manager.jpg",
+      "icon": "ads_click"
+    },
+    {
+      "name": "Web development",
+      "role": "Specialist network",
       "img": "/uploads/programador.jpg",
       "icon": "devices"
     }

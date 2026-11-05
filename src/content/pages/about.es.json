@@ -112,38 +112,38 @@
     }
   ],
   "teamTag": "Nuestro equipo",
-  "teamHeading": "Conoce al Equipo.",
-  "teamHighlight": "Equipo",
-  "teamParagraph": "El nombre Alethig reúne a tres personas: Alexis, Thiago y Gisella — el origen de la agencia. Hoy, junto a un equipo de creadores de contenido, editores y especialistas en publicidad, hacemos crecer negocios con raíces en Long Island.",
+  "teamHeading": "Quién Trabaja en Tu Cuenta.",
+  "teamHighlight": "Tu Cuenta",
+  "teamParagraph": "Alexis lidera cada cuenta personalmente: estrategia, comunicación y control de calidad. Para la producción trabajamos con una red de especialistas en diseño, video, anuncios y desarrollo web, que se suman según lo que necesita tu proyecto.",
   "teamQuote": "Construir algo real, para las personas que amamos.",
   "teamCtaLabel": "Agenda una consulta",
   "team": [
     {
       "name": "Alexis Fuel",
-      "role": "Fundador · Ventas y Marketing · Amityville, NY",
+      "role": "Fundador · Estrategia y cuentas",
       "img": "/uploads/fundador.jpg"
     },
     {
-      "name": "Project Manager",
-      "role": "Gestión de proyectos",
+      "name": "Diseño gráfico",
+      "role": "Red de especialistas",
       "img": "/uploads/project-manager.jpg",
-      "icon": "task_alt"
-    },
-    {
-      "name": "Diseñador",
-      "role": "Diseño gráfico y visual",
-      "img": "/uploads/disenador.jpg",
       "icon": "palette"
     },
     {
-      "name": "Community Manager",
-      "role": "Manejo de redes sociales",
-      "img": "/uploads/community-manager.jpg",
-      "icon": "forum"
+      "name": "Edición de video",
+      "role": "Red de especialistas",
+      "img": "/uploads/disenador.jpg",
+      "icon": "movie"
     },
     {
-      "name": "Programador",
-      "role": "Desarrollo web",
+      "name": "Anuncios Meta y Google",
+      "role": "Red de especialistas",
+      "img": "/uploads/community-manager.jpg",
+      "icon": "ads_click"
+    },
+    {
+      "name": "Desarrollo web",
+      "role": "Red de especialistas",
       "img": "/uploads/programador.jpg",
       "icon": "devices"
     }
