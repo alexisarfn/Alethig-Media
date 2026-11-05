@@ -633,3 +633,42 @@ a:hover .icon-wrap, button:hover .icon-wrap { gap: 8px; }
   .rot-slides > [data-rotator-item],
   .rot-lit > [data-rotator-item] { transition: none !important; transform: none !important; }
 }
+
+/* ============================================================
+   CATÁLOGO V1 — tarjetas de producto (Sublimación) y filtros.
+   ============================================================ */
+.dye-part { fill: var(--accent); transition: fill .4s ease; }
+.product-card:hover .dye-part,
+.product-card:focus-within .dye-part { animation: am-dye 3.2s ease-in-out infinite; }
+.product-card { transition: transform .4s var(--ease-out-expo), box-shadow .4s var(--ease-out-expo); }
+.product-card:hover { transform: translateY(-8px); box-shadow: 0 26px 60px rgba(var(--ink-rgb), .16); }
+.product-card .product-art { transition: transform .6s var(--ease-spring); }
+.product-card:hover .product-art { transform: scale(1.08) rotate(-3deg); }
+
+@keyframes am-card-in { from { opacity: 0; transform: translateY(18px) scale(.97); } to { opacity: 1; transform: none; } }
+[data-category].is-filtered-in { animation: am-card-in .5s var(--ease-out-expo) both; }
+[data-category][hidden] { display: none !important; }
+
+.filter-pill { transition: background-color .3s ease, color .3s ease, border-color .3s ease; }
+.filter-pill.is-active { background: var(--ink); color: var(--accent); border-color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card:hover .dye-part, [data-category].is-filtered-in { animation: none !important; }
+  .product-card:hover, .product-card:hover .product-art { transform: none !important; }
+}
+
+/* ============================================================
+   NOSOTROS V3 — nombre ALETHIG animado y valores que se iluminan.
+   ============================================================ */
+.name-part { color: rgba(245, 241, 230, .28); transition: color .5s ease, border-color .5s ease, transform .6s var(--ease-spring), box-shadow .5s ease; }
+.name-part.is-active { color: var(--accent); border-color: rgba(var(--accent-rgb), .6); transform: translateY(-8px) scale(1.04); box-shadow: var(--accent-glow); }
+.value-card { color: var(--ink); transition: background-color .5s ease, color .5s ease, transform .5s var(--ease-out-expo), box-shadow .5s ease; }
+.value-card .value-icon { color: var(--gold-ink); transition: color .5s ease; }
+.value-card .value-text { color: var(--ink-dim); transition: color .5s ease; }
+.value-card.is-active { background: var(--ink); color: var(--text-primary); transform: translateY(-6px); box-shadow: 0 24px 50px rgba(var(--ink-rgb), .25); }
+.value-card.is-active .value-icon { color: var(--accent); }
+.value-card.is-active .value-text { color: var(--text-secondary); }
+@media (prefers-reduced-motion: reduce) {
+  .name-part, .value-card { transition: none !important; }
+  .name-part.is-active, .value-card.is-active { transform: none !important; }
+}
