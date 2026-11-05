@@ -164,7 +164,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
               </div>
               <div>
                 <label for="contact-mensaje" class="block text-text-secondary text-xs uppercase tracking-widest font-display font-semibold mb-2">{contact.form.messageLabel}</label>
-                <textarea id="contact-mensaje" name="mensaje" rows="4" placeholder={contact.form.messagePlaceholder} class="input-cyber resize-none"></textarea>
+                <textarea id="contact-mensaje" data-prefill={contact.form.prefillPrefix} name="mensaje" rows="4" placeholder={contact.form.messagePlaceholder} class="input-cyber resize-none"></textarea>
               </div>
               <div class="cf-turnstile" data-sitekey="0x4AAAAAADyNgzCpNMskdjTs" data-action="turnstile-spin-v1" data-theme="dark" data-size="compact"></div>
               <button type="submit" class="btn-cyber-solid w-full justify-center magnetic press">
@@ -287,3 +287,8 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
   </script>
 
 </Layout>
+
+<script>
+  import { initContactPrefill } from '../../scripts/contact-prefill';
+  initContactPrefill();
+</script>

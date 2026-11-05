@@ -633,3 +633,26 @@ a:hover .icon-wrap, button:hover .icon-wrap { gap: 8px; }
   .rot-slides > [data-rotator-item],
   .rot-lit > [data-rotator-item] { transition: none !important; transform: none !important; }
 }
+
+/* ============================================================
+   CATÁLOGO V1 — tarjetas de producto (Sublimación) y filtros.
+   ============================================================ */
+.dye-part { fill: var(--accent); transition: fill .4s ease; }
+.product-card:hover .dye-part,
+.product-card:focus-within .dye-part { animation: am-dye 3.2s ease-in-out infinite; }
+.product-card { transition: transform .4s var(--ease-out-expo), box-shadow .4s var(--ease-out-expo); }
+.product-card:hover { transform: translateY(-8px); box-shadow: 0 26px 60px rgba(var(--ink-rgb), .16); }
+.product-card .product-art { transition: transform .6s var(--ease-spring); }
+.product-card:hover .product-art { transform: scale(1.08) rotate(-3deg); }
+
+@keyframes am-card-in { from { opacity: 0; transform: translateY(18px) scale(.97); } to { opacity: 1; transform: none; } }
+[data-category].is-filtered-in { animation: am-card-in .5s var(--ease-out-expo) both; }
+[data-category][hidden] { display: none !important; }
+
+.filter-pill { transition: background-color .3s ease, color .3s ease, border-color .3s ease; }
+.filter-pill.is-active { background: var(--ink); color: var(--accent); border-color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card:hover .dye-part, [data-category].is-filtered-in { animation: none !important; }
+  .product-card:hover, .product-card:hover .product-art { transform: none !important; }
+}

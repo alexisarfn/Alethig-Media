@@ -15,14 +15,38 @@
   "socialHeading": "Redes Sociales",
   "submitLabel": "Enviar Mi Mensaje →",
   "serviceOptions": [
-    { "value": "social-media", "label": "Contenido para Redes Sociales + Alethig Media OS" },
-    { "value": "video-production", "label": "Video" },
-    { "value": "paid-advertising", "label": "Publicidad" },
-    { "value": "web-development", "label": "Sitio Web" },
-    { "value": "brand-design", "label": "Diseño de Marca" },
-    { "value": "alethig-media-os", "label": "Alethig Media OS" },
-    { "value": "sublimation", "label": "Sublimación y Productos con Marca" },
-    { "value": "not-sure", "label": "No estoy seguro aún" }
+    {
+      "value": "social-media",
+      "label": "Contenido para Redes Sociales + Alethig Media OS"
+    },
+    {
+      "value": "video-production",
+      "label": "Video"
+    },
+    {
+      "value": "paid-advertising",
+      "label": "Publicidad"
+    },
+    {
+      "value": "web-development",
+      "label": "Sitio Web"
+    },
+    {
+      "value": "brand-design",
+      "label": "Diseño de Marca"
+    },
+    {
+      "value": "alethig-media-os",
+      "label": "Alethig Media OS"
+    },
+    {
+      "value": "sublimation",
+      "label": "Sublimación y Productos con Marca"
+    },
+    {
+      "value": "not-sure",
+      "label": "No estoy seguro aún"
+    }
   ],
   "mapHeading": "Amityville, Long Island, Nueva York",
   "mapText": "Con base en Long Island — Condado Nassau y Condado Suffolk — y con capacidad para trabajar con negocios fuera del área local",
@@ -41,7 +65,8 @@
     "messagePlaceholder": "¿Qué te gustaría lograr?",
     "errorMessage": "Hubo un problema. Intenta de nuevo.",
     "successHeading": "¡Mensaje enviado!",
-    "successText": "Gracias. Te responderemos muy pronto."
+    "successText": "Gracias. Te responderemos muy pronto.",
+    "prefillPrefix": "Quiero cotizar:"
   },
   "faqHeading": "Preguntas Frecuentes",
   "faq": [

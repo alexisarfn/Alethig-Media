@@ -1,0 +1,224 @@
+---
+// CATÁLOGO V1 — página de Sublimación como catálogo (compartida por
+// /es/sublimacion/ y /en/sublimation/; todo el texto viene de
+// sublimation.<locale>.json).
+//
+// Qué es y qué NO es: un catálogo de productos que se pueden personalizar
+// con la máquina de sublimación, con cotización por WhatsApp o formulario.
+// Sin precios fijos, inventario ni SKUs — el precio depende de cantidad y
+// diseño (lo dice catalogNote). Tiempos de entrega: los confirmados por
+// el dueño (turnaround).
+import Icon from '../Icon.astro';
+import ProductArt from './ProductArt.astro';
+import HomeTicker from '../home/HomeTicker.astro';
+import { withBase } from '../../lib/basePath';
+import site from '../../content/settings/site.json';
+
+interface Props {
+  sub: any;
+  base: string;
+  contactPath: string;   // '/contacto' | '/contact'
+  pricingPath: string;   // '/precios' | '/pricing'
+}
+const { sub, base, contactPath, pricingPath } = Astro.props;
+
+const waBase = site.whatsapp?.number ? `https://wa.me/${site.whatsapp.number}` : null;
+const waHref = (product: string) =>
+  waBase ? `${waBase}?text=${encodeURIComponent(sub.whatsappTemplate.replace('{producto}', product))}` : null;
+const quoteHref = (product: string) =>
+  `${withBase(base, contactPath)}/?servicio=sublimation&producto=${encodeURIComponent(product)}#contact-form`;
+const showcase = sub.products.slice(0, 3);
+---
+<!-- HERO oscuro con productos que rotan -->
+<section class="bg-bg-void relative min-h-[88vh] flex items-center pt-28 md:pt-32 pb-section-py-sm overflow-hidden">
+  <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -top-40 -right-32 w-[36rem] h-[36rem] rounded-full bg-accent/25 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -bottom-56 -left-48 w-[30rem] h-[30rem] rounded-full bg-grad-indigo/60 blur-[120px] pointer-events-none" style="animation-delay:2.5s" aria-hidden="true"></div>
+
+  <div class="max-w-container-max mx-auto px-gutter w-full relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="hero-reveal min-w-0">
+        <span class="tag-cyber mb-6 inline-flex items-center gap-2"><span class="pulse-ring w-2 h-2 rounded-full bg-accent" aria-hidden="true"></span>{sub.heroTag}</span>
+        <h1 class="uppercase font-display font-extrabold text-text-primary tracking-[-0.02em] leading-[1.08] text-[34px] sm:text-[42px] lg:text-[50px] xl:text-[58px] mb-6 break-words">
+          {sub.heroHeading} <span class="text-accent">{sub.heroHighlight}</span>
+        </h1>
+        <p class="text-body-lg text-text-secondary mb-8 max-w-xl">{sub.heroParagraph}</p>
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href="#catalogo" class="btn-cyber-solid shine magnetic press">
+            <span class="icon-wrap uppercase">{sub.heroCtaPrimaryLabel} <Icon name="arrow_forward" class="text-base" /></span>
+            <span class="shine-sweep" aria-hidden="true"></span>
+          </a>
+          {waBase && (
+            <a href={`${waBase}?text=${encodeURIComponent(sub.whatsappGeneric)}`} target="_blank" rel="noopener" class="btn-ghost magnetic press uppercase inline-flex items-center gap-2">
+              <Icon name="chat" class="text-base" />{sub.heroCtaSecondaryLabel}
+            </a>
+          )}
+        </div>
+        <div class="flex flex-wrap gap-3">
+          {sub.turnaround.map((t: any) => (
+            <div class="glass rounded-xl px-4 py-3">
+              <p class="font-display uppercase text-lg text-accent leading-none mb-1">{t.value}</p>
+              <p class="text-xs text-text-secondary">{t.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="hero-reveal reveal-delay min-w-0 relative flex justify-center items-center min-h-[340px] md:min-h-[440px]">
+        <div class="spin-slow absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full border-2 border-dashed border-accent/50" aria-hidden="true"></div>
+        <div class="absolute w-[230px] h-[230px] md:w-[310px] md:h-[310px] rounded-full bg-bg-depth" aria-hidden="true"></div>
+        <div class="rot-slides relative" data-rotator="sub-hero" data-interval="2800" data-pause-on-hover="false">
+          {showcase.map((p: any, i: number) => (
+            <div data-rotator-item data-rotator-decor class={`flex flex-col items-center ${i === 0 ? 'is-active' : ''}`}>
+              <ProductArt kind={p.art} word={sub.brandWord} animate class="bob w-[220px] h-[220px] md:w-[280px] md:h-[280px]" />
+              <span class="mt-2 font-display uppercase text-sm text-accent">{p.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<HomeTicker items={sub.tickerItems} />
+
+<!-- CATÁLOGO -->
+<section id="catalogo" class="on-light section-surface py-section-py-sm md:py-section-py-lg scroll-mt-24">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="text-center mb-10 reveal">
+      <span class="tag-cyber mb-4 inline-flex">{sub.catalogTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4">{sub.catalogHeading}</h2>
+      <p class="text-body-md text-ink-dim max-w-2xl mx-auto">{sub.catalogIntro}</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-2 mb-10 reveal" role="group" aria-label={sub.catalogFilterLabel}>
+      {sub.catalogFilters.map((f: any, i: number) => (
+        <button type="button" data-filter={f.id} aria-pressed={i === 0 ? 'true' : 'false'}
+          class={`filter-pill min-h-[44px] px-5 rounded-full border border-ink/15 bg-surface-white text-ink font-display uppercase text-xs font-bold ${i === 0 ? 'is-active' : ''}`}>
+          {f.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {sub.products.map((p: any) => (
+        <article data-category={p.category} class="reveal">
+          <div class="product-card h-full bg-surface-white rounded-2xl overflow-hidden border border-ink/10 flex flex-col">
+          <div class="relative bg-bg-void aspect-[4/3] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 grid-drift opacity-60" aria-hidden="true"></div>
+            {p.image
+              ? <img src={p.image} alt={p.name} class="relative w-full h-full object-cover media-bright" loading="lazy" />
+              : <ProductArt kind={p.art} word={sub.brandWord} class="product-art relative w-[62%] h-[62%]" />}
+            <span class="absolute top-3 left-3 tag-cyber !bg-bg-void/70 !text-accent !border-accent/40">{p.categoryLabel}</span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="uppercase font-display font-bold text-lg mb-2">{p.name}</h3>
+            <p class="text-ink-dim text-sm leading-relaxed mb-4">{p.desc}</p>
+            <ul class="flex flex-wrap gap-1.5 mb-5">
+              {p.uses.map((u: string) => (
+                <li class="text-[11px] font-display uppercase font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-2.5 py-1">{u}</li>
+              ))}
+            </ul>
+            <p class="text-xs text-gold-ink font-display uppercase font-semibold mb-4 mt-auto">{sub.priceLabel}</p>
+            <div class="flex flex-col gap-2">
+              {waHref(p.name) && (
+                <a href={waHref(p.name)} target="_blank" rel="noopener" class="btn-cyber-solid press justify-center !px-4 !text-xs">
+                  <Icon name="chat" class="text-base" /><span class="uppercase">{sub.quoteWhatsappLabel}</span>
+                </a>
+              )}
+              <a href={quoteHref(p.name)} class="inline-flex items-center justify-center gap-2 min-h-[44px] rounded-[10px] border border-ink/15 text-ink font-display uppercase text-xs font-bold hover:border-accent transition-colors">
+                {sub.quoteFormLabel} <Icon name="arrow_forward" class="text-sm" />
+              </a>
+            </div>
+          </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <p class="text-center text-sm text-ink-dim max-w-2xl mx-auto mt-10 reveal">
+      <Icon name="auto_awesome" class="text-gold-ink inline-block align-[-2px] mr-1" />{sub.catalogNote}
+    </p>
+  </div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section class="on-light section-surface-white py-section-py-sm md:py-section-py-lg">
+  <div class="max-w-container-max mx-auto px-gutter text-center">
+    <div class="mb-10 reveal">
+      <span class="tag-cyber mb-4 inline-flex">{sub.fitTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4">{sub.fitHeading}</h2>
+      <p class="text-gold-ink font-display uppercase font-semibold max-w-2xl mx-auto">{sub.fitIntro}</p>
+    </div>
+    <ul class="rot-lit flex flex-wrap justify-center gap-2.5" data-rotator="sub-fit" data-interval="1300" data-pause-on-hover="false">
+      {sub.fitItems.map((item: string, i: number) => (
+        <li data-rotator-item data-rotator-decor class={`text-sm font-display uppercase font-semibold text-ink-dim bg-ink/5 border border-ink/10 rounded-full px-4 py-2 ${i === 0 ? 'is-active' : ''}`}>{item}</li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA (oscuro, con línea de progreso) -->
+<section class="bg-bg-void relative py-section-py-sm md:py-section-py-lg overflow-hidden">
+  <div class="glow-breathe absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[30rem] rounded-full bg-accent/15 blur-[130px] pointer-events-none" aria-hidden="true"></div>
+  <div class="max-w-container-max mx-auto px-gutter relative">
+    <div class="text-center mb-16 reveal">
+      <span class="tag-cyber mb-4 inline-flex">{sub.processTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg text-text-primary">{sub.processHeading}</h2>
+    </div>
+    <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-fade">
+      {sub.processSteps.map((step: any) => (
+        <li class="glass rounded-2xl p-7 relative overflow-hidden">
+          <span class="font-display text-5xl text-accent/40 block mb-4" aria-hidden="true">{step.num}</span>
+          <h3 class="uppercase font-display text-lg text-text-primary mb-3">{step.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed">{step.desc}</p>
+          <span class="bar-grow absolute left-0 bottom-0 h-1 w-full bg-accent/70" aria-hidden="true"></span>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<!-- MARKETING + PRODUCTOS -->
+<section class="on-light section-surface-alt py-section-py-sm">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="glass rounded-2xl p-8 md:p-10 border border-accent/15 grid md:grid-cols-[1.4fr_1fr] gap-8 items-center reveal">
+      <div>
+        <span class="tag-cyber mb-4 inline-flex"><Icon name="bolt" class="text-sm" />{sub.brandingTag}</span>
+        <h2 class="uppercase font-display text-headline-md mb-3">{sub.brandingHeading}</h2>
+        <p class="text-ink-dim text-sm leading-relaxed">{sub.brandingBody}</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        {sub.brandingLinks.map((link: any) => (
+          <a href={withBase(base, link.href)} class="inline-flex items-center justify-between gap-2 text-ink font-display uppercase font-semibold text-sm bg-white rounded-xl px-5 py-3 border border-ink/10 hover:border-accent/40 hover:translate-x-1 transition-all duration-300">
+            {link.label} <Icon name="arrow_forward" class="text-sm text-gold-ink" />
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="bg-bg-depth py-section-py-sm">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="glass lumen-border rounded-3xl p-12 md:p-16 text-center reveal relative overflow-hidden"
+         style="background: linear-gradient(135deg, rgba(27,42,107,0.25) 0%, rgba(216,166,42,0.08) 100%);">
+      <span class="tag-cyber mb-6 inline-flex">{sub.ctaTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5 break-words">{sub.ctaHeading}</h2>
+      <p class="text-text-secondary text-body-md max-w-xl mx-auto mb-8">{sub.ctaParagraph}</p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        {waBase && (
+          <a href={`${waBase}?text=${encodeURIComponent(sub.whatsappGeneric)}`} target="_blank" rel="noopener" class="btn-cyber-solid shine pulse-ring magnetic press inline-flex">
+            <span class="icon-wrap uppercase">{sub.ctaButtonLabel} <Icon name="chat" class="text-base" /></span>
+            <span class="shine-sweep" aria-hidden="true"></span>
+          </a>
+        )}
+        <a href={`${withBase(base, contactPath)}/?servicio=sublimation#contact-form`} class="btn-ghost magnetic press">{sub.ctaSecondaryLabel}</a>
+      </div>
+      <p class="mt-6 text-text-dim text-sm">
+        <a href={withBase(base, pricingPath)} class="text-accent hover:underline">{sub.pricingLinkLabel}</a>
+      </p>
+    </div>
+  </div>
+</section>
