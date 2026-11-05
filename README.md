@@ -95,3 +95,4 @@ Todo el contenido es editable desde **`/admin`** sin tocar código. Vive como JS
 ```bash
 git push  # → Cloudflare Pages build automático
 ```
+
