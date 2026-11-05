@@ -7,6 +7,37 @@
   "heroParagraph": "Book a free 15-minute consultation. No commitment required. Available in English and Spanish.",
   "heroImage": "/uploads/contacto-hero.webp",
   "heroImageAlt": "Contact Alethig Media — Long Island, NY",
+  "quickActions": [
+    {
+      "kind": "whatsapp",
+      "icon": "chat",
+      "label": "WhatsApp",
+      "desc": "The fastest way to reach us.",
+      "cta": "Message now",
+      "message": "Hi Alethig Media, I'd like information about your services."
+    },
+    {
+      "kind": "call",
+      "icon": "call",
+      "label": "Call us",
+      "desc": "",
+      "cta": "Call"
+    },
+    {
+      "kind": "email",
+      "icon": "mail",
+      "label": "Email",
+      "desc": "",
+      "cta": "Send email"
+    },
+    {
+      "kind": "booking",
+      "icon": "calendar_month",
+      "label": "Free consultation",
+      "desc": "Book 15 minutes on the calendar.",
+      "cta": "Book"
+    }
+  ],
   "formInfoHeading": "Send Us a Message",
   "formInfoText": "Tell us about your business and your goals. Most clients are up and running within the same week. No pressure, no commitment — in English or Spanish.",
   "infoEmailLabel": "Email",

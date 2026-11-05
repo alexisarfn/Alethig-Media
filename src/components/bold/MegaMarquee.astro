@@ -1,0 +1,18 @@
+---
+// BOLD V1 — texto gigante en movimiento: dos filas en sentidos opuestos,
+// alternando palabras rellenas y con contorno. Decorativo (aria-hidden).
+interface Props { words: string[]; dark?: boolean }
+const { words, dark = true } = Astro.props;
+const row = [...words, ...words];
+---
+<div class={`py-8 md:py-12 overflow-hidden ${dark ? 'bg-bg-void' : 'section-surface'}`} aria-hidden="true">
+  {[false, true].map(rev => (
+    <div class="mega-marquee">
+      <div class={`mega-marquee-track ${rev ? 'is-reverse' : ''}`}>
+        {[0, 1].map(() => row.map((w, i) => (
+          <span class={`mega-word text-[56px] md:text-[96px] ${(i + (rev ? 1 : 0)) % 2 ? 'is-outline' : dark ? 'text-text-primary' : 'text-ink'}`}>{w}<span class="text-accent">✦</span></span>
+        )))}
+      </div>
+    </div>
+  ))}
+</div>

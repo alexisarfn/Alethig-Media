@@ -1,0 +1,52 @@
+---
+// BOLD V1 — mini-visual animado para cada módulo de Traffic & Growth.
+// Solo formas y etiquetas genéricas (sin métricas inventadas).
+interface Props { kind: string; labels: any }
+const { kind, labels } = Astro.props;
+---
+<div class="relative h-36 rounded-xl bg-bg-void/60 border border-white/10 overflow-hidden flex items-center justify-center p-4" aria-hidden="true">
+  {kind === 'meta' && (
+    <div class="float-soft w-44 rounded-xl bg-surface-white text-ink p-3 shadow-xl">
+      <div class="flex items-center gap-2 mb-2"><span class="w-6 h-6 rounded-full bg-accent"></span><span class="text-[10px] font-bold">{labels.brand}</span></div>
+      <div class="h-12 rounded-lg bg-grad-indigo mb-2"></div>
+      <p class="text-[9px] text-ink-dim">{labels.sponsored}</p>
+    </div>
+  )}
+  {kind === 'google' && (
+    <div class="w-full max-w-[230px] rounded-full bg-surface-white text-ink px-4 py-2.5 text-xs flex items-center gap-2 shadow-xl">
+      <span class="w-3 h-3 rounded-full border-2 border-ink/40"></span>
+      <span class="am-type font-semibold">{labels.search}</span><span class="type-cursor"></span>
+    </div>
+  )}
+  {kind === 'seo' && (
+    <div class="w-full max-w-[220px] h-[96px] overflow-hidden">
+      <div class="rank-rise flex flex-col gap-2">
+        <div class="h-[40px] rounded-lg bg-white/10 px-3 flex items-center text-[11px] text-text-secondary">{labels.competitor}</div>
+        <div class="h-[40px] rounded-lg bg-accent text-bg-void px-3 flex items-center text-[11px] font-bold">#1 · {labels.brand}</div>
+        <div class="h-[40px] rounded-lg bg-white/10 px-3 flex items-center text-[11px] text-text-secondary">{labels.competitor}</div>
+      </div>
+    </div>
+  )}
+  {kind === 'local' && (
+    <div class="relative w-full h-full grid-drift rounded-lg">
+      {[[30,40],[62,28],[48,66]].map(([x,y], i) => (
+        <span class="absolute" style={`left:${x}%;top:${y}%`}>
+          <span class="ping absolute -inset-1 rounded-full bg-accent/50" style={`animation-delay:${i*0.6}s`}></span>
+          <span class="relative block w-3.5 h-3.5 rounded-full bg-accent border-2 border-white"></span>
+        </span>
+      ))}
+    </div>
+  )}
+  {kind === 'leads' && (
+    <div class="flex flex-col gap-2 w-full max-w-[220px]">
+      <span class="bubble-in self-start rounded-2xl rounded-bl-sm bg-surface-white text-ink text-[11px] px-3 py-2">{labels.msg1}</span>
+      <span class="bubble-in self-end rounded-2xl rounded-br-sm bg-accent text-bg-void text-[11px] font-semibold px-3 py-2" style="animation-delay:1.2s">{labels.msg2}</span>
+    </div>
+  )}
+  {kind === 'growth' && (
+    <svg viewBox="0 0 200 90" class="w-full h-full">
+      <path class="line-draw" d="M5 80 C 40 75, 55 60, 80 58 S 120 40, 140 30 S 175 12, 195 6" fill="none" stroke-width="3" stroke-linecap="round" style="stroke:var(--accent)"></path>
+      <circle cx="195" cy="6" r="4" style="fill:var(--accent)" class="pulse-ring"></circle>
+    </svg>
+  )}
+</div>

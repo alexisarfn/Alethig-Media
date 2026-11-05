@@ -534,6 +534,7 @@ businessSchema.openingHoursSpecification = {
   // incluyendo las redes de seguridad de visibilidad.
   import { initMotion } from '../scripts/motion';
   import { initBookingTriggers } from '../scripts/cal-booking';
+  import { initFx } from '../scripts/fx';
 
   // ---- Scroll: sticky nav glassify ----
   // VISUAL REDESIGN V2: data-nav-theme (puesto en <header id="site-nav">
@@ -584,6 +585,7 @@ businessSchema.openingHoursSpecification = {
   // ---- Reveal (GSAP) + smooth scroll (Lenis) + triggers de reserva ----
   initMotion();
   initBookingTriggers();
+  initFx();
 
   // ---- Magnetic buttons ----
   document.querySelectorAll('.magnetic').forEach(el => {

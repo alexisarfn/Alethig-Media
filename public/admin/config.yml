@@ -556,6 +556,16 @@ collections:
           - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
           - { name: heroImage, label: "Hero · Imagen", widget: image }
           - { name: heroImageAlt, label: "Hero · Texto alternativo", widget: string }
+          - name: quickActions
+            label: "Accesos rápidos (WhatsApp, llamada, correo, reserva)"
+            widget: list
+            fields:
+              - { name: kind, label: "Tipo", widget: select, options: [whatsapp, call, email, booking] }
+              - { name: icon, label: "Icono", widget: string }
+              - { name: label, label: "Título", widget: string }
+              - { name: desc, label: "Descripción (llamada/correo muestran el dato real)", widget: string, required: false }
+              - { name: cta, label: "Texto de acción", widget: string }
+              - { name: message, label: "Mensaje prellenado de WhatsApp", widget: string, required: false }
           - { name: formInfoHeading, label: "Formulario · Título", widget: string }
           - { name: formInfoText, label: "Formulario · Texto", widget: text }
           - { name: infoEmailLabel, label: "Info · Etiqueta email", widget: string }
@@ -611,6 +621,16 @@ collections:
           - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
           - { name: heroImage, label: "Hero · Imagen", widget: image }
           - { name: heroImageAlt, label: "Hero · Texto alternativo", widget: string }
+          - name: quickActions
+            label: "Accesos rápidos (WhatsApp, llamada, correo, reserva)"
+            widget: list
+            fields:
+              - { name: kind, label: "Tipo", widget: select, options: [whatsapp, call, email, booking] }
+              - { name: icon, label: "Icono", widget: string }
+              - { name: label, label: "Título", widget: string }
+              - { name: desc, label: "Descripción (llamada/correo muestran el dato real)", widget: string, required: false }
+              - { name: cta, label: "Texto de acción", widget: string }
+              - { name: message, label: "Mensaje prellenado de WhatsApp", widget: string, required: false }
           - { name: formInfoHeading, label: "Formulario · Título", widget: string }
           - { name: formInfoText, label: "Formulario · Texto", widget: text }
           - { name: infoEmailLabel, label: "Info · Etiqueta email", widget: string }
@@ -718,6 +738,15 @@ collections:
           - { name: heroCtaPrimaryHref, label: "Hero · Enlace botón principal", widget: string }
           - { name: heroCtaSecondaryLabel, label: "Hero · Botón secundario", widget: string }
           - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario", widget: string }
+          - { name: funnelLabel, label: "Embudo · Título", widget: string }
+          - name: funnelStages
+            label: "Embudo · Etapas (4)"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: label, label: "Etapa", widget: string }
+              - { name: hint, label: "Detalle", widget: string }
+          - { name: megaWords, label: "Texto gigante en movimiento · Palabras", widget: list, field: { name: word, label: "Palabra", widget: string } }
           - { name: modulesTag, label: "Módulos · Etiqueta", widget: string }
           - { name: modulesHeading, label: "Módulos · Titular", widget: string }
           - { name: modulesIntro, label: "Módulos · Párrafo", widget: text }
@@ -730,6 +759,16 @@ collections:
               - { name: title, label: "Título", widget: string }
               - { name: desc, label: "Descripción", widget: text }
               - { name: benefit, label: "Beneficio práctico", widget: text }
+          - name: visualLabels
+            label: "Módulos · Textos de las animaciones"
+            widget: object
+            fields:
+              - { name: brand, label: "Nombre de negocio de ejemplo", widget: string }
+              - { name: sponsored, label: "Etiqueta de anuncio", widget: string }
+              - { name: search, label: "Búsqueda de ejemplo", widget: string }
+              - { name: competitor, label: "Competencia", widget: string }
+              - { name: msg1, label: "Mensaje del cliente", widget: string }
+              - { name: msg2, label: "Respuesta", widget: string }
           - { name: processTag, label: "Proceso · Etiqueta", widget: string }
           - { name: processHeading, label: "Proceso · Titular", widget: string }
           - name: processSteps
@@ -766,6 +805,7 @@ collections:
           - { name: ctaButtonIcon, label: "CTA final · Icono botón", widget: string }
           - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
           - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
+          - { name: pricingLinkLabel, label: "CTA final · Enlace a Precios", widget: string }
 
       - name: traffic-growth-en
         label: "Traffic & Growth (página dedicada, Inglés)"
@@ -782,6 +822,15 @@ collections:
           - { name: heroCtaPrimaryHref, label: "Hero · Enlace botón principal", widget: string }
           - { name: heroCtaSecondaryLabel, label: "Hero · Botón secundario", widget: string }
           - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario", widget: string }
+          - { name: funnelLabel, label: "Embudo · Título", widget: string }
+          - name: funnelStages
+            label: "Embudo · Etapas (4)"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: label, label: "Etapa", widget: string }
+              - { name: hint, label: "Detalle", widget: string }
+          - { name: megaWords, label: "Texto gigante en movimiento · Palabras", widget: list, field: { name: word, label: "Palabra", widget: string } }
           - { name: modulesTag, label: "Módulos · Etiqueta", widget: string }
           - { name: modulesHeading, label: "Módulos · Titular", widget: string }
           - { name: modulesIntro, label: "Módulos · Párrafo", widget: text }
@@ -794,6 +843,16 @@ collections:
               - { name: title, label: "Título", widget: string }
               - { name: desc, label: "Descripción", widget: text }
               - { name: benefit, label: "Beneficio práctico", widget: text }
+          - name: visualLabels
+            label: "Módulos · Textos de las animaciones"
+            widget: object
+            fields:
+              - { name: brand, label: "Nombre de negocio de ejemplo", widget: string }
+              - { name: sponsored, label: "Etiqueta de anuncio", widget: string }
+              - { name: search, label: "Búsqueda de ejemplo", widget: string }
+              - { name: competitor, label: "Competencia", widget: string }
+              - { name: msg1, label: "Mensaje del cliente", widget: string }
+              - { name: msg2, label: "Respuesta", widget: string }
           - { name: processTag, label: "Proceso · Etiqueta", widget: string }
           - { name: processHeading, label: "Proceso · Titular", widget: string }
           - name: processSteps
@@ -835,6 +894,7 @@ collections:
       # del hub (hero, callout de Traffic & Growth, categorías, CTA); las
       # tarjetas de servicio se siguen editando en "pages > home" (Inicio),
       # no se duplican aquí.
+          - { name: pricingLinkLabel, label: "CTA final · Enlace a Precios", widget: string }
       - name: services-hub
         label: "Servicios (página hub)"
         file: "src/content/pages/services-hub.es.json"
@@ -849,6 +909,9 @@ collections:
           - { name: heroCtaPrimaryHref, label: "Hero · Enlace botón principal", widget: string }
           - { name: heroCtaSecondaryLabel, label: "Hero · Botón secundario", widget: string }
           - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario", widget: string }
+          - { name: exploreLabel, label: "Hero · Botón explorar", widget: string }
+          - { name: moreLabel, label: "Tarjetas · Texto ver más", widget: string }
+          - { name: megaWords, label: "Texto gigante en movimiento · Palabras", widget: list, field: { name: word, label: "Palabra", widget: string } }
           - { name: tgCalloutTag, label: "Callout Traffic & Growth · Etiqueta", widget: string }
           - { name: tgCalloutHeading, label: "Callout Traffic & Growth · Titular", widget: string }
           - { name: tgCalloutDesc, label: "Callout Traffic & Growth · Párrafo", widget: text }
@@ -867,6 +930,9 @@ collections:
           - { name: automationBody, label: "Automatización y Sistemas · Párrafo (solo claims aprobados)", widget: text }
           - { name: automationCtaLabel, label: "Automatización y Sistemas · Texto botón", widget: string }
           - { name: automationCtaHref, label: "Automatización y Sistemas · Enlace", widget: string }
+          - { name: sublimationTag, label: "Sublimación · Etiqueta", widget: string }
+          - { name: sublimationHeading, label: "Sublimación · Titular", widget: string }
+          - { name: brandWord, label: "Sublimación · Texto en la camiseta", widget: string }
           - { name: sublimationNote, label: "Enlace a Sublimación · Texto", widget: text }
           - { name: sublimationCtaLabel, label: "Enlace a Sublimación · Texto botón", widget: string }
           - { name: sublimationCtaHref, label: "Enlace a Sublimación · Enlace (ruta real existente)", widget: string }
@@ -877,6 +943,7 @@ collections:
           - { name: ctaButtonIcon, label: "CTA final · Icono botón", widget: string }
           - { name: ctaSecondaryLabel, label: "CTA final · Texto botón secundario", widget: string }
           - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
+          - { name: pricingLinkLabel, label: "CTA final · Enlace a Precios", widget: string }
 
       - name: services-hub-en
         label: "Servicios (página hub, Inglés)"
@@ -892,6 +959,9 @@ collections:
           - { name: heroCtaPrimaryHref, label: "Hero · Enlace botón principal", widget: string }
           - { name: heroCtaSecondaryLabel, label: "Hero · Botón secundario", widget: string }
           - { name: heroCtaSecondaryHref, label: "Hero · Enlace botón secundario", widget: string }
+          - { name: exploreLabel, label: "Hero · Botón explorar", widget: string }
+          - { name: moreLabel, label: "Tarjetas · Texto ver más", widget: string }
+          - { name: megaWords, label: "Texto gigante en movimiento · Palabras", widget: list, field: { name: word, label: "Palabra", widget: string } }
           - { name: tgCalloutTag, label: "Callout Traffic & Growth · Etiqueta", widget: string }
           - { name: tgCalloutHeading, label: "Callout Traffic & Growth · Titular", widget: string }
           - { name: tgCalloutDesc, label: "Callout Traffic & Growth · Párrafo", widget: text }
@@ -910,6 +980,9 @@ collections:
           - { name: automationBody, label: "Automatización y Sistemas · Párrafo (solo claims aprobados)", widget: text }
           - { name: automationCtaLabel, label: "Automatización y Sistemas · Texto botón", widget: string }
           - { name: automationCtaHref, label: "Automatización y Sistemas · Enlace", widget: string }
+          - { name: sublimationTag, label: "Sublimación · Etiqueta", widget: string }
+          - { name: sublimationHeading, label: "Sublimación · Titular", widget: string }
+          - { name: brandWord, label: "Sublimación · Texto en la camiseta", widget: string }
           - { name: sublimationNote, label: "Enlace a Sublimación · Texto", widget: text }
           - { name: sublimationCtaLabel, label: "Enlace a Sublimación · Texto botón", widget: string }
           - { name: sublimationCtaHref, label: "Enlace a Sublimación · Enlace (ruta real existente)", widget: string }
@@ -925,6 +998,7 @@ collections:
       # Productos con Marca (tercera línea de negocio primaria). Orientada
       # a solicitudes de cotización — sin inventario, precios fijos,
       # tiempos de entrega ni SKUs.
+          - { name: pricingLinkLabel, label: "CTA final · Enlace a Precios", widget: string }
       - name: sublimation
         label: "Sublimación y Productos con Marca (página)"
         file: "src/content/pages/sublimation.es.json"
@@ -1104,6 +1178,8 @@ collections:
           - { name: heroTag, label: "Hero · Etiqueta", widget: string }
           - { name: heroHeading, label: "Hero · Titular", widget: string }
           - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: tabsLabel, label: "Pestañas · Texto accesible", widget: string }
+          - { name: featuredLabel, label: "Etiqueta del plan destacado", widget: string }
 
           - { name: tgTag, label: "Traffic & Growth · Etiqueta", widget: string }
           - { name: tgIcon, label: "Traffic & Growth · Icono", widget: string }
@@ -1241,6 +1317,8 @@ collections:
           - { name: heroTag, label: "Hero · Etiqueta", widget: string }
           - { name: heroHeading, label: "Hero · Titular", widget: string }
           - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: tabsLabel, label: "Pestañas · Texto accesible", widget: string }
+          - { name: featuredLabel, label: "Etiqueta del plan destacado", widget: string }
 
           - { name: tgTag, label: "Traffic & Growth · Etiqueta", widget: string }
           - { name: tgIcon, label: "Traffic & Growth · Icono", widget: string }
