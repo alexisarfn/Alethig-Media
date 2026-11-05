@@ -7,6 +7,37 @@
   "heroParagraph": "Agenda una consulta gratuita de 15 minutos. Sin compromiso requerido. Disponible en inglés y español.",
   "heroImage": "/uploads/contacto-hero.webp",
   "heroImageAlt": "Contacto Alethig Media — Long Island, NY",
+  "quickActions": [
+    {
+      "kind": "whatsapp",
+      "icon": "chat",
+      "label": "WhatsApp",
+      "desc": "La forma más rápida de hablar con nosotros.",
+      "cta": "Escribir ahora",
+      "message": "Hola Alethig Media, quiero información sobre sus servicios."
+    },
+    {
+      "kind": "call",
+      "icon": "call",
+      "label": "Llámanos",
+      "desc": "",
+      "cta": "Llamar"
+    },
+    {
+      "kind": "email",
+      "icon": "mail",
+      "label": "Correo",
+      "desc": "",
+      "cta": "Enviar correo"
+    },
+    {
+      "kind": "booking",
+      "icon": "calendar_month",
+      "label": "Consulta gratis",
+      "desc": "Reserva 15 minutos en el calendario.",
+      "cta": "Reservar"
+    }
+  ],
   "formInfoHeading": "Envíanos un mensaje",
   "formInfoText": "Cuéntanos sobre tu negocio y tus objetivos. La mayoría de los clientes están activos dentro de la misma semana. Sin presión, sin compromiso — en inglés o español.",
   "infoEmailLabel": "Email",

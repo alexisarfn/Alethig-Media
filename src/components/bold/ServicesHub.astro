@@ -1,0 +1,144 @@
+---
+// BOLD V1 — hub de Servicios (compartido ES/EN). Hero con órbita de íconos
+// de servicios alrededor del logo, grilla "bento" con todas las líneas de
+// negocio y servicios de apoyo, texto gigante y CTA con borde giratorio.
+// Texto: services-hub.<locale>.json + home.<locale>.json (services).
+import Icon from '../Icon.astro';
+import MegaMarquee from './MegaMarquee.astro';
+import TrafficVisual from './TrafficVisual.astro';
+import ProductArt from '../catalog/ProductArt.astro';
+import { withBase } from '../../lib/basePath';
+
+interface Props { hub: any; home: any; base: string; pricingPath: string; osPath: string }
+const { hub, home, base, pricingPath, osPath } = Astro.props;
+const services: any[] = home.services;
+const orbit = [...services.map(s => s.icon), 'monitoring', 'checkroom', 'bolt'];
+const moreLabel = hub.moreLabel;
+---
+<!-- HERO -->
+<section class="bg-bg-void relative min-h-[92vh] flex items-center pt-28 md:pt-32 pb-section-py-sm overflow-hidden">
+  <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -top-48 -right-40 w-[40rem] h-[40rem] rounded-full bg-accent/20 blur-[130px] pointer-events-none" aria-hidden="true"></div>
+  <div class="relative max-w-container-max mx-auto px-gutter w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="hero-reveal min-w-0">
+        <span class="tag-cyber mb-6 inline-flex items-center gap-2"><span class="pulse-ring w-2 h-2 rounded-full bg-accent" aria-hidden="true"></span>{hub.heroTag}</span>
+        <h1 class="uppercase font-display font-extrabold text-text-primary tracking-[-0.03em] leading-[0.98] text-[34px] sm:text-[46px] lg:text-[50px] xl:text-[58px] mb-7 break-words">{hub.heroHeading}</h1>
+        <p class="text-body-lg text-text-secondary mb-9 max-w-xl">{hub.heroParagraph}</p>
+        <div class="flex flex-wrap gap-4">
+          <a href={withBase(base, hub.heroCtaPrimaryHref)} data-booking-trigger class="btn-cyber-solid shine magnetic press !py-4 !px-8">
+            <span class="icon-wrap uppercase">{hub.heroCtaPrimaryLabel} <Icon name="calendar_month" class="text-base" /></span>
+            <span class="shine-sweep" aria-hidden="true"></span>
+          </a>
+          <a href="#bento" class="btn-ghost magnetic press uppercase !py-4">{hub.exploreLabel}</a>
+        </div>
+      </div>
+      <div class="hero-reveal reveal-delay min-w-0 flex justify-center" aria-hidden="true">
+        <div class="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]">
+          <div class="absolute inset-0 rounded-full border border-dashed border-accent/40"></div>
+          <div class="absolute inset-[18%] rounded-full border border-accent/20"></div>
+          <div class="absolute inset-[34%] rounded-full bg-accent/15 glow-breathe"></div>
+          <div class="absolute inset-[38%] rounded-full bg-bg-depth border border-accent/50 flex items-center justify-center shadow-2xl pulse-ring">
+            <span class="font-display font-extrabold text-accent text-4xl sm:text-5xl">A</span>
+          </div>
+          <div class="spin-slow absolute inset-0">
+            {orbit.map((ic, i) => {
+              const a = (i / orbit.length) * 2 * Math.PI;
+              return (
+                <span class="absolute w-12 h-12 sm:w-14 sm:h-14 -ml-6 -mt-6 sm:-ml-7 sm:-mt-7" style={`left:${50 + 50 * Math.cos(a)}%;top:${50 + 50 * Math.sin(a)}%`}>
+                  <span class="spin-slow-rev w-full h-full rounded-2xl bg-bg-depth border border-accent/40 flex items-center justify-center shadow-xl" style="animation-duration:24s;animation-direction:reverse">
+                    <Icon name={ic} class="text-accent text-xl sm:text-2xl" />
+                  </span>
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENTO -->
+<section id="bento" class="bg-bg-void relative pb-section-py-sm md:pb-section-py-lg scroll-mt-24">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:auto-rows-[minmax(220px,auto)] [grid-auto-flow:dense]">
+
+      <!-- Traffic & Growth (grande) -->
+      <a href={withBase(base, hub.tgCalloutCtaHref)} class="group tilt spot glow-border reveal sm:col-span-2 lg:row-span-2 rounded-3xl bg-bg-depth p-7 md:p-9 flex flex-col gap-6" data-tilt="4">
+        <span class="tag-cyber self-start"><Icon name="monitoring" class="text-sm" />{hub.tgCalloutTag}</span>
+        <h2 class="uppercase font-display font-extrabold text-text-primary text-[28px] md:text-[40px] leading-[1.02]">{hub.tgCalloutHeading}</h2>
+        <p class="text-text-secondary text-body-md">{hub.tgCalloutDesc}</p>
+        <TrafficVisual kind="growth" labels={{}} />
+        <ul class="flex flex-wrap gap-2">
+          {hub.tgCalloutItems.map((item: string) => <li class="text-[11px] font-display uppercase font-semibold text-text-primary bg-white/5 border border-white/10 rounded-full px-3 py-1.5">{item}</li>)}
+        </ul>
+        <span class="mt-auto inline-flex items-center gap-2 text-accent font-display uppercase font-bold text-sm">{hub.tgCalloutCtaLabel} <Icon name="arrow_forward" class="text-base group-hover:translate-x-1.5 transition-transform" /></span>
+      </a>
+
+      <!-- Servicios -->
+      {services.map((s, i) => (
+        <a href={withBase(base, s.href)} class={`group tilt spot reveal rounded-3xl border border-white/10 bg-white/[0.03] hover:border-accent/50 p-6 flex flex-col gap-4 `}>
+          <div class="flex items-center justify-between">
+            <span class="w-12 h-12 rounded-2xl bg-accent/12 border border-accent/30 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <Icon name={s.icon} class="text-accent group-hover:text-bg-void text-2xl transition-colors" />
+            </span>
+            <span class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:-rotate-45 transition-all duration-300">
+              <Icon name="arrow_forward" class="text-text-primary group-hover:text-bg-void text-sm" />
+            </span>
+          </div>
+          <h3 class="uppercase font-display font-bold text-lg text-text-primary group-hover:text-accent transition-colors">{s.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
+          <span class="mt-auto text-xs font-display uppercase font-semibold text-accent">{moreLabel}</span>
+        </a>
+      ))}
+
+      <!-- Sublimación -->
+      <a href={withBase(base, hub.sublimationCtaHref)} class="group tilt spot reveal sm:col-span-2 rounded-3xl bg-accent text-bg-void p-7 grid grid-cols-[1fr_auto] gap-4 items-center overflow-hidden">
+        <div>
+          <span class="inline-flex items-center gap-2 text-[11px] font-display uppercase font-bold mb-3"><Icon name="checkroom" class="text-sm" />{hub.sublimationTag}</span>
+          <p class="font-display uppercase font-extrabold text-2xl leading-tight mb-3">{hub.sublimationHeading}</p>
+          <p class="text-sm opacity-80 mb-4">{hub.sublimationNote}</p>
+          <span class="inline-flex items-center gap-2 font-display uppercase font-bold text-sm">{hub.sublimationCtaLabel} <Icon name="arrow_forward" class="text-base group-hover:translate-x-1.5 transition-transform" /></span>
+        </div>
+        <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-bg-void flex items-center justify-center" aria-hidden="true">
+          <ProductArt kind="tshirt" word={hub.brandWord} animate class="bob w-24 h-24 sm:w-28 sm:h-28" />
+        </div>
+      </a>
+
+      <!-- Alethig Media OS -->
+      <a href={withBase(base, osPath)} class="group tilt spot reveal rounded-3xl border border-accent/30 bg-bg-depth p-7 flex flex-col gap-4">
+        <span class="tag-cyber self-start"><Icon name="bolt" class="text-sm" />{hub.automationTag}</span>
+        <p class="uppercase font-display font-bold text-xl text-text-primary">{hub.automationHeading}</p>
+        <p class="text-text-secondary text-sm leading-relaxed">{hub.automationBody}</p>
+        <div class="space-y-2" aria-hidden="true">
+          {[['w-2/3', 0], ['w-1/3', 0.5], ['w-1/2', 1]].map(([w, d]) => <div class={`bar-grow h-2 rounded-full bg-accent/60 ${w}`} style={`animation-delay:${d}s`}></div>)}
+        </div>
+        <span class="mt-auto inline-flex items-center gap-2 text-accent font-display uppercase font-bold text-sm">{hub.automationCtaLabel} <Icon name="arrow_forward" class="text-base group-hover:translate-x-1.5 transition-transform" /></span>
+      </a>
+    </div>
+    <p class="mt-8 text-center text-sm text-text-dim max-w-2xl mx-auto">{hub.paidAdsNote} <a href={withBase(base, hub.tgCalloutCtaHref)} class="text-accent hover:underline">{hub.paidAdsNoteLinkLabel} →</a></p>
+  </div>
+</section>
+
+<MegaMarquee words={hub.megaWords} />
+
+<!-- CTA -->
+<section class="bg-bg-depth relative py-section-py-sm md:py-section-py-lg overflow-hidden">
+  <div class="grid-drift absolute inset-0 pointer-events-none opacity-70" aria-hidden="true"></div>
+  <div class="relative max-w-4xl mx-auto px-gutter">
+    <div class="glow-border rounded-3xl bg-bg-void/80 p-10 md:p-16 text-center reveal">
+      <span class="tag-cyber mb-6 inline-flex">{hub.ctaTag}</span>
+      <h2 class="uppercase font-display font-extrabold text-text-primary text-[30px] md:text-[52px] leading-[1.02] mb-5">{hub.ctaHeading}</h2>
+      <p class="text-text-secondary text-body-md max-w-xl mx-auto mb-9">{hub.ctaParagraph}</p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href={withBase(base, hub.ctaSecondaryHref)} data-booking-trigger class="btn-cyber-solid shine pulse-ring magnetic press !py-4 !px-8">
+          <span class="icon-wrap uppercase">{hub.ctaButtonLabel} <Icon name={hub.ctaButtonIcon} class="text-base" /></span>
+          <span class="shine-sweep" aria-hidden="true"></span>
+        </a>
+        <a href={withBase(base, hub.ctaSecondaryHref)} class="btn-ghost magnetic press uppercase !py-4">{hub.ctaSecondaryLabel}</a>
+      </div>
+      <p class="mt-6 text-sm"><a href={withBase(base, pricingPath)} class="text-accent hover:underline">{hub.pricingLinkLabel}</a></p>
+    </div>
+  </div>
+</section>

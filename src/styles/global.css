@@ -672,3 +672,72 @@ a:hover .icon-wrap, button:hover .icon-wrap { gap: 8px; }
   .name-part, .value-card { transition: none !important; }
   .name-part.is-active, .value-card.is-active { transform: none !important; }
 }
+
+/* ============================================================
+   BOLD V1 — efectos "wow" inspirados en sitios de agencia premiados:
+   - .spot      → luz que sigue el cursor dentro de la tarjeta (fx.ts
+                  escribe --mx/--my). Se aplica sola a .glass y .spot.
+   - .tilt      → inclinación 3D según el cursor (fx.ts).
+   - .glow-border → borde con brillo dorado que gira (conic-gradient).
+   - .mega-marquee → texto gigante en movimiento (relleno / contorno).
+   - .funnel-*  → embudo animado de Traffic & Growth.
+   ============================================================ */
+@property --glow-angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+@keyframes am-glow-spin { to { --glow-angle: 360deg; } }
+
+.spot { isolation: isolate; }
+.spot::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-rgb), .18), transparent 45%);
+  opacity: 0; transition: opacity .35s ease;
+}
+.spot:hover::before { opacity: 1; }
+/* z-index:-1 + isolation: la luz queda sobre el fondo de la tarjeta y bajo
+   su contenido, sin tocar el posicionamiento de los hijos. */
+.spot:not(.absolute):not(.fixed):not(.sticky) { position: relative; }
+
+.tilt { transform-style: preserve-3d; transition: transform .25s ease-out; will-change: transform; }
+
+.glow-border { position: relative; isolation: isolate; }
+.glow-border::after {
+  content: ''; position: absolute; inset: -2px; border-radius: inherit; z-index: -1; padding: 2px;
+  background: conic-gradient(from var(--glow-angle), transparent 0deg, var(--accent) 60deg, var(--accent-2) 90deg, transparent 150deg, transparent 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: am-glow-spin 4s linear infinite;
+}
+
+.mega-marquee { overflow: hidden; white-space: nowrap; }
+.mega-marquee-track { display: inline-flex; animation: am-ticker 40s linear infinite; }
+.mega-marquee-track.is-reverse { animation-direction: reverse; }
+.mega-word { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; line-height: 1; padding: 0 .35em; letter-spacing: -.02em; }
+.mega-word.is-outline { color: transparent; -webkit-text-stroke: 1.5px rgba(var(--accent-rgb), .55); }
+
+@keyframes am-drop { 0% { transform: translateY(-10px); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateY(330px); opacity: 0; } }
+.funnel-dot { position: absolute; top: 0; width: 8px; height: 8px; border-radius: 9999px; background: var(--accent); box-shadow: 0 0 12px rgba(var(--accent-rgb), .9); animation: am-drop 3.6s cubic-bezier(.5,0,.5,1) infinite; }
+@keyframes am-type-cursor { 50% { opacity: 0; } }
+.type-cursor { display: inline-block; width: 2px; height: 1em; background: currentColor; vertical-align: -2px; animation: am-type-cursor 1s steps(1) infinite; }
+@keyframes am-rise { 0%, 20% { transform: translateY(0); } 50%, 70% { transform: translateY(-100%); } 100% { transform: translateY(0); } }
+.rank-rise { animation: am-rise 5s ease-in-out infinite; }
+@keyframes am-draw { from { stroke-dashoffset: 400; } to { stroke-dashoffset: 0; } }
+.line-draw { stroke-dasharray: 400; animation: am-draw 3.5s ease-in-out infinite alternate; }
+@keyframes am-ping { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(2.6); opacity: 0; } }
+.ping { animation: am-ping 1.8s ease-out infinite; }
+@keyframes am-bubble { 0%, 10% { opacity: 0; transform: translateY(10px) scale(.95); } 20%, 80% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(-6px); } }
+.bubble-in { animation: am-bubble 4.5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-border::after, .mega-marquee-track, .funnel-dot, .type-cursor, .rank-rise, .line-draw, .ping, .bubble-in { animation: none !important; }
+  .funnel-dot { display: none; }
+  .tilt { transform: none !important; }
+}
+
+/* BOLD V1 — pestañas de Precios (tabs.ts). Sin JS: todos los paneles visibles. */
+.tab-pill { transition: background-color .3s ease, color .3s ease, border-color .3s ease, transform .3s var(--ease-spring); }
+.tab-pill:hover { color: var(--text-primary); border-color: rgba(var(--accent-rgb), .6); }
+.tab-pill.is-active { background: var(--accent); color: var(--bg-void); border-color: var(--accent); transform: translateY(-1px); }
+[data-tabs].is-ready .tab-panel { display: none; }
+[data-tabs].is-ready .tab-panel.is-active { display: block; animation: am-card-in .55s var(--ease-out-expo) both; }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) { [data-tabs].is-ready .tab-panel.is-active { animation: none !important; } }

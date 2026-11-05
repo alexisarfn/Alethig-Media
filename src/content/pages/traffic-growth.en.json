@@ -1,16 +1,45 @@
 {
   "title": "Traffic, Leads & Growth Services | Alethig Media",
   "metaDescription": "Meta Ads, Google Ads, SEO, Local SEO and lead generation for businesses that want more traffic, more customers and consistent growth. Based in Long Island, working with businesses beyond the local area.",
-
   "heroTag": "Traffic & Growth Services",
   "heroHeading": "Traffic, Leads & Growth for Your Business.",
   "heroHighlight": "Growth",
   "heroParagraph": "We combine digital advertising, Google, SEO and lead generation to help you build a more consistent growth system.",
   "heroCtaPrimaryLabel": "Book a Free Consultation",
   "heroCtaPrimaryHref": "/contact",
-  "heroCtaSecondaryLabel": "Contact",
+  "heroCtaSecondaryLabel": "See what we do",
   "heroCtaSecondaryHref": "/contact",
-
+  "funnelLabel": "How your growth system works",
+  "funnelStages": [
+    {
+      "icon": "ads_click",
+      "label": "Ads & Google",
+      "hint": "they see you"
+    },
+    {
+      "icon": "monitoring",
+      "label": "Visits",
+      "hint": "they learn about you"
+    },
+    {
+      "icon": "phone_in_talk",
+      "label": "Calls & messages",
+      "hint": "they reach out"
+    },
+    {
+      "icon": "groups",
+      "label": "Customers",
+      "hint": "they buy"
+    }
+  ],
+  "megaWords": [
+    "Meta Ads",
+    "Google Ads",
+    "SEO",
+    "Local SEO",
+    "Leads",
+    "Growth"
+  ],
   "modulesTag": "What We Do",
   "modulesHeading": "Six Areas. One Growth System.",
   "modulesIntro": "Each module works on its own or as part of a combined strategy, depending on what your business needs.",
@@ -58,43 +87,104 @@
       "benefit": "Brings every marketing effort together into one clear, measurable strategy."
     }
   ],
-
+  "visualLabels": {
+    "brand": "Your business",
+    "sponsored": "Sponsored · Instagram",
+    "search": "barbershop near me",
+    "competitor": "Competitor",
+    "msg1": "Hi, any openings today?",
+    "msg2": "Yes! What time works?"
+  },
   "processTag": "How We Work",
   "processHeading": "A Clear Process, Start to Finish.",
   "processSteps": [
-    { "num": "01", "title": "Discover", "desc": "We understand your business, audience and goals." },
-    { "num": "02", "title": "Plan", "desc": "We select the right channels, offers and campaign structure." },
-    { "num": "03", "title": "Launch", "desc": "We build and launch the approved campaigns or content." },
-    { "num": "04", "title": "Optimize", "desc": "We review performance and improve what's working." }
+    {
+      "num": "01",
+      "title": "Discover",
+      "desc": "We understand your business, audience and goals."
+    },
+    {
+      "num": "02",
+      "title": "Plan",
+      "desc": "We select the right channels, offers and campaign structure."
+    },
+    {
+      "num": "03",
+      "title": "Launch",
+      "desc": "We build and launch the approved campaigns or content."
+    },
+    {
+      "num": "04",
+      "title": "Optimize",
+      "desc": "We review performance and improve what's working."
+    }
   ],
-
   "fitTag": "Is This Right For Your Business?",
   "fitHeading": "Built For Businesses That Want to Grow Consistently.",
   "fitIntro": "Based in Long Island, working with businesses beyond the local area.",
   "fitItems": [
-    { "icon": "location_on", "title": "Local Businesses", "desc": "Businesses that depend on customers in their area and want more visibility." },
-    { "icon": "design_services", "title": "Service Businesses", "desc": "Businesses that offer services and need a consistent flow of inquiries." },
-    { "icon": "groups", "title": "Growing Small & Medium Businesses", "desc": "Businesses ready to invest in a more structured growth system." },
-    { "icon": "task_alt", "title": "Businesses That Need More Qualified Inquiries", "desc": "Businesses getting traffic but not enough real potential customers." },
-    { "icon": "auto_awesome", "title": "Businesses That Want Better Visibility", "desc": "Businesses that want to show up where their customers are already looking." }
+    {
+      "icon": "location_on",
+      "title": "Local Businesses",
+      "desc": "Businesses that depend on customers in their area and want more visibility."
+    },
+    {
+      "icon": "design_services",
+      "title": "Service Businesses",
+      "desc": "Businesses that offer services and need a consistent flow of inquiries."
+    },
+    {
+      "icon": "groups",
+      "title": "Growing Small & Medium Businesses",
+      "desc": "Businesses ready to invest in a more structured growth system."
+    },
+    {
+      "icon": "task_alt",
+      "title": "Businesses That Need More Qualified Inquiries",
+      "desc": "Businesses getting traffic but not enough real potential customers."
+    },
+    {
+      "icon": "auto_awesome",
+      "title": "Businesses That Want Better Visibility",
+      "desc": "Businesses that want to show up where their customers are already looking."
+    }
   ],
-
   "supportTag": "Supporting Services",
   "supportHeading": "Traffic & Growth Can Be Strengthened By This.",
   "supportIntro": "These capabilities aren't the main focus, but they can reinforce your traffic and growth strategy.",
   "supportItems": [
-    { "icon": "language", "title": "Landing Pages, Websites & Funnels", "href": "/services/web-development" },
-    { "icon": "palette", "title": "Graphic Design", "href": "/services/brand-design" },
-    { "icon": "movie", "title": "Video Production", "href": "/services/video-production" },
-    { "icon": "thumb_up", "title": "Content & Social Media", "href": "/services/social-media-management" },
-    { "icon": "bolt", "title": "Marketing Automation", "href": "/alethig-media-os" }
+    {
+      "icon": "language",
+      "title": "Landing Pages, Websites & Funnels",
+      "href": "/services/web-development"
+    },
+    {
+      "icon": "palette",
+      "title": "Graphic Design",
+      "href": "/services/brand-design"
+    },
+    {
+      "icon": "movie",
+      "title": "Video Production",
+      "href": "/services/video-production"
+    },
+    {
+      "icon": "thumb_up",
+      "title": "Content & Social Media",
+      "href": "/services/social-media-management"
+    },
+    {
+      "icon": "bolt",
+      "title": "Marketing Automation",
+      "href": "/alethig-media-os"
+    }
   ],
-
   "ctaTag": "Let's Get Started",
   "ctaHeading": "Ready to Attract More Traffic and Customers?",
   "ctaParagraph": "Book a free 15-minute consultation and let's talk about your business, your goals, and which channels make the most sense for you.",
   "ctaButtonLabel": "Book a Free Consultation",
   "ctaButtonIcon": "calendar_month",
   "ctaSecondaryLabel": "Contact",
-  "ctaSecondaryHref": "/contact"
+  "ctaSecondaryHref": "/contact",
+  "pricingLinkLabel": "How does pricing work? See Pricing →"
 }

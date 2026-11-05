@@ -1,11 +1,11 @@
 {
   "title": "Precios | Marketing Digital, SEO Local, Contenido y Alethig Media OS — Alethig Media",
   "metaDescription": "Precios de marketing digital, SEO local, contenido para redes gestionado con Alethig Media OS, sitios web y diseño de marca. Con base en Long Island, trabajando con negocios más allá del área local.",
-
   "heroTag": "Precios",
   "heroHeading": "Precios Claros Para Cada Servicio.",
   "heroParagraph": "Elige el servicio que tu negocio necesita y ve de una vez qué incluye, qué plan te conviene y qué requiere una cotización personalizada.",
-
+  "tabsLabel": "Servicios con precio",
+  "featuredLabel": "Más popular",
   "tgTag": "Traffic & Growth",
   "tgIcon": "monitoring",
   "tgHeading": "Publicidad, SEO y Generación de Leads.",
@@ -22,24 +22,42 @@
       "sub": "1 canal principal",
       "price": "$750/mes",
       "featured": false,
-      "features": ["Meta Ads o Google Ads (1 canal)", "Configuración de campaña", "Optimización continua", "Seguimiento básico de conversiones", "Reportes"]
+      "features": [
+        "Meta Ads o Google Ads (1 canal)",
+        "Configuración de campaña",
+        "Optimización continua",
+        "Seguimiento básico de conversiones",
+        "Reportes"
+      ]
     },
     {
       "name": "Growth",
       "sub": "Estrategia multicanal",
       "price": "$1,250/mes",
       "featured": true,
-      "features": ["Meta + Google, o Publicidad + SEO Local", "Optimización continua", "Revisión de landing page", "Seguimiento de conversiones", "Estrategia de crecimiento"]
+      "features": [
+        "Meta + Google, o Publicidad + SEO Local",
+        "Optimización continua",
+        "Revisión de landing page",
+        "Seguimiento de conversiones",
+        "Estrategia de crecimiento"
+      ]
     },
     {
       "name": "Scale",
       "sub": "Cobertura completa",
       "price": "$1,950/mes",
       "featured": false,
-      "features": ["Meta Ads", "Google Ads", "SEO Local", "Estrategia de generación de leads", "Optimización de embudo y landing", "Soporte prioritario"]
+      "features": [
+        "Meta Ads",
+        "Google Ads",
+        "SEO Local",
+        "Estrategia de generación de leads",
+        "Optimización de embudo y landing",
+        "Soporte prioritario"
+      ]
     }
   ],
-
   "seoTag": "SEO Local",
   "seoIcon": "my_location",
   "seoHeading": "Visibilidad en Búsquedas y Mapas Locales.",
@@ -52,24 +70,38 @@
       "sub": "Fundamentos locales",
       "price": "$499/mes",
       "featured": false,
-      "features": ["Optimización de Google Business Profile", "SEO local en el sitio", "Seguimiento de posicionamiento local", "Reporte mensual"]
+      "features": [
+        "Optimización de Google Business Profile",
+        "SEO local en el sitio",
+        "Seguimiento de posicionamiento local",
+        "Reporte mensual"
+      ]
     },
     {
       "name": "Growth",
       "sub": "Crecimiento local",
       "price": "$799/mes",
       "featured": true,
-      "features": ["Todo lo de Starter", "Gestión de citaciones locales", "Apoyo en reputación y reseñas", "Optimización continua"]
+      "features": [
+        "Todo lo de Starter",
+        "Gestión de citaciones locales",
+        "Apoyo en reputación y reseñas",
+        "Optimización continua"
+      ]
     },
     {
       "name": "Pro",
       "sub": "Máxima visibilidad local",
       "price": "$1,199/mes",
       "featured": false,
-      "features": ["Todo lo de Growth", "Estrategia local avanzada", "Soporte prioritario", "Reporte detallado de rendimiento"]
+      "features": [
+        "Todo lo de Growth",
+        "Estrategia local avanzada",
+        "Soporte prioritario",
+        "Reporte detallado de rendimiento"
+      ]
     }
   ],
-
   "contentTag": "Contenido Gestionado + Alethig Media OS",
   "contentIcon": "thumb_up",
   "contentBadge": "Alethig Media OS Incluido",
@@ -85,24 +117,40 @@
       "sub": "Aprox. 8 piezas/mes",
       "price": "$599/mes",
       "featured": false,
-      "features": ["Aprox. 8 piezas de contenido al mes", "Diseño y textos", "Organización de contenido", "Revisión y aprobación en Alethig Media OS"]
+      "features": [
+        "Aprox. 8 piezas de contenido al mes",
+        "Diseño y textos",
+        "Organización de contenido",
+        "Revisión y aprobación en Alethig Media OS"
+      ]
     },
     {
       "name": "Content Growth",
       "sub": "Aprox. 12–16 piezas/mes",
       "price": "$899/mes",
       "featured": true,
-      "features": ["Aprox. 12–16 piezas al mes", "Publicaciones + Reels", "Planeación de contenido", "Revisión, cambios y aprobación", "Calendario de contenido en Alethig Media OS"]
+      "features": [
+        "Aprox. 12–16 piezas al mes",
+        "Publicaciones + Reels",
+        "Planeación de contenido",
+        "Revisión, cambios y aprobación",
+        "Calendario de contenido en Alethig Media OS"
+      ]
     },
     {
       "name": "Content Pro",
       "sub": "Aprox. 16–20 piezas/mes",
       "price": "$1,299/mes",
       "featured": false,
-      "features": ["Aprox. 16–20 piezas al mes", "Más Reels y contenido en video", "Estrategia de contenido", "Atención prioritaria", "Flujo de trabajo en Alethig Media OS"]
+      "features": [
+        "Aprox. 16–20 piezas al mes",
+        "Más Reels y contenido en video",
+        "Estrategia de contenido",
+        "Atención prioritaria",
+        "Flujo de trabajo en Alethig Media OS"
+      ]
     }
   ],
-
   "webTag": "Sitios Web",
   "webIcon": "language",
   "webHeading": "Sitios Web Profesionales.",
@@ -112,12 +160,23 @@
   "webSecondaryLabel": "Ver Desarrollo Web",
   "webSecondaryHref": "/servicios/desarrollo-web",
   "webItems": [
-    { "name": "Landing Page", "price": "Desde $799" },
-    { "name": "Sitio Starter", "price": "Desde $1,499" },
-    { "name": "Sitio Growth", "price": "Desde $2,499" },
-    { "name": "Avanzado / E-commerce", "price": "Desde $3,500+" }
+    {
+      "name": "Landing Page",
+      "price": "Desde $799"
+    },
+    {
+      "name": "Sitio Starter",
+      "price": "Desde $1,499"
+    },
+    {
+      "name": "Sitio Growth",
+      "price": "Desde $2,499"
+    },
+    {
+      "name": "Avanzado / E-commerce",
+      "price": "Desde $3,500+"
+    }
   ],
-
   "brandTag": "Diseño de Marca",
   "brandIcon": "palette",
   "brandHeading": "Identidad de Marca Profesional.",
@@ -128,11 +187,19 @@
   "brandSecondaryLabel": "Ver Diseño de Marca",
   "brandSecondaryHref": "/servicios/diseno-de-marca",
   "brandItems": [
-    { "name": "Logo Starter", "price": "$299" },
-    { "name": "Esenciales de Marca", "price": "$599" },
-    { "name": "Identidad de Marca Completa", "price": "$1,199+" }
+    {
+      "name": "Logo Starter",
+      "price": "$299"
+    },
+    {
+      "name": "Esenciales de Marca",
+      "price": "$599"
+    },
+    {
+      "name": "Identidad de Marca Completa",
+      "price": "$1,199+"
+    }
   ],
-
   "videoTag": "Video",
   "videoIcon": "movie",
   "videoHeading": "Producción y Edición de Video.",
@@ -141,30 +208,36 @@
   "videoCtaHref": "/contacto",
   "videoSecondaryLabel": "Ver Producción de Video",
   "videoSecondaryHref": "/servicios/produccion-de-video",
-
   "osTag": "Alethig Media OS",
   "osIcon": "bolt",
   "osHeading": "Alethig Media OS.",
   "osBody": "Planes próximamente. Contáctanos para conocer opciones de acceso.",
-  "osFeatures": ["Contenido", "Aprobaciones", "Proyectos", "Flujos de Trabajo"],
+  "osFeatures": [
+    "Contenido",
+    "Aprobaciones",
+    "Proyectos",
+    "Flujos de Trabajo"
+  ],
   "osCtaLabel": "Contactar",
   "osCtaHref": "/contacto",
   "osSecondaryLabel": "Conocer Alethig Media OS",
   "osSecondaryHref": "/alethig-media-os",
-
   "subTag": "Sublimación y Productos con Marca",
   "subIcon": "checkroom",
   "subHeading": "Productos Personalizados Por Cotización.",
   "subBody": "El precio de los productos personalizados depende del tipo de producto, la cantidad, los materiales, la personalización y los requisitos de diseño. Cada proyecto recibe una cotización individual.",
-  "subFactors": ["Tipo de producto", "Cantidad", "Materiales", "Personalización y diseño"],
+  "subFactors": [
+    "Tipo de producto",
+    "Cantidad",
+    "Materiales",
+    "Personalización y diseño"
+  ],
   "subCtaLabel": "Solicitar Cotización",
   "subCtaHref": "/sublimacion",
   "subSecondaryLabel": "Contactar",
   "subSecondaryHref": "/contacto",
-
   "regionIcon": "location_on",
   "regionNote": "Los precios pueden variar según el mercado, el alcance, la moneda y los requisitos de entrega.",
-
   "ctaTag": "¿Tienes Preguntas Sobre Precios?",
   "ctaHeading": "Hablemos Sobre Tu Proyecto.",
   "ctaParagraph": "Cuéntanos qué necesitas y te ayudamos a entender qué opción tiene más sentido para tu negocio y tu presupuesto.",

@@ -15,34 +15,37 @@ const { social } = site;
 const { contactHours: phone } = siteEn;
 const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
 ---
-<Layout title={contact.title} description={contact.metaDescription} image={contact.heroImage} base={BASE} locale="en" altHref="/es/contacto/">
+<Layout navTheme="dark" title={contact.title} description={contact.metaDescription} image={contact.heroImage} base={BASE} locale="en" altHref="/es/contacto/">
 
-  <!-- HERO -->
-  <section class="bg-bg-void relative pt-32 pb-section-py-sm overflow-hidden">
+  <!-- HERO — BOLD V1: titular gigante + accesos rápidos (WhatsApp, llamada,
+       correo, reserva) en tarjetas con luz que sigue el cursor. -->
+  <section class="bg-bg-void relative pt-32 md:pt-40 pb-section-py-sm overflow-hidden">
     <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-    <div class="glow-breathe absolute -top-40 -right-32 w-[34rem] h-[34rem] rounded-full bg-accent/20 blur-[120px] pointer-events-none" aria-hidden="true"></div>
-    <div class="glow-breathe absolute -bottom-56 -left-48 w-[30rem] h-[30rem] rounded-full bg-grad-indigo/60 blur-[120px] pointer-events-none" style="animation-delay:2.5s" aria-hidden="true"></div>
+    <div class="glow-breathe absolute -top-48 left-1/2 -translate-x-1/2 w-[46rem] h-[30rem] rounded-full bg-accent/20 blur-[130px] pointer-events-none" aria-hidden="true"></div>
     <div class="relative max-w-container-max mx-auto px-gutter">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="reveal">
-          <span class="tag-cyber mb-5 inline-flex"><Icon name="mail" class="text-sm" />{contact.heroTag}</span>
-          <h1 class="uppercase font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(contact.heroHeading, contact.heroHighlight)}></h1>
-          <p class="text-body-lg text-text-secondary">
-            {contact.heroParagraph}
-          </p>
-        </div>
-        <div class="reveal">
-          <div class="glass card-cyber rounded-2xl overflow-hidden animate-float">
-            <img
-              src={contact.heroImage}
-              srcset={getSrcSet(contact.heroImage)}
-              sizes={RESPONSIVE_SIZES}
-              alt={contact.heroImageAlt}
-              class="w-full aspect-square object-cover media-bright"
-              fetchpriority="high"
-            />
-          </div>
-        </div>
+      <div class="text-center mb-14">
+        <span class="hero-reveal tag-cyber mb-6 inline-flex items-center gap-2"><span class="pulse-ring w-2 h-2 rounded-full bg-accent" aria-hidden="true"></span>{contact.heroTag}</span>
+        <h1 class="hero-reveal uppercase font-display font-extrabold text-text-primary tracking-[-0.03em] leading-[0.95] text-[44px] sm:text-[64px] lg:text-[96px] mb-6" set:html={highlightHeading(contact.heroHeading, contact.heroHighlight)}></h1>
+        <p class="hero-reveal text-body-lg text-text-secondary max-w-2xl mx-auto">{contact.heroParagraph}</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 stagger-fade">
+        {contact.quickActions.map((q: any) => {
+          const href = q.kind === 'whatsapp' ? `https://wa.me/${site.whatsapp.number}?text=${encodeURIComponent(q.message ?? '')}`
+            : q.kind === 'call' ? `tel:+${site.whatsapp.number}`
+            : q.kind === 'email' ? `mailto:${email}`
+            : '#contact-form';
+          return (
+            <a href={href} {...(q.kind === 'whatsapp' ? { target: '_blank', rel: 'noopener' } : {})} {...(q.kind === 'booking' ? { 'data-booking-trigger': '' } : {})}
+               class={`group tilt spot rounded-3xl p-6 flex flex-col gap-4 border transition-colors ${q.kind === 'whatsapp' ? 'glow-border bg-bg-depth border-accent/40' : 'bg-white/[0.03] border-white/10 hover:border-accent/50'}`}>
+              <span class="w-14 h-14 rounded-2xl bg-accent/15 border border-accent/30 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                <Icon name={q.icon} class="text-accent group-hover:text-bg-void text-2xl transition-colors" />
+              </span>
+              <span class="uppercase font-display font-bold text-lg text-text-primary">{q.label}</span>
+              <span class="text-sm text-text-secondary break-words">{q.kind === 'call' ? site.whatsapp.display : q.kind === 'email' ? email : q.desc}</span>
+              <span class="mt-auto inline-flex items-center gap-2 text-accent text-xs font-display uppercase font-bold">{q.cta} <Icon name="arrow_forward" class="text-sm group-hover:translate-x-1.5 transition-transform" /></span>
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>
@@ -119,7 +122,7 @@ const RESPONSIVE_SIZES = '(min-width: 768px) 50vw, 100vw';
 
         <!-- Right: form -->
         <div class="reveal">
-          <div class="glass lumen-border rounded-2xl p-8">
+          <div class="glow-border glass rounded-3xl p-8">
             <div id="form-wrap">
             <!-- !hidden (with important), not hidden: .tag-cyber also sets
                  display (inline-flex) and, since it compiles after
