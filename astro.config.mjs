@@ -31,6 +31,8 @@ const LOCALE_PAIRS = [
   ['/es/sublimacion/', '/en/sublimation/'],
   // POSITIONING PHASE 6 — Pricing Hub.
   ['/es/precios/', '/en/pricing/'],
+  // AUDITORÍA GRATIS — página imán de clientes.
+  ['/es/auditoria-gratis/', '/en/free-audit/'],
   ['/es/servicios/desarrollo-web/', '/en/services/web-development/'],
   ['/es/servicios/diseno-de-marca/', '/en/services/brand-design/'],
   ['/es/servicios/manejo-de-redes-sociales/', '/en/services/social-media-management/'],

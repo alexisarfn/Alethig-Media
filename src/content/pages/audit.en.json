@@ -1,0 +1,173 @@
+{
+  "title": "Free Online Presence Audit | Alethig Media",
+  "metaDescription": "Find out for free what your business is missing on Google, your website and social media. A 1-page diagnosis with 3 priority actions. Long Island, NY — in English and Spanish.",
+  "heroTag": "Free audit",
+  "heroHeading": "Find Out Why Customers Can't Find You.",
+  "heroHighlight": "Can't Find You.",
+  "heroParagraph": "We review your Google profile, website, social media and competitors, and send you a clear diagnosis with the 3 things worth fixing first. Free, no strings attached.",
+  "heroCtaLabel": "Get my free audit",
+  "heroChecks": [
+    "100% free",
+    "No commitment",
+    "In English or Spanish"
+  ],
+  "reportTitle": "Your business diagnosis",
+  "reportSampleLabel": "Sample",
+  "reportScanning": "Checking…",
+  "reportItems": [
+    {
+      "icon": "location_on",
+      "label": "Google Business Profile"
+    },
+    {
+      "icon": "devices",
+      "label": "Website on mobile"
+    },
+    {
+      "icon": "search",
+      "label": "Google search visibility"
+    },
+    {
+      "icon": "star",
+      "label": "Reviews & reputation"
+    },
+    {
+      "icon": "thumb_up",
+      "label": "Social media"
+    },
+    {
+      "icon": "groups",
+      "label": "Local competitors"
+    }
+  ],
+  "reportResult": "You get your 3 priority actions",
+  "tickerItems": [
+    "100% free audit",
+    "Google profile",
+    "Website",
+    "Social media",
+    "Reviews",
+    "Local competitors",
+    "In English or Spanish"
+  ],
+  "reviewTag": "What we review",
+  "reviewHeading": "Everything a customer sees before calling you.",
+  "reviewIntro": "Most customers look you up on Google before buying. We review what they see — and what your competitors are doing better.",
+  "reviewItems": [
+    {
+      "icon": "location_on",
+      "title": "Google Business Profile",
+      "desc": "Whether you show up on Google Maps, if your info is complete, and what you need to rank ahead of competitors."
+    },
+    {
+      "icon": "devices",
+      "title": "Website",
+      "desc": "How it looks on mobile, how fast it loads, whether it's clear and whether it gets people to call or message."
+    },
+    {
+      "icon": "search",
+      "title": "Google searches",
+      "desc": "Whether you show up when people search for your service in your area, and which keywords you're missing."
+    },
+    {
+      "icon": "star",
+      "title": "Reviews & reputation",
+      "desc": "How many reviews you have, how you respond, and how you compare with similar businesses."
+    },
+    {
+      "icon": "thumb_up",
+      "title": "Social media",
+      "desc": "Whether your profiles are active, look professional and lead people to contact you."
+    },
+    {
+      "icon": "groups",
+      "title": "Your competitors",
+      "desc": "What 2–3 nearby competitors are doing and where they're ahead of you."
+    }
+  ],
+  "stepsTag": "How it works",
+  "stepsHeading": "Three steps. Zero cost.",
+  "steps": [
+    {
+      "title": "Fill out the form",
+      "desc": "Two minutes: your business, your city and, if you have them, your website and social profiles."
+    },
+    {
+      "title": "We review your presence",
+      "desc": "We analyze Google, your website, your reviews, your social media and your local competitors."
+    },
+    {
+      "title": "You get your diagnosis",
+      "desc": "A 1-page summary of what's working, what's missing and the 3 actions with the most impact. If you'd like, we can walk through it on a 15-minute call."
+    }
+  ],
+  "formTag": "Request your audit",
+  "formHeading": "Get your free audit.",
+  "formIntro": "We'll email your diagnosis within 3 business days.",
+  "formPromises": [
+    "No cost and no obligation to hire us",
+    "Everything explained in plain language",
+    "Apply the recommendations yourself — or ask us for help"
+  ],
+  "form": {
+    "name": "Your name",
+    "business": "Business name",
+    "phone": "Phone / WhatsApp",
+    "email": "Email",
+    "city": "City",
+    "cityPlaceholder": "e.g. Amityville, NY",
+    "industry": "Type of business",
+    "selectPlaceholder": "Select an option",
+    "industries": [
+      "Barbershop / salon",
+      "Restaurant / food",
+      "Contractor / home services",
+      "Dentist / health",
+      "Attorney / professional services",
+      "Store / retail",
+      "Other"
+    ],
+    "site": "Website (if you have one)",
+    "sitePlaceholder": "yourbusiness.com",
+    "profiles": "Google, Instagram or Facebook (if you have them)",
+    "profilesPlaceholder": "Name on Google or @username",
+    "goal": "What do you want to achieve?",
+    "goals": [
+      "More calls and customers",
+      "Show up on Google",
+      "Improve my website",
+      "Grow on social media",
+      "Not sure where to start"
+    ],
+    "message": "Anything else we should know",
+    "messagePlaceholder": "Optional",
+    "submit": "Get my free audit",
+    "privacy": "We only use your information to prepare your audit and contact you about it.",
+    "errorMessage": "We couldn't send your request. Please check the fields and try again, or message us on WhatsApp.",
+    "successHeading": "Request received!",
+    "successText": "We're already reviewing your business. We'll email your diagnosis within 3 business days."
+  },
+  "faqHeading": "Frequently asked questions",
+  "faq": [
+    {
+      "q": "Is it really free?",
+      "a": "Yes. No credit card and no obligation to hire us. It's our way of showing you how we work."
+    },
+    {
+      "q": "How long does it take?",
+      "a": "We'll email your diagnosis within 3 business days."
+    },
+    {
+      "q": "What do I need to request it?",
+      "a": "Just your business name and city. If you have a website or social profiles, share them so the review is more complete."
+    },
+    {
+      "q": "Will you pressure me to buy?",
+      "a": "No. We give you clear recommendations you can apply yourself. If you want our help, we'll explain how and what it would cost — the decision is yours."
+    },
+    {
+      "q": "Do you work with businesses outside Long Island?",
+      "a": "Yes. We're based on Long Island, but we do audits for businesses across the U.S., in English or Spanish."
+    }
+  ]
+}

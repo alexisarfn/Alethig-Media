@@ -65,6 +65,12 @@ export const POST: APIRoute = async ({ request, locals, redirect }) => {
     contactPath = '/en/contact/';
     thankYouPath = '/en/thank-you/';
   }
+  // AUDITORÍA GRATIS — el formulario de /es/auditoria-gratis/ y
+  // /en/free-audit/ usa este mismo endpoint con formType=audit: mismos
+  // controles (honeypot, Turnstile, campos requeridos), asunto propio y
+  // campos extra en el correo. El fallback sin JS vuelve a esa página.
+  const isAudit = data.formType === 'audit';
+  if (isAudit) contactPath = locale === 'en' ? '/en/free-audit/' : '/es/auditoria-gratis/';
 
   // --- Honeypot: si el bot rellenó "website", fingir éxito sin guardar ni enviar ---
   if (data.website) {
@@ -117,7 +123,20 @@ export const POST: APIRoute = async ({ request, locals, redirect }) => {
   // español) sepa en qué idioma contactarlo de vuelta.
   const localeLabel = locale === 'en' ? 'Inglés' : 'Español';
 
-  const subject = `Nuevo mensaje de contacto — ${record.nombre} (${record.negocio})`;
+  const auditRows: [string, string][] = isAudit
+    ? ([
+        ['Ciudad', data.ciudad],
+        ['Industria', data.industria],
+        ['Sitio web', data.sitioWeb],
+        ['Google / redes', data.perfiles],
+        ['Objetivo principal', data.objetivo],
+      ].filter(([, v]) => v) as [string, string][]).map(([k, v]) => [k, v.slice(0, 500)])
+    : [];
+  if (isAudit) record.servicio = 'AUDITORÍA GRATIS';
+
+  const subject = isAudit
+    ? `🔎 Solicitud de AUDITORÍA GRATIS — ${record.nombre} (${record.negocio})`
+    : `Nuevo mensaje de contacto — ${record.nombre} (${record.negocio})`;
   const text =
     `Nombre: ${record.nombre}\n` +
     `Negocio: ${record.negocio}\n` +
@@ -125,9 +144,10 @@ export const POST: APIRoute = async ({ request, locals, redirect }) => {
     `Email: ${record.email}\n` +
     `Servicio: ${record.servicio}\n` +
     `Idioma del visitante: ${localeLabel}\n` +
+    auditRows.map(([k, v]) => `${k}: ${v}\n`).join('') +
     `Mensaje:\n${record.mensaje}\n`;
   const html =
-    `<h2>Nuevo mensaje de contacto</h2>` +
+    `<h2>${isAudit ? 'Nueva solicitud de auditoría gratis' : 'Nuevo mensaje de contacto'}</h2>` +
     `<table cellpadding="6" style="border-collapse:collapse;font-family:sans-serif">` +
     `<tr><td><b>Nombre</b></td><td>${esc(record.nombre)}</td></tr>` +
     `<tr><td><b>Negocio</b></td><td>${esc(record.negocio)}</td></tr>` +
@@ -135,6 +155,7 @@ export const POST: APIRoute = async ({ request, locals, redirect }) => {
     `<tr><td><b>Email</b></td><td>${esc(record.email)}</td></tr>` +
     `<tr><td><b>Servicio</b></td><td>${esc(record.servicio)}</td></tr>` +
     `<tr><td><b>Idioma del visitante</b></td><td>${esc(localeLabel)}</td></tr>` +
+    auditRows.map(([k, v]) => `<tr><td><b>${esc(k)}</b></td><td>${esc(v)}</td></tr>`).join('') +
     `<tr><td valign="top"><b>Mensaje</b></td><td>${esc(record.mensaje).replace(/\n/g, '<br>')}</td></tr>` +
     `</table>`;
 

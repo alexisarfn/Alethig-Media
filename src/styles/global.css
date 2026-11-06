@@ -741,3 +741,10 @@ a:hover .icon-wrap, button:hover .icon-wrap { gap: 8px; }
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 @media (prefers-reduced-motion: reduce) { [data-tabs].is-ready .tab-panel.is-active { animation: none !important; } }
+
+/* AUDITORÍA GRATIS — filas del diagnóstico de ejemplo (rotador). */
+.audit-row { transition: border-color .4s ease, background-color .4s ease, transform .4s var(--ease-out-expo); }
+.audit-row .audit-scan { opacity: 0; transition: opacity .3s ease; }
+.audit-row.is-active { border-color: rgba(var(--accent-rgb), .7); background: rgba(var(--accent-rgb), .1); transform: translateX(6px); }
+.audit-row.is-active .audit-scan { opacity: 1; color: var(--accent); animation: am-type-cursor 1s steps(1) infinite; }
+@media (prefers-reduced-motion: reduce) { .audit-row.is-active { transform: none; } .audit-row.is-active .audit-scan { animation: none; } }

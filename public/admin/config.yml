@@ -1447,6 +1447,164 @@ collections:
           - { name: ctaSecondaryHref, label: "CTA final · Enlace botón secundario", widget: string }
 
   # ─────────── SERVICIOS UNIFORMES (features + planes) ───────────
+      - name: audit
+        label: "Auditoría gratis"
+        file: "src/content/pages/audit.es.json"
+        format: json
+        fields:
+          - { name: title, label: "Título de pestaña (SEO)", widget: string }
+          - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
+          - { name: heroTag, label: "Hero · Etiqueta", widget: string }
+          - { name: heroHeading, label: "Hero · Titular", widget: string }
+          - { name: heroHighlight, label: "Hero · Parte resaltada", widget: string }
+          - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: heroCtaLabel, label: "Hero · Botón", widget: string }
+          - { name: heroChecks, label: "Hero · Garantías", widget: list, field: { name: item, label: "Texto", widget: string } }
+          - { name: reportTitle, label: "Diagnóstico de ejemplo · Título", widget: string }
+          - { name: reportSampleLabel, label: "Diagnóstico · Rótulo de ejemplo", widget: string }
+          - { name: reportScanning, label: "Diagnóstico · Texto de revisando", widget: string }
+          - name: reportItems
+            label: "Diagnóstico · Puntos"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: label, label: "Texto", widget: string }
+          - { name: reportResult, label: "Diagnóstico · Resultado", widget: string }
+          - { name: tickerItems, label: "Franja dorada · Frases", widget: list, field: { name: item, label: "Texto", widget: string } }
+          - { name: reviewTag, label: "Qué revisamos · Etiqueta", widget: string }
+          - { name: reviewHeading, label: "Qué revisamos · Titular", widget: string }
+          - { name: reviewIntro, label: "Qué revisamos · Párrafo", widget: text }
+          - name: reviewItems
+            label: "Qué revisamos · Tarjetas"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: stepsTag, label: "Pasos · Etiqueta", widget: string }
+          - { name: stepsHeading, label: "Pasos · Titular", widget: string }
+          - name: steps
+            label: "Pasos"
+            widget: list
+            fields:
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: formTag, label: "Formulario · Etiqueta", widget: string }
+          - { name: formHeading, label: "Formulario · Titular", widget: string }
+          - { name: formIntro, label: "Formulario · Párrafo (incluye el plazo de entrega)", widget: text }
+          - { name: formPromises, label: "Formulario · Promesas", widget: list, field: { name: item, label: "Texto", widget: string } }
+          - name: form
+            label: "Formulario · Textos"
+            widget: object
+            fields:
+              - { name: name, label: "name", widget: string }
+              - { name: business, label: "business", widget: string }
+              - { name: phone, label: "phone", widget: string }
+              - { name: email, label: "email", widget: string }
+              - { name: city, label: "city", widget: string }
+              - { name: cityPlaceholder, label: "cityPlaceholder", widget: string }
+              - { name: industry, label: "industry", widget: string }
+              - { name: selectPlaceholder, label: "selectPlaceholder", widget: string }
+              - { name: site, label: "site", widget: string }
+              - { name: sitePlaceholder, label: "sitePlaceholder", widget: string }
+              - { name: profiles, label: "profiles", widget: string }
+              - { name: profilesPlaceholder, label: "profilesPlaceholder", widget: string }
+              - { name: goal, label: "goal", widget: string }
+              - { name: message, label: "message", widget: string }
+              - { name: messagePlaceholder, label: "messagePlaceholder", widget: string }
+              - { name: submit, label: "submit", widget: string }
+              - { name: privacy, label: "privacy", widget: string }
+              - { name: errorMessage, label: "errorMessage", widget: string }
+              - { name: successHeading, label: "successHeading", widget: string }
+              - { name: successText, label: "successText", widget: string }
+              - { name: industries, label: "Tipos de negocio", widget: list, field: { name: item, label: "Opción", widget: string } }
+              - { name: goals, label: "Objetivos", widget: list, field: { name: item, label: "Opción", widget: string } }
+          - { name: faqHeading, label: "Preguntas · Titular", widget: string }
+          - name: faq
+            label: "Preguntas frecuentes"
+            widget: list
+            fields:
+              - { name: q, label: "Pregunta", widget: string }
+              - { name: a, label: "Respuesta", widget: text }
+      - name: audit-en
+        label: "Auditoría gratis (Inglés)"
+        file: "src/content/pages/audit.en.json"
+        format: json
+        fields:
+          - { name: title, label: "Título de pestaña (SEO)", widget: string }
+          - { name: metaDescription, label: "Meta descripción (SEO)", widget: text }
+          - { name: heroTag, label: "Hero · Etiqueta", widget: string }
+          - { name: heroHeading, label: "Hero · Titular", widget: string }
+          - { name: heroHighlight, label: "Hero · Parte resaltada", widget: string }
+          - { name: heroParagraph, label: "Hero · Párrafo", widget: text }
+          - { name: heroCtaLabel, label: "Hero · Botón", widget: string }
+          - { name: heroChecks, label: "Hero · Garantías", widget: list, field: { name: item, label: "Texto", widget: string } }
+          - { name: reportTitle, label: "Diagnóstico de ejemplo · Título", widget: string }
+          - { name: reportSampleLabel, label: "Diagnóstico · Rótulo de ejemplo", widget: string }
+          - { name: reportScanning, label: "Diagnóstico · Texto de revisando", widget: string }
+          - name: reportItems
+            label: "Diagnóstico · Puntos"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: label, label: "Texto", widget: string }
+          - { name: reportResult, label: "Diagnóstico · Resultado", widget: string }
+          - { name: tickerItems, label: "Franja dorada · Frases", widget: list, field: { name: item, label: "Texto", widget: string } }
+          - { name: reviewTag, label: "Qué revisamos · Etiqueta", widget: string }
+          - { name: reviewHeading, label: "Qué revisamos · Titular", widget: string }
+          - { name: reviewIntro, label: "Qué revisamos · Párrafo", widget: text }
+          - name: reviewItems
+            label: "Qué revisamos · Tarjetas"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: stepsTag, label: "Pasos · Etiqueta", widget: string }
+          - { name: stepsHeading, label: "Pasos · Titular", widget: string }
+          - name: steps
+            label: "Pasos"
+            widget: list
+            fields:
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: formTag, label: "Formulario · Etiqueta", widget: string }
+          - { name: formHeading, label: "Formulario · Titular", widget: string }
+          - { name: formIntro, label: "Formulario · Párrafo (incluye el plazo de entrega)", widget: text }
+          - { name: formPromises, label: "Formulario · Promesas", widget: list, field: { name: item, label: "Texto", widget: string } }
+          - name: form
+            label: "Formulario · Textos"
+            widget: object
+            fields:
+              - { name: name, label: "name", widget: string }
+              - { name: business, label: "business", widget: string }
+              - { name: phone, label: "phone", widget: string }
+              - { name: email, label: "email", widget: string }
+              - { name: city, label: "city", widget: string }
+              - { name: cityPlaceholder, label: "cityPlaceholder", widget: string }
+              - { name: industry, label: "industry", widget: string }
+              - { name: selectPlaceholder, label: "selectPlaceholder", widget: string }
+              - { name: site, label: "site", widget: string }
+              - { name: sitePlaceholder, label: "sitePlaceholder", widget: string }
+              - { name: profiles, label: "profiles", widget: string }
+              - { name: profilesPlaceholder, label: "profilesPlaceholder", widget: string }
+              - { name: goal, label: "goal", widget: string }
+              - { name: message, label: "message", widget: string }
+              - { name: messagePlaceholder, label: "messagePlaceholder", widget: string }
+              - { name: submit, label: "submit", widget: string }
+              - { name: privacy, label: "privacy", widget: string }
+              - { name: errorMessage, label: "errorMessage", widget: string }
+              - { name: successHeading, label: "successHeading", widget: string }
+              - { name: successText, label: "successText", widget: string }
+              - { name: industries, label: "Tipos de negocio", widget: list, field: { name: item, label: "Opción", widget: string } }
+              - { name: goals, label: "Objetivos", widget: list, field: { name: item, label: "Opción", widget: string } }
+          - { name: faqHeading, label: "Preguntas · Titular", widget: string }
+          - name: faq
+            label: "Preguntas frecuentes"
+            widget: list
+            fields:
+              - { name: q, label: "Pregunta", widget: string }
+              - { name: a, label: "Respuesta", widget: text }
   - name: services
     label: "Servicios (Español)"
     label_singular: "Servicio"

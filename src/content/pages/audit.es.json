@@ -1,0 +1,173 @@
+{
+  "title": "Auditoría Gratis de tu Presencia en Internet | Alethig Media",
+  "metaDescription": "Descubre gratis qué le falta a tu negocio en Google, tu página web y tus redes. Diagnóstico de 1 página con 3 acciones prioritarias. Long Island, NY — en inglés y español.",
+  "heroTag": "Auditoría gratis",
+  "heroHeading": "Descubre Por Qué Tus Clientes No Te Encuentran.",
+  "heroHighlight": "No Te Encuentran.",
+  "heroParagraph": "Revisamos tu perfil de Google, tu página web, tus redes y tu competencia, y te entregamos un diagnóstico claro con las 3 cosas que más te conviene arreglar primero. Gratis y sin compromiso.",
+  "heroCtaLabel": "Quiero mi auditoría gratis",
+  "heroChecks": [
+    "100% gratis",
+    "Sin compromiso",
+    "En inglés o español"
+  ],
+  "reportTitle": "Diagnóstico de tu negocio",
+  "reportSampleLabel": "Ejemplo",
+  "reportScanning": "Revisando…",
+  "reportItems": [
+    {
+      "icon": "location_on",
+      "label": "Perfil de Google Business"
+    },
+    {
+      "icon": "devices",
+      "label": "Página web en el celular"
+    },
+    {
+      "icon": "search",
+      "label": "Aparición en Google"
+    },
+    {
+      "icon": "star",
+      "label": "Reseñas y reputación"
+    },
+    {
+      "icon": "thumb_up",
+      "label": "Redes sociales"
+    },
+    {
+      "icon": "groups",
+      "label": "Competencia en tu zona"
+    }
+  ],
+  "reportResult": "Recibes tus 3 acciones prioritarias",
+  "tickerItems": [
+    "Auditoría 100% gratis",
+    "Perfil de Google",
+    "Página web",
+    "Redes sociales",
+    "Reseñas",
+    "Competencia local",
+    "En inglés o español"
+  ],
+  "reviewTag": "Qué revisamos",
+  "reviewHeading": "Todo lo que ve un cliente antes de llamarte.",
+  "reviewIntro": "La mayoría de clientes te busca en Google antes de comprar. Revisamos lo mismo que ellos ven — y lo que tu competencia está haciendo mejor.",
+  "reviewItems": [
+    {
+      "icon": "location_on",
+      "title": "Perfil de Google Business",
+      "desc": "Si apareces en Google Maps, si tu información está completa y qué te falta para salir antes que la competencia."
+    },
+    {
+      "icon": "devices",
+      "title": "Página web",
+      "desc": "Cómo se ve en el celular, qué tan rápido carga, si es clara y si invita a llamar o escribir."
+    },
+    {
+      "icon": "search",
+      "title": "Búsquedas en Google",
+      "desc": "Si apareces cuando alguien busca tu servicio en tu zona, y qué palabras te están faltando."
+    },
+    {
+      "icon": "star",
+      "title": "Reseñas y reputación",
+      "desc": "Cuántas reseñas tienes, cómo respondes y qué imagen das frente a negocios parecidos."
+    },
+    {
+      "icon": "thumb_up",
+      "title": "Redes sociales",
+      "desc": "Si tus perfiles están activos, si se ven profesionales y si llevan a la gente a contactarte."
+    },
+    {
+      "icon": "groups",
+      "title": "Tu competencia",
+      "desc": "Qué están haciendo 2–3 competidores cercanos y en qué te llevan ventaja."
+    }
+  ],
+  "stepsTag": "Cómo funciona",
+  "stepsHeading": "Tres pasos. Cero costo.",
+  "steps": [
+    {
+      "title": "Llenas el formulario",
+      "desc": "Dos minutos: tu negocio, tu ciudad y, si los tienes, tu página web y tus redes."
+    },
+    {
+      "title": "Revisamos tu presencia",
+      "desc": "Analizamos Google, tu web, tus reseñas, tus redes y tu competencia local."
+    },
+    {
+      "title": "Recibes tu diagnóstico",
+      "desc": "Un resumen de 1 página con lo que está bien, lo que falta y las 3 acciones que más impacto tendrían. Si quieres, lo repasamos en una llamada de 15 minutos."
+    }
+  ],
+  "formTag": "Solicitar auditoría",
+  "formHeading": "Pide tu auditoría gratis.",
+  "formIntro": "Te enviamos tu diagnóstico por correo en un máximo de 3 días hábiles.",
+  "formPromises": [
+    "Sin costo y sin compromiso de contratar nada",
+    "Te explicamos todo en palabras simples",
+    "Puedes aplicar las recomendaciones tú mismo — o pedirnos ayuda"
+  ],
+  "form": {
+    "name": "Tu nombre",
+    "business": "Nombre del negocio",
+    "phone": "Teléfono / WhatsApp",
+    "email": "Correo electrónico",
+    "city": "Ciudad",
+    "cityPlaceholder": "Ej. Amityville, NY",
+    "industry": "Tipo de negocio",
+    "selectPlaceholder": "Selecciona una opción",
+    "industries": [
+      "Barbería / salón",
+      "Restaurante / comida",
+      "Contratista / servicios del hogar",
+      "Dentista / salud",
+      "Abogado / servicios profesionales",
+      "Tienda / retail",
+      "Otro"
+    ],
+    "site": "Página web (si tienes)",
+    "sitePlaceholder": "tunegocio.com",
+    "profiles": "Google, Instagram o Facebook (si tienes)",
+    "profilesPlaceholder": "Nombre en Google o @usuario",
+    "goal": "¿Qué quieres lograr?",
+    "goals": [
+      "Más llamadas y clientes",
+      "Aparecer en Google",
+      "Mejorar mi página web",
+      "Crecer en redes sociales",
+      "No sé por dónde empezar"
+    ],
+    "message": "Algo más que debamos saber",
+    "messagePlaceholder": "Opcional",
+    "submit": "Quiero mi auditoría gratis",
+    "privacy": "Usamos tus datos solo para preparar tu auditoría y contactarte sobre ella.",
+    "errorMessage": "No pudimos enviar tu solicitud. Revisa los campos e intenta de nuevo, o escríbenos por WhatsApp.",
+    "successHeading": "¡Solicitud recibida!",
+    "successText": "Ya estamos revisando tu negocio. Te enviaremos tu diagnóstico por correo en un máximo de 3 días hábiles."
+  },
+  "faqHeading": "Preguntas frecuentes",
+  "faq": [
+    {
+      "q": "¿De verdad es gratis?",
+      "a": "Sí. No pedimos tarjeta ni te comprometes a contratar nada. Es nuestra forma de mostrarte cómo trabajamos."
+    },
+    {
+      "q": "¿Cuánto tarda?",
+      "a": "Te enviamos tu diagnóstico por correo en un máximo de 3 días hábiles."
+    },
+    {
+      "q": "¿Qué necesito para pedirla?",
+      "a": "Solo el nombre de tu negocio y tu ciudad. Si tienes página web o redes, compártelas para que la revisión sea más completa."
+    },
+    {
+      "q": "¿Me van a presionar para comprar?",
+      "a": "No. Te damos recomendaciones claras que puedes aplicar tú mismo. Si quieres que te ayudemos, te explicamos cómo y cuánto costaría — la decisión es tuya."
+    },
+    {
+      "q": "¿Atienden negocios fuera de Long Island?",
+      "a": "Sí. Estamos en Long Island, pero hacemos auditorías para negocios en todo EE. UU., en inglés o en español."
+    }
+  ]
+}

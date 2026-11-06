@@ -1,0 +1,232 @@
+---
+// AUDITORÍA GRATIS — página imán de clientes (compartida por
+// /es/auditoria-gratis/ y /en/free-audit/; texto en audit.<locale>.json).
+// El formulario envía a /api/contact con formType=audit (mismo honeypot,
+// Turnstile y Resend que Contacto; asunto propio en el correo).
+import Icon from '../Icon.astro';
+import HomeTicker from '../home/HomeTicker.astro';
+import { highlightHeading } from '../../lib/highlight';
+
+interface Props { a: any; locale: 'es' | 'en' }
+const { a, locale } = Astro.props;
+const label = 'block text-text-secondary text-xs uppercase tracking-widest font-display font-semibold mb-2';
+---
+<!-- HERO -->
+<section class="bg-bg-void relative min-h-[92vh] flex items-center pt-28 md:pt-32 pb-section-py-sm overflow-hidden">
+  <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -top-48 -right-40 w-[40rem] h-[40rem] rounded-full bg-accent/20 blur-[130px] pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -bottom-56 -left-48 w-[32rem] h-[32rem] rounded-full bg-grad-indigo/70 blur-[120px] pointer-events-none" style="animation-delay:2.5s" aria-hidden="true"></div>
+  <div class="relative max-w-container-max mx-auto px-gutter w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-14 items-center">
+      <div class="hero-reveal min-w-0">
+        <span class="tag-cyber mb-6 inline-flex items-center gap-2"><span class="pulse-ring w-2 h-2 rounded-full bg-accent" aria-hidden="true"></span>{a.heroTag}</span>
+        <h1 class="uppercase font-display font-extrabold text-text-primary tracking-[-0.03em] leading-[0.98] text-[38px] sm:text-[52px] lg:text-[60px] xl:text-[70px] mb-7 break-words" set:html={highlightHeading(a.heroHeading, a.heroHighlight)}></h1>
+        <p class="text-body-lg text-text-secondary mb-8 max-w-xl">{a.heroParagraph}</p>
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href="#formulario" class="btn-cyber-solid shine pulse-ring magnetic press !py-4 !px-8">
+            <span class="icon-wrap uppercase">{a.heroCtaLabel} <Icon name="arrow_forward" class="text-base" /></span>
+            <span class="shine-sweep" aria-hidden="true"></span>
+          </a>
+        </div>
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-secondary">
+          {a.heroChecks.map((c: string) => <li class="flex items-center gap-2"><Icon name="check_circle" class="text-accent text-base" />{c}</li>)}
+        </ul>
+      </div>
+
+      <!-- Diagnóstico de ejemplo: los puntos se van revisando de a uno -->
+      <div class="hero-reveal reveal-delay min-w-0">
+        <div class="float-soft glow-border rounded-3xl bg-bg-depth/80 p-6 md:p-8 shadow-2xl">
+          <div class="flex items-center justify-between mb-6">
+            <p class="font-display uppercase font-bold text-text-primary text-sm">{a.reportTitle}</p>
+            <span class="text-[10px] font-display uppercase tracking-[0.2em] text-accent border border-accent/40 rounded-full px-2.5 py-1">{a.reportSampleLabel}</span>
+          </div>
+          <ul class="rot-audit space-y-2.5" data-rotator="audit-checks" data-interval="1200" data-pause-on-hover="false">
+            {a.reportItems.map((it: any, i: number) => (
+              <li data-rotator-item data-rotator-decor class={`audit-row flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 ${i === 0 ? 'is-active' : ''}`}>
+                <span class="flex items-center gap-3 min-w-0">
+                  <Icon name={it.icon} class="text-accent text-lg shrink-0" />
+                  <span class="text-sm text-text-primary truncate">{it.label}</span>
+                </span>
+                <span class="audit-scan text-[10px] font-display uppercase font-bold tracking-wide text-text-dim whitespace-nowrap">{a.reportScanning}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 rounded-xl bg-accent text-bg-void px-4 py-3 flex items-center gap-3">
+            <Icon name="task_alt" class="text-xl" />
+            <span class="text-sm font-semibold">{a.reportResult}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<HomeTicker items={a.tickerItems} />
+
+<!-- QUÉ REVISAMOS -->
+<section class="bg-bg-void py-section-py-sm md:py-section-py-lg">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="grid lg:grid-cols-2 gap-6 items-end mb-12 reveal">
+      <div>
+        <span class="tag-cyber mb-4 inline-flex">{a.reviewTag}</span>
+        <h2 class="uppercase font-display font-extrabold text-text-primary text-[30px] md:text-[48px] leading-[1.03]">{a.reviewHeading}</h2>
+      </div>
+      <p class="text-body-md text-text-secondary lg:text-right">{a.reviewIntro}</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {a.reviewItems.map((it: any, i: number) => (
+        <article class="tilt spot reveal rounded-3xl border border-white/10 bg-white/[0.03] hover:border-accent/50 p-7 flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="w-12 h-12 rounded-2xl bg-accent/12 border border-accent/30 flex items-center justify-center"><Icon name={it.icon} class="text-accent text-2xl" /></span>
+            <span class="font-display text-3xl text-white/15">0{i + 1}</span>
+          </div>
+          <h3 class="uppercase font-display font-bold text-lg text-text-primary">{it.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed">{it.desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ RECIBES -->
+<section class="on-light section-surface-white py-section-py-sm md:py-section-py-lg">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="text-center mb-14 reveal">
+      <span class="tag-cyber mb-4 inline-flex">{a.stepsTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg">{a.stepsHeading}</h2>
+    </div>
+    <ol class="relative grid md:grid-cols-3 gap-8 stagger-fade">
+      <span class="hidden md:block absolute left-0 right-0 top-7 h-0.5 bg-ink/10" aria-hidden="true"></span>
+      <span class="bar-grow hidden md:block absolute left-0 right-0 top-7 h-0.5 bg-accent" aria-hidden="true"></span>
+      {a.steps.map((s: any, i: number) => (
+        <li class="relative">
+          <span class="relative z-10 w-14 h-14 rounded-full bg-bg-void text-accent font-display text-lg flex items-center justify-center mb-5 shadow-lg pulse-ring">{i + 1}</span>
+          <h3 class="uppercase font-display font-bold text-lg mb-2">{s.title}</h3>
+          <p class="text-ink-dim text-sm leading-relaxed">{s.desc}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section id="formulario" class="bg-bg-depth relative py-section-py-sm md:py-section-py-lg scroll-mt-20 overflow-hidden">
+  <div class="grid-drift absolute inset-0 pointer-events-none opacity-60" aria-hidden="true"></div>
+  <div class="relative max-w-container-max mx-auto px-gutter">
+    <div class="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
+      <div class="reveal lg:sticky lg:top-28">
+        <span class="tag-cyber mb-5 inline-flex"><Icon name="search" class="text-sm" />{a.formTag}</span>
+        <h2 class="uppercase font-display font-extrabold text-text-primary text-[30px] md:text-[48px] leading-[1.03] mb-5">{a.formHeading}</h2>
+        <p class="text-text-secondary text-body-md mb-8">{a.formIntro}</p>
+        <ul class="space-y-3">
+          {a.formPromises.map((p: string) => <li class="flex items-start gap-3 text-text-primary text-sm"><Icon name="check_circle" class="text-accent text-lg shrink-0" />{p}</li>)}
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <div class="glow-border glass rounded-3xl p-7 md:p-9">
+          <div id="audit-error" class="!hidden tag-cyber !text-red-300 !border-red-400/30 mb-5"><Icon name="error" class="text-sm" /> {a.form.errorMessage}</div>
+          <form id="audit-form" class="space-y-5" method="POST" action="/api/contact" novalidate>
+            <input type="hidden" name="locale" value={locale} />
+            <input type="hidden" name="formType" value="audit" />
+            <input type="hidden" name="servicio" value="audit" />
+            <div class="absolute left-[-9999px]" aria-hidden="true">
+              <label>No llenar<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div><label for="a-nombre" class={label}>{a.form.name} *</label><input id="a-nombre" name="nombre" type="text" autocomplete="name" required class="input-cyber" /></div>
+              <div><label for="a-negocio" class={label}>{a.form.business} *</label><input id="a-negocio" name="negocio" type="text" autocomplete="organization" required class="input-cyber" /></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div><label for="a-telefono" class={label}>{a.form.phone} *</label><input id="a-telefono" name="telefono" type="tel" autocomplete="tel" required class="input-cyber" /></div>
+              <div><label for="a-email" class={label}>{a.form.email} *</label><input id="a-email" name="email" type="email" autocomplete="email" required class="input-cyber" /></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div><label for="a-ciudad" class={label}>{a.form.city}</label><input id="a-ciudad" name="ciudad" type="text" placeholder={a.form.cityPlaceholder} class="input-cyber" /></div>
+              <div>
+                <label for="a-industria" class={label}>{a.form.industry}</label>
+                <select id="a-industria" name="industria" class="input-cyber">
+                  <option value="">{a.form.selectPlaceholder}</option>
+                  {a.form.industries.map((o: string) => <option value={o}>{o}</option>)}
+                </select>
+              </div>
+            </div>
+            <div><label for="a-web" class={label}>{a.form.site}</label><input id="a-web" name="sitioWeb" type="text" inputmode="url" placeholder={a.form.sitePlaceholder} class="input-cyber" /></div>
+            <div><label for="a-perfiles" class={label}>{a.form.profiles}</label><input id="a-perfiles" name="perfiles" type="text" placeholder={a.form.profilesPlaceholder} class="input-cyber" /></div>
+            <div>
+              <label for="a-objetivo" class={label}>{a.form.goal}</label>
+              <select id="a-objetivo" name="objetivo" class="input-cyber">
+                <option value="">{a.form.selectPlaceholder}</option>
+                {a.form.goals.map((o: string) => <option value={o}>{o}</option>)}
+              </select>
+            </div>
+            <div><label for="a-mensaje" class={label}>{a.form.message}</label><textarea id="a-mensaje" name="mensaje" rows="3" placeholder={a.form.messagePlaceholder} class="input-cyber resize-none"></textarea></div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADyNgzCpNMskdjTs" data-action="turnstile-spin-v1" data-theme="dark" data-size="compact"></div>
+            <button type="submit" class="btn-cyber-solid shine w-full justify-center magnetic press !py-4">
+              <span class="uppercase">{a.form.submit}</span><span class="shine-sweep" aria-hidden="true"></span>
+            </button>
+            <p class="text-xs text-text-dim text-center">{a.form.privacy}</p>
+          </form>
+          <div id="audit-success" class="hidden text-center py-8">
+            <div class="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/30 flex items-center justify-center mx-auto mb-5 pulse-ring"><Icon name="check_circle" class="text-accent text-3xl" /></div>
+            <h3 class="uppercase font-display text-headline-lg-mobile text-text-primary mb-3">{a.form.successHeading}</h3>
+            <p class="text-text-secondary text-body-md">{a.form.successText}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-bg-void py-section-py-sm md:py-section-py-lg">
+  <div class="max-w-3xl mx-auto px-gutter">
+    <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg text-text-primary text-center mb-10 reveal">{a.faqHeading}</h2>
+    <div class="space-y-3 stagger-fade">
+      {a.faq.map((f: any) => (
+        <details class="glass rounded-2xl px-6 py-5 group">
+          <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-semibold text-text-primary">
+            {f.q}<Icon name="expand_more" class="text-accent shrink-0 transition-transform group-open:rotate-180" />
+          </summary>
+          <p class="text-text-secondary text-sm leading-relaxed mt-3">{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+<script>
+  const form = document.getElementById('audit-form') as HTMLFormElement | null;
+  const ok = document.getElementById('audit-success');
+  const err = document.getElementById('audit-error');
+  const btn = form?.querySelector('button[type=submit]') as HTMLButtonElement | null;
+  if (new URLSearchParams(location.search).get('error') === '1') err?.classList.remove('!hidden');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    err?.classList.add('!hidden');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (btn) { btn.disabled = true; btn.classList.add('opacity-60'); }
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { Accept: 'application/json', 'X-Requested-With': 'fetch' },
+        body: new FormData(form),
+      });
+      const data = await res.json().catch(() => ({ ok: false }));
+      if (res.ok && data.ok) {
+        form.classList.add('hidden');
+        ok?.classList.remove('hidden');
+        ok?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        err?.classList.remove('!hidden');
+        (window as any).turnstile?.reset?.();
+      }
+    } catch {
+      err?.classList.remove('!hidden');
+    } finally {
+      if (btn) { btn.disabled = false; btn.classList.remove('opacity-60'); }
+    }
+  });
+</script>
