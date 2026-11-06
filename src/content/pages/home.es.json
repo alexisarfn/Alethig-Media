@@ -18,8 +18,8 @@
     "href": "/contacto"
   },
   "heroCtaSecondary": {
-    "label": "Ver Servicios",
-    "href": "#servicios"
+    "label": "Auditoría gratis",
+    "href": "/auditoria-gratis"
   },
   "heroImage": "/uploads/home-hero.webp",
   "heroImageAlt": "Equipo de Alethig Media trabajando en estrategia de marketing digital",
@@ -42,6 +42,7 @@
     }
   ],
   "tickerItems": [
+    "Auditoría gratis de tu negocio",
     "Consulta gratis de 15 minutos",
     "Páginas web desde $799",
     "Sublimación: pedidos pequeños en 3–5 días",

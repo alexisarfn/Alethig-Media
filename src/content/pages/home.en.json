@@ -18,8 +18,8 @@
     "href": "/contact"
   },
   "heroCtaSecondary": {
-    "label": "View Services",
-    "href": "#services"
+    "label": "Free audit",
+    "href": "/free-audit"
   },
   "heroImage": "/uploads/home-hero.webp",
   "heroImageAlt": "Alethig Media team working on digital marketing strategy",
@@ -42,6 +42,7 @@
     }
   ],
   "tickerItems": [
+    "Free audit of your business",
     "Free 15-minute consultation",
     "Websites starting at $799",
     "Sublimation: small orders in 3–5 days",

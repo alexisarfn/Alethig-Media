@@ -1,0 +1,19 @@
+---
+// AUDITORÍA GRATIS — markup en src/components/audit/AuditPage.astro
+// (compartido ES/EN); texto en src/content/pages/audit.es.json.
+import Layout from '../../layouts/Layout.astro';
+import AuditPage from '../../components/audit/AuditPage.astro';
+import audit from '../../content/pages/audit.es.json';
+
+export const prerender = true;
+
+const BASE = '/es';
+---
+<Layout title={audit.title} description={audit.metaDescription} base={BASE} locale="es" altHref="/en/free-audit/" navTheme="dark">
+  <AuditPage a={audit} locale="es" />
+</Layout>
+
+<script>
+  import { initHomeMotion } from '../../scripts/home-motion';
+  initHomeMotion();
+</script>
