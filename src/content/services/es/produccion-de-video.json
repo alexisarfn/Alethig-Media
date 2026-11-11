@@ -15,11 +15,10 @@
     { "icon": "task_alt", "title": "Tú apruebas", "desc": "Revisas y apruebas el video final — revisiones incluidas antes de la entrega lista para publicar." }
   ],
   "plans": [
-    { "name": "Edición Básica", "sub": "Transiciones, texto, música", "price": "$75/video", "featured": false, "features": ["Transiciones", "Texto en pantalla", "Música", "Revisiones incluidas"] },
-    { "name": "Edición Estándar", "sub": "+ Efectos y mockups", "price": "$150/video", "featured": true, "features": ["Todo lo de Básica", "Efectos", "Mockups", "Revisiones incluidas"] },
-    { "name": "Edición Premium", "sub": "Producción completa", "price": "$350/video", "featured": false, "features": ["Animaciones", "Producción completa", "Revisiones incluidas"] },
-    { "name": "Bundle Semanal", "sub": "4 videos básicos/mes", "price": "$160/mes", "featured": false, "features": ["4 videos básicos al mes", "Contenido semanal", "Ahorro vs. por video"] },
-    { "name": "Bundle Semanal +", "sub": "4 videos estándar/mes", "price": "$360/mes", "featured": false, "features": ["4 videos estándar al mes", "Contenido semanal", "Ahorro vs. por video"] }
+    {"name": "Solo Edición", "sub": "Tú nos envías el material", "price": "Desde $75/video", "featured": false, "features": ["Cortes y transiciones", "Texto en pantalla", "Música libre de derechos", "Revisiones incluidas"]},
+    {"name": "Grabación + Edición", "sub": "Grabamos en tu negocio en Long Island", "price": "Desde $150/video", "featured": true, "features": ["Sesión de grabación en tu local", "Edición profesional", "Formato vertical para Reels/TikTok", "Revisiones incluidas"]},
+    {"name": "Producción Promocional", "sub": "Videos promocionales y anuncios", "price": "Desde $350/video", "featured": false, "features": ["Guion y planificación", "Varias escenas", "Animaciones", "Cotización final según el alcance"]},
+    {"name": "Reels Mensuales", "sub": "Con los planes de Contenido Gestionado", "price": "Incluido", "featured": false, "features": ["Edición de Reels incluida en los planes de Contenido Gestionado", "Grabación se cotiza aparte", "Ver página de precios"]}
   ],
   "ctaHeading": "¿Listo para grabar tu próximo video?",
   "ctaText": "Coordinamos la filmación en tu negocio y entregamos contenido listo para publicar. Hablemos.",
