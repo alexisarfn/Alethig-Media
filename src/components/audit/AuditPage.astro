@@ -216,6 +216,7 @@ const label = 'block text-text-secondary text-xs uppercase tracking-widest font-
       });
       const data = await res.json().catch(() => ({ ok: false }));
       if (res.ok && data.ok) {
+          (window as any).alethigTrackLead?.('free_audit_form');
         form.classList.add('hidden');
         ok?.classList.remove('hidden');
         ok?.scrollIntoView({ behavior: 'smooth', block: 'center' });

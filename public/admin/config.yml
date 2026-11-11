@@ -49,6 +49,13 @@ collections:
               - { name: instagram, label: "Instagram (URL)", widget: string, required: false }
               - { name: facebook, label: "Facebook (URL)", widget: string, required: false }
               - { name: tiktok, label: "TikTok (URL)", widget: string, required: false }
+          - name: analytics
+            label: "Medición (Google Analytics y Meta Pixel)"
+            widget: object
+            required: false
+            fields:
+              - { name: ga4MeasurementId, label: "Google Analytics 4 — ID de medición (G-XXXXXXXXXX)", widget: string, required: false }
+              - { name: metaPixelId, label: "Meta Pixel — ID del conjunto de datos (solo números)", widget: string, required: false }
 
       - name: site-es
         label: "Navegación y footer (Español)"
