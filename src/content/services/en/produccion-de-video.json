@@ -16,11 +16,10 @@
     { "icon": "task_alt", "title": "You Approve", "desc": "You review and approve the final video — revisions included before it's delivered ready to post." }
   ],
   "plans": [
-    { "name": "Basic Editing", "sub": "Transitions, text, music", "price": "$75/video", "featured": false, "features": ["Transitions", "On-screen text", "Music", "Revisions included"] },
-    { "name": "Standard Editing", "sub": "+ Effects and mockups", "price": "$150/video", "featured": true, "features": ["Everything in Basic", "Effects", "Mockups", "Revisions included"] },
-    { "name": "Premium Editing", "sub": "Full production", "price": "$350/video", "featured": false, "features": ["Animations", "Full production", "Revisions included"] },
-    { "name": "Weekly Bundle", "sub": "4 basic videos/month", "price": "$160/mo", "featured": false, "features": ["4 basic videos per month", "Weekly content", "Savings vs. per-video"] },
-    { "name": "Weekly Bundle +", "sub": "4 standard videos/month", "price": "$360/mo", "featured": false, "features": ["4 standard videos per month", "Weekly content", "Savings vs. per-video"] }
+    {"name": "Editing Only", "sub": "You send us the footage", "price": "From $75/video", "featured": false, "features": ["Cuts and transitions", "On-screen text", "Royalty-free music", "Revisions included"]},
+    {"name": "Film + Edit", "sub": "We film at your Long Island business", "price": "From $150/video", "featured": true, "features": ["On-site filming session", "Professional editing", "Vertical format for Reels/TikTok", "Revisions included"]},
+    {"name": "Promo Production", "sub": "Promotional videos and ads", "price": "From $350/video", "featured": false, "features": ["Script and planning", "Multiple scenes", "Animations", "Final quote based on scope"]},
+    {"name": "Monthly Reels", "sub": "With Managed Content plans", "price": "Included", "featured": false, "features": ["Reels editing included in Managed Content plans", "Filming quoted separately", "See our pricing page"]}
   ],
   "ctaHeading": "Ready to shoot your next video?",
   "ctaText": "We coordinate the shoot at your business and deliver content that's ready to post. Let's talk.",
