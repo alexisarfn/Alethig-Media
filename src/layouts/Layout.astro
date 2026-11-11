@@ -164,6 +164,13 @@ const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`
 // es público por diseño de Cloudflare, pero no se hardcodea aquí).
 const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
 
+// --- Medición: Google Analytics 4 y Meta Pixel (opcionales) ---
+// IDs públicos guardados en site.json (editables en /admin). Vacío = no se
+// carga nada. Se validan con regex para no inyectar texto arbitrario.
+const analyticsCfg = (site as { analytics?: { ga4MeasurementId?: string; metaPixelId?: string } }).analytics || {};
+const ga4Id = /^G-[A-Z0-9]{4,20}$/.test(String(analyticsCfg.ga4MeasurementId || '').trim()) ? String(analyticsCfg.ga4MeasurementId).trim() : '';
+const metaPixelId = /^[0-9]{6,20}$/.test(String(analyticsCfg.metaPixelId || '').trim()) ? String(analyticsCfg.metaPixelId).trim() : '';
+
 // --- JSON-LD (AdvertisingAgency / LocalBusiness) ---
 // Solo se incluyen campos con datos reales presentes en site.json.
 // Sin dirección postal completa ni coordenadas: no están en el contenido del sitio.
@@ -241,6 +248,36 @@ businessSchema.openingHoursSpecification = {
 
   <script type="application/ld+json" set:html={JSON.stringify(businessSchema)}></script>
 
+  {ga4Id && (
+    <>
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
+      <script is:inline define:vars={{ ga4Id }}>
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', ga4Id);
+      </script>
+    </>
+  )}
+  {metaPixelId && (
+    <script is:inline define:vars={{ metaPixelId }}>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      window.fbq('init', metaPixelId);
+      window.fbq('track', 'PageView');
+    </script>
+  )}
+  <script is:inline>
+    // Conversión: un formulario o el chat entregó un lead. Seguro aunque
+    // GA4/Pixel no estén configurados (no hace nada).
+    window.alethigTrackLead = function (source) {
+      try { if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { lead_source: source }); } catch (e) {}
+      try { if (typeof window.fbq === 'function') window.fbq('track', 'Lead', { content_name: source }); } catch (e) {}
+    };
+  </script>
   {cfBeaconToken && (
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={`{"token": "${cfBeaconToken}"}`}></script>
   )}

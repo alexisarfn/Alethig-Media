@@ -332,6 +332,7 @@ const t = STRINGS[locale] ?? STRINGS.es;
             history.push({ role: 'assistant', content: data.reply });
             saveHistory(history);
             if (data.leadSent === true) {
+              if (!leadSent && typeof window.alethigTrackLead === 'function') window.alethigTrackLead('chatbot');
               leadSent = true;
               saveLeadSent();
             }
