@@ -351,23 +351,32 @@ export const POST: APIRoute = async ({ request, locals }) => {
   // no había marcado ya leadSent=true (evita reenvíos duplicados). Un fallo
   // de Resend aquí se registra y se ignora — ver sendChatLead, que ya nunca
   // lanza; el try/catch de aquí es una segunda capa de seguridad.
+  // V3.1 — solo cuenta como lead si el visitante dejó teléfono o email.
+  // Antes, el modelo a veces incluía "lead" en el primer mensaje con solo el
+  // tipo de negocio: llegaba un correo sin forma de contactar a nadie y,
+  // peor, se marcaba leadSent=true, lo que bloqueaba el correo bueno cuando
+  // el visitante sí dejaba su teléfono más adelante. También evita disparar
+  // el evento Lead del Meta Pixel (ChatbotWidget) con leads vacíos.
   let leadSent: boolean | undefined;
-  if (parsed.lead && !leadAlreadySent) {
+  const l = parsed.lead;
+  if (l && (l.email || l.phone) && !leadAlreadySent) {
+    const fullConversation = [
+      ...history,
+      { role: 'user' as const, content: trimmedMessage },
+      { role: 'assistant' as const, content: parsed.message },
+    ];
     try {
-      await sendChatLead(env, locale, parsed.lead, [...history, { role: 'user', content: trimmedMessage }]);
+      await sendChatLead(env, locale, l, fullConversation);
     } catch (e) {
       console.error('Chatbot: sendChatLead falló inesperadamente (ignorado, no afecta la respuesta):', e);
     }
-    // Copia al CRM de Alethig Media OS (→ HubSpot) solo si hay email o teléfono.
-    const l = parsed.lead;
-    if (l.email || l.phone) {
-      await forwardLeadToOs(locals, {
-        name: l.name, email: l.email, phone: l.phone, company: l.business, city: l.location,
-        service: l.service_interest,
-        message: [l.business_type && `Tipo de negocio: ${l.business_type}`, l.marketing_goal && `Objetivo: ${l.marketing_goal}`, `Idioma: ${locale}`].filter(Boolean).join('\n'),
-        source_detail: 'chatbot',
-      });
-    }
+    // Copia al CRM de Alethig Media OS (→ HubSpot).
+    await forwardLeadToOs(locals, {
+      name: l.name, email: l.email, phone: l.phone, company: l.business, city: l.location,
+      service: l.service_interest,
+      message: [l.business_type && `Tipo de negocio: ${l.business_type}`, l.marketing_goal && `Objetivo: ${l.marketing_goal}`, `Idioma: ${locale}`].filter(Boolean).join('\n'),
+      source_detail: 'chatbot',
+    });
     leadSent = true;
   }
 

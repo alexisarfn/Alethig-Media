@@ -83,34 +83,58 @@ export async function sendChatLead(
     .map((key) => [labels[key], lead[key]] as const)
     .filter(([, value]) => typeof value === 'string' && value.trim().length > 0);
 
-  const ts = new Date().toISOString();
+  // V3.1 — hora de Nueva York (no UTC), asunto que se entiende en la
+  // bandeja del celular, y botones para responder con un toque.
+  const now = new Date();
+  const ts = now.toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'medium', timeStyle: 'short' }) + ' (NY)';
   const localeLabel = locale === 'en' ? 'English' : 'Español';
   const summary = summarizeConversation(history, locale);
 
-  const subject = `Nuevo lead del chatbot — ${lead.business || lead.name || (locale === 'en' ? 'unnamed' : 'sin nombre')}`;
+  const who = lead.name || lead.business || lead.business_type || 'sin nombre';
+  const what = lead.service_interest ? ` · ${lead.service_interest}` : '';
+  const subject = `🔥 Lead del chatbot: ${who}${what}`;
+
+  const digits = (lead.phone ?? '').replace(/\D/g, '');
+  const waDigits = digits.length === 10 ? `1${digits}` : digits;
+  const actions: { label: string; href: string }[] = [];
+  if (digits.length >= 7) {
+    actions.push({ label: '📞 Llamar', href: `tel:+${waDigits}` });
+    actions.push({ label: '💬 WhatsApp', href: `https://wa.me/${waDigits}` });
+  }
+  if (lead.email) actions.push({ label: '✉️ Responder por email', href: `mailto:${lead.email}` });
 
   const textLines = [
-    `Timestamp: ${ts}`,
-    `Locale: ${localeLabel}`,
+    `Recibido: ${ts}`,
+    `Idioma: ${localeLabel}`,
     ...presentFields.map(([label, value]) => `${label}: ${value}`),
-    `Source: chatbot`,
+    `Fuente: chatbot de alethigmedia.com`,
     '',
-    locale === 'en' ? 'Conversation summary:' : 'Resumen de la conversación:',
+    ...actions.map((a) => `${a.label}: ${a.href}`),
+    '',
+    'Conversación:',
     summary,
   ];
 
   const htmlRows = [
-    `<tr><td><b>Timestamp</b></td><td>${esc(ts)}</td></tr>`,
-    `<tr><td><b>Locale</b></td><td>${esc(localeLabel)}</td></tr>`,
-    ...presentFields.map(([label, value]) => `<tr><td><b>${esc(label)}</b></td><td>${esc(String(value))}</td></tr>`),
-    `<tr><td><b>Source</b></td><td>chatbot</td></tr>`,
+    ...presentFields.map(([label, value]) => `<tr><td style="color:#666">${esc(label)}</td><td><b>${esc(String(value))}</b></td></tr>`),
+    `<tr><td style="color:#666">Idioma</td><td>${esc(localeLabel)}</td></tr>`,
+    `<tr><td style="color:#666">Recibido</td><td>${esc(ts)}</td></tr>`,
+    `<tr><td style="color:#666">Fuente</td><td>Chatbot de alethigmedia.com</td></tr>`,
   ].join('');
 
+  const buttons = actions
+    .map((a) => `<a href="${esc(a.href)}" style="display:inline-block;margin:4px 6px 4px 0;padding:10px 14px;background:#000326;color:#D8A62B;border-radius:8px;text-decoration:none;font-weight:bold">${esc(a.label)}</a>`)
+    .join('');
+
   const html =
-    `<h2>Nuevo lead del chatbot</h2>` +
-    `<table cellpadding="6" style="border-collapse:collapse;font-family:sans-serif">${htmlRows}</table>` +
-    `<p><b>${locale === 'en' ? 'Conversation summary' : 'Resumen de la conversación'}:</b></p>` +
-    `<pre style="white-space:pre-wrap;font-family:sans-serif">${esc(summary)}</pre>`;
+    `<div style="font-family:sans-serif;max-width:560px">` +
+    `<h2 style="margin:0 0 8px">Nuevo lead del chatbot</h2>` +
+    `<p style="margin:0 0 12px;color:#444">Respóndele lo antes posible con uno de estos botones.</p>` +
+    (buttons ? `<p>${buttons}</p>` : '') +
+    `<table cellpadding="6" style="border-collapse:collapse">${htmlRows}</table>` +
+    `<p><b>Conversación:</b></p>` +
+    `<pre style="white-space:pre-wrap;font-family:sans-serif;background:#f4f4f4;padding:10px;border-radius:8px">${esc(summary)}</pre>` +
+    `</div>`;
 
   try {
     const r = await fetch(RESEND_ENDPOINT, {
