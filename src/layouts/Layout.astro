@@ -204,11 +204,11 @@ if (whatsapp?.number) {
 }
 const sameAs = [social?.instagram, social?.facebook, social?.tiktok].filter(Boolean);
 if (sameAs.length) businessSchema.sameAs = sameAs;
-// Horario tomado tal cual del texto público "Lun a Vie · 9:00 AM – 6:00 PM EST"
+// Horario tomado tal cual del texto público "Lun a Dom · 7:00 AM – 6:00 PM EST"
 businessSchema.openingHoursSpecification = {
   '@type': 'OpeningHoursSpecification',
-  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-  opens: '09:00',
+  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+  opens: '07:00',
   closes: '18:00',
 };
 ---
