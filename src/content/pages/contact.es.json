@@ -47,6 +47,14 @@
   "submitLabel": "Enviar Mi Mensaje →",
   "serviceOptions": [
     {
+      "value": "traffic-growth",
+      "label": "Traffic & Growth (Meta/Google Ads + SEO Local + leads)"
+    },
+    {
+      "value": "local-seo",
+      "label": "SEO Local y Perfil de Negocio de Google"
+    },
+    {
       "value": "social-media",
       "label": "Contenido para Redes Sociales + Alethig Media OS"
     },
