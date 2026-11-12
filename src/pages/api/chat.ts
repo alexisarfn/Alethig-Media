@@ -11,13 +11,37 @@ export const prerender = false;
 // implementar — @cf/meta/llama-3.1-8b-instruct-fast (128k de contexto,
 // multilingüe). Si Cloudflare lo retira en el futuro, cambiar solo esta
 // constante.
-const MODEL = '@cf/meta/llama-3.1-8b-instruct-fast';
-// V2: subido de 400 a 550 — el modelo ahora responde con un objeto JSON
-// (message + quickReplies/showContactActions/lead opcionales), que pesa más
-// en tokens que el texto plano de V1. Sin este margen, el JSON podía
-// truncarse a mitad y fallar el parseo (ver el fallback seguro más abajo,
-// que igual nunca rompe la UI, pero es mejor evitarlo).
+// Chatbot V3 — modelo principal más capaz (70B) con JSON Mode de Workers AI
+// (response_format json_schema): el modelo queda obligado a devolver el
+// objeto con la forma de abajo, en vez de "pedírselo" solo en el prompt —
+// que es lo que hacía que el 8B a veces respondiera prosa con listas de
+// markdown o con el esquema pegado al final. Ambos modelos están en la lista
+// oficial de JSON Mode de Workers AI.
+//
+// Si el modelo principal falla por cualquier motivo (límite de uso de la
+// cuenta, modelo retirado, error transitorio), se reintenta con el modelo
+// anterior (8B), igual que en V2 — el visitante nunca ve la diferencia.
+const PRIMARY_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
+const FALLBACK_MODEL = '@cf/meta/llama-3.1-8b-instruct-fast';
 const MAX_TOKENS = 550;
+
+const REPLY_SCHEMA = {
+  type: 'object',
+  properties: {
+    message: { type: 'string' },
+    quickReplies: { type: 'array', items: { type: 'string' } },
+    showContactActions: { type: 'boolean' },
+    lead: {
+      type: 'object',
+      properties: {
+        name: { type: 'string' }, business: { type: 'string' }, business_type: { type: 'string' },
+        location: { type: 'string' }, phone: { type: 'string' }, email: { type: 'string' },
+        service_interest: { type: 'string' }, marketing_goal: { type: 'string' },
+      },
+    },
+  },
+  required: ['message'],
+};
 
 // --- Validación de entrada (spec aprobada, sección F/G) ---
 const MAX_MESSAGE_LEN = 500;
@@ -137,6 +161,15 @@ function stripTrailingSchemaEcho(text: string): string {
   return text.trim();
 }
 
+// V3 — el prompt prohíbe markdown, pero si igual se cuela (listas con
+// "* " o "- ", negritas con **), se aplana a texto corrido: la burbuja del
+// chat no renderiza markdown y los asteriscos se veían crudos.
+function flattenMarkdown(text: string): string {
+  const lines = text.split('\n').map((l) => l.trim()).filter((l) => l.length > 0);
+  const out = lines.map((l) => l.replace(/^([*\-•]|\d+[.)])\s+/, '')).join(' ');
+  return out.replace(/\*\*(.+?)\*\*/g, '$1').replace(/__(.+?)__/g, '$1').replace(/\s{2,}/g, ' ').trim();
+}
+
 // Nunca lanza. Acepta `raw` en DOS formas posibles de result.response de
 // Workers AI: normalmente un string (que puede o no ser JSON válido), pero
 // quando el modelo produce una salida que "parece" JSON, Workers AI a veces
@@ -174,7 +207,7 @@ function parseModelReply(raw: unknown): ParsedReply | null {
       }
       if (!obj) {
         console.error('Chatbot: el modelo no devolvió JSON válido, usando texto plano. Salida cruda (primeros 300 caracteres):', raw.slice(0, 300));
-        return { message: stripTrailingSchemaEcho(raw) };
+        return { message: flattenMarkdown(stripTrailingSchemaEcho(raw)) };
       }
     }
   } else if (raw && typeof raw === 'object') {
@@ -185,14 +218,14 @@ function parseModelReply(raw: unknown): ParsedReply | null {
 
   if (obj && typeof obj === 'object' && typeof obj.message === 'string' && obj.message.trim().length > 0) {
     return {
-      message: obj.message.trim(),
+      message: flattenMarkdown(obj.message),
       quickReplies: sanitizeQuickReplies(obj.quickReplies),
       showContactActions: obj.showContactActions === true,
       lead: sanitizeLead(obj.lead),
     };
   }
   console.error('Chatbot: el modelo devolvió JSON con forma inesperada.', JSON.stringify(obj).slice(0, 300));
-  return rawText ? { message: stripTrailingSchemaEcho(rawText) } : null;
+  return rawText ? { message: flattenMarkdown(stripTrailingSchemaEcho(rawText)) } : null;
 }
 
 export const POST: APIRoute = async ({ request, locals }) => {
@@ -277,30 +310,40 @@ export const POST: APIRoute = async ({ request, locals }) => {
     console.error('Falta el binding AI: Workers AI no está configurado.');
     return json(503, { ok: false, error: 'unavailable' });
   }
-  let parsed: ParsedReply;
-  try {
-    const messages = [
-      { role: 'system', content: systemPrompt },
-      ...history.map((m) => ({ role: m.role, content: m.content })),
-      { role: 'user', content: trimmedMessage },
-    ];
-    const result = await ai.run(MODEL, { messages, max_tokens: MAX_TOKENS });
-    // result.response normalmente es un string, pero Workers AI a veces lo
-    // entrega ya como objeto parseado cuando la salida "parece" JSON — ver
-    // la nota detallada en parseModelReply, que acepta ambas formas.
+  const messages = [
+    { role: 'system', content: systemPrompt },
+    ...history.map((m) => ({ role: m.role, content: m.content })),
+    { role: 'user', content: trimmedMessage },
+  ];
+
+  // Una llamada al modelo → respuesta ya parseada, o lanza. result.response
+  // normalmente es un string, pero Workers AI a veces lo entrega ya como
+  // objeto (y siempre en JSON Mode) — parseModelReply acepta ambas formas.
+  const runModel = async (model: string, jsonMode: boolean): Promise<ParsedReply> => {
+    const input: Record<string, unknown> = { messages, max_tokens: MAX_TOKENS };
+    if (jsonMode) input.response_format = { type: 'json_schema', json_schema: REPLY_SCHEMA };
+    const result = await ai.run(model, input);
     const reply = result?.response;
     const isEmptyString = typeof reply === 'string' && reply.trim().length === 0;
     if (reply === undefined || reply === null || isEmptyString) {
       throw new Error('Respuesta vacía del modelo.');
     }
     const parsedOrNull = parseModelReply(reply);
-    if (!parsedOrNull) {
-      throw new Error('El modelo devolvió una respuesta sin forma utilizable.');
+    if (!parsedOrNull) throw new Error('El modelo devolvió una respuesta sin forma utilizable.');
+    return parsedOrNull;
+  };
+
+  let parsed: ParsedReply;
+  try {
+    parsed = await runModel(PRIMARY_MODEL, true);
+  } catch (primaryError) {
+    console.error('Chatbot: el modelo principal falló, usando el modelo de respaldo:', primaryError);
+    try {
+      parsed = await runModel(FALLBACK_MODEL, false);
+    } catch (e) {
+      console.error('Workers AI falló (también el respaldo):', e);
+      return json(502, { ok: false, error: 'unavailable' });
     }
-    parsed = parsedOrNull;
-  } catch (e) {
-    console.error('Workers AI falló:', e);
-    return json(502, { ok: false, error: 'unavailable' });
   }
 
   // --- Captura de lead (V2) — nunca debe romper la respuesta del chat ---

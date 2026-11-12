@@ -34,7 +34,8 @@ const STRINGS = {
     placeholder: 'Escribe tu pregunta…',
     sendLabel: 'Enviar mensaje',
     disclaimer: 'Puede cometer errores. Para cotizaciones exactas, contáctanos.',
-    greeting: 'Hola 👋 ¿En qué puedo ayudarte sobre nuestros servicios, precios o la consulta gratuita?',
+    greeting: 'Hola 👋 Soy el asistente de Alethig Media. ¿Qué quieres lograr con tu negocio?',
+    starters: ['Quiero más clientes', 'Ver precios', 'Auditoría gratis', 'Necesito una página web'],
     fallback: 'No pude responder en este momento, pero podemos ayudarte directamente.',
     rateLimited: 'Estás enviando mensajes muy rápido. Espera un momento y vuelve a intentar.',
     ctaWhatsapp: 'WhatsApp',
@@ -50,7 +51,8 @@ const STRINGS = {
     placeholder: 'Type your question…',
     sendLabel: 'Send message',
     disclaimer: 'May make mistakes. For exact quotes, contact us.',
-    greeting: 'Hi 👋 What would you like to know about our services, pricing, or the free consultation?',
+    greeting: "Hi 👋 I'm Alethig Media's assistant. What would you like to achieve for your business?",
+    starters: ['I want more customers', 'See pricing', 'Free audit', 'I need a website'],
     fallback: "I couldn't respond right now, but you can reach our team directly.",
     rateLimited: "You're sending messages too fast. Please wait a moment and try again.",
     ctaWhatsapp: 'WhatsApp',
@@ -251,6 +253,9 @@ const t = STRINGS[locale] ?? STRINGS.es;
     // la API como si fuera una respuesta real del modelo).
     if (history.length === 0) {
       renderMessage('assistant', t.greeting);
+      // V3: atajos iniciales (solo UI, igual que el saludo) — al tocar uno
+      // se envía como mensaje normal del visitante y desaparecen.
+      renderQuickReplies(t.starters);
     } else {
       for (var i = 0; i < history.length; i++) renderMessage(history[i].role, history[i].content);
     }
