@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import site from '../../content/settings/site.json';
 import contact from '../../content/pages/contact.es.json';
+import { forwardLeadToOs } from '../../lib/os-lead-intake';
 
 export const prerender = false;
 
@@ -189,6 +190,22 @@ export const POST: APIRoute = async ({ request, locals, redirect }) => {
     console.error('Resend fetch falló:', e);
     return fail(502, 'No se pudo enviar. Intenta de nuevo.');
   }
+
+  // --- Copia al CRM de Alethig Media OS (→ HubSpot). Nunca bloquea ni rompe el envío. ---
+  await forwardLeadToOs(locals, {
+    name: record.nombre,
+    email: record.email,
+    phone: record.telefono,
+    company: record.negocio,
+    city: isAudit ? data.ciudad : undefined,
+    service: record.servicio,
+    message: [
+      record.mensaje,
+      ...auditRows.map(([k, v]) => `${k}: ${v}`),
+      `Idioma: ${localeLabel}`,
+    ].filter(Boolean).join('\n'),
+    source_detail: isAudit ? 'free_audit_form' : 'contact_form',
+  });
 
   return wantsJson
     ? new Response(JSON.stringify({ ok: true }), {

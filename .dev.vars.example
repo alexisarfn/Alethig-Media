@@ -11,3 +11,10 @@ TURNSTILE_SECRET_KEY=
 # Resend (envío del formulario de contacto por email). API key del dashboard
 # de Resend; el dominio remitente debe estar verificado ahí.
 RESEND_API_KEY=
+
+# Copia de los leads (formularios + chatbot) al CRM de Alethig Media OS,
+# que luego los pasa a HubSpot. Opcional: sin estas dos, el sitio sigue
+# enviando solo el correo. El secreto debe ser IGUAL a LEAD_INTAKE_SECRET
+# en Railway (app.alethigmedia.com).
+OS_LEAD_INTAKE_URL=https://app.alethigmedia.com/api/leads/intake
+OS_LEAD_INTAKE_SECRET=
