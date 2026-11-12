@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { buildChatContext, buildSystemPrompt, type ChatLocale } from '../../lib/chatbot-context';
 import { sendChatLead, type ChatLead } from '../../lib/chat-lead';
+import { forwardLeadToOs } from '../../lib/os-lead-intake';
 
 export const prerender = false;
 
@@ -313,6 +314,16 @@ export const POST: APIRoute = async ({ request, locals }) => {
       await sendChatLead(env, locale, parsed.lead, [...history, { role: 'user', content: trimmedMessage }]);
     } catch (e) {
       console.error('Chatbot: sendChatLead falló inesperadamente (ignorado, no afecta la respuesta):', e);
+    }
+    // Copia al CRM de Alethig Media OS (→ HubSpot) solo si hay email o teléfono.
+    const l = parsed.lead;
+    if (l.email || l.phone) {
+      await forwardLeadToOs(locals, {
+        name: l.name, email: l.email, phone: l.phone, company: l.business, city: l.location,
+        service: l.service_interest,
+        message: [l.business_type && `Tipo de negocio: ${l.business_type}`, l.marketing_goal && `Objetivo: ${l.marketing_goal}`, `Idioma: ${locale}`].filter(Boolean).join('\n'),
+        source_detail: 'chatbot',
+      });
     }
     leadSent = true;
   }
