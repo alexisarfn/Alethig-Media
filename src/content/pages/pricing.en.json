@@ -211,15 +211,15 @@
   "osTag": "Alethig Media OS",
   "osIcon": "bolt",
   "osHeading": "Alethig Media OS.",
-  "osBody": "Pro $37/mo · Max $67/mo · Max annual $500/yr. Access starts in January, with a 5-day free trial.",
+  "osBody": "Pro $37/mo · Max $67/mo · Max annual $500/yr. 5-day free trial.",
   "osFeatures": [
     "Content",
     "Approvals",
     "Projects",
     "Workflows"
   ],
-  "osCtaLabel": "Contact",
-  "osCtaHref": "/contact",
+  "osCtaLabel": "Start your free trial",
+  "osCtaHref": "https://app.alethigmedia.com/signup",
   "osSecondaryLabel": "Learn About Alethig Media OS",
   "osSecondaryHref": "/alethig-media-os",
   "subTag": "Sublimation & Branded Products",
