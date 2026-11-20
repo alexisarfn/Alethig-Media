@@ -20,7 +20,7 @@
     {
       "name": "Starter",
       "sub": "1 primary channel",
-      "price": "$750/mo",
+      "price": "$649/mo",
       "featured": false,
       "features": [
         "Meta Ads or Google Ads (1 channel)",
@@ -33,7 +33,7 @@
     {
       "name": "Growth",
       "sub": "Multi-channel strategy",
-      "price": "$1,250/mo",
+      "price": "$1,090/mo",
       "featured": true,
       "features": [
         "Meta + Google, or Paid Ads + Local SEO",
@@ -46,7 +46,7 @@
     {
       "name": "Scale",
       "sub": "Full coverage",
-      "price": "$1,950/mo",
+      "price": "$1,690/mo",
       "featured": false,
       "features": [
         "Meta Ads",
@@ -68,7 +68,7 @@
     {
       "name": "Starter",
       "sub": "Local fundamentals",
-      "price": "$499/mo",
+      "price": "$449/mo",
       "featured": false,
       "features": [
         "Google Business Profile optimization",
@@ -80,7 +80,7 @@
     {
       "name": "Growth",
       "sub": "Local growth",
-      "price": "$799/mo",
+      "price": "$749/mo",
       "featured": true,
       "features": [
         "Everything in Starter",
@@ -92,7 +92,7 @@
     {
       "name": "Pro",
       "sub": "Maximum local visibility",
-      "price": "$1,199/mo",
+      "price": "$1,090/mo",
       "featured": false,
       "features": [
         "Everything in Growth",
@@ -114,11 +114,11 @@
   "contentPlans": [
     {
       "name": "Content Starter",
-      "sub": "~8 pieces/month",
-      "price": "$599/mo",
+      "sub": "12 pieces/month",
+      "price": "$549/mo",
       "featured": false,
       "features": [
-        "Approximately 8 content pieces/month",
+        "12 content pieces/month",
         "Design + copy",
         "Content organization",
         "Review and approval through Alethig Media OS"
@@ -126,11 +126,11 @@
     },
     {
       "name": "Content Growth",
-      "sub": "~12–16 pieces/month",
-      "price": "$899/mo",
+      "sub": "20 pieces/month, 4 Reels",
+      "price": "$849/mo",
       "featured": true,
       "features": [
-        "Approximately 12–16 pieces/month",
+        "20 pieces/month, including 4 Reels",
         "Posts + Reels",
         "Content planning",
         "Review, revisions and approval",
@@ -139,11 +139,11 @@
     },
     {
       "name": "Content Pro",
-      "sub": "~16–20 pieces/month",
-      "price": "$1,299/mo",
+      "sub": "30 pieces/month, 8 Reels",
+      "price": "$1,190/mo",
       "featured": false,
       "features": [
-        "Approximately 16–20 pieces/month",
+        "30 pieces/month, including 8 Reels",
         "More Reels & video content",
         "Content strategy",
         "Priority handling",
@@ -162,19 +162,19 @@
   "webItems": [
     {
       "name": "Landing Page",
-      "price": "Starting at $799"
+      "price": "Starting at $699"
     },
     {
       "name": "Starter Website",
-      "price": "Starting at $1,499"
+      "price": "Starting at $1,390"
     },
     {
       "name": "Growth Website",
-      "price": "Starting at $2,499"
+      "price": "Starting at $2,290"
     },
     {
       "name": "Advanced / Ecommerce",
-      "price": "Starting at $3,500+"
+      "price": "Starting at $3,290+"
     }
   ],
   "brandTag": "Brand Design",
@@ -193,11 +193,11 @@
     },
     {
       "name": "Brand Essentials",
-      "price": "$599"
+      "price": "$549"
     },
     {
       "name": "Full Brand Identity",
-      "price": "$1,199+"
+      "price": "$1,090+"
     }
   ],
   "videoTag": "Video",
@@ -211,7 +211,7 @@
   "osTag": "Alethig Media OS",
   "osIcon": "bolt",
   "osHeading": "Alethig Media OS.",
-  "osBody": "Plans coming soon. Contact us for access options.",
+  "osBody": "Pro $37/mo · Max $67/mo · Max annual $500/yr. Access starts in January, with a 5-day free trial.",
   "osFeatures": [
     "Content",
     "Approvals",

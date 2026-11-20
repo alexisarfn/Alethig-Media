@@ -1,0 +1,20 @@
+---
+// Precios regionales para campañas pagadas (mexico). Misma plantilla que
+// /es/precios/ (PricingPage.astro); texto y precios en pricing.mx.json.
+// noindex y fuera del sitemap: solo se llega desde los anuncios de ese país.
+import Layout from '../../../layouts/Layout.astro';
+import PricingPage from '../../../components/bold/PricingPage.astro';
+import pricing from '../../../content/pages/pricing.mx.json';
+
+export const prerender = true;
+
+const BASE = '/es';
+---
+<Layout title={pricing.title} description={pricing.metaDescription} base={BASE} locale="es" navTheme="dark" noindex>
+  <PricingPage p={pricing} base={BASE} />
+</Layout>
+
+<script>
+  import { initTabs } from '../../../scripts/tabs';
+  initTabs();
+</script>

@@ -20,7 +20,7 @@
     {
       "name": "Starter",
       "sub": "1 canal principal",
-      "price": "$750/mes",
+      "price": "$649/mes",
       "featured": false,
       "features": [
         "Meta Ads o Google Ads (1 canal)",
@@ -33,7 +33,7 @@
     {
       "name": "Growth",
       "sub": "Estrategia multicanal",
-      "price": "$1,250/mes",
+      "price": "$1,090/mes",
       "featured": true,
       "features": [
         "Meta + Google, o Publicidad + SEO Local",
@@ -46,7 +46,7 @@
     {
       "name": "Scale",
       "sub": "Cobertura completa",
-      "price": "$1,950/mes",
+      "price": "$1,690/mes",
       "featured": false,
       "features": [
         "Meta Ads",
@@ -68,7 +68,7 @@
     {
       "name": "Starter",
       "sub": "Fundamentos locales",
-      "price": "$499/mes",
+      "price": "$449/mes",
       "featured": false,
       "features": [
         "Optimización de Google Business Profile",
@@ -80,7 +80,7 @@
     {
       "name": "Growth",
       "sub": "Crecimiento local",
-      "price": "$799/mes",
+      "price": "$749/mes",
       "featured": true,
       "features": [
         "Todo lo de Starter",
@@ -92,7 +92,7 @@
     {
       "name": "Pro",
       "sub": "Máxima visibilidad local",
-      "price": "$1,199/mes",
+      "price": "$1,090/mes",
       "featured": false,
       "features": [
         "Todo lo de Growth",
@@ -114,11 +114,11 @@
   "contentPlans": [
     {
       "name": "Content Starter",
-      "sub": "Aprox. 8 piezas/mes",
-      "price": "$599/mes",
+      "sub": "12 piezas/mes",
+      "price": "$549/mes",
       "featured": false,
       "features": [
-        "Aprox. 8 piezas de contenido al mes",
+        "12 piezas de contenido al mes",
         "Diseño y textos",
         "Organización de contenido",
         "Revisión y aprobación en Alethig Media OS"
@@ -126,11 +126,11 @@
     },
     {
       "name": "Content Growth",
-      "sub": "Aprox. 12–16 piezas/mes",
-      "price": "$899/mes",
+      "sub": "20 piezas/mes, 4 Reels",
+      "price": "$849/mes",
       "featured": true,
       "features": [
-        "Aprox. 12–16 piezas al mes",
+        "20 piezas al mes, incluye 4 Reels",
         "Publicaciones + Reels",
         "Planeación de contenido",
         "Revisión, cambios y aprobación",
@@ -139,11 +139,11 @@
     },
     {
       "name": "Content Pro",
-      "sub": "Aprox. 16–20 piezas/mes",
-      "price": "$1,299/mes",
+      "sub": "30 piezas/mes, 8 Reels",
+      "price": "$1,190/mes",
       "featured": false,
       "features": [
-        "Aprox. 16–20 piezas al mes",
+        "30 piezas al mes, incluye 8 Reels",
         "Más Reels y contenido en video",
         "Estrategia de contenido",
         "Atención prioritaria",
@@ -162,19 +162,19 @@
   "webItems": [
     {
       "name": "Landing Page",
-      "price": "Desde $799"
+      "price": "Desde $699"
     },
     {
       "name": "Sitio Starter",
-      "price": "Desde $1,499"
+      "price": "Desde $1,390"
     },
     {
       "name": "Sitio Growth",
-      "price": "Desde $2,499"
+      "price": "Desde $2,290"
     },
     {
       "name": "Avanzado / E-commerce",
-      "price": "Desde $3,500+"
+      "price": "Desde $3,290+"
     }
   ],
   "brandTag": "Diseño de Marca",
@@ -193,11 +193,11 @@
     },
     {
       "name": "Esenciales de Marca",
-      "price": "$599"
+      "price": "$549"
     },
     {
       "name": "Identidad de Marca Completa",
-      "price": "$1,199+"
+      "price": "$1,090+"
     }
   ],
   "videoTag": "Video",
@@ -211,7 +211,7 @@
   "osTag": "Alethig Media OS",
   "osIcon": "bolt",
   "osHeading": "Alethig Media OS.",
-  "osBody": "Planes próximamente. Contáctanos para conocer opciones de acceso.",
+  "osBody": "Pro $37/mes · Max $67/mes · Max anual $500/año. Acceso a partir de enero, con 5 días de prueba gratis.",
   "osFeatures": [
     "Contenido",
     "Aprobaciones",

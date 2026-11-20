@@ -12,14 +12,61 @@
   "image": "/uploads/servicio-redes.webp",
   "imageAlt": "Creación de contenido para redes sociales, gestionado con Alethig Media OS",
   "features": [
-    { "icon": "movie_edit", "title": "Creación de Contenido", "desc": "Diseños, textos y Reels producidos por nuestro equipo cada mes para tus redes sociales." },
-    { "icon": "calendar_month", "title": "Calendario y Aprobaciones", "desc": "Revisa, aprueba y solicita cambios desde Alethig Media OS — todo organizado en un calendario de contenido." },
-    { "icon": "bolt", "title": "Colaboración en Alethig Media OS", "desc": "Organiza el flujo de trabajo con nuestro equipo directamente desde la plataforma, sin cadenas de correos." }
+    {
+      "icon": "movie_edit",
+      "title": "Creación de Contenido",
+      "desc": "Diseños, textos y Reels producidos por nuestro equipo cada mes para tus redes sociales."
+    },
+    {
+      "icon": "calendar_month",
+      "title": "Calendario y Aprobaciones",
+      "desc": "Revisa, aprueba y solicita cambios desde Alethig Media OS — todo organizado en un calendario de contenido."
+    },
+    {
+      "icon": "bolt",
+      "title": "Colaboración en Alethig Media OS",
+      "desc": "Organiza el flujo de trabajo con nuestro equipo directamente desde la plataforma, sin cadenas de correos."
+    }
   ],
   "plans": [
-    { "name": "Content Starter", "sub": "Aprox. 8 piezas/mes", "price": "$599/mes", "featured": false, "features": ["Aprox. 8 piezas de contenido al mes", "Diseño y textos", "Organización de contenido", "Revisión y aprobación en Alethig Media OS"] },
-    { "name": "Content Growth", "sub": "Aprox. 12–16 piezas/mes", "price": "$899/mes", "featured": true, "features": ["Aprox. 12–16 piezas al mes", "Publicaciones + Reels", "Planeación de contenido", "Revisión, cambios y aprobación", "Calendario de contenido en Alethig Media OS"] },
-    { "name": "Content Pro", "sub": "Aprox. 16–20 piezas/mes", "price": "$1,299/mes", "featured": false, "features": ["Aprox. 16–20 piezas al mes", "Más Reels y contenido en video", "Estrategia de contenido", "Atención prioritaria", "Flujo de trabajo en Alethig Media OS"] }
+    {
+      "name": "Content Starter",
+      "sub": "12 piezas/mes",
+      "price": "$549/mes",
+      "featured": false,
+      "features": [
+        "12 piezas de contenido al mes",
+        "Diseño y textos",
+        "Organización de contenido",
+        "Revisión y aprobación en Alethig Media OS"
+      ]
+    },
+    {
+      "name": "Content Growth",
+      "sub": "20 piezas/mes, 4 Reels",
+      "price": "$849/mes",
+      "featured": true,
+      "features": [
+        "20 piezas al mes, incluye 4 Reels",
+        "Publicaciones + Reels",
+        "Planeación de contenido",
+        "Revisión, cambios y aprobación",
+        "Calendario de contenido en Alethig Media OS"
+      ]
+    },
+    {
+      "name": "Content Pro",
+      "sub": "30 piezas/mes, 8 Reels",
+      "price": "$1,190/mes",
+      "featured": false,
+      "features": [
+        "30 piezas al mes, incluye 8 Reels",
+        "Más Reels y contenido en video",
+        "Estrategia de contenido",
+        "Atención prioritaria",
+        "Flujo de trabajo en Alethig Media OS"
+      ]
+    }
   ],
   "plansHeading": "Precios",
   "ctaHeading": "¿Listo Para Organizar Tu Contenido?",

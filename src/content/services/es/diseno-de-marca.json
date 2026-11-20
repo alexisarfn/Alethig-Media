@@ -16,8 +16,8 @@
   ],
   "plans": [
     { "name": "Logo Starter", "sub": "Identidad inicial", "price": "$299", "featured": false, "features": ["Logotipo profesional", "Archivos listos para uso comercial"], "group": "package" },
-    { "name": "Brand Essentials", "sub": "Identidad esencial", "price": "$599", "featured": false, "features": ["Logotipo profesional", "Paleta de colores y tipografía", "Kit básico de marca"], "group": "package" },
-    { "name": "Full Brand Identity", "sub": "Identidad completa", "price": "$1,199+", "featured": false, "features": ["Logotipo profesional", "Sistema de marca completo", "Guía de marca", "Aplicaciones de marca"], "group": "package" },
+    { "name": "Brand Essentials", "sub": "Identidad esencial", "price": "$549", "featured": false, "features": ["Logotipo profesional", "Paleta de colores y tipografía", "Kit básico de marca"], "group": "package" },
+    { "name": "Full Brand Identity", "sub": "Identidad completa", "price": "$1,090+", "featured": false, "features": ["Logotipo profesional", "Sistema de marca completo", "Guía de marca", "Aplicaciones de marca"], "group": "package" },
     { "name": "Tarjeta de Presentación", "sub": "Adicional", "price": "Cotización", "featured": false, "features": ["Diseño profesional", "Listo para imprimir"], "group": "addon" },
     { "name": "Flyer", "sub": "Adicional", "price": "Cotización", "featured": false, "features": ["Diseño profesional", "Listo para imprimir o redes"], "group": "addon" },
     { "name": "Banner / Portada", "sub": "Adicional", "price": "Cotización", "featured": false, "features": ["Portada para redes", "Optimizado por plataforma"], "group": "addon" },

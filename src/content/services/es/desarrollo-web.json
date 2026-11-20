@@ -1,6 +1,6 @@
 {
   "title": "Desarrollo Web",
-  "metaDescription": "Desarrollo web para negocios, con base en Long Island, NY. Sitios rápidos y modernos que convierten visitantes en clientes, desde $799. Bilingüe inglés y español — Alethig Media.",
+  "metaDescription": "Desarrollo web para negocios, con base en Long Island, NY. Sitios rápidos y modernos que convierten visitantes en clientes, desde $699. Bilingüe inglés y español — Alethig Media.",
   "order": 5,
   "icon": "language",
   "heroHeading": "Un sitio web profesional que funciona en todos los dispositivos",
@@ -15,10 +15,10 @@
     { "icon": "palette", "title": "Escalable a tu negocio", "desc": "Desde una landing page hasta una tienda en línea completa, con el nivel de funcionalidad que tu negocio necesita." }
   ],
   "plans": [
-    { "name": "Landing Page", "sub": "1 página de conversión", "price": "Desde $799", "featured": false, "features": ["Una página de conversión", "Hosting + SSL incluidos", "Correo corporativo", "Adaptada a tu marca"] },
-    { "name": "Sitio Starter", "sub": "Sitio de negocio", "price": "Desde $1,499", "featured": false, "features": ["Sitio de varias páginas", "Hosting + SSL incluidos", "Correo corporativo", "Diseño profesional"] },
-    { "name": "Sitio Growth", "sub": "Más páginas y funciones", "price": "Desde $2,499", "featured": false, "features": ["Más páginas y funcionalidad", "Hosting + SSL incluidos", "Correo corporativo", "Integraciones según el proyecto"] },
-    { "name": "Avanzado / E-commerce", "sub": "Tienda en línea", "price": "Desde $3,500+", "featured": false, "features": ["Tienda en línea o funcionalidad avanzada", "Pasarela de pagos cuando aplique", "Hosting + SSL incluidos", "Correo corporativo"] }
+    { "name": "Landing Page", "sub": "1 página de conversión", "price": "Desde $699", "featured": false, "features": ["Una página de conversión", "Hosting + SSL incluidos", "Correo corporativo", "Adaptada a tu marca"] },
+    { "name": "Sitio Starter", "sub": "Sitio de negocio", "price": "Desde $1,390", "featured": false, "features": ["Sitio de varias páginas", "Hosting + SSL incluidos", "Correo corporativo", "Diseño profesional"] },
+    { "name": "Sitio Growth", "sub": "Más páginas y funciones", "price": "Desde $2,290", "featured": false, "features": ["Más páginas y funcionalidad", "Hosting + SSL incluidos", "Correo corporativo", "Integraciones según el proyecto"] },
+    { "name": "Avanzado / E-commerce", "sub": "Tienda en línea", "price": "Desde $3,290+", "featured": false, "features": ["Tienda en línea o funcionalidad avanzada", "Pasarela de pagos cuando aplique", "Hosting + SSL incluidos", "Correo corporativo"] }
   ],
   "plansHeading": "Precios",
   "ctaHeading": "¿Listo para tu nuevo sitio web?",

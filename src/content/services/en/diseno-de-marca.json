@@ -17,8 +17,8 @@
   ],
   "plans": [
     { "name": "Logo Starter", "sub": "Starting identity", "price": "$299", "featured": false, "features": ["Professional logo", "Commercial-use-ready files"], "group": "package" },
-    { "name": "Brand Essentials", "sub": "Essential identity", "price": "$599", "featured": false, "features": ["Professional logo", "Color palette and typography", "Basic brand kit"], "group": "package" },
-    { "name": "Full Brand Identity", "sub": "Complete identity", "price": "$1,199+", "featured": false, "features": ["Professional logo", "Complete brand system", "Brand guide", "Brand applications"], "group": "package" },
+    { "name": "Brand Essentials", "sub": "Essential identity", "price": "$549", "featured": false, "features": ["Professional logo", "Color palette and typography", "Basic brand kit"], "group": "package" },
+    { "name": "Full Brand Identity", "sub": "Complete identity", "price": "$1,090+", "featured": false, "features": ["Professional logo", "Complete brand system", "Brand guide", "Brand applications"], "group": "package" },
     { "name": "Business Card", "sub": "Add-on", "price": "Custom Quote", "featured": false, "features": ["Professional design", "Print-ready"], "group": "addon" },
     { "name": "Flyer", "sub": "Add-on", "price": "Custom Quote", "featured": false, "features": ["Professional design", "Ready for print or social"], "group": "addon" },
     { "name": "Banner / Cover Photo", "sub": "Add-on", "price": "Custom Quote", "featured": false, "features": ["Social media cover photo", "Optimized per platform"], "group": "addon" },

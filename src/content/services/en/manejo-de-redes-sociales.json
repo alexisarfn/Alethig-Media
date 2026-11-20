@@ -13,14 +13,61 @@
   "image": "/uploads/servicio-redes.webp",
   "imageAlt": "Social media content creation, managed through Alethig Media OS",
   "features": [
-    { "icon": "movie_edit", "title": "Content Creation", "desc": "Designs, copy and Reels produced by our team every month for your social channels." },
-    { "icon": "calendar_month", "title": "Calendar & Approvals", "desc": "Review, approve and request changes through Alethig Media OS — everything organized in one content calendar." },
-    { "icon": "bolt", "title": "Collaboration in Alethig Media OS", "desc": "Organize the workflow with our team directly through the platform — no email chains." }
+    {
+      "icon": "movie_edit",
+      "title": "Content Creation",
+      "desc": "Designs, copy and Reels produced by our team every month for your social channels."
+    },
+    {
+      "icon": "calendar_month",
+      "title": "Calendar & Approvals",
+      "desc": "Review, approve and request changes through Alethig Media OS — everything organized in one content calendar."
+    },
+    {
+      "icon": "bolt",
+      "title": "Collaboration in Alethig Media OS",
+      "desc": "Organize the workflow with our team directly through the platform — no email chains."
+    }
   ],
   "plans": [
-    { "name": "Content Starter", "sub": "~8 pieces/month", "price": "$599/mo", "featured": false, "features": ["Approximately 8 content pieces/month", "Design + copy", "Content organization", "Review and approval through Alethig Media OS"] },
-    { "name": "Content Growth", "sub": "~12–16 pieces/month", "price": "$899/mo", "featured": true, "features": ["Approximately 12–16 pieces/month", "Posts + Reels", "Content planning", "Review, revisions and approval", "Content calendar in Alethig Media OS"] },
-    { "name": "Content Pro", "sub": "~16–20 pieces/month", "price": "$1,299/mo", "featured": false, "features": ["Approximately 16–20 pieces/month", "More Reels & video content", "Content strategy", "Priority handling", "Alethig Media OS workflow"] }
+    {
+      "name": "Content Starter",
+      "sub": "12 pieces/month",
+      "price": "$549/mo",
+      "featured": false,
+      "features": [
+        "12 content pieces/month",
+        "Design + copy",
+        "Content organization",
+        "Review and approval through Alethig Media OS"
+      ]
+    },
+    {
+      "name": "Content Growth",
+      "sub": "20 pieces/month, 4 Reels",
+      "price": "$849/mo",
+      "featured": true,
+      "features": [
+        "20 pieces/month, including 4 Reels",
+        "Posts + Reels",
+        "Content planning",
+        "Review, revisions and approval",
+        "Content calendar in Alethig Media OS"
+      ]
+    },
+    {
+      "name": "Content Pro",
+      "sub": "30 pieces/month, 8 Reels",
+      "price": "$1,190/mo",
+      "featured": false,
+      "features": [
+        "30 pieces/month, including 8 Reels",
+        "More Reels & video content",
+        "Content strategy",
+        "Priority handling",
+        "Alethig Media OS workflow"
+      ]
+    }
   ],
   "plansHeading": "Pricing",
   "ctaHeading": "Ready to Get Your Content Organized?",
