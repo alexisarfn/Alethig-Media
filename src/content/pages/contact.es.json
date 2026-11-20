@@ -140,6 +140,14 @@
     {
       "question": "¿Qué pasa en la consulta gratuita de 15 minutos?",
       "answer": "Es una llamada sin compromiso donde: conocemos su negocio y objetivos → identificamos sus necesidades de marketing → le recomendamos los servicios más adecuados → explicamos los próximos pasos. Al finalizar, si decide continuar, le enviamos una propuesta personalizada."
+    },
+    {
+      "question": "¿Qué formas de pago aceptan?",
+      "answer": "Aceptamos tarjeta de crédito o débito, PayPal y Zelle. Los planes mensuales se pagan al inicio de cada ciclo; los proyectos únicos (logo, sitio web, video) se pagan completos o por etapas, según lo acordado."
+    },
+    {
+      "question": "¿Trabajan con negocios fuera de EE. UU.?",
+      "answer": "Sí, trabajamos de forma remota con negocios de otros países. Los precios publicados son para EE. UU.; si tu negocio está en otro país, pide una cotización y ajustamos el precio a tu país y tu moneda."
     }
   ]
 }

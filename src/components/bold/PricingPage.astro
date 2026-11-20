@@ -138,7 +138,12 @@ const starts = [p.tgPlans[0]?.price, p.seoPlans[0]?.price, p.webItems[0]?.price]
       </div>
     ))}
 
-    <p class="text-center text-sm text-text-dim inline-flex w-full justify-center items-center gap-2"><Icon name={p.regionIcon} class="text-accent" />{p.regionNote}</p>
+    <div class="text-center text-sm text-text-dim space-y-3">
+      {p.paymentNote && <p class="inline-flex w-full justify-center items-center gap-2"><Icon name="payments" class="text-accent" />{p.paymentNote}</p>}
+      <p class="inline-flex w-full flex-wrap justify-center items-center gap-2"><Icon name={p.regionIcon} class="text-accent" />{p.regionNote}
+        {p.regionCtaLabel && <a href={withBase(base, p.regionCtaHref)} class="text-accent font-semibold hover:underline">{p.regionCtaLabel} →</a>}
+      </p>
+    </div>
   </div>
 </section>
 

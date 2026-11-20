@@ -237,12 +237,15 @@
   "subSecondaryLabel": "Contact",
   "subSecondaryHref": "/contact",
   "regionIcon": "location_on",
-  "regionNote": "Pricing may vary by market, scope, currency, and delivery requirements.",
+  "regionNote": "Is your business outside the US? Get a quote: we adjust pricing to your country and currency.",
   "ctaTag": "Have Questions About Pricing?",
   "ctaHeading": "Let's Talk About Your Project.",
   "ctaParagraph": "Tell us what you need and we'll help you understand which option makes the most sense for your business and budget.",
   "ctaButtonLabel": "Book a Free Consultation",
   "ctaButtonIcon": "calendar_month",
   "ctaSecondaryLabel": "Contact",
-  "ctaSecondaryHref": "/contact"
+  "ctaSecondaryHref": "/contact",
+  "regionCtaLabel": "Request my quote",
+  "regionCtaHref": "/contact",
+  "paymentNote": "Payment options: credit or debit card, PayPal and Zelle."
 }

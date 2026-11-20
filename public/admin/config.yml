@@ -1405,6 +1405,9 @@ collections:
 
           - { name: regionIcon, label: "Nota de región · Icono", widget: string }
           - { name: regionNote, label: "Nota de región · Texto", widget: text }
+          - { name: regionCtaLabel, label: "Nota de región · Texto del enlace", widget: string, required: false }
+          - { name: regionCtaHref, label: "Nota de región · Enlace", widget: string, required: false }
+          - { name: paymentNote, label: "Formas de pago", widget: string, required: false }
 
           - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
           - { name: ctaHeading, label: "CTA final · Titular", widget: string }
@@ -1544,6 +1547,9 @@ collections:
 
           - { name: regionIcon, label: "Nota de región · Icono", widget: string }
           - { name: regionNote, label: "Nota de región · Texto", widget: text }
+          - { name: regionCtaLabel, label: "Nota de región · Texto del enlace", widget: string, required: false }
+          - { name: regionCtaHref, label: "Nota de región · Enlace", widget: string, required: false }
+          - { name: paymentNote, label: "Formas de pago", widget: string, required: false }
 
           - { name: ctaTag, label: "CTA final · Etiqueta", widget: string }
           - { name: ctaHeading, label: "CTA final · Titular", widget: string }

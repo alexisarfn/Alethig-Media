@@ -68,10 +68,6 @@ export default defineConfig({
     '/servicios/manejo-de-redes-sociales': '/es/servicios/manejo-de-redes-sociales/',
     '/servicios/produccion-de-video': '/es/servicios/produccion-de-video/',
     '/servicios/publicidad-pagada': '/es/servicios/publicidad-pagada/',
-    // Precios regionales: URLs cortas para los anuncios de cada país.
-    '/mx': '/es/precios/mexico/',
-    '/ec': '/es/precios/ecuador/',
-    '/eu': '/es/precios/europa/',
   },
   integrations: [
     sitemap({
@@ -80,7 +76,7 @@ export default defineConfig({
       // sitemap. Las rutas legacy (/contacto, /servicios/*, etc.) no
       // aparecen aquí: son redirects, no páginas, y el propio integration
       // solo recorre rutas de tipo "page".
-      filter: (page) => !page.includes('/precios/mexico') && !page.includes('/precios/ecuador') && !page.includes('/precios/europa') && !page.includes('/gracias') && !page.includes('/thank-you') && !page.includes('/api/'),
+      filter: (page) => !page.includes('/gracias') && !page.includes('/thank-you') && !page.includes('/api/'),
       // Alternates ES/EN reales por página (ver PATH_TO_ALT arriba).
       serialize(item) {
         const path = new URL(item.url).pathname;

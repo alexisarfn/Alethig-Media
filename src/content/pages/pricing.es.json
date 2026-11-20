@@ -237,12 +237,15 @@
   "subSecondaryLabel": "Contactar",
   "subSecondaryHref": "/contacto",
   "regionIcon": "location_on",
-  "regionNote": "Los precios pueden variar según el mercado, el alcance, la moneda y los requisitos de entrega.",
+  "regionNote": "¿Tu negocio está fuera de EE. UU.? Cotiza tu precio: lo ajustamos a tu país y tu moneda.",
   "ctaTag": "¿Tienes Preguntas Sobre Precios?",
   "ctaHeading": "Hablemos Sobre Tu Proyecto.",
   "ctaParagraph": "Cuéntanos qué necesitas y te ayudamos a entender qué opción tiene más sentido para tu negocio y tu presupuesto.",
   "ctaButtonLabel": "Agenda una Consulta Gratis",
   "ctaButtonIcon": "calendar_month",
   "ctaSecondaryLabel": "Contactar",
-  "ctaSecondaryHref": "/contacto"
+  "ctaSecondaryHref": "/contacto",
+  "regionCtaLabel": "Pedir mi cotización",
+  "regionCtaHref": "/contacto",
+  "paymentNote": "Formas de pago: tarjeta de crédito o débito, PayPal y Zelle."
 }
