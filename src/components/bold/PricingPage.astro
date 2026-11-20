@@ -13,16 +13,16 @@ const plansPanels = [
   { id: 'traffic', tag: p.tgTag, icon: p.tgIcon, heading: p.tgHeading, intro: p.tgIntro, plans: p.tgPlans, cta: p.tgCtaLabel, href: p.tgCtaHref, sec: p.tgSecondaryLabel, secHref: p.tgSecondaryHref, notes: [p.tgAdSpendNote, p.tgDisclaimer] },
   { id: 'seo', tag: p.seoTag, icon: p.seoIcon, heading: p.seoHeading, intro: p.seoIntro, plans: p.seoPlans, cta: p.seoCtaLabel, href: p.seoCtaHref, notes: [] },
   { id: 'content', tag: p.contentTag, icon: p.contentIcon, heading: p.contentHeading, intro: p.contentIntro, plans: p.contentPlans, cta: p.contentCtaLabel, href: p.contentCtaHref, sec: p.contentSecondaryLabel, secHref: p.contentSecondaryHref, badge: p.contentBadge, notes: [] },
-];
+].filter(x => x.tag);
 const itemPanels = [
   { id: 'web', tag: p.webTag, icon: p.webIcon, heading: p.webHeading, intro: p.webIntro, items: p.webItems, cta: p.webCtaLabel, href: p.webCtaHref, sec: p.webSecondaryLabel, secHref: p.webSecondaryHref },
   { id: 'brand', tag: p.brandTag, icon: p.brandIcon, heading: p.brandHeading, intro: p.brandIntro, items: p.brandItems, cta: p.brandCtaLabel, href: p.brandCtaHref, sec: p.brandSecondaryLabel, secHref: p.brandSecondaryHref, note: p.brandNote },
-];
+].filter(x => x.tag);
 const quotePanels = [
   { id: 'video', tag: p.videoTag, icon: p.videoIcon, heading: p.videoHeading, body: p.videoBody, cta: p.videoCtaLabel, href: p.videoCtaHref, sec: p.videoSecondaryLabel, secHref: p.videoSecondaryHref },
   { id: 'sub', tag: p.subTag, icon: p.subIcon, heading: p.subHeading, body: p.subBody, chips: p.subFactors, cta: p.subCtaLabel, href: p.subCtaHref, sec: p.subSecondaryLabel, secHref: p.subSecondaryHref },
   { id: 'os', tag: p.osTag, icon: p.osIcon, heading: p.osHeading, body: p.osBody, chips: p.osFeatures, cta: p.osCtaLabel, href: p.osCtaHref, sec: p.osSecondaryLabel, secHref: p.osSecondaryHref },
-];
+].filter(x => x.tag);
 const tabs = [...plansPanels, ...itemPanels, ...quotePanels].map(x => ({ id: x.id, tag: x.tag, icon: x.icon }));
 const starts = [p.tgPlans[0]?.price, p.seoPlans[0]?.price, p.webItems[0]?.price].filter(Boolean);
 ---
@@ -114,7 +114,7 @@ const starts = [p.tgPlans[0]?.price, p.seoPlans[0]?.price, p.webItems[0]?.price]
         {panel.note && <p class="text-center text-sm text-text-dim mt-6 max-w-2xl mx-auto">{panel.note}</p>}
         <div class="mt-8 flex flex-wrap justify-center gap-4">
           <a href={withBase(base, panel.href)} data-booking-trigger class="btn-cyber-solid shine magnetic press"><span class="uppercase">{panel.cta}</span><span class="shine-sweep" aria-hidden="true"></span></a>
-          <a href={withBase(base, panel.secHref)} class="btn-ghost magnetic press uppercase">{panel.sec}</a>
+          {panel.sec && <a href={withBase(base, panel.secHref)} class="btn-ghost magnetic press uppercase">{panel.sec}</a>}
         </div>
       </div>
     ))}
@@ -132,13 +132,18 @@ const starts = [p.tgPlans[0]?.price, p.seoPlans[0]?.price, p.webItems[0]?.price]
           )}
           <div class="flex flex-wrap justify-center gap-4">
             <a href={withBase(base, panel.href)} class="btn-cyber-solid shine magnetic press"><span class="uppercase">{panel.cta}</span><span class="shine-sweep" aria-hidden="true"></span></a>
-            <a href={withBase(base, panel.secHref)} class="btn-ghost magnetic press uppercase">{panel.sec}</a>
+            {panel.sec && <a href={withBase(base, panel.secHref)} class="btn-ghost magnetic press uppercase">{panel.sec}</a>}
           </div>
         </div>
       </div>
     ))}
 
-    <p class="text-center text-sm text-text-dim inline-flex w-full justify-center items-center gap-2"><Icon name={p.regionIcon} class="text-accent" />{p.regionNote}</p>
+    <div class="text-center text-sm text-text-dim space-y-3">
+      {p.paymentNote && <p class="inline-flex w-full justify-center items-center gap-2"><Icon name="payments" class="text-accent" />{p.paymentNote}</p>}
+      <p class="inline-flex w-full flex-wrap justify-center items-center gap-2"><Icon name={p.regionIcon} class="text-accent" />{p.regionNote}
+        {p.regionCtaLabel && <a href={withBase(base, p.regionCtaHref)} class="text-accent font-semibold hover:underline">{p.regionCtaLabel} →</a>}
+      </p>
+    </div>
   </div>
 </section>
 

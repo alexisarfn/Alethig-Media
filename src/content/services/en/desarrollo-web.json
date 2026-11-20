@@ -1,7 +1,7 @@
 {
   "title": "Web Development",
   "urlSlug": "web-development",
-  "metaDescription": "Web development for businesses, based in Long Island, NY. Fast, modern websites that convert visitors into customers, starting at $799. Bilingual English and Spanish — Alethig Media.",
+  "metaDescription": "Web development for businesses, based in Long Island, NY. Fast, modern websites that convert visitors into customers, starting at $699. Bilingual English and Spanish — Alethig Media.",
   "order": 5,
   "icon": "language",
   "heroHeading": "A professional website that works on every device",
@@ -16,10 +16,10 @@
     { "icon": "palette", "title": "Scales With Your Business", "desc": "From a landing page to a full online store, with the level of functionality your business needs." }
   ],
   "plans": [
-    { "name": "Landing Page", "sub": "1 conversion page", "price": "Starting at $799", "featured": false, "features": ["One conversion-focused page", "Hosting + SSL included", "Business email", "Tailored to your brand"] },
-    { "name": "Starter Website", "sub": "Business website", "price": "Starting at $1,499", "featured": false, "features": ["Multi-page website", "Hosting + SSL included", "Business email", "Professional design"] },
-    { "name": "Growth Website", "sub": "More pages & features", "price": "Starting at $2,499", "featured": false, "features": ["More pages and functionality", "Hosting + SSL included", "Business email", "Integrations as needed"] },
-    { "name": "Advanced / Ecommerce", "sub": "Online store", "price": "Starting at $3,500+", "featured": false, "features": ["Online store or advanced functionality", "Payment gateway where applicable", "Hosting + SSL included", "Business email"] }
+    { "name": "Landing Page", "sub": "1 conversion page", "price": "Starting at $699", "featured": false, "features": ["One conversion-focused page", "Hosting + SSL included", "Business email", "Tailored to your brand"] },
+    { "name": "Starter Website", "sub": "Business website", "price": "Starting at $1,390", "featured": false, "features": ["Multi-page website", "Hosting + SSL included", "Business email", "Professional design"] },
+    { "name": "Growth Website", "sub": "More pages & features", "price": "Starting at $2,290", "featured": false, "features": ["More pages and functionality", "Hosting + SSL included", "Business email", "Integrations as needed"] },
+    { "name": "Advanced / Ecommerce", "sub": "Online store", "price": "Starting at $3,290+", "featured": false, "features": ["Online store or advanced functionality", "Payment gateway where applicable", "Hosting + SSL included", "Business email"] }
   ],
   "plansHeading": "Pricing",
   "ctaHeading": "Ready for your new website?",

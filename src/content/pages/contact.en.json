@@ -140,6 +140,14 @@
     {
       "question": "What happens during the free 15-minute consultation?",
       "answer": "It's a no-obligation call where we: learn about your business and goals → identify your marketing needs → recommend the right services → explain next steps. If you decide to move forward, we'll follow up with a personalized proposal."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept credit or debit card, PayPal and Zelle. Monthly plans are paid at the start of each billing cycle; one-time projects (logo, website, video) are paid in full or in stages, as agreed."
+    },
+    {
+      "question": "Do you work with businesses outside the US?",
+      "answer": "Yes, we work remotely with businesses in other countries. Published prices are for the US; if your business is in another country, request a quote and we will adjust pricing to your country and currency."
     }
   ]
 }
