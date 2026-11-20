@@ -1,14 +1,14 @@
 {
   "title": "Alethig Media OS | Create and publish your business content with AI",
   "metaDescription": "Alethig Media OS creates on-brand posts, carousels and reel scripts for your business, schedules them and publishes to Instagram and Facebook. Includes 12 AI marketing advisors and a CRM. From $37/month.",
-  "heroTag": "Launching January 2027",
+  "heroTag": "Now available",
   "heading": "A Month of Marketing, Ready in One Afternoon.",
   "highlight": "One Afternoon",
   "paragraph": "Alethig Media OS creates on-brand posts, carousels and reel scripts for your business, lets you approve them, and publishes them automatically to Instagram and Facebook. It's the same platform we use with our clients, now ready for you to use yourself.",
-  "ctaLabel": "Get early access",
-  "ctaHref": "/contact",
+  "ctaLabel": "Start your 5-day free trial",
+  "ctaHref": "https://app.alethigmedia.com/signup",
   "ctaSecondaryLabel": "See plans",
-  "heroNote": "5 days free when we open. Choose your plan with a card; no charge today, cancel anytime.",
+  "heroNote": "5 days free. Choose your plan with a card; no charge today, cancel anytime.",
   "problemHeading": "You know you should post. The problem is time.",
   "problemText": "Coming up with ideas, designing, writing captions and remembering to post every day takes hours you need for your business. Alethig Media OS does the heavy lifting: you review, tweak whatever you want and approve.",
   "featuresTag": "What's included",
@@ -106,7 +106,7 @@
     "Leads / CRM inside the app",
     "English and Spanish"
   ],
-  "planCtaLabel": "Reserve my spot",
+  "planCtaLabel": "Start free trial",
   "plansFootnote": "Prices in US dollars. 1 credit = 1 image; each carousel slide uses 1 credit. Unused credits don't roll over.",
   "agencyLinkLabel": "Rather have our team create the content for you? See Managed Content →",
   "agencyHref": "/pricing",
@@ -134,10 +134,10 @@
     },
     {
       "q": "When can I start?",
-      "a": "We open in January 2027. Reserve your spot and we'll let you know first."
+      "a": "We are open. Create your account, choose your plan and get 5 days free to try it."
     }
   ],
   "finalHeading": "Stop wondering what to post.",
-  "finalText": "Reserve your spot and be one of the first to use Alethig Media OS when we open in January.",
+  "finalText": "Create your account and start today with 5 days free.",
   "loginLabel": "Already a client · Log in"
 }

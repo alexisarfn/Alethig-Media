@@ -1,14 +1,14 @@
 {
   "title": "Alethig Media OS | Crea y publica el contenido de tu negocio con IA",
   "metaDescription": "Alethig Media OS crea posts, carruseles y guiones de reels con la marca de tu negocio, los programa y los publica en Instagram y Facebook. Incluye 12 asesores de marketing con IA y un CRM. Desde $37 al mes.",
-  "heroTag": "Lanzamiento enero 2027",
+  "heroTag": "Ya disponible",
   "heading": "Tu Marketing de Todo el Mes, Listo en Una Tarde.",
   "highlight": "Una Tarde",
   "paragraph": "Alethig Media OS crea posts, carruseles y guiones de reels con la marca de tu negocio, te deja aprobarlos y los publica solo en Instagram y Facebook. Es la misma plataforma que usamos con nuestros clientes, ahora para que la uses tú.",
-  "ctaLabel": "Quiero acceso en enero",
-  "ctaHref": "/contacto",
+  "ctaLabel": "Empieza 5 días gratis",
+  "ctaHref": "https://app.alethigmedia.com/signup",
   "ctaSecondaryLabel": "Ver planes",
-  "heroNote": "5 días gratis cuando abramos. Pides tu plan con tarjeta; hoy no se cobra nada y cancelas cuando quieras.",
+  "heroNote": "5 días gratis. Eliges tu plan con tarjeta; hoy no se cobra nada y cancelas cuando quieras.",
   "problemHeading": "Sabes que tienes que publicar. El problema es el tiempo.",
   "problemText": "Pensar qué decir, diseñar, escribir el texto y acordarte de publicar todos los días te quita horas que necesitas para atender tu negocio. Alethig Media OS hace la parte pesada: tú revisas, ajustas lo que quieras y apruebas.",
   "featuresTag": "Qué incluye",
@@ -106,7 +106,7 @@
     "Leads / CRM dentro de la app",
     "Inglés y español"
   ],
-  "planCtaLabel": "Reservar mi acceso",
+  "planCtaLabel": "Empezar 5 días gratis",
   "plansFootnote": "Precios en dólares (USD). 1 crédito = 1 imagen; cada slide de un carrusel usa 1 crédito. Los créditos no usados no se acumulan.",
   "agencyLinkLabel": "¿Prefieres que nuestro equipo cree el contenido por ti? Ver Contenido Gestionado →",
   "agencyHref": "/precios",
@@ -134,10 +134,10 @@
     },
     {
       "q": "¿Cuándo puedo empezar?",
-      "a": "Abrimos en enero de 2027. Reserva tu acceso y te avisamos primero."
+      "a": "Ya está abierto. Crea tu cuenta, elige tu plan y tienes 5 días gratis para probarlo."
     }
   ],
   "finalHeading": "Deja de pensar qué publicar.",
-  "finalText": "Reserva tu acceso y sé de los primeros en usar Alethig Media OS cuando abramos en enero.",
+  "finalText": "Crea tu cuenta y empieza hoy con 5 días gratis.",
   "loginLabel": "Ya soy cliente · Entrar"
 }
