@@ -1,0 +1,153 @@
+---
+// Página de venta de Alethig Media OS (planes self-serve). Markup compartido
+// ES/EN; todo el texto viene de src/content/pages/alethig-media-os.{es,en}.json
+// (editable en /admin). Precios = los mismos que cobra la app
+// (BILLING_OFFERS en Alethig-Media-OS); si cambian allá, cambiarlos aquí.
+import Icon from './Icon.astro';
+import { highlightHeading } from '../lib/highlight';
+import { withBase } from '../lib/basePath';
+
+interface Item { icon: string; title: string; desc: string }
+interface Step { title: string; desc: string }
+interface Plan { name: string; price: string; period: string; note?: string; capacity: string; capacityDetail: string; featured?: boolean }
+interface Faq { q: string; a: string }
+
+const { os, base } = Astro.props as { os: any; base: string };
+const APP = 'https://app.alethigmedia.com';
+const ctaHref = os.ctaHref?.startsWith('http') ? os.ctaHref : withBase(base, os.ctaHref || '/contacto');
+---
+<!-- HERO -->
+<section class="bg-bg-void relative pt-32 pb-section-py-lg overflow-hidden">
+  <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -top-40 -right-32 w-[34rem] h-[34rem] rounded-full bg-accent/20 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+  <div class="glow-breathe absolute -bottom-56 -left-48 w-[30rem] h-[30rem] rounded-full bg-grad-indigo/60 blur-[120px] pointer-events-none" style="animation-delay:2.5s" aria-hidden="true"></div>
+  <div class="relative max-w-container-max mx-auto px-gutter text-center reveal">
+    <span class="tag-cyber mb-6 inline-flex"><Icon name="bolt" class="text-sm" />{os.heroTag}</span>
+    <h1 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-6 max-w-4xl mx-auto" set:html={highlightHeading(os.heading, os.highlight)}></h1>
+    <p class="text-body-lg text-text-secondary mb-10 max-w-2xl mx-auto">{os.paragraph}</p>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href={ctaHref} class="btn-cyber-solid shine magnetic press inline-flex">
+        <span class="icon-wrap">{os.ctaLabel} <Icon name="arrow_forward" class="text-base" /></span>
+        <span class="shine-sweep" aria-hidden="true"></span>
+      </a>
+      <a href="#planes" class="btn-ghost magnetic press">{os.ctaSecondaryLabel}</a>
+    </div>
+    {os.heroNote && <p class="mt-6 text-text-dim text-sm">{os.heroNote}</p>}
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="bg-bg-depth py-section-py-sm">
+  <div class="max-w-3xl mx-auto px-gutter text-center reveal">
+    <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5">{os.problemHeading}</h2>
+    <p class="text-body-lg text-text-secondary">{os.problemText}</p>
+  </div>
+</section>
+
+<!-- FUNCIONES -->
+<section class="bg-bg-void py-section-py-lg">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="text-center mb-12 reveal">
+      <span class="tag-cyber mb-4 inline-flex">{os.featuresTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg">{os.featuresHeading}</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-fade">
+      {(os.features as Item[]).map(f => (
+        <div class="glass card-cyber rounded-2xl p-7">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
+            <Icon name={f.icon} class="text-accent text-2xl" />
+          </div>
+          <h3 class="font-display uppercase font-bold text-lg mb-2">{f.title}</h3>
+          <p class="text-text-secondary text-sm">{f.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="bg-bg-depth py-section-py-lg">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <h2 class="text-center uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-12 reveal">{os.stepsHeading}</h2>
+    <ol class="grid md:grid-cols-4 gap-6 stagger-fade">
+      {(os.steps as Step[]).map((s, i) => (
+        <li class="glass rounded-2xl p-6">
+          <span class="gradient-text font-display font-extrabold text-3xl">{String(i + 1).padStart(2, '0')}</span>
+          <h3 class="font-display uppercase font-bold text-base mt-3 mb-2">{s.title}</h3>
+          <p class="text-text-secondary text-sm">{s.desc}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section id="planes" class="bg-bg-void py-section-py-lg scroll-mt-24">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="text-center mb-12 reveal">
+      <span class="tag-cyber mb-4 inline-flex">{os.plansTag}</span>
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4">{os.plansHeading}</h2>
+      <p class="text-text-secondary max-w-2xl mx-auto">{os.plansIntro}</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 items-stretch">
+      {(os.plans as Plan[]).map(p => (
+        <div class={`glass card-cyber rounded-2xl p-7 flex flex-col ${p.featured ? 'lumen-border md:scale-105 relative' : ''}`}>
+          {p.featured && <span class="tag-cyber mb-4 self-start">{os.featuredLabel}</span>}
+          <p class="font-display uppercase font-bold text-xl mb-2">{p.name}</p>
+          <p class="gradient-text font-display uppercase font-extrabold text-3xl">{p.price}<span class="text-base text-text-secondary normal-case font-body font-semibold"> {p.period}</span></p>
+          <p class="text-text-dim text-xs mt-1 mb-5 min-h-[1rem]">{p.note || ''}</p>
+          <div class="rounded-xl border border-accent/20 px-4 py-3 mb-5">
+            <p class="text-sm font-semibold">{p.capacity}</p>
+            <p class="text-xs text-text-secondary">{p.capacityDetail}</p>
+          </div>
+          <ul class="space-y-2 mb-6 flex-1">
+            {(os.planFeatures as string[]).map(f => (
+              <li class="flex items-start gap-2 text-sm text-text-secondary">
+                <Icon name="check_circle" class="text-accent text-base mt-0.5 flex-shrink-0" />{f}
+              </li>
+            ))}
+          </ul>
+          <a href={ctaHref} class={p.featured ? 'btn-cyber-solid w-full justify-center text-center' : 'btn-ghost w-full justify-center text-center'}>{os.planCtaLabel}</a>
+        </div>
+      ))}
+    </div>
+    <p class="text-center text-text-dim text-sm mt-8 max-w-2xl mx-auto">{os.plansFootnote}</p>
+    <p class="text-center text-sm mt-3">
+      <a href={withBase(base, os.agencyHref || '/precios')} class="text-accent hover:underline">{os.agencyLinkLabel}</a>
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-bg-depth py-section-py-lg">
+  <div class="max-w-3xl mx-auto px-gutter">
+    <h2 class="text-center uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-10 reveal">{os.faqHeading}</h2>
+    <div class="space-y-4">
+      {(os.faq as Faq[]).map(f => (
+        <details class="glass rounded-2xl p-6 group">
+          <summary class="cursor-pointer font-semibold flex justify-between items-center gap-4 list-none">
+            {f.q}<Icon name="expand_more" class="text-accent transition-transform group-open:rotate-180" />
+          </summary>
+          <p class="text-text-secondary text-sm mt-3">{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="bg-bg-void py-section-py-lg">
+  <div class="max-w-2xl mx-auto px-gutter">
+    <div class="glass lumen-border rounded-2xl p-10 md:p-14 text-center reveal">
+      <h2 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-4">{os.finalHeading}</h2>
+      <p class="text-text-secondary mb-8">{os.finalText}</p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href={ctaHref} class="btn-cyber-solid shine magnetic press inline-flex">
+          <span class="icon-wrap">{os.ctaLabel} <Icon name="arrow_forward" class="text-base" /></span>
+          <span class="shine-sweep" aria-hidden="true"></span>
+        </a>
+        <a href={APP} class="btn-ghost magnetic press">{os.loginLabel}</a>
+      </div>
+    </div>
+  </div>
+</section>

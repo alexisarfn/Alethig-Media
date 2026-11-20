@@ -1,10 +1,65 @@
 {
-  "title": "Alethig Media OS | Alethig Media",
-  "metaDescription": "Alethig Media OS is the platform we use to organize content, approvals, projects and marketing workflows from one place.",
-  "heroTag": "Available",
-  "heading": "Alethig Media OS Is Now Available.",
-  "highlight": "Alethig Media OS",
-  "paragraph": "Alethig Media OS is the platform we use to organize content, approvals, projects and marketing workflows from one place.",
-  "ctaLabel": "Open Alethig Media OS",
-  "ctaSecondaryLabel": "Back to Home"
+  "title": "Alethig Media OS | Create and publish your business content with AI",
+  "metaDescription": "Alethig Media OS creates on-brand posts, carousels and reel scripts for your business, schedules them and publishes to Instagram and Facebook. Includes 12 AI marketing advisors and a CRM. From $37/month.",
+  "heroTag": "Launching January 2027",
+  "heading": "A Month of Marketing, Ready in One Afternoon.",
+  "highlight": "One Afternoon",
+  "paragraph": "Alethig Media OS creates on-brand posts, carousels and reel scripts for your business, lets you approve them, and publishes them automatically to Instagram and Facebook. It's the same platform we use with our clients, now ready for you to use yourself.",
+  "ctaLabel": "Get early access",
+  "ctaHref": "/contact",
+  "ctaSecondaryLabel": "See plans",
+  "heroNote": "14-day free trial when we open. No contracts.",
+  "problemHeading": "You know you should post. The problem is time.",
+  "problemText": "Coming up with ideas, designing, writing captions and remembering to post every day takes hours you need for your business. Alethig Media OS does the heavy lifting: you review, tweak whatever you want and approve.",
+  "featuresTag": "What's included",
+  "featuresHeading": "Everything you need for social media, in one place.",
+  "features": [
+    { "icon": "photo_library", "title": "On-brand posts and carousels", "desc": "Captions and images with your colors, logo and tone, ready for Instagram and Facebook." },
+    { "icon": "movie", "title": "Reels made easy", "desc": "Scene-by-scene scripts to film, plus reels with music made from your carousels." },
+    { "icon": "psychology", "title": "12 AI marketing advisors", "desc": "Ask them like a team: strategy, SWOT analysis, hooks, ads, local SEO, sales and results." },
+    { "icon": "event_available", "title": "Approval and auto-publishing", "desc": "Nothing goes out without your OK. Pick the day and time and it posts itself. If something fails, we email you." },
+    { "icon": "contacts", "title": "Lead CRM", "desc": "Keep track of your leads inside the same app." },
+    { "icon": "translate", "title": "English and Spanish", "desc": "Create content in one language or both, with no manual translation." }
+  ],
+  "stepsHeading": "How it works",
+  "steps": [
+    { "title": "Tell us about your business", "desc": "Your services, your city, your logo and colors. You do it once." },
+    { "title": "Ask for your content", "desc": "Describe what you want to post, or let the app plan your week." },
+    { "title": "Review and approve", "desc": "Change anything you want. Nothing is published without your approval." },
+    { "title": "It posts itself", "desc": "Connect Instagram and Facebook, pick the time, and you're done." }
+  ],
+  "plansTag": "Plans",
+  "plansHeading": "Simple pricing. Cancel anytime.",
+  "plansIntro": "Every plan includes every feature. The difference is how much content you create each month.",
+  "featuredLabel": "Most popular",
+  "plans": [
+    { "name": "Pro", "price": "$37", "period": "/month", "note": "", "capacity": "About 20 posts per month", "capacityDetail": "For example 15 posts and 5 carousels · 50 image credits", "featured": false },
+    { "name": "Max", "price": "$67", "period": "/month", "note": "", "capacity": "About 40 posts per month", "capacityDetail": "For example 30 posts and 10 carousels · 100 image credits", "featured": true },
+    { "name": "Max annual", "price": "$500", "period": "/year", "note": "Launch price · Same as Max, paid once a year", "capacity": "About 40 posts per month", "capacityDetail": "For example 30 posts and 10 carousels · 100 image credits", "featured": false }
+  ],
+  "planFeatures": [
+    "Posts and carousels with branded images",
+    "Reel scripts, scene by scene",
+    "Reels with music made from your carousels",
+    "Assistant with 12 marketing advisors",
+    "Approvals, calendar and automatic publishing to Instagram and Facebook",
+    "Leads / CRM inside the app",
+    "English and Spanish"
+  ],
+  "planCtaLabel": "Reserve my spot",
+  "plansFootnote": "Prices in US dollars. 1 credit = 1 image; each carousel slide uses 1 credit. Unused credits don't roll over.",
+  "agencyLinkLabel": "Rather have our team create the content for you? See Managed Content →",
+  "agencyHref": "/pricing",
+  "faqHeading": "Frequently asked questions",
+  "faq": [
+    { "q": "Do I need design or marketing experience?", "a": "No. The app creates content from your business information and you just review and approve. If you have questions, the AI advisors walk you through it." },
+    { "q": "Will anything be posted without me seeing it?", "a": "Never. Every piece needs approval from someone on your team before it's published." },
+    { "q": "Which platforms does it publish to?", "a": "Instagram and Facebook, through your own connected account. You can disconnect it anytime." },
+    { "q": "How does the free trial work?", "a": "You get 14 days to try the app with a smaller usage limit. If you choose a plan, all your content and settings stay." },
+    { "q": "Can I cancel?", "a": "Yes, anytime. Cancellation takes effect at the end of the period you already paid for. No contracts." },
+    { "q": "When can I start?", "a": "We open in January 2027. Reserve your spot and we'll let you know first." }
+  ],
+  "finalHeading": "Stop wondering what to post.",
+  "finalText": "Reserve your spot and be one of the first to use Alethig Media OS when we open in January.",
+  "loginLabel": "Already a client · Log in"
 }

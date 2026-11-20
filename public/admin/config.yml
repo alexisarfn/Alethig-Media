@@ -712,8 +712,58 @@ collections:
           - { name: heading, label: "Titular", widget: string }
           - { name: highlight, label: "Palabra resaltada", widget: string, required: false }
           - { name: paragraph, label: "Párrafo", widget: text }
-          - { name: ctaLabel, label: "Botón principal (abre app.alethigmedia.com)", widget: string }
-          - { name: ctaSecondaryLabel, label: "Botón secundario", widget: string }
+          - { name: ctaLabel, label: "Botón principal", widget: string }
+          - { name: ctaHref, label: "Enlace botón principal (p.ej. /contacto, o https://app.alethigmedia.com/signup al abrir)", widget: string }
+          - { name: ctaSecondaryLabel, label: "Botón secundario (baja a los planes)", widget: string }
+          - { name: heroNote, label: "Nota bajo los botones", widget: string, required: false }
+          - { name: problemHeading, label: "Problema · Titular", widget: string }
+          - { name: problemText, label: "Problema · Texto", widget: text }
+          - { name: featuresTag, label: "Funciones · Etiqueta", widget: string }
+          - { name: featuresHeading, label: "Funciones · Titular", widget: string }
+          - name: features
+            label: "Funciones"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono (Material Symbols)", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: stepsHeading, label: "Pasos · Titular", widget: string }
+          - name: steps
+            label: "Pasos"
+            widget: list
+            fields:
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: plansTag, label: "Planes · Etiqueta", widget: string }
+          - { name: plansHeading, label: "Planes · Titular", widget: string }
+          - { name: plansIntro, label: "Planes · Intro", widget: text }
+          - { name: featuredLabel, label: "Planes · Etiqueta del destacado", widget: string }
+          - name: plans
+            label: "Planes (precios = los que cobra la app)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: price, label: "Precio", widget: string }
+              - { name: period, label: "Periodo", widget: string }
+              - { name: note, label: "Nota", widget: string, required: false }
+              - { name: capacity, label: "Capacidad", widget: string }
+              - { name: capacityDetail, label: "Detalle de capacidad", widget: string }
+              - { name: featured, label: "Destacado", widget: boolean, required: false }
+          - { name: planFeatures, label: "Planes · Funciones incluidas", widget: list }
+          - { name: planCtaLabel, label: "Planes · Botón", widget: string }
+          - { name: plansFootnote, label: "Planes · Nota al pie", widget: text }
+          - { name: agencyLinkLabel, label: "Enlace a contenido gestionado · Texto", widget: string }
+          - { name: agencyHref, label: "Enlace a contenido gestionado · URL", widget: string }
+          - { name: faqHeading, label: "Preguntas · Titular", widget: string }
+          - name: faq
+            label: "Preguntas frecuentes"
+            widget: list
+            fields:
+              - { name: q, label: "Pregunta", widget: string }
+              - { name: a, label: "Respuesta", widget: text }
+          - { name: finalHeading, label: "Cierre · Titular", widget: string }
+          - { name: finalText, label: "Cierre · Texto", widget: text }
+          - { name: loginLabel, label: "Cierre · Botón de entrar a la app", widget: string }
 
       - name: alethig-media-os-en
         label: "Alethig Media OS (Inglés)"
@@ -726,8 +776,58 @@ collections:
           - { name: heading, label: "Titular", widget: string }
           - { name: highlight, label: "Palabra resaltada", widget: string, required: false }
           - { name: paragraph, label: "Párrafo", widget: text }
-          - { name: ctaLabel, label: "Botón principal (abre app.alethigmedia.com)", widget: string }
-          - { name: ctaSecondaryLabel, label: "Botón secundario", widget: string }
+          - { name: ctaLabel, label: "Botón principal", widget: string }
+          - { name: ctaHref, label: "Enlace botón principal (p.ej. /contacto, o https://app.alethigmedia.com/signup al abrir)", widget: string }
+          - { name: ctaSecondaryLabel, label: "Botón secundario (baja a los planes)", widget: string }
+          - { name: heroNote, label: "Nota bajo los botones", widget: string, required: false }
+          - { name: problemHeading, label: "Problema · Titular", widget: string }
+          - { name: problemText, label: "Problema · Texto", widget: text }
+          - { name: featuresTag, label: "Funciones · Etiqueta", widget: string }
+          - { name: featuresHeading, label: "Funciones · Titular", widget: string }
+          - name: features
+            label: "Funciones"
+            widget: list
+            fields:
+              - { name: icon, label: "Icono (Material Symbols)", widget: string }
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: stepsHeading, label: "Pasos · Titular", widget: string }
+          - name: steps
+            label: "Pasos"
+            widget: list
+            fields:
+              - { name: title, label: "Título", widget: string }
+              - { name: desc, label: "Descripción", widget: text }
+          - { name: plansTag, label: "Planes · Etiqueta", widget: string }
+          - { name: plansHeading, label: "Planes · Titular", widget: string }
+          - { name: plansIntro, label: "Planes · Intro", widget: text }
+          - { name: featuredLabel, label: "Planes · Etiqueta del destacado", widget: string }
+          - name: plans
+            label: "Planes (precios = los que cobra la app)"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: price, label: "Precio", widget: string }
+              - { name: period, label: "Periodo", widget: string }
+              - { name: note, label: "Nota", widget: string, required: false }
+              - { name: capacity, label: "Capacidad", widget: string }
+              - { name: capacityDetail, label: "Detalle de capacidad", widget: string }
+              - { name: featured, label: "Destacado", widget: boolean, required: false }
+          - { name: planFeatures, label: "Planes · Funciones incluidas", widget: list }
+          - { name: planCtaLabel, label: "Planes · Botón", widget: string }
+          - { name: plansFootnote, label: "Planes · Nota al pie", widget: text }
+          - { name: agencyLinkLabel, label: "Enlace a contenido gestionado · Texto", widget: string }
+          - { name: agencyHref, label: "Enlace a contenido gestionado · URL", widget: string }
+          - { name: faqHeading, label: "Preguntas · Titular", widget: string }
+          - name: faq
+            label: "Preguntas frecuentes"
+            widget: list
+            fields:
+              - { name: q, label: "Pregunta", widget: string }
+              - { name: a, label: "Respuesta", widget: text }
+          - { name: finalHeading, label: "Cierre · Titular", widget: string }
+          - { name: finalText, label: "Cierre · Texto", widget: text }
+          - { name: loginLabel, label: "Cierre · Botón de entrar a la app", widget: string }
 
       # POSITIONING PHASE 3 — página bespoke dedicada de Traffic & Growth.
       - name: traffic-growth

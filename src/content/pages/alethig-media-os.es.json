@@ -1,10 +1,65 @@
 {
-  "title": "Alethig Media OS | Alethig Media",
-  "metaDescription": "Alethig Media OS es la plataforma que usamos para organizar contenido, aprobaciones, proyectos y flujos de trabajo de marketing desde un solo lugar.",
-  "heroTag": "Disponible",
-  "heading": "Alethig Media OS Ya Está Disponible.",
-  "highlight": "Alethig Media OS",
-  "paragraph": "Alethig Media OS es la plataforma que usamos para organizar contenido, aprobaciones, proyectos y flujos de trabajo de marketing desde un solo lugar.",
-  "ctaLabel": "Abrir Alethig Media OS",
-  "ctaSecondaryLabel": "Volver al inicio"
+  "title": "Alethig Media OS | Crea y publica el contenido de tu negocio con IA",
+  "metaDescription": "Alethig Media OS crea posts, carruseles y guiones de reels con la marca de tu negocio, los programa y los publica en Instagram y Facebook. Incluye 12 asesores de marketing con IA y un CRM. Desde $37 al mes.",
+  "heroTag": "Lanzamiento enero 2027",
+  "heading": "Tu Marketing de Todo el Mes, Listo en Una Tarde.",
+  "highlight": "Una Tarde",
+  "paragraph": "Alethig Media OS crea posts, carruseles y guiones de reels con la marca de tu negocio, te deja aprobarlos y los publica solo en Instagram y Facebook. Es la misma plataforma que usamos con nuestros clientes, ahora para que la uses tú.",
+  "ctaLabel": "Quiero acceso en enero",
+  "ctaHref": "/contacto",
+  "ctaSecondaryLabel": "Ver planes",
+  "heroNote": "Prueba gratis de 14 días cuando abramos. Sin contratos.",
+  "problemHeading": "Sabes que tienes que publicar. El problema es el tiempo.",
+  "problemText": "Pensar qué decir, diseñar, escribir el texto y acordarte de publicar todos los días te quita horas que necesitas para atender tu negocio. Alethig Media OS hace la parte pesada: tú revisas, ajustas lo que quieras y apruebas.",
+  "featuresTag": "Qué incluye",
+  "featuresHeading": "Todo lo que necesitas para tus redes, en un solo lugar.",
+  "features": [
+    { "icon": "photo_library", "title": "Posts y carruseles con tu marca", "desc": "Textos e imágenes con tus colores, tu logo y tu tono, listos para Instagram y Facebook." },
+    { "icon": "movie", "title": "Reels sin complicarte", "desc": "Guiones escena por escena para grabar, y reels con música creados a partir de tus carruseles." },
+    { "icon": "psychology", "title": "12 asesores de marketing con IA", "desc": "Pregunta como a un equipo: estrategia, análisis FODA, hooks, anuncios, SEO local, ventas y resultados." },
+    { "icon": "event_available", "title": "Aprobación y publicación automática", "desc": "Nada sale sin tu visto bueno. Eliges día y hora, y se publica solo. Si algo falla, te avisamos por correo." },
+    { "icon": "contacts", "title": "CRM de leads", "desc": "Guarda y sigue a tus clientes potenciales dentro de la misma app." },
+    { "icon": "translate", "title": "Inglés y español", "desc": "Crea contenido en uno o en los dos idiomas, sin traducir a mano." }
+  ],
+  "stepsHeading": "Cómo funciona",
+  "steps": [
+    { "title": "Cuéntanos de tu negocio", "desc": "Tus servicios, tu ciudad, tu logo y tus colores. Lo haces una sola vez." },
+    { "title": "Pide tu contenido", "desc": "Escribe lo que quieres publicar o deja que la app te proponga la semana." },
+    { "title": "Revisa y aprueba", "desc": "Cambia lo que quieras. Nada se publica sin tu aprobación." },
+    { "title": "Se publica solo", "desc": "Conectas tu Instagram y Facebook, eliges la hora y listo." }
+  ],
+  "plansTag": "Planes",
+  "plansHeading": "Precios simples. Cancela cuando quieras.",
+  "plansIntro": "Todos los planes incluyen todas las funciones. La diferencia es cuánto contenido creas al mes.",
+  "featuredLabel": "Más popular",
+  "plans": [
+    { "name": "Pro", "price": "$37", "period": "/mes", "note": "", "capacity": "Unas 20 publicaciones al mes", "capacityDetail": "Por ejemplo 15 posts y 5 carruseles · 50 créditos de imagen", "featured": false },
+    { "name": "Max", "price": "$67", "period": "/mes", "note": "", "capacity": "Unas 40 publicaciones al mes", "capacityDetail": "Por ejemplo 30 posts y 10 carruseles · 100 créditos de imagen", "featured": true },
+    { "name": "Max anual", "price": "$500", "period": "/año", "note": "Precio de lanzamiento · Lo mismo que Max, pagando una vez al año", "capacity": "Unas 40 publicaciones al mes", "capacityDetail": "Por ejemplo 30 posts y 10 carruseles · 100 créditos de imagen", "featured": false }
+  ],
+  "planFeatures": [
+    "Posts y carruseles con imágenes de tu marca",
+    "Guiones de reels escena por escena",
+    "Reels con música a partir de tus carruseles",
+    "Asistente con 12 asesores de marketing",
+    "Aprobaciones, calendario y publicación automática en Instagram y Facebook",
+    "Leads / CRM dentro de la app",
+    "Inglés y español"
+  ],
+  "planCtaLabel": "Reservar mi acceso",
+  "plansFootnote": "Precios en dólares (USD). 1 crédito = 1 imagen; cada slide de un carrusel usa 1 crédito. Los créditos no usados no se acumulan.",
+  "agencyLinkLabel": "¿Prefieres que nuestro equipo cree el contenido por ti? Ver Contenido Gestionado →",
+  "agencyHref": "/precios",
+  "faqHeading": "Preguntas frecuentes",
+  "faq": [
+    { "q": "¿Necesito saber de diseño o de marketing?", "a": "No. La app crea el contenido con la información de tu negocio y tú solo revisas y apruebas. Si tienes dudas, los asesores de IA te explican paso a paso." },
+    { "q": "¿Se publica algo sin que yo lo vea?", "a": "Nunca. Cada pieza necesita la aprobación de una persona de tu equipo antes de publicarse." },
+    { "q": "¿En qué redes publica?", "a": "Instagram y Facebook, a través de tu propia cuenta conectada. Puedes desconectarla cuando quieras." },
+    { "q": "¿Cómo funciona la prueba gratis?", "a": "Tienes 14 días para probar la app con un límite de uso más pequeño. Si eliges un plan, todo tu contenido y tu configuración se quedan." },
+    { "q": "¿Puedo cancelar?", "a": "Sí, cuando quieras. La cancelación aplica al final del periodo que ya pagaste. No hay contratos." },
+    { "q": "¿Cuándo puedo empezar?", "a": "Abrimos en enero de 2027. Reserva tu acceso y te avisamos primero." }
+  ],
+  "finalHeading": "Deja de pensar qué publicar.",
+  "finalText": "Reserva tu acceso y sé de los primeros en usar Alethig Media OS cuando abramos en enero.",
+  "loginLabel": "Ya soy cliente · Entrar"
 }

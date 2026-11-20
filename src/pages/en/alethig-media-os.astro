@@ -1,45 +1,14 @@
 ---
-import Icon from '../../components/Icon.astro';
+// Página de venta de Alethig Media OS. Markup en src/components/OsSalesPage.astro
+// (compartido ES/EN); texto en src/content/pages/alethig-media-os.en.json.
 import Layout from '../../layouts/Layout.astro';
+import OsSalesPage from '../../components/OsSalesPage.astro';
 import os from '../../content/pages/alethig-media-os.en.json';
-import { highlightHeading } from '../../lib/highlight';
-import { withBase } from '../../lib/basePath';
 
 export const prerender = true;
 
 const BASE = '/en';
 ---
 <Layout title={os.title} description={os.metaDescription} base={BASE} locale="en" altHref="/es/alethig-media-os/">
-  <section class="bg-bg-void relative pt-32 pb-section-py-lg overflow-hidden min-h-[70vh] flex items-center">
-    <div class="grid-drift absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-    <div class="glow-breathe absolute -top-40 -right-32 w-[34rem] h-[34rem] rounded-full bg-accent/20 blur-[120px] pointer-events-none" aria-hidden="true"></div>
-    <div class="glow-breathe absolute -bottom-56 -left-48 w-[30rem] h-[30rem] rounded-full bg-grad-indigo/60 blur-[120px] pointer-events-none" style="animation-delay:2.5s" aria-hidden="true"></div>
-    <div class="relative max-w-container-max mx-auto px-gutter w-full">
-      <div class="glass lumen-border rounded-2xl p-10 md:p-14 text-center reveal max-w-2xl mx-auto">
-        <span class="tag-cyber mb-6 inline-flex">
-          <Icon name="bolt" class="text-sm" />
-          {os.heroTag}
-        </span>
-        <div class="bob pulse-ring w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-6">
-          <Icon name="rocket_launch" class="text-accent text-3xl" />
-        </div>
-        <h1 class="uppercase font-display text-headline-lg-mobile md:text-headline-lg mb-5" set:html={highlightHeading(os.heading, os.highlight)}></h1>
-        <p class="text-body-lg text-text-secondary mb-10 max-w-xl mx-auto">
-          {os.paragraph}
-        </p>
-        <!-- Phase 7: primary CTA now opens the real app directly (previously
-             /contact, from when the product didn't exist yet). -->
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href="https://app.alethigmedia.com" class="btn-cyber-solid shine magnetic press inline-flex">
-            <span class="icon-wrap">{os.ctaLabel} <Icon name="arrow_forward" class="text-base" /></span>
-          <span class="shine-sweep" aria-hidden="true"></span></a>
-          <a href={withBase(BASE, '/')} class="btn-ghost magnetic press">{os.ctaSecondaryLabel}</a>
-        </div>
-        <!-- POSITIONING PHASE 6: minimal link to the Pricing Hub. -->
-        <p class="mt-6 text-text-dim text-sm">
-          <a href={withBase(BASE, '/pricing')} class="text-accent hover:underline">How does pricing work? See Pricing →</a>
-        </p>
-      </div>
-    </div>
-  </section>
+  <OsSalesPage os={os} base={BASE} />
 </Layout>
